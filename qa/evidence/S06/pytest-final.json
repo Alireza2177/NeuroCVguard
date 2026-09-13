@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "--junitxml=qa/evidence/S06/pytest-final.xml"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T11:27:42.141929+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "........................................................................ [ 26%]\n........................................................................ [ 52%]\n........................................................................ [ 78%]\n...........................................................              [100%]\n275 passed in 75.71s (0:01:15)\n",
+  "stderr": ""
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "--select",
+    "I,F",
+    "--fix",
+    "src/neurocvguard",
+    "tests/test_config.py",
+    "tests/test_contracts.py",
+    "qa/evidence/S01"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T07:43:19.938175+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 0,
+  "stdout": "Found 5 errors (5 fixed, 0 remaining).\n",
+  "stderr": ""
+}

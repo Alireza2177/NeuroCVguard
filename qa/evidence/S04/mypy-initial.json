@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "mypy",
+    "src/neurocvguard"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T08:44:42.803734+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "src\\neurocvguard\\io.py:94: error: Need type annotation for \"members\" (hint: \"members: set[<type>] = ...\")  [var-annotated]\nsrc\\neurocvguard\\checks\\partitions.py:257: error: Value of type variable \"SupportsRichComparisonT\" of \"sorted\" cannot be \"str | None\"  [type-var]\nFound 2 errors in 2 files (checked 16 source files)\n",
+  "stderr": ""
+}

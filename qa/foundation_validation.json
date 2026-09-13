@@ -1,0 +1,646 @@
+{
+  "scope": "Foundation document/schema/fixture consistency only. No NeuroCVguard implementation or application tests are validated here.",
+  "checks_total": 127,
+  "checks_passed": 127,
+  "checks_failed": 0,
+  "planned_application_acceptance_cases": 184,
+  "application_tests_executed": 0,
+  "software_status": "NOT_IMPLEMENTED",
+  "checks": [
+    {
+      "check": "schema:audit-report.schema.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "schema:comparison-summary.schema.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "schema:config.schema.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "schema:evaluation-result.schema.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "schema:preprocessing-ledger.schema.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "schema:split-plan.schema.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "fixture:fixtures/config.json",
+      "passed": true,
+      "detail": "Expected structurally valid; 0 schema error(s)."
+    },
+    {
+      "check": "fixture:fixtures/config_invalid_unknown_key.json",
+      "passed": true,
+      "detail": "Expected structurally invalid; 1 schema error(s)."
+    },
+    {
+      "check": "fixture:fixtures/splits_clean.json",
+      "passed": true,
+      "detail": "Expected structurally valid; 0 schema error(s)."
+    },
+    {
+      "check": "fixture:fixtures/splits_participant_overlap.json",
+      "passed": true,
+      "detail": "Expected structurally valid; 0 schema error(s)."
+    },
+    {
+      "check": "fixture:fixtures/splits_unknown_id.json",
+      "passed": true,
+      "detail": "Expected structurally valid; 0 schema error(s)."
+    },
+    {
+      "check": "fixture:fixtures/ledger_declared_global.json",
+      "passed": true,
+      "detail": "Expected structurally valid; 0 schema error(s)."
+    },
+    {
+      "check": "fixture:fixtures/report_schema_example.json",
+      "passed": true,
+      "detail": "Expected structurally valid; 0 schema error(s)."
+    },
+    {
+      "check": "fixture:fixtures/evaluation_schema_example.json",
+      "passed": true,
+      "detail": "Expected structurally valid; 0 schema error(s)."
+    },
+    {
+      "check": "fixture:fixtures/comparison_schema_example.json",
+      "passed": true,
+      "detail": "Expected structurally valid; 0 schema error(s)."
+    },
+    {
+      "check": "stage-count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "stage-order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "work-package-count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "unique-cases",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "unique-rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "unique-requirements",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "case-stages",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "rule-stages",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "case-reqs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all-stages-have-cases",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "all-required-cases-unrun",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "software-not-claimed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no-invented-stage-passes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S00",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S00",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S00",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S00",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S01",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S02",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S03",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S04",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S05",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S06",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S07",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S07",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S07",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S07",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S08",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S08",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S08",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S08",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S16",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S16",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S16",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S16",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt:S17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "readings:S17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "predecessor:S17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "prompt-cases:S17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "agents-size",
+      "passed": true,
+      "detail": "4248 bytes; intentionally below 8,000 bytes and the cited default instruction limit."
+    },
+    {
+      "check": "cohort-known-counts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "cohort-two-visits",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_clean.json:coverage:fold-000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_clean.json:participant-oracle:fold-000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_clean.json:coverage:fold-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_clean.json:participant-oracle:fold-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_clean.json:coverage:fold-002",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_clean.json:participant-oracle:fold-002",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_clean.json:complete-cv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_participant_overlap.json:coverage:fold-000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_participant_overlap.json:participant-oracle:fold-000",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_participant_overlap.json:coverage:fold-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_participant_overlap.json:participant-oracle:fold-001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "splits_participant_overlap.json:complete-cv",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "unknown-ID-fixture-intent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "features-complete-keys",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "features-really-shuffled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "features-formula-oracle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "reference-identifiers",
+      "passed": true,
+      "detail": "['R01', 'R02', 'R03', 'R04', 'R05', 'R06', 'R07', 'R08', 'R09', 'R10', 'R11', 'R12', 'R13', 'R14', 'R15', 'R16', 'R17', 'R18', 'R19', 'R20', 'R21', 'R22', 'R23', 'R24']"
+    },
+    {
+      "check": "chapter-count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "chapter-paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "master-has-all-stages",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "master-has-all-cases",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "master-has-all-rules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "master-code-fences-balanced",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "check": "no-chat-citation-tokens",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

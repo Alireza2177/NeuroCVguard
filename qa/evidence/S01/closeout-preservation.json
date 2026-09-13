@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "qa/evidence/S01/check_closeout.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T08:00:21.287018+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "{\n  \"baseline_files_retained\": 152,\n  \"unchanged_baseline_files\": 144,\n  \"authorized_changed_files\": [\n    \"AI_ASSISTANCE.md\",\n    \"README.md\",\n    \"pyproject.toml\",\n    \"qa/acceptance_cases.json\",\n    \"qa/case_to_test_map.json\",\n    \"qa/requirements.json\",\n    \"src/neurocvguard/__init__.py\",\n    \"state/PROJECT_STATUS.json\"\n  ],\n  \"s00_status_and_historical_evidence_unchanged\": true,\n  \"normative_definitions_unchanged\": true,\n  \"later_stages_unchanged\": true,\n  \"packaged_schemas_identical\": 6,\n  \"passing_suite_tests\": 79,\n  \"s01_cases_mapped\": 11,\n  \"human_acceptance\": \"pending\"\n}\n",
+  "stderr": ""
+}

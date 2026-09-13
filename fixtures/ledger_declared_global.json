@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "source": "user_declaration",
+  "events": [
+    {
+      "event_id": "declared-global-pca",
+      "transform": "PCA",
+      "data_dependent": true,
+      "repeat_id": null,
+      "fold_id": null,
+      "inner_fold_id": null,
+      "fit_scope": "all_cohort",
+      "fit_ids": null,
+      "uses_target": false,
+      "note": "Synthetic declaration used to test evidence labeling; not a real processing record."
+    }
+  ]
+}

@@ -1,0 +1,984 @@
+[
+  {
+    "id": "S00",
+    "slug": "bootstrap",
+    "title": "Repository bootstrap and environment evidence",
+    "chapters": [
+      0,
+      1,
+      2,
+      3,
+      18,
+      20
+    ],
+    "goal": "Establish a conventional local package workspace and an exercised development environment without implementing scientific features.",
+    "packages": [
+      [
+        "A",
+        "Inspect the repository and instructions",
+        "Read the foundation; inspect existing files and git status; preserve unrelated work. Summarize scientific scope and exclusions. Create the local state/decision/evidence directories without pretending any prior code exists."
+      ],
+      [
+        "B",
+        "Create minimal installable structure",
+        "Create src/neurocvguard with version and module entry point, pyproject.toml, pytest configuration and a minimal import test. Select the prescribed dependencies, install in a virtual environment, record actual versions and interpreter. Do not advertise future subcommands."
+      ],
+      [
+        "C",
+        "Establish hygiene",
+        "Add focused .gitignore, formatter/type-check configuration, a truthful development README and proposed license metadata. Publication-specific identity/URL/name fields remain explicitly pending, not guessed. Record environment problems as blocked evidence."
+      ]
+    ],
+    "deliverables": [
+      "Installable minimal source package",
+      "Environment/compatibility record",
+      "Import smoke test and lint/type configuration",
+      "S00 handoff; all later stages not started"
+    ],
+    "gates": [
+      "Fresh environment imports the package without filesystem/network side effects",
+      "Editable install and the import smoke test actually run",
+      "No fabricated repository, PyPI, DOI or CI badge",
+      "AGENTS is loaded and the stage maps to the correct specs"
+    ],
+    "non_goals": "No audits, classifiers, GUI, public push, package upload or large generated source tree.",
+    "prompt_file": "prompts/S00_bootstrap.md",
+    "spec_files": [
+      "spec/00_project_charter.md",
+      "spec/01_scientific_contract.md",
+      "spec/02_execution_governance.md",
+      "spec/03_architecture.md",
+      "spec/18_security_release.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": null
+  },
+  {
+    "id": "S01",
+    "slug": "models_contracts",
+    "title": "Typed models, configuration and serialization contracts",
+    "chapters": [
+      1,
+      3,
+      4,
+      5,
+      20
+    ],
+    "goal": "Implement stable records and strict, offline schema validation before downstream modules create their own data formats.",
+    "packages": [
+      [
+        "A",
+        "Implement records and errors",
+        "Create typed records, enums and documented exceptions. Define configuration parsing and optional defaults. Treat JSON duplicate keys, unknown keys, booleans-as-integers and incompatible schema versions explicitly."
+      ],
+      [
+        "B",
+        "Implement serialization",
+        "Load standalone packaged schemas locally. Implement canonical JSON utilities, private versus public result boundaries, standard null behavior and model round trips. Keep clinical and provenance claims scoped."
+      ],
+      [
+        "C",
+        "Bind tests to contracts",
+        "Exercise bundled valid/invalid contract examples; reject illegal status/evidence combinations where semantic checks are required. Document fields and no-mutation behavior. Do not implement an alternative hidden config language."
+      ]
+    ],
+    "deliverables": [
+      "Typed public records and errors",
+      "Packaged schemas with offline loader",
+      "Config/default validation",
+      "Contract and serialization tests"
+    ],
+    "gates": [
+      "Unknown keys and duplicate JSON keys fail",
+      "NaN and Infinity cannot appear in emitted JSON",
+      "Schema validation does not perform HTTP requests",
+      "Public and operational serializers are visibly separate"
+    ],
+    "non_goals": "No data ingestion heuristics, auditing algorithms or estimator fitting.",
+    "prompt_file": "prompts/S01_models_contracts.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/03_architecture.md",
+      "spec/04_inputs_configuration.md",
+      "spec/05_models_serialization.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S00"
+  },
+  {
+    "id": "S02",
+    "slug": "table_io",
+    "title": "Strict tables, identities and keyed feature joins",
+    "chapters": [
+      3,
+      4,
+      5,
+      18,
+      20
+    ],
+    "goal": "Read valid local tables without losing identities or silently changing the cohort.",
+    "packages": [
+      [
+        "A",
+        "Parse metadata conservatively",
+        "Read CSV/TSV with explicit delimiter and UTF-8/BOM support. Detect duplicate headers and malformed rows before pandas coercion. Preserve zero-prefixed and Unicode IDs; enforce whitespace/control-character rules."
+      ],
+      [
+        "B",
+        "Implement role and feature checks",
+        "Validate role mappings, missing tokens and collisions. Align feature tables by one-to-one key matching. Reject extra/missing IDs and prohibited predictor roles. Convert only selected numeric features; reject infinity and unsupported data types."
+      ],
+      [
+        "C",
+        "Resource and mutation tests",
+        "Apply file and dense-size guards before avoidable allocations. Test paths with spaces/Unicode, shuffled input rows, unsupported formats, safe errors and DataFrame immutability. Implement canonical cohort/feature digest functions."
+      ]
+    ],
+    "deliverables": [
+      "load_cohort and supporting I/O",
+      "Strict feature joins",
+      "Resource guards and digests",
+      "Detailed input contract tests"
+    ],
+    "gates": [
+      "001 and 1 remain distinct",
+      "Reordering feature rows does not change aligned values",
+      "Missing/extra join keys never disappear silently",
+      "Row reordering preserves cohort digest; mapped-value changes alter it"
+    ],
+    "non_goals": "No automatic BIDS scan discovery, raw image reading, patient downloads or cleaning by silent row deletion.",
+    "prompt_file": "prompts/S02_table_io.md",
+    "spec_files": [
+      "spec/03_architecture.md",
+      "spec/04_inputs_configuration.md",
+      "spec/05_models_serialization.md",
+      "spec/18_security_release.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S01"
+  },
+  {
+    "id": "S03",
+    "slug": "identity_cohort",
+    "title": "Participant, dependency and cohort checks",
+    "chapters": [
+      1,
+      4,
+      6,
+      20
+    ],
+    "goal": "Build the identity model and accurate cohort inventory with evidence-aware findings.",
+    "packages": [
+      [
+        "A",
+        "Implement participant inventory",
+        "Count observations and people separately, inspect target stability and participant-local sessions, and report missing mapped fields. Repeated visits are an informational design cue, not confirmed leakage."
+      ],
+      [
+        "B",
+        "Build protected components",
+        "Implement union–find with field namespaces and transitive participant links. Report incomplete relationships without grouping missing values together. Preserve cross-site participant identity."
+      ],
+      [
+        "C",
+        "Add equality and variation checks",
+        "Add exact selected-feature equality using hashing plus confirmation, skip all-missing vectors and keep heuristic interpretation. Describe site/phase changes within participants. Register stable cohort rule IDs and messages."
+      ]
+    ],
+    "deliverables": [
+      "Identity components",
+      "Cohort audit checks",
+      "Initial rule registry",
+      "Unit/property tests for grouping and no false identity matches"
+    ],
+    "gates": [
+      "Shared ses-01 across people creates no false linkage",
+      "Transitive family/duplicate links form one component",
+      "Feature equality does not merge participants",
+      "Repeated observations alone do not create an observed-leakage conclusion"
+    ],
+    "non_goals": "No split generation, causal inference or automatic participant deduplication.",
+    "prompt_file": "prompts/S03_identity_cohort.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/04_inputs_configuration.md",
+      "spec/06_identity_audits.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S02"
+  },
+  {
+    "id": "S04",
+    "slug": "split_audits",
+    "title": "Split import and independent invariant auditing",
+    "chapters": [
+      1,
+      4,
+      5,
+      7,
+      20
+    ],
+    "goal": "Audit supplied partitions correctly at observation, participant, component, domain and nested levels.",
+    "packages": [
+      [
+        "A",
+        "Load plans",
+        "Support canonical JSON and outer-only assignment TSV. Validate keys, objective, digest and identities. Bind null-digest imported plans after validation while retaining imported origin."
+      ],
+      [
+        "B",
+        "Implement invariants",
+        "Check within-fold membership, coverage, participant/components, objective-dependent domain separation and class support. Distinguish ordinary repeated training membership across folds from real train/test contamination."
+      ],
+      [
+        "C",
+        "Implement nested and coverage semantics",
+        "Verify inner containment/disjointness and outer-test exclusion. Audit one-fold holdouts and repeated imported CV correctly, while recording complete-CV status separately. Output all meaningful scoped failures without exposing IDs by default."
+      ]
+    ],
+    "deliverables": [
+      "load_split_plan and audit_splits",
+      "Split/inner rule implementations",
+      "Literal-set oracle tests",
+      "Plan binding and imported TSV tests"
+    ],
+    "gates": [
+      "Known leaky fixture gives participant-overlap errors",
+      "Clean repeated-measures fixture has no participant-overlap error",
+      "Shared sites are allowed for unseen_participant",
+      "Outer test inside any inner fit is rejected"
+    ],
+    "non_goals": "Do not generate, repair, resample or silently curate plans.",
+    "prompt_file": "prompts/S04_split_audits.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/04_inputs_configuration.md",
+      "spec/05_models_serialization.md",
+      "spec/07_split_auditing.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S03"
+  },
+  {
+    "id": "S05",
+    "slug": "split_generation",
+    "title": "Group-aware and held-out-domain plan generation",
+    "chapters": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      20
+    ],
+    "goal": "Generate deterministic plans using established splitters and independently verify their invariants.",
+    "packages": [
+      [
+        "A",
+        "Participant-grouped folds",
+        "Build one-row-per-person target table, map protected components, run StratifiedGroupKFold and expand memberships to observations. Use explicit seed and canonical order."
+      ],
+      [
+        "B",
+        "Domain folds",
+        "Implement LeaveOneGroupOut for requested site/phase objectives. Reject crossing participants/components, missing required domains and impossible class training. Do not prune data."
+      ],
+      [
+        "C",
+        "Validate and export",
+        "Run the independent split audit before returning success. Generate stable plan IDs/digests and sensitive local assignment exports. Record feasible warnings separately from invalid training conditions."
+      ]
+    ],
+    "deliverables": [
+      "make_splits",
+      "Sensitive plan/assignment writers",
+      "Deterministic group and domain tests",
+      "Actionable infeasibility messages"
+    ],
+    "gates": [
+      "All protected relationships stay intact",
+      "No fallback to random splitting or seed search",
+      "Generated plans pass independent audit",
+      "Cross-site participants cause explicit domain-planning refusal"
+    ],
+    "non_goals": "No within-person forecasting, temporal split heuristics or automatic cohort selection.",
+    "prompt_file": "prompts/S05_split_generation.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/05_models_serialization.md",
+      "spec/06_identity_audits.md",
+      "spec/07_split_auditing.md",
+      "spec/08_split_generation.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S04"
+  },
+  {
+    "id": "S06",
+    "slug": "associations",
+    "title": "Descriptive acquisition–target association checks",
+    "chapters": [
+      1,
+      6,
+      9,
+      20
+    ],
+    "goal": "Implement participant-level categorical diagnostics without overstating confounding or significance.",
+    "packages": [
+      [
+        "A",
+        "Construct pairwise participant view",
+        "Require within-person stability for each covariate/target pair. Record complete/missing counts and skip unsupported unstable pairs without dropping people from the main cohort."
+      ],
+      [
+        "B",
+        "Compute known statistic",
+        "Build ordered contingency tables and use SciPy uncorrected Cramers V. Handle constant variables, observed zeros, sparse cells and category limits. Keep null reasons explicit."
+      ],
+      [
+        "C",
+        "Messages and reference tests",
+        "Register review-threshold and sparse-table warnings with descriptive language. Verify V=0/V=1 oracles, row/label invariance and repeated-observation invariance."
+      ]
+    ],
+    "deliverables": [
+      "Association diagnostics",
+      "Per-pair denominator/support records",
+      "Reference-statistic tests",
+      "Conditional, noncausal recommendations"
+    ],
+    "gates": [
+      "No p-value or causal-confounding verdict",
+      "Repeating visits cannot multiply participant counts",
+      "V=0 and V=1 fixtures agree with reference",
+      "Constant/unstable pairs are unassessable, not zero"
+    ],
+    "non_goals": "No naive permutations, mlconfound reimplementation, automatic ComBat or category merging.",
+    "prompt_file": "prompts/S06_associations.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/06_identity_audits.md",
+      "spec/09_association_diagnostics.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S05"
+  },
+  {
+    "id": "S07",
+    "slug": "provenance",
+    "title": "Declared preprocessing and runtime evidence model",
+    "chapters": [
+      1,
+      5,
+      7,
+      10,
+      20
+    ],
+    "goal": "Represent what can and cannot be known about preprocessing without claiming to reconstruct hidden pipeline history.",
+    "packages": [
+      [
+        "A",
+        "Validate declaration ledger",
+        "Parse strict JSON events and fold references. Imported source is user_declaration; reject attempts to authenticate runtime claims through a string value."
+      ],
+      [
+        "B",
+        "Audit declared scopes",
+        "Compare declared fit IDs against relevant training sets. Distinguish global learning, unknown history, external transformations and fixed row-local operations."
+      ],
+      [
+        "C",
+        "Prepare observed event contract",
+        "Implement fit-boundary record types and validation helpers for the future runner. Add tests for truthful evidence labels and unassessable upstream operations; do not fabricate observed events before fits exist."
+      ]
+    ],
+    "deliverables": [
+      "Ledger parser and provenance checks",
+      "Fit-event record contract",
+      "Declared versus observed evidence tests",
+      "Persistent upstream limitations"
+    ],
+    "gates": [
+      "Unknown history cannot pass as verified",
+      "Imported runtime labels remain declarations",
+      "Fixed non-learning transforms are not blanket leakage",
+      "Declared IDs outside train trigger appropriately qualified findings"
+    ],
+    "non_goals": "No static Python/notebook code scanner, arbitrary execution or universal LeakagePipeline.",
+    "prompt_file": "prompts/S07_provenance.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/05_models_serialization.md",
+      "spec/07_split_auditing.md",
+      "spec/10_preprocessing_provenance.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S06"
+  },
+  {
+    "id": "S08",
+    "slug": "reports",
+    "title": "Shared JSON/HTML reporting and privacy boundaries",
+    "chapters": [
+      1,
+      5,
+      13,
+      20
+    ],
+    "goal": "Make findings understandable while keeping sensitive operational artifacts distinct from public reports.",
+    "packages": [
+      [
+        "A",
+        "Implement report projection",
+        "Centralize raw-ID/path/domain aliasing and small-cell suppression. Remove suppressed table totals, percentages and derived statistics from all public representations."
+      ],
+      [
+        "B",
+        "Render offline outputs",
+        "Implement Jinja2 autoescaped HTML, packaged local CSS, contents links, print layout and versioned JSON. Use structured checks rather than recomputing statistics in templates."
+      ],
+      [
+        "C",
+        "Test adversarial content and writes",
+        "Test malicious tags/formulas, raw-ID leakage, hidden JSON, overwrite refusal, atomic writes and missing assets. Review real rendered fixture HTML for readability and explicit incomplete coverage."
+      ]
+    ],
+    "deliverables": [
+      "write_report with safe defaults",
+      "Offline HTML/CSS templates",
+      "Privacy projection",
+      "Security/layout tests and actual rendering evidence"
+    ],
+    "gates": [
+      "No raw identifiers/paths in default outputs",
+      "No external network assets or script execution",
+      "Suppressed information is not recoverable from hidden report data",
+      "Unknown checks remain prominent even for clean splits"
+    ],
+    "non_goals": "No web service, JS dashboard, trust score or anonymization guarantee.",
+    "prompt_file": "prompts/S08_reports.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/05_models_serialization.md",
+      "spec/13_reports_privacy.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S07"
+  },
+  {
+    "id": "S09",
+    "slug": "audit_cli",
+    "title": "CLI and usable audit milestone",
+    "chapters": [
+      3,
+      4,
+      5,
+      13,
+      14,
+      20
+    ],
+    "goal": "Expose the completed audit functionality through a coherent command-line workflow.",
+    "packages": [
+      [
+        "A",
+        "Add implemented commands",
+        "Implement init, validate, audit, split and report over existing APIs. Implement version/help and module/console parity. Do not advertise unfinished evaluate/demo/compare commands as operational."
+      ],
+      [
+        "B",
+        "Control output and exit status",
+        "Add fail-on policy, stderr logging, sanitized error messages, overwrite/sensitive flags and documented exit codes. Announce identity-bearing split exports."
+      ],
+      [
+        "C",
+        "Exercise a user journey",
+        "Run config validation, cohort audit, split generation and split audit on the fixture in a temporary directory. Verify API/CLI results agree and record actual command output."
+      ]
+    ],
+    "deliverables": [
+      "Working audit CLI",
+      "End-to-end audit smoke test",
+      "User-facing help/error contracts",
+      "Audit milestone handoff"
+    ],
+    "gates": [
+      "Console and python -m behavior agree",
+      "Report is written before an audit-threshold exit 3",
+      "Malformed input gives exit 2, not a fake report",
+      "No success claim for not-yet-implemented baseline features"
+    ],
+    "non_goals": "No full v0.1.0 release claim yet; no publication actions.",
+    "prompt_file": "prompts/S09_audit_cli.md",
+    "spec_files": [
+      "spec/03_architecture.md",
+      "spec/04_inputs_configuration.md",
+      "spec/05_models_serialization.md",
+      "spec/13_reports_privacy.md",
+      "spec/14_interfaces.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S08"
+  },
+  {
+    "id": "S10",
+    "slug": "baseline",
+    "title": "Fixed-parameter controlled evaluator",
+    "chapters": [
+      1,
+      5,
+      7,
+      10,
+      11,
+      14,
+      20
+    ],
+    "goal": "Implement the auditable fixed-C classification runner and exact participant-level metric semantics.",
+    "packages": [
+      [
+        "A",
+        "Preflight and pipeline",
+        "Validate complete one-repeat CV, constant participant targets, roles and training classes. Construct the prescribed imputer/scaler/logistic Pipeline and participant-loss weights."
+      ],
+      [
+        "B",
+        "Execute observed fits",
+        "Clone per fold; record actual fit boundaries; handle convergence and fitting failures. Predict only held-out rows with explicit class-order mapping. Keep upstream limitations."
+      ],
+      [
+        "C",
+        "Aggregate and expose",
+        "Average probabilities per participant, compute exact metric/null rules, write private evaluation and public reports. Add evaluate CLI. Test fixed probability oracles and an independent fit-spy."
+      ]
+    ],
+    "deliverables": [
+      "evaluate_baseline tune=false",
+      "Private EvaluationResult and public summary",
+      "Metric/reference tests",
+      "Evaluate CLI and real synthetic run evidence"
+    ],
+    "gates": [
+      "No outer-test row reaches a fit call",
+      "Undefined metrics are null with reasons",
+      "Any failed fold prevents a complete pooled score",
+      "One-off/repeated/longitudinal-unstable designs are explicitly refused"
+    ],
+    "non_goals": "No tuning until S11, arbitrary models, calibrated clinical claims or inferential intervals.",
+    "prompt_file": "prompts/S10_baseline.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/05_models_serialization.md",
+      "spec/07_split_auditing.md",
+      "spec/10_preprocessing_provenance.md",
+      "spec/11_evaluation.md",
+      "spec/14_interfaces.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S09"
+  },
+  {
+    "id": "S11",
+    "slug": "nested_tuning",
+    "title": "Nested participant-aware regularization selection",
+    "chapters": [
+      1,
+      5,
+      7,
+      8,
+      10,
+      11,
+      20
+    ],
+    "goal": "Add a small correct inner selection loop without consuming any outer-test information.",
+    "packages": [
+      [
+        "A",
+        "Inner plans",
+        "Use supplied valid inner folds or generate participant/component-disjoint inner folds from outer training only. Capture generated memberships in a derived run record."
+      ],
+      [
+        "B",
+        "Candidate evaluation",
+        "Fit fresh pipelines for each C/inner fold; compute pooled inner participant balanced accuracy; use the same memberships for every C. Implement exact tie-breaking."
+      ],
+      [
+        "C",
+        "Refit and verify",
+        "Refit a fresh chosen pipeline on outer train, then predict outer test. Add adversarial spies, infeasibility tests and proof that a failing inner run does not silently fall back."
+      ]
+    ],
+    "deliverables": [
+      "tune=true path",
+      "Candidate/selection provenance",
+      "Nested isolation tests",
+      "Documentation of inner versus outer objective"
+    ],
+    "gates": [
+      "Outer test never participates in candidate selection",
+      "Inner validation never reaches inner fit",
+      "Ties select smallest C within 1e-12",
+      "All candidates share memberships and fresh estimator objects"
+    ],
+    "non_goals": "No broad AutoML, score-based seed hunting or outer-test early stopping.",
+    "prompt_file": "prompts/S11_nested_tuning.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/05_models_serialization.md",
+      "spec/07_split_auditing.md",
+      "spec/08_split_generation.md",
+      "spec/10_preprocessing_provenance.md",
+      "spec/11_evaluation.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S10"
+  },
+  {
+    "id": "S12",
+    "slug": "comparison",
+    "title": "Design comparison and gated diagnostic examples",
+    "chapters": [
+      1,
+      7,
+      11,
+      12,
+      14,
+      20
+    ],
+    "goal": "Compare design outputs without confusing distribution changes with a measured amount of leakage.",
+    "packages": [
+      [
+        "A",
+        "Build comparison records",
+        "Load private evaluation records; check comparable cohort/features/classes/units. Preserve signed deltas and mismatch reasons; never select a winning scientific design."
+      ],
+      [
+        "B",
+        "Implement narrow diagnostic mode",
+        "Allow explicit row-random participant-overlap diagnostics only under the chapter 12 restrictions. Keep all structural guards and unmistakable invalid-for-objective labeling."
+      ],
+      [
+        "C",
+        "Expose and test",
+        "Add compare CLI and comparison report. Test negative differences, incomparable runs, incomplete results, suppression projection and unauthorized diagnostic waivers."
+      ]
+    ],
+    "deliverables": [
+      "compare_designs and compare CLI",
+      "Diagnostic-only evaluation path",
+      "Comparison/null/mismatch tests",
+      "Explanatory report language"
+    ],
+    "gates": [
+      "No delta when cohorts/features/units mismatch",
+      "Negative differences are retained",
+      "Diagnostic option cannot waive observation overlap or domain/family constraints",
+      "Every diagnostic report states invalidity for unseen-person evidence"
+    ],
+    "non_goals": "No causal optimism estimator, significance tests or best-design leaderboard.",
+    "prompt_file": "prompts/S12_comparison.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/07_split_auditing.md",
+      "spec/11_evaluation.md",
+      "spec/12_design_comparison.md",
+      "spec/14_interfaces.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S11"
+  },
+  {
+    "id": "S13",
+    "slug": "synthetic_demo",
+    "title": "Synthetic generators and reproducible end-to-end demos",
+    "chapters": [
+      1,
+      13,
+      14,
+      15,
+      20
+    ],
+    "goal": "Deliver a first-run experience that works offline and illustrates the tool honestly.",
+    "packages": [
+      [
+        "A",
+        "Generators",
+        "Implement documented local RNG scenarios clean, repeated and site_shift. Test shape/identity/determinism/mechanism parameters without asserting universal performance inflation."
+      ],
+      [
+        "B",
+        "Executable tutorials",
+        "Write the five required scripts and add demo CLI. Use only packaged synthetic data. Keep default demo non-diagnostic; opt-in scenarios disclose their intentional problems."
+      ],
+      [
+        "C",
+        "Capture actual outputs",
+        "Run every example in fresh temporary outputs, retain command/config/version evidence and produce a genuine report screenshot. Do not substitute conversational example numbers."
+      ]
+    ],
+    "deliverables": [
+      "Offline demo CLI",
+      "Five runnable scripts",
+      "Deterministic generators",
+      "Actual demo reports and provenance"
+    ],
+    "gates": [
+      "No downloads, account or real participant data",
+      "Demo runs outside the source tree after wheel installation later",
+      "Global RNG state remains unchanged",
+      "Example claims match actual output"
+    ],
+    "non_goals": "No real ADNI/AIBL distribution, biological realism claims or seed cherry-picking for a marketing metric.",
+    "prompt_file": "prompts/S13_synthetic_demo.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/13_reports_privacy.md",
+      "spec/14_interfaces.md",
+      "spec/15_synthetic_examples.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S12"
+  },
+  {
+    "id": "S14",
+    "slug": "documentation",
+    "title": "Complete documentation and contributor materials",
+    "chapters": [
+      0,
+      1,
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      21
+    ],
+    "goal": "Make the complete tool understandable and maintainable without reading implementation details.",
+    "packages": [
+      [
+        "A",
+        "User docs",
+        "Write the README, installation/troubleshooting, quickstart, input/config/CLI/API references and all required methodological interpretation pages."
+      ],
+      [
+        "B",
+        "Contributor/governance docs",
+        "Add contribution/testing/release guidance, changelog, proposed license, code of conduct, issue/PR templates and honest AI-assistance record. Keep unconfirmed public metadata blocked."
+      ],
+      [
+        "C",
+        "Executable consistency review",
+        "Build Sphinx strictly, run every command/script, validate links and match documented feature claims to code/tests. Prepare the maintainer ownership questions and external-user test checklist."
+      ]
+    ],
+    "deliverables": [
+      "Built documentation site",
+      "Accurate README and examples",
+      "Governance/support files",
+      "Doc-to-code consistency evidence"
+    ],
+    "gates": [
+      "No fake DOI/author/CI/public package claim",
+      "Every documented public function/key exists",
+      "Strict docs build passes",
+      "Limitations and sensitive-output distinctions are easy to find"
+    ],
+    "non_goals": "No invented contributors, testimonials or claims of independent review.",
+    "prompt_file": "prompts/S14_documentation.md",
+    "spec_files": [
+      "spec/00_project_charter.md",
+      "spec/01_scientific_contract.md",
+      "spec/14_interfaces.md",
+      "spec/15_synthetic_examples.md",
+      "spec/16_quality_tests.md",
+      "spec/17_documentation.md",
+      "spec/18_security_release.md",
+      "spec/20_contract_clarifications.md",
+      "spec/21_sources.md"
+    ],
+    "predecessor": "S13"
+  },
+  {
+    "id": "S15",
+    "slug": "hardening",
+    "title": "Adversarial, property, security and scientific review",
+    "chapters": [
+      1,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      16,
+      18,
+      20
+    ],
+    "goal": "Try to falsify the implementation against the specification rather than only confirming happy paths.",
+    "packages": [
+      [
+        "A",
+        "Adversarial coverage",
+        "Implement remaining acceptance cases and Hypothesis invariants; exercise malformed data, missing classes, transitive groups, hidden report data, low sample counts and platform paths."
+      ],
+      [
+        "B",
+        "Independent review and mutations",
+        "Use a separate review pass over actual code and source contracts. Verify critical tests catch the specified intentional faults; restore code and rerun. Record disagreements and human-review status honestly."
+      ],
+      [
+        "C",
+        "Performance/security evidence",
+        "Run resource/scaling benchmarks, verify no runtime networking or unsafe loaders, review dependencies/licenses/workflows and inspect privacy output. Fix defects without weakening gates."
+      ]
+    ],
+    "deliverables": [
+      "Completed case-to-test map",
+      "Coverage and mutation evidence",
+      "Measured benchmark/security record",
+      "Scientific review findings and resolutions"
+    ],
+    "gates": [
+      "Coverage thresholds and all mandatory cases pass",
+      "No result-changing defect remains",
+      "Actual resources are recorded without fabricated speed claims",
+      "Review provenance distinguishes agent and human work"
+    ],
+    "non_goals": "No scope expansion or hiding failing tests behind skips/tolerance changes.",
+    "prompt_file": "prompts/S15_hardening.md",
+    "spec_files": [
+      "spec/01_scientific_contract.md",
+      "spec/04_inputs_configuration.md",
+      "spec/05_models_serialization.md",
+      "spec/06_identity_audits.md",
+      "spec/07_split_auditing.md",
+      "spec/08_split_generation.md",
+      "spec/09_association_diagnostics.md",
+      "spec/10_preprocessing_provenance.md",
+      "spec/11_evaluation.md",
+      "spec/12_design_comparison.md",
+      "spec/13_reports_privacy.md",
+      "spec/16_quality_tests.md",
+      "spec/18_security_release.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S14"
+  },
+  {
+    "id": "S16",
+    "slug": "release_candidate",
+    "title": "Build, clean installation and release-readiness dossier",
+    "chapters": [
+      0,
+      3,
+      5,
+      13,
+      14,
+      16,
+      17,
+      18,
+      20
+    ],
+    "goal": "Prove that the complete package, not just the source tree, is ready for a controlled public release.",
+    "packages": [
+      [
+        "A",
+        "Distributions",
+        "Build wheel/sdist, validate metadata, inspect package files and verify templates/schemas/demo resources. Check version consistency and hashes."
+      ],
+      [
+        "B",
+        "Clean installs and CI",
+        "Install the wheel outside the repo; run import/CLI/demo and core tests. Exercise the required CI matrix or state which platforms remain unverified. No editable-source fallback."
+      ],
+      [
+        "C",
+        "Dossier and human gates",
+        "Assemble actual tests/build/docs/privacy evidence, unresolved risks and public metadata checklist. Set local candidate ready-for-review, never auto-approve a public release."
+      ]
+    ],
+    "deliverables": [
+      "Validated distribution artifacts",
+      "Clean-install evidence",
+      "Release dossier and checklist",
+      "Recorded owner/security/citation/publication gates"
+    ],
+    "gates": [
+      "Wheel demo works with no source-tree access",
+      "All runtime assets included; private data excluded",
+      "Actual supported platform matrix is truthful",
+      "No external publication has occurred implicitly"
+    ],
+    "non_goals": "No public push/tag/upload/DOI creation without S17 authorization.",
+    "prompt_file": "prompts/S16_release_candidate.md",
+    "spec_files": [
+      "spec/00_project_charter.md",
+      "spec/03_architecture.md",
+      "spec/05_models_serialization.md",
+      "spec/13_reports_privacy.md",
+      "spec/14_interfaces.md",
+      "spec/16_quality_tests.md",
+      "spec/17_documentation.md",
+      "spec/18_security_release.md",
+      "spec/20_contract_clarifications.md"
+    ],
+    "predecessor": "S15"
+  },
+  {
+    "id": "S17",
+    "slug": "public_release",
+    "title": "Human-approved public release and maintenance handoff",
+    "chapters": [
+      2,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "goal": "Publish only the reviewed artifacts after explicit owner authorization and then verify the public installation.",
+    "packages": [
+      [
+        "A",
+        "Owner and metadata checkpoint",
+        "Confirm real maintainer identity/contact, copyright, license, namespace availability, public repository visibility and exact release commit. Record consent for each external action."
+      ],
+      [
+        "B",
+        "Approved publication",
+        "Publish the approved repository/tag/release and package through least-privilege workflows. Register an archive/DOI only if authorized; insert only actual identifiers. Never manufacture historical activity."
+      ],
+      [
+        "C",
+        "Independent verification and maintenance",
+        "Verify install from the real published distribution in a clean environment; check docs and citation links; record release evidence and known limitations. Open maintenance tasks based on actual findings."
+      ]
+    ],
+    "deliverables": [
+      "Actual public release, only if authorized",
+      "Verified public installation",
+      "Accurate citation/release metadata",
+      "Maintenance and optional research backlog"
+    ],
+    "gates": [
+      "No invented authorization or public identifier",
+      "Published bytes/version match reviewed release",
+      "AI assistance and human review described truthfully",
+      "Publication or DOI failure is reported as incomplete, not success"
+    ],
+    "non_goals": "No automated journal submission, artificial user activity or promise of research publication.",
+    "prompt_file": "prompts/S17_public_release.md",
+    "spec_files": [
+      "spec/02_execution_governance.md",
+      "spec/17_documentation.md",
+      "spec/18_security_release.md",
+      "spec/19_research_roadmap.md",
+      "spec/20_contract_clarifications.md",
+      "spec/21_sources.md"
+    ],
+    "predecessor": "S16"
+  }
+]

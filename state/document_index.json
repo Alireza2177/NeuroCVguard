@@ -1,0 +1,115 @@
+{
+  "foundation_version": "1.0.0",
+  "sections": [
+    {
+      "slug": "00_project_charter",
+      "title": "00 — Project charter and release boundary",
+      "path": "spec/00_project_charter.md"
+    },
+    {
+      "slug": "01_scientific_contract",
+      "title": "01 — Scientific contract and permitted claims",
+      "path": "spec/01_scientific_contract.md"
+    },
+    {
+      "slug": "02_execution_governance",
+      "title": "02 — Codex execution protocol and change control",
+      "path": "spec/02_execution_governance.md"
+    },
+    {
+      "slug": "03_architecture",
+      "title": "03 — Architecture, package boundaries and dependencies",
+      "path": "spec/03_architecture.md"
+    },
+    {
+      "slug": "04_inputs_configuration",
+      "title": "04 — Input tables and configuration contract",
+      "path": "spec/04_inputs_configuration.md"
+    },
+    {
+      "slug": "05_models_serialization",
+      "title": "05 — Public models, schemas and deterministic serialization",
+      "path": "spec/05_models_serialization.md"
+    },
+    {
+      "slug": "06_identity_audits",
+      "title": "06 — Cohort and dependency auditing",
+      "path": "spec/06_identity_audits.md"
+    },
+    {
+      "slug": "07_split_auditing",
+      "title": "07 — Split auditing and design invariants",
+      "path": "spec/07_split_auditing.md"
+    },
+    {
+      "slug": "08_split_generation",
+      "title": "08 — Deterministic split generation",
+      "path": "spec/08_split_generation.md"
+    },
+    {
+      "slug": "09_association_diagnostics",
+      "title": "09 — Acquisition and target association diagnostics",
+      "path": "spec/09_association_diagnostics.md"
+    },
+    {
+      "slug": "10_preprocessing_provenance",
+      "title": "10 — Preprocessing declarations and observed fitting boundaries",
+      "path": "spec/10_preprocessing_provenance.md"
+    },
+    {
+      "slug": "11_evaluation",
+      "title": "11 — Controlled classification baseline and nested tuning",
+      "path": "spec/11_evaluation.md"
+    },
+    {
+      "slug": "12_design_comparison",
+      "title": "12 — Design comparisons and intentional negative examples",
+      "path": "spec/12_design_comparison.md"
+    },
+    {
+      "slug": "13_reports_privacy",
+      "title": "13 — Offline reports, usability and privacy projection",
+      "path": "spec/13_reports_privacy.md"
+    },
+    {
+      "slug": "14_interfaces",
+      "title": "14 — Public Python API and command-line interface",
+      "path": "spec/14_interfaces.md"
+    },
+    {
+      "slug": "15_synthetic_examples",
+      "title": "15 — Synthetic fixtures, examples and reproducibility",
+      "path": "spec/15_synthetic_examples.md"
+    },
+    {
+      "slug": "16_quality_tests",
+      "title": "16 — Test strategy, acceptance oracles and quality gates",
+      "path": "spec/16_quality_tests.md"
+    },
+    {
+      "slug": "17_documentation",
+      "title": "17 — Documentation, examples and community standards",
+      "path": "spec/17_documentation.md"
+    },
+    {
+      "slug": "18_security_release",
+      "title": "18 — Security, packaging and release operations",
+      "path": "spec/18_security_release.md"
+    },
+    {
+      "slug": "19_research_roadmap",
+      "title": "19 — Paper-readiness and post-v0.1 research boundaries",
+      "path": "spec/19_research_roadmap.md"
+    },
+    {
+      "slug": "20_contract_clarifications",
+      "title": "20 — Cross-contract clarifications and precedence",
+      "path": "spec/20_contract_clarifications.md"
+    },
+    {
+      "slug": "21_sources",
+      "title": "21 — Source register and evidence boundaries",
+      "path": "spec/21_sources.md"
+    }
+  ]
+}

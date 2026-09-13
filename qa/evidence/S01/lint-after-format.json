@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    ".",
+    "--output-format",
+    "concise"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T07:43:20.677020+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 1,
+  "stdout": "src\\neurocvguard\\_projection.py:32:101: E501 Line too long (106 > 100)\nsrc\\neurocvguard\\_projection.py:33:101: E501 Line too long (104 > 100)\nsrc\\neurocvguard\\_projection.py:58:101: E501 Line too long (102 > 100)\nsrc\\neurocvguard\\_projection.py:74:101: E501 Line too long (124 > 100)\nsrc\\neurocvguard\\_projection.py:272:101: E501 Line too long (150 > 100)\nsrc\\neurocvguard\\config.py:189:101: E501 Line too long (105 > 100)\nsrc\\neurocvguard\\config.py:197:101: E501 Line too long (106 > 100)\nsrc\\neurocvguard\\models.py:287:101: E501 Line too long (103 > 100)\nsrc\\neurocvguard\\models.py:459:101: E501 Line too long (103 > 100)\nFound 9 errors.\n",
+  "stderr": ""
+}

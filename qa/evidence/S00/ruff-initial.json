@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T07:01:32.017774+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 1,
+  "stdout": "I001 [*] Import block is un-sorted or un-formatted\n  --> qa\\evidence\\S00\\run_check.py:3:1\n   |\n 1 |   \"\"\"Run a local S00 check and save an exclusive, privacy-normalized JSON record.\"\"\"\n 2 |\n 3 | / import datetime\n 4 | | import json\n 5 | | import os\n 6 | | from pathlib import Path\n 7 | | import platform\n 8 | | import re\n 9 | | import subprocess\n10 | | import sys\n   | |__________^\nhelp: Organize imports\n   |\n5  | import os\n   - from pathlib import Path\n6  | import platform\n7  | import re\n8  | import subprocess\n9  | import sys\n10 + from pathlib import Path\n11 |\n   |\n\nUP017 [*] Use `datetime.UTC` alias\n  --> qa\\evidence\\S00\\run_check.py:20:35\n   |\n18 |     if destination.exists():\n19 |         raise FileExistsError(destination)\n20 |     start = datetime.datetime.now(datetime.timezone.utc).isoformat()\n   |                                   ^^^^^^^^^^^^^^^^^^^^^\n21 |     result = subprocess.run(command, cwd=root, capture_output=True, text=True)\n   |\nhelp: Convert to `datetime.UTC` alias\n   |\n19 |         raise FileExistsError(destination)\n   -     start = datetime.datetime.now(datetime.timezone.utc).isoformat()\n20 +     start = datetime.datetime.now(datetime.UTC).isoformat()\n21 |     result = subprocess.run(command, cwd=root, capture_output=True, text=True)\n   |\n\nB023 Function definition does not bind loop variable `replacement`\n  --> qa\\evidence\\S00\\run_check.py:31:67\n   |\n29 |             if path:\n30 |                 for spelling in (path, path.replace(\"\\\\\", \"/\")):\n31 |                     value = re.sub(re.escape(spelling), lambda _: replacement, value, flags=re.I)\n   |                                                                   ^^^^^^^^^^^\n32 |         return value\n   |\n\nI001 [*] Import block is un-sorted or un-formatted\n --> tests\\test_bootstrap.py:3:1\n  |\n1 |   \"\"\"S00 installed-package acceptance checks using fresh Python processes.\"\"\"\n2 |\n3 | / import json\n4 | | from pathlib import Path\n5 | | import subprocess\n6 | | import sys\n7 | | import sysconfig\n8 | |\n9 | | import pytest\n  | |_____________^\nhelp: Organize imports\n  |\n3 | import json\n  - from pathlib import Path\n4 | import subprocess\n5 | import sys\n6 | import sysconfig\n7 + from pathlib import Path\n8 |\n  |\n\nFound 4 errors.\n[*] 3 fixable with the `--fix` option.\n",
+  "stderr": ""
+}

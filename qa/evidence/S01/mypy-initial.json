@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "mypy",
+    "src/neurocvguard"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T07:35:12.506593+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 1,
+  "stdout": "src\\neurocvguard\\schema.py:103: error: Assignment to variable \"error\" outside except: block  [misc]\nsrc\\neurocvguard\\schema.py:111: error: Redundant cast to \"dict[str, JSONValue]\"  [redundant-cast]\nsrc\\neurocvguard\\_projection.py:148: error: Dict entry 7 has incompatible type \"str\": \"list[str] | list[int | float | str | list[JSONValue] | dict[str, JSONValue] | None]\"; expected \"str\": \"int | float | str | list[JSONValue] | dict[str, JSONValue] | None\"  [dict-item]\nsrc\\neurocvguard\\_projection.py:189: error: Incompatible types in assignment (expression has type \"list[str]\", target has type \"JSONValue\")  [assignment]\nFound 4 errors in 2 files (checked 9 source files)\n",
+  "stderr": ""
+}

@@ -1,0 +1,359 @@
+{
+  "basis": "S01/baseline.json; no Git repository",
+  "excluded": [
+    ".git",
+    ".hypothesis",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".venv-install",
+    "__pycache__",
+    "_build",
+    "build",
+    "dist"
+  ],
+  "note": "Excludes this inventory itself, bytecode and egg-info. Hashes describe stage closeout files, including human-review-pending handoff.",
+  "changes": [
+    {
+      "path": "AI_ASSISTANCE.md",
+      "kind": "modified",
+      "sha256": "deab189fb629bb8344d866152dce15d0ceacb6055dcd1bf34ba1469a4be36216"
+    },
+    {
+      "path": "README.md",
+      "kind": "modified",
+      "sha256": "cf6d839a883cc3f82934186ded4edeb5d064529cf592a9d42c440c331d509417"
+    },
+    {
+      "path": "docs/contracts.md",
+      "kind": "added",
+      "sha256": "b85b6b0d7fc321a7624f0749a940d2aa5d2c44f8a3eb7139232c58b15b3ee3f9"
+    },
+    {
+      "path": "pyproject.toml",
+      "kind": "modified",
+      "sha256": "b5d04b682dc62a091de9a477c8e19a6872cbdbcaaff3814b30676aafaa157319"
+    },
+    {
+      "path": "qa/acceptance_cases.json",
+      "kind": "modified",
+      "sha256": "0afe9e12aa533b0429a0abce08239408322d18ffe2f2a190fddeae6315f6ab41"
+    },
+    {
+      "path": "qa/case_to_test_map.json",
+      "kind": "modified",
+      "sha256": "2388ad5db72604f69c890948780785a177c333fd3e8ac65148ce8df3d9d066db"
+    },
+    {
+      "path": "qa/evidence/S01/baseline.json",
+      "kind": "added",
+      "sha256": "75814517ce832767128040e5a22956962defb0837a368403f76ff2cd8e9879b6"
+    },
+    {
+      "path": "qa/evidence/S01/check_closeout.py",
+      "kind": "added",
+      "sha256": "2ef6cebe2a8773433383fe1873c46086a68fd089616d4400774273e939e8b8ca"
+    },
+    {
+      "path": "qa/evidence/S01/check_installed.py",
+      "kind": "added",
+      "sha256": "16118296c38618e07b8d07d533991cf86efaabbc6d89bdc491f16313d099f37a"
+    },
+    {
+      "path": "qa/evidence/S01/closeout-format-helper.json",
+      "kind": "added",
+      "sha256": "8e38a62db0383bb9531242f6e748fb6ba4a9b33b3d7bacca09ec3dad88bc8ece"
+    },
+    {
+      "path": "qa/evidence/S01/closeout-format-passed.json",
+      "kind": "added",
+      "sha256": "146aff23bc6d66f4b2c9a740c4618ab424e91b56d7c15df98e361f02774af987"
+    },
+    {
+      "path": "qa/evidence/S01/closeout-format-runner.json",
+      "kind": "added",
+      "sha256": "3d399ac7302a1eff91374305aa1f0f128d3a46c080d903d7101234a6e20a0983"
+    },
+    {
+      "path": "qa/evidence/S01/closeout-format.json",
+      "kind": "added",
+      "sha256": "b0474edb5bd83126b8e85b3502fd26569ea9b48df82499138d475de657ed85ac"
+    },
+    {
+      "path": "qa/evidence/S01/closeout-lint.json",
+      "kind": "added",
+      "sha256": "5a90138babe17d5c85f704e44b8fadbe1d779adfca656e5868586ba221f59910"
+    },
+    {
+      "path": "qa/evidence/S01/closeout-preservation.json",
+      "kind": "added",
+      "sha256": "c135642388faf7f7d5d7d1347018704cfecb1d0a6113bddc5824a84d8a1c95ac"
+    },
+    {
+      "path": "qa/evidence/S01/commands.md",
+      "kind": "added",
+      "sha256": "686f72281b8706a2b40b5098e542be4660f92db01027aa227c9dd69b1c708f0b"
+    },
+    {
+      "path": "qa/evidence/S01/doctests.json",
+      "kind": "added",
+      "sha256": "105f727f4e2c64a36b500535a4ccbf9d4af4f43bbfca63ca10adbe593b914d90"
+    },
+    {
+      "path": "qa/evidence/S01/doctests.xml",
+      "kind": "added",
+      "sha256": "d2aa132304b8ad4774b58c37e4aad4324be444555809f2cba1ebb05866ea5f61"
+    },
+    {
+      "path": "qa/evidence/S01/edges.json",
+      "kind": "added",
+      "sha256": "4d5b9fc182592bc14dd145b320a0bb370586c00bad2eee484543c3ff73e1a205"
+    },
+    {
+      "path": "qa/evidence/S01/environment-final.json",
+      "kind": "added",
+      "sha256": "01b29c2e1a66fd9a7894e85de8796e73e2c710fb88fcb870677ba1d38b4360bc"
+    },
+    {
+      "path": "qa/evidence/S01/format-edges.json",
+      "kind": "added",
+      "sha256": "64b6349a134e20487fce74071769a828e97de96b117ec071c8b39dcc15f3e42b"
+    },
+    {
+      "path": "qa/evidence/S01/format-final.json",
+      "kind": "added",
+      "sha256": "44972a0a84636a8e104318b919b8413d79accd2c6d6a0bc323bf780281ad7ab0"
+    },
+    {
+      "path": "qa/evidence/S01/format-fix.json",
+      "kind": "added",
+      "sha256": "31a475441555a9fc4de3ee08ff73b6f90aa423c564234b2e2bf57aa512f83188"
+    },
+    {
+      "path": "qa/evidence/S01/format-passed.json",
+      "kind": "added",
+      "sha256": "7b501708693b45621a10f70a26f126eb60fb4f277ec97c086083260b74deb8ca"
+    },
+    {
+      "path": "qa/evidence/S01/formatting-finalize.json",
+      "kind": "added",
+      "sha256": "290c0ec4ec8756ea37f8df75c6591e9f106ff8fa229873dca22e92d647e987db"
+    },
+    {
+      "path": "qa/evidence/S01/import-order-finalize.json",
+      "kind": "added",
+      "sha256": "0e177264edf38cfd2e1590afeb46f36155641f293cd3fe1e93c255de6a10dfef"
+    },
+    {
+      "path": "qa/evidence/S01/install-editable-final.json",
+      "kind": "added",
+      "sha256": "39dffbbd1f06ee1d31435d57d6b13da8ca3b1816479c864cef1a0de7af80dbf0"
+    },
+    {
+      "path": "qa/evidence/S01/install-ordinary-final.json",
+      "kind": "added",
+      "sha256": "816b6580b45dbcca520187a522f7b25c49bce1ac29516d943530123a09d70cc7"
+    },
+    {
+      "path": "qa/evidence/S01/install-type-stubs-retry.json",
+      "kind": "added",
+      "sha256": "27afd78eacbc81c4b82cce5b8e3b53a24340f3c765ceb5c20c685797d6b63214"
+    },
+    {
+      "path": "qa/evidence/S01/install-type-stubs.json",
+      "kind": "added",
+      "sha256": "05379672d3bf7f469432667b768570ab2ca4812cb5e764fb0a967a62b9f8ff92"
+    },
+    {
+      "path": "qa/evidence/S01/installed-resources.json",
+      "kind": "added",
+      "sha256": "2013c6c7ac92aa85c464ede6951480b3698aebe9046a3abbc5e8b9f68787af28"
+    },
+    {
+      "path": "qa/evidence/S01/instruction_loading.md",
+      "kind": "added",
+      "sha256": "d42be5ff7b5661e617112ae08eb6ca651e9fcc84a5c8bbae7495dc39165959f3"
+    },
+    {
+      "path": "qa/evidence/S01/lint-after-format.json",
+      "kind": "added",
+      "sha256": "02cb40693ff036570babeb7d89cd59154f1b9781549ce3f50f5c435bf9384efa"
+    },
+    {
+      "path": "qa/evidence/S01/lint-fix.json",
+      "kind": "added",
+      "sha256": "0b82a9c5cceee3cdfd8499f16bd42ec1d636e4dffd8ba287004c932e292696e6"
+    },
+    {
+      "path": "qa/evidence/S01/lint-initial.json",
+      "kind": "added",
+      "sha256": "2116a9e1aa887df221037e4a15dfeca8cbfcd4a9d31b8fc2d9ccbeffe528852a"
+    },
+    {
+      "path": "qa/evidence/S01/mypy-final.json",
+      "kind": "added",
+      "sha256": "bb5cd26961716c8bbc77c11b8853ec064c07093dee0296df0ca66697c1ed3037"
+    },
+    {
+      "path": "qa/evidence/S01/mypy-initial.json",
+      "kind": "added",
+      "sha256": "1090abd7baff492621e1174fb88680913b5d07ef943b6c80a28d9eb8660590ac"
+    },
+    {
+      "path": "qa/evidence/S01/mypy-second.json",
+      "kind": "added",
+      "sha256": "4f98c33757d59570719d531b95e28ce8e892a5d2c714aa13711efb12253ad93e"
+    },
+    {
+      "path": "qa/evidence/S01/pip-check.json",
+      "kind": "added",
+      "sha256": "1a4f6b3c3f088085447535616fd8d554e1fee32904bc7b381af53afcad08a28d"
+    },
+    {
+      "path": "qa/evidence/S01/pytest-final.json",
+      "kind": "added",
+      "sha256": "c64cf7811198caadccdf30da8fe985f91eb1987d697b03733e332b1337d1f38a"
+    },
+    {
+      "path": "qa/evidence/S01/pytest-final.xml",
+      "kind": "added",
+      "sha256": "324e0a269656b0252e7acb6c9bf13d6d2323f9f488cd2bd2c66e15af1c942712"
+    },
+    {
+      "path": "qa/evidence/S01/review.md",
+      "kind": "added",
+      "sha256": "c88e24665f70fb204abc5b2e092c2530b2f827e2e6cc3d8b6a892718fae1a1e5"
+    },
+    {
+      "path": "qa/evidence/S01/ruff-final.json",
+      "kind": "added",
+      "sha256": "2358a2d2df7df3f76d89f74dc5aa3b0628f466b2d1257b787d35841dd6331b81"
+    },
+    {
+      "path": "qa/evidence/S01/ruff-passed.json",
+      "kind": "added",
+      "sha256": "45ceeb6e022f054fe698a1e3d0ba461b3dd424b8280e0fcc091ab7647913b7fe"
+    },
+    {
+      "path": "qa/evidence/S01/run_check.py",
+      "kind": "added",
+      "sha256": "634bf0dfac228767dd73ed620f4585d539879a0a459bdb800be0a605da3fe263"
+    },
+    {
+      "path": "qa/evidence/S01/s01a-config.json",
+      "kind": "added",
+      "sha256": "2a5aafe0a0be0af8101d404b92ed5335c7314c0da8e22d62574efacc21e85381"
+    },
+    {
+      "path": "qa/evidence/S01/s01b-contracts-fixed.json",
+      "kind": "added",
+      "sha256": "82748008e36d0114032fa7254ab2cfade5d8ab3fb13e6ea4e81c127ef5559976"
+    },
+    {
+      "path": "qa/evidence/S01/s01b-contracts.json",
+      "kind": "added",
+      "sha256": "e04084ca2f51d689f9d61a595a133e0973a6abd34c4980d0bad0a1c21761c5a4"
+    },
+    {
+      "path": "qa/requirements.json",
+      "kind": "modified",
+      "sha256": "7e9d8dc3864bd4c1b5040e5f15b39588ff5cbcf941cf8259e278c80880ca2a90"
+    },
+    {
+      "path": "src/neurocvguard/__init__.py",
+      "kind": "modified",
+      "sha256": "c01d7bc4cc3909f5723695403cfd9860d7b15e06fa99beccc0653f11ea8475f3"
+    },
+    {
+      "path": "src/neurocvguard/_projection.py",
+      "kind": "added",
+      "sha256": "97caab754c03f5ab04bc927209bc6f7d7a2e3caf9b6e561b0ad88ca3e37f6863"
+    },
+    {
+      "path": "src/neurocvguard/_records.py",
+      "kind": "added",
+      "sha256": "d24c0ff82f3c35465079ac2a2f50161ef745fa5006948d3e1736e125027e83da"
+    },
+    {
+      "path": "src/neurocvguard/config.py",
+      "kind": "added",
+      "sha256": "25bd172c4c08b9c2912461d7547cafa3d403ed8d9a8b02f55d0e429730d094e8"
+    },
+    {
+      "path": "src/neurocvguard/errors.py",
+      "kind": "added",
+      "sha256": "f8205c72bd9fe367a5575646fe34c47737530590fab75661cab0ceaa28dbb674"
+    },
+    {
+      "path": "src/neurocvguard/models.py",
+      "kind": "added",
+      "sha256": "8511563355590b3fe9b0e56cbf85f9f8f414d2bfaa8584626d6a3b9d48808c7d"
+    },
+    {
+      "path": "src/neurocvguard/schema.py",
+      "kind": "added",
+      "sha256": "01516210939cc14c9337373312e02c23f51822416bdbc2cf44e06c8ab8823de3"
+    },
+    {
+      "path": "src/neurocvguard/schemas/audit-report.schema.json",
+      "kind": "added",
+      "sha256": "4dfa584699b5b863ad9192e04294195303091cbcb3b09ca65fdf822608bed626"
+    },
+    {
+      "path": "src/neurocvguard/schemas/comparison-summary.schema.json",
+      "kind": "added",
+      "sha256": "5fc2054d25640df19b750b6aee95353f603cb7a8e6aa4d0293187bf21f03150c"
+    },
+    {
+      "path": "src/neurocvguard/schemas/config.schema.json",
+      "kind": "added",
+      "sha256": "5f6363d9dec4adbc82152177c9e52b860c2cfab101252e14623204a3c2cb41e7"
+    },
+    {
+      "path": "src/neurocvguard/schemas/evaluation-result.schema.json",
+      "kind": "added",
+      "sha256": "684b3e8fcaab31eb562d6980337733ea2dfe8e2f3a008589addca132f2d3bf8f"
+    },
+    {
+      "path": "src/neurocvguard/schemas/preprocessing-ledger.schema.json",
+      "kind": "added",
+      "sha256": "2de708c42f865d2d73ee63c66c06cab2b40d188a554c8b8a93cf67357d979b54"
+    },
+    {
+      "path": "src/neurocvguard/schemas/split-plan.schema.json",
+      "kind": "added",
+      "sha256": "94caa7d57078c6f052ab2c14a2798f941b21758d459337f741609d869f450945"
+    },
+    {
+      "path": "src/neurocvguard/serialization.py",
+      "kind": "added",
+      "sha256": "d6ff6d9ff683fd3f1be8fcda69552e47977c75ba4a42d25fbc0aa8b43a1a930b"
+    },
+    {
+      "path": "state/PROJECT_STATUS.json",
+      "kind": "modified",
+      "sha256": "cde7cbe53e013c117baa7208d10fb0459e47009e6e1cf403af4493342c82d34c"
+    },
+    {
+      "path": "state/handoffs/S01.md",
+      "kind": "added",
+      "sha256": "566f4f6d079fa9effc1bf6601c1a7032a414d0c16b108cf871a7f27adb33e207"
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "added",
+      "sha256": "5a171e9bef90977580f0bdcb21e892293958f947aa44fc0b7f30088d42c65164"
+    },
+    {
+      "path": "tests/test_contract_edges.py",
+      "kind": "added",
+      "sha256": "8c3a19f77d43cff8bc4fb390efb4cff2d7a68805b0cc71834844e77ecfcbdeff"
+    },
+    {
+      "path": "tests/test_contracts.py",
+      "kind": "added",
+      "sha256": "0f879c342cdbb44b63ed325398d6b9617a81de2a17a5f63b14847adb16b48c20"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T08:54:09.206136+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "I001 [*] Import block is un-sorted or un-formatted\n  --> tests\\test_split_edges.py:3:1\n   |\n 1 |   \"\"\"Additional S04 identity, privacy and no-repair boundaries.\"\"\"\n 2 |\n 3 | / import json\n 4 | | from dataclasses import replace\n 5 | |\n 6 | | import pandas as pd\n 7 | | import pytest\n 8 | |\n 9 | | from neurocvguard import audit_splits, load_split_plan\n10 | | from neurocvguard.config import AuditConfig, Objective\n11 | | from neurocvguard.errors import SplitValidationError\n12 | | from neurocvguard.models import CheckStatus, Cohort, PlanOrigin, SplitPlan\n13 | | from neurocvguard.serialization import json_digest\n14 | | from test_partitions import findings, objective_config, plan_fixture\n15 | | from test_split_audit import nested_plan, summary\n   | |_________________________________________________^\nhelp: Organize imports\n   |\n7  | import pytest\n8  + from test_partitions import findings, objective_config, plan_fixture\n9  + from test_split_audit import nested_plan, summary\n10 |\n--------------------------------------------------------------------------------\n15 | from neurocvguard.serialization import json_digest\n   - from test_partitions import findings, objective_config, plan_fixture\n   - from test_split_audit import nested_plan, summary\n16 |\n   |\n\nFound 1 error.\n[*] 1 fixable with the `--fix` option.\n",
+  "stderr": ""
+}

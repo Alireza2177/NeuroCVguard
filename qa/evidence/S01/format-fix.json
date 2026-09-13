@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "src/neurocvguard",
+    "tests/test_config.py",
+    "tests/test_contracts.py",
+    "qa/evidence/S01",
+    "pyproject.toml"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T07:43:20.292566+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 0,
+  "stdout": "8 files reformatted, 4 files left unchanged\n",
+  "stderr": ""
+}

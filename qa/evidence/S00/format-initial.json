@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "--check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T07:01:32.114011+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 1,
+  "stdout": "unformatted: File would be reformatted\n   --> tests\\test_bootstrap.py:14:14\n   |\n13 |     \"\"\"AT-S00-01: block non-code reads, writes, sockets, and worker creation.\"\"\"\n   -     probe = r'''\n14 +     probe = r\"\"\"\n15 | import os\n--------------------------------------------------------------------------------\n45 | assert neurocvguard.__version__ == \"0.1.0\"\n   - '''\n46 + \"\"\"\n47 |     # -B prevents interpreter bytecode caching; the package itself must stay inert.\n--------------------------------------------------------------------------------\n93 |     command = (\n   -         [sys.executable, \"-I\", \"-m\", \"neurocvguard\"]\n   -         if entry == \"module\"\n   -         else [str(executable)]\n   -     )\n   -     result = subprocess.run(\n   -         [*command, *arguments], cwd=tmp_path, capture_output=True, text=True\n94 +         [sys.executable, \"-I\", \"-m\", \"neurocvguard\"] if entry == \"module\" else [str(executable)]\n95 |     )\n96 +     result = subprocess.run([*command, *arguments], cwd=tmp_path, capture_output=True, text=True)\n97 |     assert result.returncode == code, result.stderr\n   |\n\n1 file would be reformatted, 65 files already formatted\n",
+  "stderr": ""
+}

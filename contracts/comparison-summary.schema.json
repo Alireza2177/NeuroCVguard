@@ -1,0 +1,375 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:neurocvguard:schema:comparison-summary:1.0",
+  "title": "NeuroCVguard comparison-summary contract 1.0",
+  "type": "object",
+  "properties": {
+    "designs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "objective": {
+            "enum": [
+              "unseen_participant",
+              "unseen_site",
+              "unseen_phase",
+              "audit_only"
+            ]
+          },
+          "diagnostic_only": {
+            "type": "boolean"
+          },
+          "metrics": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "accuracy": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "reason": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "n": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "reason",
+                      "n"
+                    ],
+                    "additionalProperties": false,
+                    "allOf": [
+                      {
+                        "if": {
+                          "properties": {
+                            "value": {
+                              "type": "null"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "reason": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        },
+                        "else": {
+                          "properties": {
+                            "reason": {
+                              "type": "null"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "balanced_accuracy": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "reason": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "n": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "reason",
+                      "n"
+                    ],
+                    "additionalProperties": false,
+                    "allOf": [
+                      {
+                        "if": {
+                          "properties": {
+                            "value": {
+                              "type": "null"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "reason": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        },
+                        "else": {
+                          "properties": {
+                            "reason": {
+                              "type": "null"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "macro_f1": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "reason": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "n": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "reason",
+                      "n"
+                    ],
+                    "additionalProperties": false,
+                    "allOf": [
+                      {
+                        "if": {
+                          "properties": {
+                            "value": {
+                              "type": "null"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "reason": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        },
+                        "else": {
+                          "properties": {
+                            "reason": {
+                              "type": "null"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "roc_auc": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "reason": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "n": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "reason",
+                      "n"
+                    ],
+                    "additionalProperties": false,
+                    "allOf": [
+                      {
+                        "if": {
+                          "properties": {
+                            "value": {
+                              "type": "null"
+                            }
+                          }
+                        },
+                        "then": {
+                          "properties": {
+                            "reason": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        },
+                        "else": {
+                          "properties": {
+                            "reason": {
+                              "type": "null"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "n_participants": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "per_class": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "class_label": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "support": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "recall": {
+                          "type": [
+                            "number",
+                            "null"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "class_label",
+                        "support",
+                        "recall"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 2
+                  },
+                  "confusion_matrix": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "minItems": 2
+                    },
+                    "minItems": 2
+                  }
+                },
+                "required": [
+                  "accuracy",
+                  "balanced_accuracy",
+                  "macro_f1",
+                  "roc_auc",
+                  "n_participants",
+                  "per_class",
+                  "confusion_matrix"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "objective",
+          "diagnostic_only",
+          "metrics"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "differences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "design_a": {
+            "type": "string",
+            "minLength": 1
+          },
+          "design_b": {
+            "type": "string",
+            "minLength": 1
+          },
+          "metric": {
+            "enum": [
+              "accuracy",
+              "balanced_accuracy",
+              "macro_f1",
+              "roc_auc"
+            ]
+          },
+          "difference": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "design_a",
+          "design_b",
+          "metric",
+          "difference",
+          "reasons"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "interpretation": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "designs",
+    "differences",
+    "interpretation"
+  ],
+  "additionalProperties": false
+}

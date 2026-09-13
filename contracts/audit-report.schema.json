@@ -1,0 +1,1237 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:neurocvguard:schema:audit-report:1.0",
+  "title": "NeuroCVguard audit-report contract 1.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "tool_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "result_type": {
+      "enum": [
+        "audit",
+        "evaluation",
+        "comparison"
+      ]
+    },
+    "objective": {
+      "enum": [
+        "unseen_participant",
+        "unseen_site",
+        "unseen_phase",
+        "audit_only"
+      ]
+    },
+    "execution_status": {
+      "enum": [
+        "completed",
+        "partial",
+        "blocked"
+      ]
+    },
+    "input_summary": {
+      "type": "object",
+      "properties": {
+        "n_observations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "n_participants": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "supplied_roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "missing_roles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "n_observations",
+        "n_participants",
+        "supplied_roles",
+        "missing_roles"
+      ],
+      "additionalProperties": false
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "instance_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rule_id": {
+            "type": "string",
+            "pattern": "^NCG-[A-Z]+-[0-9]{3}$"
+          },
+          "status": {
+            "enum": [
+              "pass",
+              "fail",
+              "not_assessable",
+              "not_applicable"
+            ]
+          },
+          "severity": {
+            "enum": [
+              "info",
+              "warning",
+              "error"
+            ]
+          },
+          "evidence_kind": {
+            "enum": [
+              "observed",
+              "declared",
+              "heuristic",
+              "unassessable"
+            ]
+          },
+          "scope": {
+            "type": "object",
+            "additionalProperties": {
+              "type": [
+                "string",
+                "integer",
+                "null"
+              ]
+            }
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recommendation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "instance_id",
+          "rule_id",
+          "status",
+          "severity",
+          "evidence_kind",
+          "scope",
+          "message",
+          "recommendation",
+          "evidence"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "foundation_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "versions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "sensitive_details": {
+          "type": "boolean"
+        },
+        "upstream_preprocessing_verified": {
+          "const": false
+        }
+      },
+      "required": [
+        "foundation_version",
+        "versions",
+        "sensitive_details",
+        "upstream_preprocessing_verified"
+      ],
+      "additionalProperties": false
+    },
+    "evaluation_summary": {
+      "type": "object",
+      "properties": {
+        "diagnostic_only": {
+          "type": "boolean"
+        },
+        "metric_unit": {
+          "const": "participant"
+        },
+        "class_order": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2,
+          "uniqueItems": true
+        },
+        "n_participants": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "execution_status": {
+          "enum": [
+            "completed",
+            "incomplete",
+            "blocked"
+          ]
+        },
+        "pooled_metrics": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "accuracy": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "reason": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "n": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "reason",
+                    "n"
+                  ],
+                  "additionalProperties": false,
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "value": {
+                            "type": "null"
+                          }
+                        }
+                      },
+                      "then": {
+                        "properties": {
+                          "reason": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      },
+                      "else": {
+                        "properties": {
+                          "reason": {
+                            "type": "null"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "balanced_accuracy": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "reason": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "n": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "reason",
+                    "n"
+                  ],
+                  "additionalProperties": false,
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "value": {
+                            "type": "null"
+                          }
+                        }
+                      },
+                      "then": {
+                        "properties": {
+                          "reason": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      },
+                      "else": {
+                        "properties": {
+                          "reason": {
+                            "type": "null"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "macro_f1": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "reason": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "n": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "reason",
+                    "n"
+                  ],
+                  "additionalProperties": false,
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "value": {
+                            "type": "null"
+                          }
+                        }
+                      },
+                      "then": {
+                        "properties": {
+                          "reason": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      },
+                      "else": {
+                        "properties": {
+                          "reason": {
+                            "type": "null"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "roc_auc": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "reason": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "n": {
+                      "type": "integer",
+                      "minimum": 0
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "reason",
+                    "n"
+                  ],
+                  "additionalProperties": false,
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "value": {
+                            "type": "null"
+                          }
+                        }
+                      },
+                      "then": {
+                        "properties": {
+                          "reason": {
+                            "type": "string",
+                            "minLength": 1
+                          }
+                        }
+                      },
+                      "else": {
+                        "properties": {
+                          "reason": {
+                            "type": "null"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "n_participants": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "per_class": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "class_label": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "support": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "recall": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "class_label",
+                      "support",
+                      "recall"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 2
+                },
+                "confusion_matrix": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "minItems": 2
+                  },
+                  "minItems": 2
+                }
+              },
+              "required": [
+                "accuracy",
+                "balanced_accuracy",
+                "macro_f1",
+                "roc_auc",
+                "n_participants",
+                "per_class",
+                "confusion_matrix"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "metrics_hidden_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fold_metrics": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "repeat_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "fold_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "status": {
+                "enum": [
+                  "completed",
+                  "failed"
+                ]
+              },
+              "metrics": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "accuracy": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "reason": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "n": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "value",
+                          "reason",
+                          "n"
+                        ],
+                        "additionalProperties": false,
+                        "allOf": [
+                          {
+                            "if": {
+                              "properties": {
+                                "value": {
+                                  "type": "null"
+                                }
+                              }
+                            },
+                            "then": {
+                              "properties": {
+                                "reason": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "else": {
+                              "properties": {
+                                "reason": {
+                                  "type": "null"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "balanced_accuracy": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "reason": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "n": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "value",
+                          "reason",
+                          "n"
+                        ],
+                        "additionalProperties": false,
+                        "allOf": [
+                          {
+                            "if": {
+                              "properties": {
+                                "value": {
+                                  "type": "null"
+                                }
+                              }
+                            },
+                            "then": {
+                              "properties": {
+                                "reason": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "else": {
+                              "properties": {
+                                "reason": {
+                                  "type": "null"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "macro_f1": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "reason": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "n": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "value",
+                          "reason",
+                          "n"
+                        ],
+                        "additionalProperties": false,
+                        "allOf": [
+                          {
+                            "if": {
+                              "properties": {
+                                "value": {
+                                  "type": "null"
+                                }
+                              }
+                            },
+                            "then": {
+                              "properties": {
+                                "reason": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "else": {
+                              "properties": {
+                                "reason": {
+                                  "type": "null"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "roc_auc": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "reason": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "n": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "value",
+                          "reason",
+                          "n"
+                        ],
+                        "additionalProperties": false,
+                        "allOf": [
+                          {
+                            "if": {
+                              "properties": {
+                                "value": {
+                                  "type": "null"
+                                }
+                              }
+                            },
+                            "then": {
+                              "properties": {
+                                "reason": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "else": {
+                              "properties": {
+                                "reason": {
+                                  "type": "null"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "n_participants": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "per_class": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "class_label": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "support": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "recall": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "class_label",
+                            "support",
+                            "recall"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "minItems": 2
+                      },
+                      "confusion_matrix": {
+                        "type": "array",
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "minItems": 2
+                        },
+                        "minItems": 2
+                      }
+                    },
+                    "required": [
+                      "accuracy",
+                      "balanced_accuracy",
+                      "macro_f1",
+                      "roc_auc",
+                      "n_participants",
+                      "per_class",
+                      "confusion_matrix"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "metrics_hidden_reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "repeat_id",
+              "fold_id",
+              "status",
+              "metrics",
+              "metrics_hidden_reason"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "diagnostic_only",
+        "metric_unit",
+        "class_order",
+        "n_participants",
+        "execution_status",
+        "pooled_metrics"
+      ],
+      "additionalProperties": false
+    },
+    "comparison_summary": {
+      "type": "object",
+      "properties": {
+        "designs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "objective": {
+                "enum": [
+                  "unseen_participant",
+                  "unseen_site",
+                  "unseen_phase",
+                  "audit_only"
+                ]
+              },
+              "diagnostic_only": {
+                "type": "boolean"
+              },
+              "metrics": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "accuracy": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "reason": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "n": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "value",
+                          "reason",
+                          "n"
+                        ],
+                        "additionalProperties": false,
+                        "allOf": [
+                          {
+                            "if": {
+                              "properties": {
+                                "value": {
+                                  "type": "null"
+                                }
+                              }
+                            },
+                            "then": {
+                              "properties": {
+                                "reason": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "else": {
+                              "properties": {
+                                "reason": {
+                                  "type": "null"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "balanced_accuracy": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "reason": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "n": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "value",
+                          "reason",
+                          "n"
+                        ],
+                        "additionalProperties": false,
+                        "allOf": [
+                          {
+                            "if": {
+                              "properties": {
+                                "value": {
+                                  "type": "null"
+                                }
+                              }
+                            },
+                            "then": {
+                              "properties": {
+                                "reason": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "else": {
+                              "properties": {
+                                "reason": {
+                                  "type": "null"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "macro_f1": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "reason": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "n": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "value",
+                          "reason",
+                          "n"
+                        ],
+                        "additionalProperties": false,
+                        "allOf": [
+                          {
+                            "if": {
+                              "properties": {
+                                "value": {
+                                  "type": "null"
+                                }
+                              }
+                            },
+                            "then": {
+                              "properties": {
+                                "reason": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "else": {
+                              "properties": {
+                                "reason": {
+                                  "type": "null"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "roc_auc": {
+                        "type": "object",
+                        "properties": {
+                          "value": {
+                            "type": [
+                              "number",
+                              "null"
+                            ]
+                          },
+                          "reason": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          },
+                          "n": {
+                            "type": "integer",
+                            "minimum": 0
+                          }
+                        },
+                        "required": [
+                          "value",
+                          "reason",
+                          "n"
+                        ],
+                        "additionalProperties": false,
+                        "allOf": [
+                          {
+                            "if": {
+                              "properties": {
+                                "value": {
+                                  "type": "null"
+                                }
+                              }
+                            },
+                            "then": {
+                              "properties": {
+                                "reason": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "else": {
+                              "properties": {
+                                "reason": {
+                                  "type": "null"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "n_participants": {
+                        "type": "integer",
+                        "minimum": 0
+                      },
+                      "per_class": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "class_label": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "support": {
+                              "type": "integer",
+                              "minimum": 0
+                            },
+                            "recall": {
+                              "type": [
+                                "number",
+                                "null"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "class_label",
+                            "support",
+                            "recall"
+                          ],
+                          "additionalProperties": false
+                        },
+                        "minItems": 2
+                      },
+                      "confusion_matrix": {
+                        "type": "array",
+                        "items": {
+                          "type": "array",
+                          "items": {
+                            "type": "integer",
+                            "minimum": 0
+                          },
+                          "minItems": 2
+                        },
+                        "minItems": 2
+                      }
+                    },
+                    "required": [
+                      "accuracy",
+                      "balanced_accuracy",
+                      "macro_f1",
+                      "roc_auc",
+                      "n_participants",
+                      "per_class",
+                      "confusion_matrix"
+                    ],
+                    "additionalProperties": false
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "objective",
+              "diagnostic_only",
+              "metrics"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "differences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "design_a": {
+                "type": "string",
+                "minLength": 1
+              },
+              "design_b": {
+                "type": "string",
+                "minLength": 1
+              },
+              "metric": {
+                "enum": [
+                  "accuracy",
+                  "balanced_accuracy",
+                  "macro_f1",
+                  "roc_auc"
+                ]
+              },
+              "difference": {
+                "type": [
+                  "number",
+                  "null"
+                ]
+              },
+              "reasons": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "design_a",
+              "design_b",
+              "metric",
+              "difference",
+              "reasons"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "interpretation": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "designs",
+        "differences",
+        "interpretation"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "tool_version",
+    "result_type",
+    "objective",
+    "execution_status",
+    "input_summary",
+    "checks",
+    "limitations",
+    "provenance"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "result_type": {
+            "const": "evaluation"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "evaluation_summary"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "result_type": {
+            "const": "comparison"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "comparison_summary"
+        ]
+      }
+    }
+  ]
+}

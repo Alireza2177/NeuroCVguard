@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "tool_version": "0.0.0+fixture",
+  "result_type": "audit",
+  "objective": "unseen_participant",
+  "execution_status": "partial",
+  "input_summary": {
+    "n_observations": 36,
+    "n_participants": 18,
+    "supplied_roles": [
+      "observation_id",
+      "subject_id",
+      "target",
+      "session",
+      "site"
+    ],
+    "missing_roles": [
+      "phase"
+    ]
+  },
+  "checks": [
+    {
+      "instance_id": "fixture-upstream",
+      "rule_id": "NCG-PROV-001",
+      "status": "not_assessable",
+      "severity": "warning",
+      "evidence_kind": "unassessable",
+      "scope": {
+        "component": "upstream_preprocessing"
+      },
+      "message": "Upstream feature-fitting history was not provided.",
+      "recommendation": "Document data-dependent preprocessing scopes; do not infer them from feature values.",
+      "evidence": {}
+    }
+  ],
+  "limitations": [
+    "Synthetic schema fixture only. Not the output of an implemented NeuroCVguard audit."
+  ],
+  "provenance": {
+    "foundation_version": "1.0.0",
+    "versions": {},
+    "sensitive_details": false,
+    "upstream_preprocessing_verified": false
+  }
+}

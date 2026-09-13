@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T08:46:20.220702+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "UP034 [*] Avoid extraneous parentheses\n  --> src\\neurocvguard\\io.py:63:21\n   |\n61 |               else:\n62 |                   raise InputValidationError(\n63 | /                     (\n64 | |                         \"Mapped metadata must contain validated strings or missing values \"\n65 | |                         \"before binding.\"\n66 | |                     )\n   | |_____________________^\n67 |                   )\n68 |           records.append(record)\n   |\nhelp: Remove extraneous parentheses\n   |\n62 |                 raise InputValidationError(\n   -                     (\n63 +                     \n64 |                         \"Mapped metadata must contain validated strings or missing values \"\n65 |                         \"before binding.\"\n   -                     )\n66 +                     \n67 |                 )\n   |\n\nUP034 [*] Avoid extraneous parentheses\n  --> src\\neurocvguard\\io.py:91:13\n   |\n89 |       if plan.cohort_digest is not None and plan.cohort_digest != digest:\n90 |           raise SplitValidationError(\n91 | /             (\n92 | |                 \"Cohort digest mismatch; supply the original mapped metadata or explicitly \"\n93 | |                 \"review a new plan.\"\n94 | |             )\n   | |_____________^\n95 |           )\n96 |       return digest\n   |\nhelp: Remove extraneous parentheses\n   |\n90 |         raise SplitValidationError(\n   -             (\n91 +             \n92 |                 \"Cohort digest mismatch; supply the original mapped metadata or explicitly \"\n93 |                 \"review a new plan.\"\n   -             )\n94 +             \n95 |         )\n   |\n\nUP034 [*] Avoid extraneous parentheses\n   --> src\\neurocvguard\\io.py:136:17\n    |\n134 |           if tuple(next(reader, ())) != header:\n135 |               raise InputValidationError(\n136 | /                 (\n137 | |                     \"Assignment TSV requires exact unique columns: repeat_id, fold_id, role, \"\n138 | |                     \"observation_id.\"\n139 | |                 )\n    | |_________________^\n140 |               )\n141 |           for count, row in enumerate(reader, 1):\n    |\nhelp: Remove extraneous parentheses\n    |\n135 |             raise InputValidationError(\n    -                 (\n136 +                 \n137 |                     \"Assignment TSV requires exact unique columns: repeat_id, fold_id, role, \"\n138 |                     \"observation_id.\"\n    -                 )\n139 +                 \n140 |             )\n    |\n\nFound 3 errors.\n[*] 3 fixable with the `--fix` option.\n",
+  "stderr": ""
+}

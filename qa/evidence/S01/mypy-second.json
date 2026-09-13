@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "mypy",
+    "src/neurocvguard"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T07:42:09.432246+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 1,
+  "stdout": "src\\neurocvguard\\_projection.py:189: error: Incompatible types in assignment (expression has type \"list[str]\", target has type \"JSONValue\")  [assignment]\nFound 1 error in 1 file (checked 9 source files)\n",
+  "stderr": ""
+}

@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "mypy",
+    "src/neurocvguard"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T11:24:49.777142+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "src\\neurocvguard\\checks\\associations.py:7: error: Library stubs not installed for \"scipy.stats.contingency\"  [import-untyped]\nsrc\\neurocvguard\\checks\\associations.py:7: note: Hint: \"python3 -m pip install scipy-stubs\"\nsrc\\neurocvguard\\checks\\associations.py:7: note: (or run \"mypy --install-types\" to install all missing stub packages)\nsrc\\neurocvguard\\checks\\associations.py:7: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports\nFound 1 error in 1 file (checked 18 source files)\n",
+  "stderr": ""
+}

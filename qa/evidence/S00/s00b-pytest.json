@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "tests/test_bootstrap.py",
+    "--junitxml=qa/evidence/S00/s00b-pytest.xml"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T06:59:36.281231+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 0,
+  "stdout": "...........                                                              [100%]\n11 passed in 3.61s\n",
+  "stderr": ""
+}

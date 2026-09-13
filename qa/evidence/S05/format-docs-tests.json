@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "src/neurocvguard/splitting.py",
+    "src/neurocvguard/io.py",
+    "src/neurocvguard/rules.py",
+    "tests/test_generation.py",
+    "tests/test_plan_exports.py",
+    "docs/split_generation.md"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T11:04:01.232775+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "4 files reformatted, 2 files left unchanged\n",
+  "stderr": ""
+}

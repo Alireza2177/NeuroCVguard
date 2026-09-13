@@ -1,0 +1,38 @@
+# Isolated local environments and build products
+.venv/
+.venv-install/
+build/
+dist/
+*.egg-info/
+
+# Python and development caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+docs/_build/
+
+# Local research inputs and outputs; synthetic fixtures remain visible
+/data/private/
+/private_data/
+/local_outputs/
+/results/
+*.private.json
+
+# Credentials and per-user IDE settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.secrets/
+.vscode/
+.idea/
+*.code-workspace
+# Local backup copies
+/Backup/

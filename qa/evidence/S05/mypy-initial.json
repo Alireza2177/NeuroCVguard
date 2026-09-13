@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "mypy",
+    "src/neurocvguard"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T10:52:02.375875+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "src\\neurocvguard\\splitting.py:7: error: Skipping analyzing \"sklearn\": module is installed, but missing library stubs or py.typed marker  [import-untyped]\nsrc\\neurocvguard\\splitting.py:8: error: Skipping analyzing \"sklearn.model_selection\": module is installed, but missing library stubs or py.typed marker  [import-untyped]\nsrc\\neurocvguard\\splitting.py:8: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports\nFound 2 errors in 1 file (checked 17 source files)\n",
+  "stderr": ""
+}

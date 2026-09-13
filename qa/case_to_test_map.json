@@ -1,0 +1,1072 @@
+{
+  "note": "S00, S01, S03, S04 and S05 entries refer to actual tests and AI review evidence. Human acceptance remains separate. S02 and S06 onward remain unimplemented and unrun.",
+  "mappings": [
+    {
+      "case_id": "AT-S00-01",
+      "test_node_ids": [
+        "tests/test_bootstrap.py::test_import_has_no_side_effects"
+      ],
+      "evidence": [
+        "qa/evidence/S00/pytest-final.xml",
+        "qa/evidence/S00/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S00",
+      "requirement_id": "REQ-S00",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S00-02",
+      "test_node_ids": [
+        "tests/test_bootstrap.py::test_installed_version_matches_metadata",
+        "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments1-0-Only help and version are available-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments1-0-Only help and version are available-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments2-0-Only help and version are available-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments2-0-Only help and version are available-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments3-2-unrecognized arguments: audit-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments3-2-unrecognized arguments: audit-console]",
+        "tests/test_bootstrap.py::test_editable_install_points_to_source"
+      ],
+      "evidence": [
+        "qa/evidence/S00/reinstall-editable-final.json",
+        "qa/evidence/S00/reinstall-ordinary-final.json",
+        "qa/evidence/S00/ordinary-smoke.json",
+        "qa/evidence/S00/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S00",
+      "requirement_id": "REQ-S00",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S00-03",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S00/baseline.json",
+        "qa/evidence/S00/preservation-final.json",
+        "qa/evidence/S00/review.md"
+      ],
+      "verification_type": "file_hash_check_and_AI_review",
+      "stage": "S00",
+      "requirement_id": "REQ-S00",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S00-04",
+      "test_node_ids": [
+        "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments1-0-Only help and version are available-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments1-0-Only help and version are available-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments2-0-Only help and version are available-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments2-0-Only help and version are available-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments3-2-unrecognized arguments: audit-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments3-2-unrecognized arguments: audit-console]"
+      ],
+      "evidence": [
+        "qa/evidence/S00/metadata-dev.json",
+        "qa/evidence/S00/metadata-ordinary.json",
+        "qa/evidence/S00/review.md"
+      ],
+      "verification_type": "automated_metadata_check_and_AI_review",
+      "stage": "S00",
+      "requirement_id": "REQ-S00",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S00-05",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S00/instruction_loading.md",
+        "qa/evidence/S00/review.md"
+      ],
+      "verification_type": "AI_instruction_loading_record",
+      "stage": "S00",
+      "requirement_id": "REQ-S00",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S01-01",
+      "test_node_ids": [
+        "tests/test_config.py::test_at_s01_01_unknown_key"
+      ],
+      "evidence": [
+        "qa/evidence/S01/pytest-final.xml",
+        "qa/evidence/S01/pytest-final.json",
+        "qa/evidence/S01/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S01",
+      "requirement_id": "REQ-S01",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S01-02",
+      "test_node_ids": [
+        "tests/test_config.py::test_at_s01_02_duplicate_keys[{\"schema_version\":\"1.0\",\"schema_version\":\"1.0\"}]",
+        "tests/test_config.py::test_at_s01_02_duplicate_keys[{\"x\":{\"n\":1,\"n\":2}}]"
+      ],
+      "evidence": [
+        "qa/evidence/S01/pytest-final.xml",
+        "qa/evidence/S01/pytest-final.json",
+        "qa/evidence/S01/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S01",
+      "requirement_id": "REQ-S01",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S01-03",
+      "test_node_ids": [
+        "tests/test_config.py::test_at_s01_03_boolean_number[split-n_splits]",
+        "tests/test_config.py::test_at_s01_03_boolean_number[split-seed]",
+        "tests/test_config.py::test_at_s01_03_boolean_number[limits-max_rows]",
+        "tests/test_config.py::test_at_s01_03_boolean_number[evaluation-max_iter]",
+        "tests/test_config.py::test_at_s01_03_boolean_number[association-review_threshold]"
+      ],
+      "evidence": [
+        "qa/evidence/S01/pytest-final.xml",
+        "qa/evidence/S01/pytest-final.json",
+        "qa/evidence/S01/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S01",
+      "requirement_id": "REQ-S01",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S01-04",
+      "test_node_ids": [
+        "tests/test_config.py::test_at_s01_04_optional_defaults"
+      ],
+      "evidence": [
+        "qa/evidence/S01/pytest-final.xml",
+        "qa/evidence/S01/pytest-final.json",
+        "qa/evidence/S01/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S01",
+      "requirement_id": "REQ-S01",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S01-05",
+      "test_node_ids": [
+        "tests/test_config.py::test_at_s01_05_version[2.0]",
+        "tests/test_config.py::test_at_s01_05_version[1.1]",
+        "tests/test_config.py::test_at_s01_05_version[1]",
+        "tests/test_config.py::test_at_s01_05_version[True]",
+        "tests/test_config.py::test_at_s01_05_version[None]"
+      ],
+      "evidence": [
+        "qa/evidence/S01/pytest-final.xml",
+        "qa/evidence/S01/pytest-final.json",
+        "qa/evidence/S01/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S01",
+      "requirement_id": "REQ-S01",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S01-06",
+      "test_node_ids": [
+        "tests/test_contracts.py::test_at_s01_06_null_metric"
+      ],
+      "evidence": [
+        "qa/evidence/S01/pytest-final.xml",
+        "qa/evidence/S01/pytest-final.json",
+        "qa/evidence/S01/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S01",
+      "requirement_id": "REQ-S01",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S01-07",
+      "test_node_ids": [
+        "tests/test_config.py::test_at_s01_07_nonfinite_input[NaN]",
+        "tests/test_config.py::test_at_s01_07_nonfinite_input[Infinity]",
+        "tests/test_config.py::test_at_s01_07_nonfinite_input[-Infinity]",
+        "tests/test_config.py::test_at_s01_07_nonfinite_input[1e9999]",
+        "tests/test_contracts.py::test_at_s01_07_reject_nonfinite_output[nan]",
+        "tests/test_contracts.py::test_at_s01_07_reject_nonfinite_output[inf]",
+        "tests/test_contracts.py::test_at_s01_07_reject_nonfinite_output[-inf]"
+      ],
+      "evidence": [
+        "qa/evidence/S01/pytest-final.xml",
+        "qa/evidence/S01/pytest-final.json",
+        "qa/evidence/S01/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S01",
+      "requirement_id": "REQ-S01",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S01-08",
+      "test_node_ids": [
+        "tests/test_contract_edges.py::test_at_s01_08_remote_dynamic_reference_refused",
+        "tests/test_contracts.py::test_at_s01_08_all_packaged_contracts_offline"
+      ],
+      "evidence": [
+        "qa/evidence/S01/pytest-final.xml",
+        "qa/evidence/S01/pytest-final.json",
+        "qa/evidence/S01/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S01",
+      "requirement_id": "REQ-S01",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S01-09",
+      "test_node_ids": [
+        "tests/test_contract_edges.py::test_at_s01_09_twelve_fold_public_projection_is_idempotent",
+        "tests/test_contract_edges.py::test_at_s01_09_inner_folds_and_optional_presence",
+        "tests/test_contracts.py::test_at_s01_09_operational_round_trip[SplitPlan-splits_clean]",
+        "tests/test_contracts.py::test_at_s01_09_operational_round_trip[SplitPlan-splits_participant_overlap]",
+        "tests/test_contracts.py::test_at_s01_09_operational_round_trip[SplitPlan-splits_unknown_id]",
+        "tests/test_contracts.py::test_at_s01_09_operational_round_trip[PreprocessingLedger-ledger_declared_global]",
+        "tests/test_contracts.py::test_at_s01_09_operational_round_trip[EvaluationResult-evaluation_schema_example]",
+        "tests/test_contracts.py::test_at_s01_09_report_and_comparison_round_trip",
+        "tests/test_contracts.py::test_at_s01_09_memberships_sorted_without_relabeling"
+      ],
+      "evidence": [
+        "qa/evidence/S01/pytest-final.xml",
+        "qa/evidence/S01/pytest-final.json",
+        "qa/evidence/S01/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S01",
+      "requirement_id": "REQ-S01",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S01-10",
+      "test_node_ids": [
+        "tests/test_config.py::test_at_s01_10_config_no_mutation",
+        "tests/test_contract_edges.py::test_at_s01_10_helpers_do_not_mutate_config",
+        "tests/test_contracts.py::test_at_s01_10_cohort_copy_and_key_alignment",
+        "tests/test_contracts.py::test_at_s01_10_nested_record_ownership"
+      ],
+      "evidence": [
+        "qa/evidence/S01/pytest-final.xml",
+        "qa/evidence/S01/pytest-final.json",
+        "qa/evidence/S01/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S01",
+      "requirement_id": "REQ-S01",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S01-11",
+      "test_node_ids": [
+        "tests/test_contract_edges.py::test_at_s01_11_sensitive_access_requires_boolean[1]",
+        "tests/test_contract_edges.py::test_at_s01_11_sensitive_access_requires_boolean[true]",
+        "tests/test_contract_edges.py::test_at_s01_11_sensitive_access_requires_boolean[None]",
+        "tests/test_contracts.py::test_at_s01_11_private_and_public_boundaries",
+        "tests/test_contracts.py::test_at_s01_11_small_cells_hide_linked_fold_and_pooled_metrics",
+        "tests/test_contracts.py::test_at_s01_11_report_open_evidence_not_exported",
+        "tests/test_contracts.py::test_at_s01_11_comparison_redacts_dependent_deltas"
+      ],
+      "evidence": [
+        "qa/evidence/S01/pytest-final.xml",
+        "qa/evidence/S01/pytest-final.json",
+        "qa/evidence/S01/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S01",
+      "requirement_id": "REQ-S01",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-01",
+      "test_node_ids": [
+        "tests/test_cohort_inventory.py::test_at_s03_01_people_and_observations"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-02",
+      "test_node_ids": [
+        "tests/test_cohort_inventory.py::test_at_s03_02_repetition_is_informational"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-03",
+      "test_node_ids": [
+        "tests/test_cohort_inventory.py::test_at_s03_03_sessions_are_participant_local",
+        "tests/test_identity.py::test_at_s03_03_sessions_do_not_link_people",
+        "tests/test_identity.py::test_at_s03_03_session_cannot_be_global_relationship"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-04",
+      "test_node_ids": [
+        "tests/test_cohort_inventory.py::test_at_s03_04_target_variation_not_relabeling"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-05",
+      "test_node_ids": [
+        "tests/test_identity.py::test_at_s03_05_transitive_components"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-06",
+      "test_node_ids": [
+        "tests/test_identity.py::test_at_s03_06_field_namespaces_and_real_bridges"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-07",
+      "test_node_ids": [
+        "tests/test_identity.py::test_at_s03_07_missing_values_are_not_links[None]",
+        "tests/test_identity.py::test_at_s03_07_missing_values_are_not_links[missing1]",
+        "tests/test_identity.py::test_at_s03_07_missing_values_are_not_links[nan]",
+        "tests/test_identity.py::test_at_s03_07_missing_values_are_not_links[]",
+        "tests/test_identity.py::test_at_s03_07_missing_values_are_not_links[n/a]",
+        "tests/test_identity.py::test_at_s03_07_missing_declared_column_blocks"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-08",
+      "test_node_ids": [
+        "tests/test_cohort_inventory.py::test_at_s03_08_cross_site_inventory",
+        "tests/test_identity.py::test_at_s03_08_cross_site_identity_preserved"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-09",
+      "test_node_ids": [
+        "tests/test_cohort_checks.py::test_at_s03_09_equality_is_heuristic_not_identity"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-10",
+      "test_node_ids": [
+        "tests/test_cohort_checks.py::test_at_s03_10_all_missing_vectors_skipped",
+        "tests/test_cohort_checks.py::test_at_s03_10_partial_missing_and_signed_zero"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-11",
+      "test_node_ids": [
+        "tests/test_identity.py::test_at_s03_11_row_order_invariant"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S03-12",
+      "test_node_ids": [
+        "tests/test_cohort_checks.py::test_at_s03_12_hash_collisions_require_exact_confirmation"
+      ],
+      "evidence": [
+        "qa/evidence/S03/pytest-final.json",
+        "qa/evidence/S03/pytest-final.xml",
+        "qa/evidence/S03/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S03",
+      "requirement_id": "REQ-S03",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-01",
+      "test_node_ids": [
+        "tests/test_partitions.py::test_at_s04_01_participant_overlap_without_observation_overlap"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-02",
+      "test_node_ids": [
+        "tests/test_partitions.py::test_at_s04_02_clean_repeated_cohort"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-03",
+      "test_node_ids": [
+        "tests/test_partitions.py::test_at_s04_03_observation_overlap_never_waived[False]",
+        "tests/test_partitions.py::test_at_s04_03_observation_overlap_never_waived[True]"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-04",
+      "test_node_ids": [
+        "tests/test_partitions.py::test_at_s04_04_train_reuse_is_ordinary"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-05",
+      "test_node_ids": [
+        "tests/test_partitions.py::test_at_s04_05_sites_allowed_for_unseen_people"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-06",
+      "test_node_ids": [
+        "tests/test_partitions.py::test_at_s04_06_requested_domain_is_separate[unseen_phase]",
+        "tests/test_partitions.py::test_at_s04_06_requested_domain_is_separate[unseen_site]"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-07",
+      "test_node_ids": [
+        "tests/test_partitions.py::test_at_s04_07_unknown_fold_retains_independent_results",
+        "tests/test_split_io.py::test_at_s04_07_unknown_members_rejected"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-08",
+      "test_node_ids": [
+        "tests/test_partitions.py::test_at_s04_08_missing_row_is_coverage_failure"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-09",
+      "test_node_ids": [
+        "tests/test_split_io.py::test_at_s04_09_duplicate_json_membership",
+        "tests/test_split_io.py::test_at_s04_09_duplicate_tsv_membership"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-10",
+      "test_node_ids": [
+        "tests/test_partitions.py::test_at_s04_10_missing_training_class_blocks"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-11",
+      "test_node_ids": [
+        "tests/test_partitions.py::test_at_s04_11_missing_test_class_is_warning"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-12",
+      "test_node_ids": [
+        "tests/test_split_audit.py::test_at_s04_12_outer_test_in_inner_train"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-13",
+      "test_node_ids": [
+        "tests/test_split_audit.py::test_at_s04_13_inner_protected_overlap"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-14",
+      "test_node_ids": [
+        "tests/test_split_audit.py::test_at_s04_14_holdout_is_auditable_not_complete_cv"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-15",
+      "test_node_ids": [
+        "tests/test_split_audit.py::test_at_s04_15_repeated_cv_audited_separately"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-16",
+      "test_node_ids": [
+        "tests/test_split_io.py::test_at_s04_16_digest_mismatch_and_metadata_scope"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S04-17",
+      "test_node_ids": [
+        "tests/test_split_io.py::test_at_s04_17_invalid_tsv_role[Train]",
+        "tests/test_split_io.py::test_at_s04_17_invalid_tsv_role[]",
+        "tests/test_split_io.py::test_at_s04_17_invalid_tsv_role[train ]",
+        "tests/test_split_io.py::test_at_s04_17_invalid_tsv_role[validation]",
+        "tests/test_split_io.py::test_at_s04_17_tsv_valid_import"
+      ],
+      "evidence": [
+        "qa/evidence/S04/pytest-final.xml",
+        "qa/evidence/S04/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S04",
+      "requirement_id": "REQ-S04",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S05-01",
+      "test_node_ids": [
+        "tests/test_generation.py::test_at_s05_01_participant_stratification_unit"
+      ],
+      "evidence": [
+        "qa/evidence/S05/pytest-final.xml",
+        "qa/evidence/S05/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S05",
+      "requirement_id": "REQ-S05",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S05-02",
+      "test_node_ids": [
+        "tests/test_generation.py::test_at_s05_02_protected_group_disjointness"
+      ],
+      "evidence": [
+        "qa/evidence/S05/pytest-final.xml",
+        "qa/evidence/S05/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S05",
+      "requirement_id": "REQ-S05",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S05-03",
+      "test_node_ids": [
+        "tests/test_generation.py::test_at_s05_03_too_few_groups"
+      ],
+      "evidence": [
+        "qa/evidence/S05/pytest-final.xml",
+        "qa/evidence/S05/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S05",
+      "requirement_id": "REQ-S05",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S05-04",
+      "test_node_ids": [
+        "tests/test_generation.py::test_at_s05_04_approximate_stratification"
+      ],
+      "evidence": [
+        "qa/evidence/S05/pytest-final.xml",
+        "qa/evidence/S05/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S05",
+      "requirement_id": "REQ-S05",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S05-05",
+      "test_node_ids": [
+        "tests/test_domain_generation.py::test_at_s05_05_crossing_domain_group[family]",
+        "tests/test_domain_generation.py::test_at_s05_05_crossing_domain_group[person]"
+      ],
+      "evidence": [
+        "qa/evidence/S05/pytest-final.xml",
+        "qa/evidence/S05/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S05",
+      "requirement_id": "REQ-S05",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S05-06",
+      "test_node_ids": [
+        "tests/test_domain_generation.py::test_at_s05_06_held_out_phase[phase]",
+        "tests/test_domain_generation.py::test_at_s05_06_held_out_phase[site]"
+      ],
+      "evidence": [
+        "qa/evidence/S05/pytest-final.xml",
+        "qa/evidence/S05/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S05",
+      "requirement_id": "REQ-S05",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S05-07",
+      "test_node_ids": [
+        "tests/test_generation.py::test_at_s05_07_no_hidden_repair"
+      ],
+      "evidence": [
+        "qa/evidence/S05/pytest-final.xml",
+        "qa/evidence/S05/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S05",
+      "requirement_id": "REQ-S05",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S05-08",
+      "test_node_ids": [
+        "tests/test_generation.py::test_at_s05_08_independent_post_audit"
+      ],
+      "evidence": [
+        "qa/evidence/S05/pytest-final.xml",
+        "qa/evidence/S05/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S05",
+      "requirement_id": "REQ-S05",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S05-09",
+      "test_node_ids": [
+        "tests/test_generation.py::test_at_s05_09_seed_and_order_stability"
+      ],
+      "evidence": [
+        "qa/evidence/S05/pytest-final.xml",
+        "qa/evidence/S05/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S05",
+      "requirement_id": "REQ-S05",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S05-10",
+      "test_node_ids": [
+        "tests/test_generation.py::test_at_s05_10_global_rng_preservation"
+      ],
+      "evidence": [
+        "qa/evidence/S05/pytest-final.xml",
+        "qa/evidence/S05/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S05",
+      "requirement_id": "REQ-S05",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S06-01",
+      "test_node_ids": [
+        "tests/test_association_statistics.py::test_at_s06_01_zero_association"
+      ],
+      "evidence": [
+        "qa/evidence/S06/pytest-final.xml",
+        "qa/evidence/S06/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S06",
+      "requirement_id": "REQ-S06",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S06-02",
+      "test_node_ids": [
+        "tests/test_association_statistics.py::test_at_s06_02_perfect_association"
+      ],
+      "evidence": [
+        "qa/evidence/S06/pytest-final.xml",
+        "qa/evidence/S06/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S06",
+      "requirement_id": "REQ-S06",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S06-03",
+      "test_node_ids": [
+        "tests/test_association_statistics.py::test_at_s06_03_constant_variable[table0]",
+        "tests/test_association_statistics.py::test_at_s06_03_constant_variable[table1]"
+      ],
+      "evidence": [
+        "qa/evidence/S06/pytest-final.xml",
+        "qa/evidence/S06/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S06",
+      "requirement_id": "REQ-S06",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S06-04",
+      "test_node_ids": [
+        "tests/test_association_statistics.py::test_at_s06_04_repeat_invariance"
+      ],
+      "evidence": [
+        "qa/evidence/S06/pytest-final.xml",
+        "qa/evidence/S06/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S06",
+      "requirement_id": "REQ-S06",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S06-05",
+      "test_node_ids": [
+        "tests/test_association_pairs.py::test_at_s06_05_within_person_covariate_changes"
+      ],
+      "evidence": [
+        "qa/evidence/S06/pytest-final.xml",
+        "qa/evidence/S06/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S06",
+      "requirement_id": "REQ-S06",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S06-06",
+      "test_node_ids": [
+        "tests/test_association_pairs.py::test_at_s06_06_missing_pairs"
+      ],
+      "evidence": [
+        "qa/evidence/S06/pytest-final.xml",
+        "qa/evidence/S06/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S06",
+      "requirement_id": "REQ-S06",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S06-07",
+      "test_node_ids": [
+        "tests/test_association_checks.py::test_at_s06_07_sparse_warning_without_inference"
+      ],
+      "evidence": [
+        "qa/evidence/S06/pytest-final.xml",
+        "qa/evidence/S06/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S06",
+      "requirement_id": "REQ-S06",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S06-08",
+      "test_node_ids": [
+        "tests/test_association_statistics.py::test_at_s06_08_high_cardinality"
+      ],
+      "evidence": [
+        "qa/evidence/S06/pytest-final.xml",
+        "qa/evidence/S06/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S06",
+      "requirement_id": "REQ-S06",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S06-09",
+      "test_node_ids": [
+        "tests/test_association_checks.py::test_at_s06_09_inclusive_noncausal_review_warning"
+      ],
+      "evidence": [
+        "qa/evidence/S06/pytest-final.xml",
+        "qa/evidence/S06/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S06",
+      "requirement_id": "REQ-S06",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S06-10",
+      "test_node_ids": [
+        "tests/test_association_statistics.py::test_at_s06_10_category_name_invariance"
+      ],
+      "evidence": [
+        "qa/evidence/S06/pytest-final.xml",
+        "qa/evidence/S06/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S06",
+      "requirement_id": "REQ-S06",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    }
+  ]
+}

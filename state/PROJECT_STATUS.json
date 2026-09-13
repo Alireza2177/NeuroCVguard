@@ -1,0 +1,117 @@
+{
+  "foundation_version": "1.0.0",
+  "target_release": "0.1.0",
+  "software_status": "IN_PROGRESS",
+  "current_stage": "S06",
+  "public_release_authorized": false,
+  "stages": [
+    {
+      "id": "S00",
+      "status": "READY_FOR_REVIEW",
+      "human_accepted": false,
+      "evidence_path": "qa/evidence/S00/"
+    },
+    {
+      "id": "S01",
+      "status": "READY_FOR_REVIEW",
+      "human_accepted": false,
+      "evidence_path": "qa/evidence/S01/"
+    },
+    {
+      "id": "S02",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    },
+    {
+      "id": "S03",
+      "status": "READY_FOR_REVIEW",
+      "human_accepted": false,
+      "evidence_path": "qa/evidence/S03/"
+    },
+    {
+      "id": "S04",
+      "status": "READY_FOR_REVIEW",
+      "human_accepted": false,
+      "evidence_path": "qa/evidence/S04/"
+    },
+    {
+      "id": "S05",
+      "status": "READY_FOR_REVIEW",
+      "human_accepted": false,
+      "evidence_path": "qa/evidence/S05/"
+    },
+    {
+      "id": "S06",
+      "status": "READY_FOR_REVIEW",
+      "human_accepted": false,
+      "evidence_path": "qa/evidence/S06/"
+    },
+    {
+      "id": "S07",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    },
+    {
+      "id": "S08",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    },
+    {
+      "id": "S09",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    },
+    {
+      "id": "S10",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    },
+    {
+      "id": "S11",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    },
+    {
+      "id": "S12",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    },
+    {
+      "id": "S13",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    },
+    {
+      "id": "S14",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    },
+    {
+      "id": "S15",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    },
+    {
+      "id": "S16",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    },
+    {
+      "id": "S17",
+      "status": "NOT_STARTED",
+      "human_accepted": false,
+      "evidence_path": null
+    }
+  ]
+}

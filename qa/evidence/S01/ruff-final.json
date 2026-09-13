@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T07:51:08.937371+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "E501 Line too long (113 > 100)\n  --> qa\\evidence\\S01\\check_installed.py:38:101\n   |\n36 | assert config.evaluation.positive_class is None\n37 | assert config.limits.max_input_mb == 128\n38 | assert canonical_json(MetricValue(None, 'undefined', 0).to_dict()) == '{\"n\":0,\"reason\":\"undefined\",\"value\":null}'\n   |                                                                                                     ^^^^^^^^^^^^^\n39 | print('PASS: installed S01 models/configuration and all six byte-identical packaged schemas')\n40 | \"\"\"\n   |\n\nE501 Line too long (101 > 100)\n   --> src\\neurocvguard\\_projection.py:275:101\n    |\n273 |             \"designs\": designs,\n274 |             \"differences\": differences,\n275 |             \"interpretation\": \"Design differences are descriptive, not causal estimates of leakage. \"\n    |                                                                                                     ^\n276 |             \"Small-cell metrics are withheld when applicable.\",\n277 |         },\n    |\n\nFound 2 errors.\n",
+  "stderr": ""
+}

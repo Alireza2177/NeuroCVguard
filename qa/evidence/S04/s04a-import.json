@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "tests/test_split_io.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T08:33:34.161175+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": ".....F.............                                                      [100%]\n================================== FAILURES ===================================\n_______________________ test_at_s04_17_tsv_valid_import _______________________\n\nclean_cohort = Cohort(columns=ColumnMap(observation_id='observation_id', subject_id='subject_id', target='diagnosis', session='session_id', site='site', phase=None, independence=(), categorical_covariates=()))\n\n    def test_at_s04_17_tsv_valid_import(clean_cohort):\n        plan = load_split_plan(FIXTURES / \"assignments_clean.tsv\", cohort=clean_cohort,\n                               config=AuditConfig())\n        expected = SplitPlan.from_json((FIXTURES / \"splits_clean.json\").read_text())\n>       assert plan.folds == expected.folds\nE       AssertionError: assert (SplitFold(re...r_folds=None)) == (SplitFold(re...ner_folds=()))\nE         \nE         At index 0 diff: SplitFold(repeat_id='0', fold_id='fold-000', train_ids=('obs-001-1', 'obs-001-2', 'obs-002-1', 'obs-002-2', 'obs-004-1', 'obs-004-2', 'obs-005-1', 'obs-005-2', 'obs-007-1', 'obs-007-2', 'obs-008-1', 'obs-008-2', 'obs-010-1', 'obs-010-2', 'obs-011-1', 'obs-011-2', 'obs-013-1', 'obs-013-2', 'obs-014-1', 'obs-014-2', 'obs-016-1', 'obs-016-2', 'obs-017-1', 'obs-017-2'), test_ids=('obs-003-1', 'obs-003-2', 'obs-006-1', 'obs-006-2', 'obs-009-1', 'obs-009-2', 'obs-012-1', 'obs-012-2', 'obs-015-1', 'obs-015-2', 'obs-018-1', 'obs-018-2'), inner_folds=None) != Sp...\nE         \nE         ...Full output truncated (2 lines hidden), use '-vv' to show\n\ntests\\test_split_io.py:73: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_split_io.py::test_at_s04_17_tsv_valid_import - AssertionErr...\n1 failed, 18 passed in 1.93s\n",
+  "stderr": ""
+}

@@ -1,0 +1,330 @@
+[
+  {
+    "id": "REQ-S00",
+    "stage": "S00",
+    "requirement": "Establish a conventional local package workspace and an exercised development environment without implementing scientific features.",
+    "acceptance_case_ids": [
+      "AT-S00-01",
+      "AT-S00-02",
+      "AT-S00-03",
+      "AT-S00-04",
+      "AT-S00-05"
+    ],
+    "status": "IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S01",
+    "stage": "S01",
+    "requirement": "Implement stable records and strict, offline schema validation before downstream modules create their own data formats.",
+    "acceptance_case_ids": [
+      "AT-S01-01",
+      "AT-S01-02",
+      "AT-S01-03",
+      "AT-S01-04",
+      "AT-S01-05",
+      "AT-S01-06",
+      "AT-S01-07",
+      "AT-S01-08",
+      "AT-S01-09",
+      "AT-S01-10",
+      "AT-S01-11"
+    ],
+    "status": "IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S02",
+    "stage": "S02",
+    "requirement": "Read valid local tables without losing identities or silently changing the cohort.",
+    "acceptance_case_ids": [
+      "AT-S02-01",
+      "AT-S02-02",
+      "AT-S02-03",
+      "AT-S02-04",
+      "AT-S02-05",
+      "AT-S02-06",
+      "AT-S02-07",
+      "AT-S02-08",
+      "AT-S02-09",
+      "AT-S02-10",
+      "AT-S02-11",
+      "AT-S02-12",
+      "AT-S02-13",
+      "AT-S02-14",
+      "AT-S02-15",
+      "AT-S02-16",
+      "AT-S02-17",
+      "AT-S02-18"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S03",
+    "stage": "S03",
+    "requirement": "Build the identity model and accurate cohort inventory with evidence-aware findings.",
+    "acceptance_case_ids": [
+      "AT-S03-01",
+      "AT-S03-02",
+      "AT-S03-03",
+      "AT-S03-04",
+      "AT-S03-05",
+      "AT-S03-06",
+      "AT-S03-07",
+      "AT-S03-08",
+      "AT-S03-09",
+      "AT-S03-10",
+      "AT-S03-11",
+      "AT-S03-12"
+    ],
+    "status": "IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S04",
+    "stage": "S04",
+    "requirement": "Audit supplied partitions correctly at observation, participant, component, domain and nested levels.",
+    "acceptance_case_ids": [
+      "AT-S04-01",
+      "AT-S04-02",
+      "AT-S04-03",
+      "AT-S04-04",
+      "AT-S04-05",
+      "AT-S04-06",
+      "AT-S04-07",
+      "AT-S04-08",
+      "AT-S04-09",
+      "AT-S04-10",
+      "AT-S04-11",
+      "AT-S04-12",
+      "AT-S04-13",
+      "AT-S04-14",
+      "AT-S04-15",
+      "AT-S04-16",
+      "AT-S04-17"
+    ],
+    "status": "IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S05",
+    "stage": "S05",
+    "requirement": "Generate deterministic plans using established splitters and independently verify their invariants.",
+    "acceptance_case_ids": [
+      "AT-S05-01",
+      "AT-S05-02",
+      "AT-S05-03",
+      "AT-S05-04",
+      "AT-S05-05",
+      "AT-S05-06",
+      "AT-S05-07",
+      "AT-S05-08",
+      "AT-S05-09",
+      "AT-S05-10"
+    ],
+    "status": "IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S06",
+    "stage": "S06",
+    "requirement": "Implement participant-level categorical diagnostics without overstating confounding or significance.",
+    "acceptance_case_ids": [
+      "AT-S06-01",
+      "AT-S06-02",
+      "AT-S06-03",
+      "AT-S06-04",
+      "AT-S06-05",
+      "AT-S06-06",
+      "AT-S06-07",
+      "AT-S06-08",
+      "AT-S06-09",
+      "AT-S06-10"
+    ],
+    "status": "IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S07",
+    "stage": "S07",
+    "requirement": "Represent what can and cannot be known about preprocessing without claiming to reconstruct hidden pipeline history.",
+    "acceptance_case_ids": [
+      "AT-S07-01",
+      "AT-S07-02",
+      "AT-S07-03",
+      "AT-S07-04",
+      "AT-S07-05",
+      "AT-S07-06",
+      "AT-S07-07"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S08",
+    "stage": "S08",
+    "requirement": "Make findings understandable while keeping sensitive operational artifacts distinct from public reports.",
+    "acceptance_case_ids": [
+      "AT-S08-01",
+      "AT-S08-02",
+      "AT-S08-03",
+      "AT-S08-04",
+      "AT-S08-05",
+      "AT-S08-06",
+      "AT-S08-07",
+      "AT-S08-08",
+      "AT-S08-09",
+      "AT-S08-10",
+      "AT-S08-11",
+      "AT-S08-12",
+      "AT-S08-13"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S09",
+    "stage": "S09",
+    "requirement": "Expose the completed audit functionality through a coherent command-line workflow.",
+    "acceptance_case_ids": [
+      "AT-S09-01",
+      "AT-S09-02",
+      "AT-S09-03",
+      "AT-S09-04",
+      "AT-S09-05",
+      "AT-S09-06",
+      "AT-S09-07",
+      "AT-S09-08",
+      "AT-S09-09"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S10",
+    "stage": "S10",
+    "requirement": "Implement the auditable fixed-C classification runner and exact participant-level metric semantics.",
+    "acceptance_case_ids": [
+      "AT-S10-01",
+      "AT-S10-02",
+      "AT-S10-03",
+      "AT-S10-04",
+      "AT-S10-05",
+      "AT-S10-06",
+      "AT-S10-07",
+      "AT-S10-08",
+      "AT-S10-09",
+      "AT-S10-10",
+      "AT-S10-11",
+      "AT-S10-12",
+      "AT-S10-13",
+      "AT-S10-14",
+      "AT-S10-15",
+      "AT-S10-16"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S11",
+    "stage": "S11",
+    "requirement": "Add a small correct inner selection loop without consuming any outer-test information.",
+    "acceptance_case_ids": [
+      "AT-S11-01",
+      "AT-S11-02",
+      "AT-S11-03",
+      "AT-S11-04",
+      "AT-S11-05",
+      "AT-S11-06",
+      "AT-S11-07",
+      "AT-S11-08",
+      "AT-S11-09"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S12",
+    "stage": "S12",
+    "requirement": "Compare design outputs without confusing distribution changes with a measured amount of leakage.",
+    "acceptance_case_ids": [
+      "AT-S12-01",
+      "AT-S12-02",
+      "AT-S12-03",
+      "AT-S12-04",
+      "AT-S12-05",
+      "AT-S12-06",
+      "AT-S12-07",
+      "AT-S12-08",
+      "AT-S12-09"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S13",
+    "stage": "S13",
+    "requirement": "Deliver a first-run experience that works offline and illustrates the tool honestly.",
+    "acceptance_case_ids": [
+      "AT-S13-01",
+      "AT-S13-02",
+      "AT-S13-03",
+      "AT-S13-04",
+      "AT-S13-05",
+      "AT-S13-06",
+      "AT-S13-07"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S14",
+    "stage": "S14",
+    "requirement": "Make the complete tool understandable and maintainable without reading implementation details.",
+    "acceptance_case_ids": [
+      "AT-S14-01",
+      "AT-S14-02",
+      "AT-S14-03",
+      "AT-S14-04",
+      "AT-S14-05",
+      "AT-S14-06",
+      "AT-S14-07",
+      "AT-S14-08"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S15",
+    "stage": "S15",
+    "requirement": "Try to falsify the implementation against the specification rather than only confirming happy paths.",
+    "acceptance_case_ids": [
+      "AT-S15-01",
+      "AT-S15-02",
+      "AT-S15-03",
+      "AT-S15-04",
+      "AT-S15-05",
+      "AT-S15-06",
+      "AT-S15-07",
+      "AT-S15-08",
+      "AT-S15-09"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S16",
+    "stage": "S16",
+    "requirement": "Prove that the complete package, not just the source tree, is ready for a controlled public release.",
+    "acceptance_case_ids": [
+      "AT-S16-01",
+      "AT-S16-02",
+      "AT-S16-03",
+      "AT-S16-04",
+      "AT-S16-05",
+      "AT-S16-06",
+      "AT-S16-07",
+      "AT-S16-08"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  },
+  {
+    "id": "REQ-S17",
+    "stage": "S17",
+    "requirement": "Publish only the reviewed artifacts after explicit owner authorization and then verify the public installation.",
+    "acceptance_case_ids": [
+      "AT-S17-01",
+      "AT-S17-02",
+      "AT-S17-03",
+      "AT-S17-04",
+      "AT-S17-05",
+      "AT-S17-06"
+    ],
+    "status": "NOT_IMPLEMENTED"
+  }
+]

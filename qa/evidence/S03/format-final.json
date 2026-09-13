@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "--check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T08:22:38.472466+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "unformatted: File would be reformatted\n  --> docs\\cohort_checks.md:18:25\n   |\n17 |\n   - metadata = pd.DataFrame({\n   -     \"observation_id\": [\"o1\", \"o2\", \"o3\"],\n   -     \"subject_id\": [\"person-A\", \"person-A\", \"person-B\"],\n   -     \"diagnosis\": [\"class-A\", \"class-A\", \"class-B\"],\n   -     \"session_id\": [\"ses-01\", \"ses-02\", \"ses-01\"],\n   -     \"site\": [\"site-X\", \"site-X\", \"site-X\"],\n   -     \"family\": [\"family-A\", \"family-A\", \"family-B\"],\n   - })\n   - features = pd.DataFrame({\n   -     \"observation_id\": [\"o1\", \"o2\", \"o3\"],\n   -     \"feature_1\": [1.0, 2.0, 3.0],\n   -     \"feature_2\": [4.0, 5.0, 6.0],\n   - })\n   - cohort = Cohort(metadata, features, ColumnMap(independence=(\"family\",)),\n   -                 (\"o1\", \"o2\", \"o3\"))\n18 + metadata = pd.DataFrame(\n19 +     {\n20 +         \"observation_id\": [\"o1\", \"o2\", \"o3\"],\n21 +         \"subject_id\": [\"person-A\", \"person-A\", \"person-B\"],\n22 +         \"diagnosis\": [\"class-A\", \"class-A\", \"class-B\"],\n23 +         \"session_id\": [\"ses-01\", \"ses-02\", \"ses-01\"],\n24 +         \"site\": [\"site-X\", \"site-X\", \"site-X\"],\n25 +         \"family\": [\"family-A\", \"family-A\", \"family-B\"],\n26 +     }\n27 + )\n28 + features = pd.DataFrame(\n29 +     {\n30 +         \"observation_id\": [\"o1\", \"o2\", \"o3\"],\n31 +         \"feature_1\": [1.0, 2.0, 3.0],\n32 +         \"feature_2\": [4.0, 5.0, 6.0],\n33 +     }\n34 + )\n35 + cohort = Cohort(metadata, features, ColumnMap(independence=(\"family\",)), (\"o1\", \"o2\", \"o3\"))\n36 | result = check_cohort(cohort, (\"feature_1\", \"feature_2\"))\n   |\n\n1 file would be reformatted, 100 files already formatted\n",
+  "stderr": ""
+}

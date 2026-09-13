@@ -1,0 +1,28 @@
+{
+  "designs": [
+    {
+      "name": "fixture-A",
+      "objective": "unseen_participant",
+      "diagnostic_only": false,
+      "metrics": null
+    },
+    {
+      "name": "fixture-B",
+      "objective": "unseen_site",
+      "diagnostic_only": false,
+      "metrics": null
+    }
+  ],
+  "differences": [
+    {
+      "design_a": "fixture-A",
+      "design_b": "fixture-B",
+      "metric": "accuracy",
+      "difference": null,
+      "reasons": [
+        "Schema example only; no evaluations executed."
+      ]
+    }
+  ],
+  "interpretation": "This is an unexecuted synthetic schema example, not a research result."
+}

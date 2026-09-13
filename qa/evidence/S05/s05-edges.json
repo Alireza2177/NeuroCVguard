@@ -1,0 +1,25 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "tests/test_generation.py::test_insufficient_class_components_can_retain_valid_warning_plan",
+    "tests/test_generation.py::test_splitter_infeasibility_is_not_input_error_or_fallback",
+    "tests/test_plan_exports.py::test_no_overwrite_race_preserves_competing_file",
+    "tests/test_plan_exports.py::test_staging_failure_does_not_replace_existing_artifacts",
+    "tests/test_plan_exports.py::test_documented_planning_example"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T11:04:03.987512+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "......                                                                   [100%]\n6 passed in 4.24s\n",
+  "stderr": ""
+}

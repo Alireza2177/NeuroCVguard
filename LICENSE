@@ -1,0 +1,11 @@
+PROPOSED LICENSE — NOT FINALIZED
+
+The foundation selects BSD-3-Clause as the proposed project license
+(spec/17_documentation.md, section 17.4). The maintainer must confirm its
+adoption and the actual copyright ownership before public distribution.
+No copyright holder or copyright year has been supplied or invented here.
+
+This file records an internal development proposal, not a finalized license
+grant. Before release, replace this notice with the complete BSD-3-Clause
+license and confirmed copyright notice. Third-party dependencies retain their
+own licenses. No third-party implementation code is copied into this bootstrap.

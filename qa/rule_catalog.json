@@ -1,0 +1,266 @@
+[
+  {
+    "id": "NCG-COHORT-001",
+    "name": "Repeated observations",
+    "trigger_severity": "info",
+    "evidence_kind": "observed",
+    "meaning": "Inventory notice; repeated people are not by themselves a split violation.",
+    "stage": "S03"
+  },
+  {
+    "id": "NCG-COHORT-002",
+    "name": "Within-participant target variation",
+    "trigger_severity": "warning",
+    "evidence_kind": "observed",
+    "meaning": "Valid longitudinal possibility; baseline/stratified planning unsupported without explicit curation.",
+    "stage": "S03"
+  },
+  {
+    "id": "NCG-COHORT-003",
+    "name": "Within-participant domain variation",
+    "trigger_severity": "info",
+    "evidence_kind": "observed",
+    "meaning": "Describe crossing sites/phases; strict domain planning must assess feasibility.",
+    "stage": "S03"
+  },
+  {
+    "id": "NCG-COHORT-004",
+    "name": "Exact feature equality across IDs",
+    "trigger_severity": "warning",
+    "evidence_kind": "heuristic",
+    "meaning": "Observed equal vectors suggest review, not verified duplicate identity.",
+    "stage": "S03"
+  },
+  {
+    "id": "NCG-COHORT-005",
+    "name": "Missing optional metadata",
+    "trigger_severity": "warning",
+    "evidence_kind": "unassessable",
+    "meaning": "Requested checks without required metadata are not_assessable.",
+    "stage": "S03"
+  },
+  {
+    "id": "NCG-COHORT-006",
+    "name": "Missing protected relationship data",
+    "trigger_severity": "error",
+    "evidence_kind": "unassessable",
+    "meaning": "Strict splitting/evaluation blocked; unknown values not treated as independent.",
+    "stage": "S03"
+  },
+  {
+    "id": "NCG-SPLIT-001",
+    "name": "Observation train/test overlap",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Never waived, including diagnostic evaluation.",
+    "stage": "S04"
+  },
+  {
+    "id": "NCG-SPLIT-002",
+    "name": "Participant train/test overlap",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Violation for supported unseen-person objectives; warning under audit_only.",
+    "stage": "S04"
+  },
+  {
+    "id": "NCG-SPLIT-003",
+    "name": "Protected-component overlap",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Crossing a declared dependence component invalidates the stated independent-unit design.",
+    "stage": "S04"
+  },
+  {
+    "id": "NCG-SPLIT-004",
+    "name": "Requested held-out domain overlaps",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Only a separation violation for the corresponding unseen_site/unseen_phase objective.",
+    "stage": "S04"
+  },
+  {
+    "id": "NCG-SPLIT-005",
+    "name": "Training class missing",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Cannot fit the requested full-class baseline for that fold.",
+    "stage": "S04"
+  },
+  {
+    "id": "NCG-SPLIT-006",
+    "name": "Test class missing",
+    "trigger_severity": "warning",
+    "evidence_kind": "observed",
+    "meaning": "Class-complete metrics undefined for this fold; retain other meaningful results.",
+    "stage": "S04"
+  },
+  {
+    "id": "NCG-SPLIT-007",
+    "name": "Unknown or duplicate membership",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Structural membership diagnostic; reject invalid identity mapping.",
+    "stage": "S04"
+  },
+  {
+    "id": "NCG-SPLIT-008",
+    "name": "Per-fold cohort coverage broken",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "No silent exclusions or automatic row intersection.",
+    "stage": "S04"
+  },
+  {
+    "id": "NCG-SPLIT-009",
+    "name": "Inner rows escape outer train",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Outer test or unknown IDs appear in an inner partition.",
+    "stage": "S04"
+  },
+  {
+    "id": "NCG-SPLIT-010",
+    "name": "Inner partitions overlap or lack coverage",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Inner training/validation identities/components and completeness must hold.",
+    "stage": "S04"
+  },
+  {
+    "id": "NCG-SPLIT-011",
+    "name": "Complete-CV coverage unavailable",
+    "trigger_severity": "warning",
+    "evidence_kind": "observed",
+    "meaning": "A valid one-off holdout is auditable but outside complete-CV evaluation.",
+    "stage": "S04"
+  },
+  {
+    "id": "NCG-PLAN-001",
+    "name": "Insufficient independent groups",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Requested fold count cannot be satisfied; do not downgrade automatically.",
+    "stage": "S05"
+  },
+  {
+    "id": "NCG-PLAN-002",
+    "name": "Protected component crosses held-out domain",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Strict domain plan rejected without removing or relabeling observations.",
+    "stage": "S05"
+  },
+  {
+    "id": "NCG-PLAN-003",
+    "name": "Stratification/class feasibility limitation",
+    "trigger_severity": "warning",
+    "evidence_kind": "observed",
+    "meaning": "Document absent test-class feasibility; invalid actual training folds block plan.",
+    "stage": "S05"
+  },
+  {
+    "id": "NCG-ASSOC-001",
+    "name": "Association review threshold crossed",
+    "trigger_severity": "warning",
+    "evidence_kind": "observed",
+    "meaning": "Descriptive review signal, not proof of causal confounding or shortcut use.",
+    "stage": "S06"
+  },
+  {
+    "id": "NCG-ASSOC-002",
+    "name": "Sparse contingency table",
+    "trigger_severity": "warning",
+    "evidence_kind": "observed",
+    "meaning": "Small observed/expected counts make interpretation unstable; no p-value.",
+    "stage": "S06"
+  },
+  {
+    "id": "NCG-ASSOC-003",
+    "name": "Association not assessable",
+    "trigger_severity": "warning",
+    "evidence_kind": "unassessable",
+    "meaning": "Missing, constant, unstable or excessive-category input prevents specified statistic.",
+    "stage": "S06"
+  },
+  {
+    "id": "NCG-PROV-001",
+    "name": "Upstream fitting history unknown",
+    "trigger_severity": "warning",
+    "evidence_kind": "unassessable",
+    "meaning": "No automatic certification from a supplied feature matrix.",
+    "stage": "S07"
+  },
+  {
+    "id": "NCG-PROV-002",
+    "name": "Declared global data-dependent fitting",
+    "trigger_severity": "warning",
+    "evidence_kind": "declared",
+    "meaning": "User-declared information use outside training scope; not reconstructed history.",
+    "stage": "S07"
+  },
+  {
+    "id": "NCG-PROV-003",
+    "name": "Declared fitting IDs violate scope",
+    "trigger_severity": "error",
+    "evidence_kind": "declared",
+    "meaning": "Qualified declaration-based boundary finding; does not prove historical execution.",
+    "stage": "S07"
+  },
+  {
+    "id": "NCG-PROV-004",
+    "name": "Observed internal fit scope violation",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Controlled runner defect; block successful evaluation and investigate.",
+    "stage": "S10"
+  },
+  {
+    "id": "NCG-PROV-005",
+    "name": "Declared fixed non-learning transform",
+    "trigger_severity": "info",
+    "evidence_kind": "declared",
+    "meaning": "No training-fit isolation requirement solely for a fixed row-local conversion.",
+    "stage": "S07"
+  },
+  {
+    "id": "NCG-EVAL-001",
+    "name": "Fit failed or did not converge",
+    "trigger_severity": "error",
+    "evidence_kind": "observed",
+    "meaning": "Incomplete run, no complete pooled score.",
+    "stage": "S10"
+  },
+  {
+    "id": "NCG-EVAL-002",
+    "name": "Metric undefined",
+    "trigger_severity": "warning",
+    "evidence_kind": "observed",
+    "meaning": "Null value plus specific reason; never substitute zero/NaN.",
+    "stage": "S10"
+  },
+  {
+    "id": "NCG-EVAL-003",
+    "name": "Intentionally invalid diagnostic evaluation",
+    "trigger_severity": "warning",
+    "evidence_kind": "observed",
+    "meaning": "Do not use as evidence for unseen-participant generalization.",
+    "stage": "S12"
+  },
+  {
+    "id": "NCG-EVAL-004",
+    "name": "Training feature entirely missing",
+    "trigger_severity": "warning",
+    "evidence_kind": "observed",
+    "meaning": "Document no training information and prescribed fold-local imputer handling.",
+    "stage": "S10"
+  },
+  {
+    "id": "NCG-REPORT-001",
+    "name": "Sensitive operational output",
+    "trigger_severity": "info",
+    "evidence_kind": "observed",
+    "meaning": "Identity-bearing split/private evaluation artifact; not a public report.",
+    "stage": "S08"
+  }
+]

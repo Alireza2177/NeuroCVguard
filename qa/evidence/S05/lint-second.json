@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T11:00:52.777197+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "E501 Line too long (108 > 100)\n   --> src\\neurocvguard\\io.py:418:101\n    |\n416 |             \"rejected-plan.private.json\": canonical_json(report.to_dict(sensitive_details=True))\n417 |             + \"\\n\",\n418 |             \"REJECTED.SENSITIVE.txt\": \"SENSITIVE REJECTED-PLAN DIAGNOSTICS\\nNo usable plan was produced.\\n\",\n    |                                                                                                     ^^^^^^^^\n419 |         },\n420 |         overwrite=overwrite,\n    |\n\nFound 1 error.\n",
+  "stderr": ""
+}

@@ -1,0 +1,58 @@
+{
+  "fixture_status": "hand-checkable expectations, not application run results",
+  "cohort": {
+    "observations": 36,
+    "participants": 18,
+    "sites": 3,
+    "classes": [
+      "AD",
+      "CN"
+    ],
+    "observations_per_participant": 2
+  },
+  "clean_plan": {
+    "outer_folds": 3,
+    "participant_overlap_per_fold": 0,
+    "observation_overlap_per_fold": 0,
+    "test_observations_per_fold": 12,
+    "test_participants_per_fold": 6,
+    "complete_cv": true
+  },
+  "participant_overlap_plan": {
+    "outer_folds": 2,
+    "participant_overlap_per_fold": 18,
+    "observation_overlap_per_fold": 0,
+    "complete_cv_observation_coverage": true,
+    "valid_for_unseen_participant": false
+  },
+  "association_oracles": [
+    {
+      "table": [
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "cramers_v": 0.0
+    },
+    {
+      "table": [
+        [
+          10,
+          0
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "cramers_v": 1.0
+    }
+  ],
+  "invalid_unknown_config": "must fail structural config validation",
+  "unknown_id_plan": "structurally JSON-valid but fails cohort membership validation"
+}

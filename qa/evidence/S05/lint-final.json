@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T11:05:11.246561+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "E501 Line too long (101 > 100)\n  --> qa\\evidence\\S05\\check_installed.py:48:101\n   |\n46 | assert private.provenance['versions']['scikit-learn']\n47 | assert len(PLAN_RULES) == 3\n48 | print('PASS: isolated installed S05 generation, independent audit, sensitive writers and round trip')\n   |                                                                                                     ^\n49 | \"\"\"\n50 | with tempfile.TemporaryDirectory(prefix=\"neurocvguard-s05-\") as directory:\n   |\n\nFound 1 error.\n",
+  "stderr": ""
+}

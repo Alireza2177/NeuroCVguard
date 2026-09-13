@@ -1,0 +1,47 @@
+[
+  {
+    "path": "fixtures/config.json",
+    "schema": "contracts/config.schema.json",
+    "valid": true
+  },
+  {
+    "path": "fixtures/config_invalid_unknown_key.json",
+    "schema": "contracts/config.schema.json",
+    "valid": false
+  },
+  {
+    "path": "fixtures/splits_clean.json",
+    "schema": "contracts/split-plan.schema.json",
+    "valid": true
+  },
+  {
+    "path": "fixtures/splits_participant_overlap.json",
+    "schema": "contracts/split-plan.schema.json",
+    "valid": true
+  },
+  {
+    "path": "fixtures/splits_unknown_id.json",
+    "schema": "contracts/split-plan.schema.json",
+    "valid": true
+  },
+  {
+    "path": "fixtures/ledger_declared_global.json",
+    "schema": "contracts/preprocessing-ledger.schema.json",
+    "valid": true
+  },
+  {
+    "path": "fixtures/report_schema_example.json",
+    "schema": "contracts/audit-report.schema.json",
+    "valid": true
+  },
+  {
+    "path": "fixtures/evaluation_schema_example.json",
+    "schema": "contracts/evaluation-result.schema.json",
+    "valid": true
+  },
+  {
+    "path": "fixtures/comparison_schema_example.json",
+    "schema": "contracts/comparison-summary.schema.json",
+    "valid": true
+  }
+]

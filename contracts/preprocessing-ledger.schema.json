@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:neurocvguard:schema:preprocessing-ledger:1.0",
+  "title": "NeuroCVguard preprocessing-ledger contract 1.0",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "source": {
+      "const": "user_declaration"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "transform": {
+            "type": "string",
+            "minLength": 1
+          },
+          "data_dependent": {
+            "type": "boolean"
+          },
+          "repeat_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fold_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "inner_fold_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fit_scope": {
+            "enum": [
+              "outer_train",
+              "inner_train",
+              "all_cohort",
+              "external",
+              "unknown"
+            ]
+          },
+          "fit_ids": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "uses_target": {
+            "type": "boolean"
+          },
+          "note": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "event_id",
+          "transform",
+          "data_dependent",
+          "repeat_id",
+          "fold_id",
+          "inner_fold_id",
+          "fit_scope",
+          "fit_ids",
+          "uses_target",
+          "note"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    }
+  },
+  "required": [
+    "schema_version",
+    "source",
+    "events"
+  ],
+  "additionalProperties": false
+}

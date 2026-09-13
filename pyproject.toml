@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "neurocvguard"
+dynamic = ["version"]
+description = "Research-only cohort audits and independently checked split plans for neuroimaging ML"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["numpy", "pandas", "scipy", "scikit-learn", "Jinja2", "jsonschema"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "hypothesis", "ruff", "mypy", "build", "twine", "pandas-stubs", "types-jsonschema"]
+docs = ["sphinx", "myst-parser", "sphinx-rtd-theme"]
+
+[project.scripts]
+neurocvguard = "neurocvguard.__main__:main"
+
+[tool.hatch.version]
+path = "src/neurocvguard/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/neurocvguard"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/neurocvguard", "pyproject.toml", "README.md", "LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--strict-markers --strict-config"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+# Preserve the supplied standalone foundation tools; they predate S00 and
+# are specification utilities, not application code. New stage helpers are checked.
+extend-exclude = ["tools/build_master.py", "tools/validate_foundation.py", ".venv-install"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+# sklearn does not ship typing metadata. Restrict this exception to its import
+# boundary; NeuroCVguard's participant adapters and public functions remain strict.
+[[tool.mypy.overrides]]
+module = ["sklearn", "sklearn.*"]
+ignore_missing_imports = true
+
+# SciPy's installed contingency module has no typing metadata. Keep this
+# exception at the external boundary; validate finite outputs and type our adapter.
+[[tool.mypy.overrides]]
+module = ["scipy.stats.contingency"]
+ignore_missing_imports = true
+
+[tool.neurocvguard.release]
+proposed-license = "BSD-3-Clause"
+license-status = "PENDING_MAINTAINER_CONFIRMATION"
+copyright-owner = "PENDING_MAINTAINER_CONFIRMATION"
+maintainer = "PENDING_MAINTAINER_CONFIRMATION"
+security-contact = "PENDING_MAINTAINER_CONFIRMATION"
+repository-url = "PENDING_OWNER_VERIFICATION"
+package-namespace = "PENDING_OWNER_VERIFICATION"
+public-release-authorized = false

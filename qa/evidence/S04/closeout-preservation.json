@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "qa/evidence/S04/check_closeout.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T09:04:00.198762+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "{\n  \"baseline_files_retained\": 260,\n  \"unchanged_baseline_files\": 250,\n  \"authorized_changed_files\": [\n    \"AI_ASSISTANCE.md\",\n    \"README.md\",\n    \"pyproject.toml\",\n    \"qa/acceptance_cases.json\",\n    \"qa/case_to_test_map.json\",\n    \"qa/requirements.json\",\n    \"src/neurocvguard/__init__.py\",\n    \"src/neurocvguard/_projection.py\",\n    \"src/neurocvguard/rules.py\",\n    \"state/PROJECT_STATUS.json\"\n  ],\n  \"prior_stage_status_and_evidence_unchanged\": true,\n  \"s02_and_later_stages_unchanged\": true,\n  \"normative_definitions_unchanged\": true,\n  \"passing_suite_tests\": 185,\n  \"s04_cases_mapped\": 17,\n  \"human_acceptance\": \"pending\"\n}\n",
+  "stderr": ""
+}

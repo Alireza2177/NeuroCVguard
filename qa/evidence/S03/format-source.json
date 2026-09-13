@@ -1,0 +1,27 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "src/neurocvguard/identity.py",
+    "src/neurocvguard/rules.py",
+    "src/neurocvguard/checks",
+    "src/neurocvguard/_projection.py",
+    "tests/conftest.py",
+    "tests/test_cohort_inventory.py",
+    "tests/test_identity.py",
+    "tests/test_cohort_checks.py",
+    "qa/evidence/S03/run_check.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T08:16:12.160220+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "8 files reformatted, 2 files left unchanged\n",
+  "stderr": ""
+}

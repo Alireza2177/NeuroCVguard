@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "columns": {
+    "observation_id": "observation_id",
+    "subject_id": "subject_id",
+    "target": "diagnosis",
+    "session": "session_id",
+    "site": "site",
+    "phase": null,
+    "independence": [],
+    "categorical_covariates": []
+  },
+  "study": {
+    "objective": "unseen_participant"
+  },
+  "split": {
+    "scheme": "subject_kfold",
+    "n_splits": 3,
+    "seed": 2026
+  },
+  "association": {
+    "review_threshold": 0.3,
+    "min_cell_count": 5
+  },
+  "evaluation": {
+    "feature_columns": [
+      "feature_1",
+      "feature_2"
+    ],
+    "tune": false,
+    "C": 1.0,
+    "C_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "inner_splits": 3,
+    "max_iter": 2000,
+    "diagnostic_allow_subject_overlap": false,
+    "positive_class": "AD",
+    "secret_magic": true
+  },
+  "report": {
+    "sensitive_details": false,
+    "small_cell_threshold": 5
+  },
+  "limits": {
+    "max_rows": 100000,
+    "max_features": 10000,
+    "max_dense_mb": 512
+  }
+}

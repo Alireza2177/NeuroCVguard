@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pip",
+    "install",
+    "pandas-stubs",
+    "types-jsonschema"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T07:32:03.799899+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "ERROR: Could not find a version that satisfies the requirement pandas-stubs (from versions: none)\nERROR: No matching distribution found for pandas-stubs\n"
+}

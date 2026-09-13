@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python",
+    "qa/evidence/S00/check_preservation.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T06:55:49.509208+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 0,
+  "stdout": "{\n  \"original_files\": 91,\n  \"unchanged_files\": 91,\n  \"authorized_changed_files\": [],\n  \"missing_files\": [],\n  \"unexpected_changes\": [],\n  \"later_stages_unchanged\": true,\n  \"git_index\": \"NOT APPLICABLE: no Git repository at baseline\"\n}\n",
+  "stderr": ""
+}

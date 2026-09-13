@@ -1,0 +1,12 @@
+{
+  "checks": [
+    {"check": "Python 3.13 compatibility", "status": "NOT RUN", "reason": "No Python 3.13 interpreter was available in the inspected local interpreter inventory; full matrix remains a later-stage gate."},
+    {"check": "Linux and macOS compatibility", "status": "NOT RUN", "reason": "Only a local Windows host was available."},
+    {"check": "Full pytest suite on Python 3.12", "status": "NOT RUN", "reason": "Python 3.12 exercised ordinary installation, runtime dependency imports, metadata, pip check and import/module/console smoke checks; the editable developer suite ran on Python 3.11."},
+    {"check": "Lowest dependency environment", "status": "NOT RUN", "reason": "No supported dependency lower bounds asserted; later compatibility gate."},
+    {"check": "python -m sphinx -W --keep-going -b html docs docs/_build/html", "status": "NOT RUN", "reason": "Documentation project not implemented; required from S14."},
+    {"check": "python -m build and twine distribution validation", "status": "NOT RUN", "reason": "S16 release distribution checks are outside S00. Pip's local installation builds succeeded but are not an S16 release dossier."},
+    {"check": "python tools/validate_foundation.py", "status": "NOT RUN", "reason": "Standalone foundation validator asserts the original unimplemented state. Preserved without weakening its checks; not used for application verification."},
+    {"check": "Human acceptance", "status": "PENDING", "reason": "No human acceptance instruction received."}
+  ]
+}

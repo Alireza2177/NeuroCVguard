@@ -1,0 +1,314 @@
+{
+  "basis": "S05 pre-edit baseline; no Git repository",
+  "excluded": [
+    ".git",
+    ".hypothesis",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".venv-install",
+    "__pycache__",
+    "_build",
+    "build",
+    "dist"
+  ],
+  "note": "Excludes this inventory itself, bytecode and egg-info. Includes the human-review-pending handoff and command index.",
+  "changes": [
+    {
+      "path": "AI_ASSISTANCE.md",
+      "kind": "modified",
+      "sha256": "4751c8323914fe9b0b5810c1379566f890a1e17b631007efc7cbb7eaa7431f7b"
+    },
+    {
+      "path": "README.md",
+      "kind": "modified",
+      "sha256": "6e4d743cebbc294f59e4af59fec6454630bbc34697fb9450379934d4337da91d"
+    },
+    {
+      "path": "docs/split_generation.md",
+      "kind": "added",
+      "sha256": "777d6954ddea263a94b79554d4a150c7377c3c010504d7eff81d52162908b077"
+    },
+    {
+      "path": "pyproject.toml",
+      "kind": "modified",
+      "sha256": "e8db0bad59c1dee5c4dd2f19bc573b554dfd7c0be9c1ec8b04819995ddad35a0"
+    },
+    {
+      "path": "qa/acceptance_cases.json",
+      "kind": "modified",
+      "sha256": "6553c7c847fdc33f7482673c74445f4fc4708b5a65fcdad2f0f9f79f8bc6184c"
+    },
+    {
+      "path": "qa/case_to_test_map.json",
+      "kind": "modified",
+      "sha256": "5a498b416a8c7de89f0b34d4388336a73e8df9c353321ca7eb5278cc50ed9fbf"
+    },
+    {
+      "path": "qa/evidence/S05/baseline.json",
+      "kind": "added",
+      "sha256": "49c3ebfd658330e127494eab145b920de83b879e384b718560198e38625ea5f2"
+    },
+    {
+      "path": "qa/evidence/S05/check_closeout.py",
+      "kind": "added",
+      "sha256": "1fcb290d30a5aa22dbc3e90035f26bcf1fb0124373ee2c6e1ae5f91f91bf8106"
+    },
+    {
+      "path": "qa/evidence/S05/check_installed.py",
+      "kind": "added",
+      "sha256": "baef7832ca5d153367027328e926c09bc12e6b8f9ef2a2f1da8de796395ece1f"
+    },
+    {
+      "path": "qa/evidence/S05/closeout-format.json",
+      "kind": "added",
+      "sha256": "a24f563b49e1d13def770530e08f778a7a33adbe536264f1d5ceb4c32e638427"
+    },
+    {
+      "path": "qa/evidence/S05/closeout-lint.json",
+      "kind": "added",
+      "sha256": "b8affb79231de7b7b2316c2de28ee0e0cfa421514f1f82f9f9cf4e9245526da5"
+    },
+    {
+      "path": "qa/evidence/S05/closeout-preservation.json",
+      "kind": "added",
+      "sha256": "4e1949e3c27a2d8335e84d508bfb940ad537694a1d8cb0935f5c2bdf98fcb5a2"
+    },
+    {
+      "path": "qa/evidence/S05/commands.md",
+      "kind": "added",
+      "sha256": "1b40fdb722f61d170100c82a95d01b32c2d60724edde073d4b3ff85f3862d4b7"
+    },
+    {
+      "path": "qa/evidence/S05/doctests.json",
+      "kind": "added",
+      "sha256": "5ae8e073ddb4a198b0f1e4d7fb007afc4a7b49f1f459ab1dfd2b1c7ad6d44e80"
+    },
+    {
+      "path": "qa/evidence/S05/environment-dev.json",
+      "kind": "added",
+      "sha256": "bf852ef99e0700a20fea514b5f09625c549e9681d071ae33d72c29cd6183dd54"
+    },
+    {
+      "path": "qa/evidence/S05/environment-ordinary.json",
+      "kind": "added",
+      "sha256": "02205d9688f7e5b69d423fc2d6c2a5ba3dd7b82ba1b5014e988cf25f47759354"
+    },
+    {
+      "path": "qa/evidence/S05/format-current.json",
+      "kind": "added",
+      "sha256": "3eac1d779fbb9a027b119c3d9e21c5c18ca55c306e615ec6e1400c367459f165"
+    },
+    {
+      "path": "qa/evidence/S05/format-docs-tests.json",
+      "kind": "added",
+      "sha256": "f5c32155b10c5b2116b459e1c5e14cfb4c5421069446f040f328a455446b10ea"
+    },
+    {
+      "path": "qa/evidence/S05/format-final.json",
+      "kind": "added",
+      "sha256": "de99ec9c7b67b02d7a21855feade615c9ece0e4f7883e0304b77a17c4fe80bea"
+    },
+    {
+      "path": "qa/evidence/S05/format-helpers.json",
+      "kind": "added",
+      "sha256": "5d77bea7e04808bb799bf17154f04512ce07510876147d0e3555d7740ee6e8db"
+    },
+    {
+      "path": "qa/evidence/S05/format-s05c.json",
+      "kind": "added",
+      "sha256": "16609a7e9e5eb12e674524917672f307bfc82641406c3a7d757021b0c1bd25c3"
+    },
+    {
+      "path": "qa/evidence/S05/install-ordinary-retry.json",
+      "kind": "added",
+      "sha256": "ed4da584747c293b5cd42d3d623c4a7eaf4c9ba8b816196f7e8ae8f7e72d5216"
+    },
+    {
+      "path": "qa/evidence/S05/install-ordinary.json",
+      "kind": "added",
+      "sha256": "0dd33f083b65f1b60e6956c3a6b0412b5dcfdf6687287ce1b75e939f4cfbc6c5"
+    },
+    {
+      "path": "qa/evidence/S05/installed-smoke.json",
+      "kind": "added",
+      "sha256": "4b30fde440de234ffd9d3dcf27743cf700432c6abcdfda64ee3d1a4c77211fa3"
+    },
+    {
+      "path": "qa/evidence/S05/instruction_loading.md",
+      "kind": "added",
+      "sha256": "5b1e33b5907c4437d8cc78c4f2a567a50e7eaed8495489f1b355544d495612ca"
+    },
+    {
+      "path": "qa/evidence/S05/lint-final.json",
+      "kind": "added",
+      "sha256": "2de5a1fe24e7a95cf22305c71d66c7da32b8332ea2b80160a1d13091d7c16c9d"
+    },
+    {
+      "path": "qa/evidence/S05/lint-fixes.json",
+      "kind": "added",
+      "sha256": "09b9099bd67c0a2f93e2fb15e5215b021cef32cc8beca430970036e9c62b317f"
+    },
+    {
+      "path": "qa/evidence/S05/lint-initial.json",
+      "kind": "added",
+      "sha256": "467e4ed6b4b3e6b7cc2faf6044213a21d32cfe547211ba0106f060977458a510"
+    },
+    {
+      "path": "qa/evidence/S05/lint-passed.json",
+      "kind": "added",
+      "sha256": "27f796800438cb7d7933747d61793b23af7dd6b110d82998575106292aa8b2c1"
+    },
+    {
+      "path": "qa/evidence/S05/lint-second.json",
+      "kind": "added",
+      "sha256": "26e7f1fa2546e2aa6acf39c4cffa3d5f2cecf5891032fff858384453eed31f62"
+    },
+    {
+      "path": "qa/evidence/S05/mypy-final.json",
+      "kind": "added",
+      "sha256": "20c1679252e5807bee033f57ac6de7bbdf73252bb0c7d1f2a84b2331db95148f"
+    },
+    {
+      "path": "qa/evidence/S05/mypy-initial.json",
+      "kind": "added",
+      "sha256": "b367ed896fb215e58aca38e358c6daf5c0795c38b06aa17dcfdf5577af4f427b"
+    },
+    {
+      "path": "qa/evidence/S05/mypy-second.json",
+      "kind": "added",
+      "sha256": "e6d66220c7576ad67234edf61b7815da32cfe763539735ff52faf9ce9572e919"
+    },
+    {
+      "path": "qa/evidence/S05/pip-check.json",
+      "kind": "added",
+      "sha256": "f2b728805edbc1d3e1dcdee73d9bb28733d770cad60577d62d3bf064929ddaeb"
+    },
+    {
+      "path": "qa/evidence/S05/pytest-final.json",
+      "kind": "added",
+      "sha256": "c0737f9df3113c39d13430e0c23e8bab4b65dfcb7120cad440861117894a8584"
+    },
+    {
+      "path": "qa/evidence/S05/pytest-final.xml",
+      "kind": "added",
+      "sha256": "61984abab513aff5ec3c2148f882b064e55dc872067458fe11d7f9f499bfdd68"
+    },
+    {
+      "path": "qa/evidence/S05/regression-initial.json",
+      "kind": "added",
+      "sha256": "69be93d464453d4bab581ae2037768d98f7c5437747ab46ab062a962887c3f4a"
+    },
+    {
+      "path": "qa/evidence/S05/review.md",
+      "kind": "added",
+      "sha256": "80c50c36ec35ea305c2750b0e1392a1c33f21748399a7c76c35b56d045a60554"
+    },
+    {
+      "path": "qa/evidence/S05/run_check.py",
+      "kind": "added",
+      "sha256": "7a1faf2714885520c3da664c6a8743121025f25f23d8a976f9628e28ac8073fd"
+    },
+    {
+      "path": "qa/evidence/S05/s05-edges.json",
+      "kind": "added",
+      "sha256": "cb5889986adf2e3b354b62c27df0a46bbbce6baa12e76f7b3cd6a6c6f5625728"
+    },
+    {
+      "path": "qa/evidence/S05/s05a-participants.json",
+      "kind": "added",
+      "sha256": "ee8598ba4751cb7fdf3ec63b077b4a2357cd353b4ee9aec87020f73fbf5c6284"
+    },
+    {
+      "path": "qa/evidence/S05/s05b-domains.json",
+      "kind": "added",
+      "sha256": "02dc4527028a033cde7436007983a59c7789af8199a36f928f944a066d237fc6"
+    },
+    {
+      "path": "qa/evidence/S05/s05c-exports-fixed.json",
+      "kind": "added",
+      "sha256": "d2be8e66868339f16966a50658e3ece5c716ff6fb6a955d273d42d2885343acd"
+    },
+    {
+      "path": "qa/evidence/S05/s05c-exports.json",
+      "kind": "added",
+      "sha256": "8b309b25bea35aecdf12c1f6d251466031f0aa0d46be9834a88d592a071bdb50"
+    },
+    {
+      "path": "qa/requirements.json",
+      "kind": "modified",
+      "sha256": "af35418ff0bda1092a39f5a98b73ab16bb12cbd16159188686f8dd9fc98026ff"
+    },
+    {
+      "path": "src/neurocvguard/__init__.py",
+      "kind": "modified",
+      "sha256": "572cab5d5778b8418329a5c0406b54b533f7c91e00991d001eaef9bcb993c601"
+    },
+    {
+      "path": "src/neurocvguard/_projection.py",
+      "kind": "modified",
+      "sha256": "9472e6e4cfbd8f1e58ae86ea08457a07d36deb0ccd677fbe013d6e7fbe651c15"
+    },
+    {
+      "path": "src/neurocvguard/config.py",
+      "kind": "modified",
+      "sha256": "30a1d0a41cbaff2351c9399636b541b7743ce6eab11138679e4400384e9bba39"
+    },
+    {
+      "path": "src/neurocvguard/errors.py",
+      "kind": "modified",
+      "sha256": "6007635cdf3eabaaa4eef25954a49de6dc1760eaf3fab14944dbd82cba64e3c6"
+    },
+    {
+      "path": "src/neurocvguard/io.py",
+      "kind": "modified",
+      "sha256": "efc6b6a0128719c2e52de335aa4febc23962df9914d94fffc77b2a39ea8d1e23"
+    },
+    {
+      "path": "src/neurocvguard/models.py",
+      "kind": "modified",
+      "sha256": "38303f4efd7c517d944f33ac769eeeb5f522869d7d83442e6566f9cd6dc4ac0c"
+    },
+    {
+      "path": "src/neurocvguard/rules.py",
+      "kind": "modified",
+      "sha256": "0c4d986f68cc5c58cd6a9ca185322ada35a70cded5cbb7b2d10594f4a67e447f"
+    },
+    {
+      "path": "src/neurocvguard/serialization.py",
+      "kind": "modified",
+      "sha256": "114dc296f5fcec26fbc458310507a37b5768c391b12ee2ea1f34e6411043a593"
+    },
+    {
+      "path": "src/neurocvguard/splitting.py",
+      "kind": "added",
+      "sha256": "d777867a074246f9d2c5abe9151777953f6d43c617e132aa6300741d662a1186"
+    },
+    {
+      "path": "state/PROJECT_STATUS.json",
+      "kind": "modified",
+      "sha256": "3fdaad0e17fb0bd1806378440066e3b85fdff1371fc9a7d402eca23ce8f754d4"
+    },
+    {
+      "path": "state/handoffs/S05.md",
+      "kind": "added",
+      "sha256": "0338cc2853ec8fe584c06422060a3bc0811e9f40766729c679771a11ad2c00c7"
+    },
+    {
+      "path": "tests/test_domain_generation.py",
+      "kind": "added",
+      "sha256": "d4b3288f45273df4f3b8d5388144d34b91552ad30d1a1a5722d2eca499190bcd"
+    },
+    {
+      "path": "tests/test_generation.py",
+      "kind": "added",
+      "sha256": "fc6077b41d82add498026ca47f5da2150f3316217b8b6a712d5b1daafcd419fc"
+    },
+    {
+      "path": "tests/test_plan_exports.py",
+      "kind": "added",
+      "sha256": "5236086badd236af9158cf14aa308f3860f1f439222fe04a1ec5a39c3a9a60e3"
+    }
+  ]
+}

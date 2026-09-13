@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "--check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T11:28:48.062978+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "unformatted: File would be reformatted\n  --> docs\\association_diagnostics.md:19:25\n   |\n18 |\n   - metadata = pd.DataFrame({\n   -     \"observation_id\": [f\"observation-{i}\" for i in range(20)],\n   -     \"subject_id\": [f\"participant-{i}\" for i in range(20)],\n   -     \"site\": [\"site-A\"] * 10 + [\"site-B\"] * 10,\n   -     \"diagnosis\": ([\"class-A\"] * 5 + [\"class-B\"] * 5) * 2,\n   - })\n19 + metadata = pd.DataFrame(\n20 +     {\n21 +         \"observation_id\": [f\"observation-{i}\" for i in range(20)],\n22 +         \"subject_id\": [f\"participant-{i}\" for i in range(20)],\n23 +         \"site\": [\"site-A\"] * 10 + [\"site-B\"] * 10,\n24 +         \"diagnosis\": ([\"class-A\"] * 5 + [\"class-B\"] * 5) * 2,\n25 +     }\n26 + )\n27 | config = AuditConfig(columns=ColumnMap(session=None))\n   |\n\n1 file would be reformatted, 139 files already formatted\n",
+  "stderr": ""
+}

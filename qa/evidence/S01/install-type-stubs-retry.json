@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pip",
+    "install",
+    "pandas-stubs",
+    "types-jsonschema"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T07:32:23.131593+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "exit_code": 0,
+  "stdout": "Collecting pandas-stubs\n  Obtaining dependency information for pandas-stubs from https://files.pythonhosted.org/packages/60/c2/959caec5c46f484b5f8bb6def4b0cf7a45ba6acda26f12b75142d98cc5ae/pandas_stubs-3.0.5.260730-py3-none-any.whl.metadata\n  Downloading pandas_stubs-3.0.5.260730-py3-none-any.whl.metadata (11 kB)\nCollecting types-jsonschema\n  Obtaining dependency information for types-jsonschema from https://files.pythonhosted.org/packages/07/d5/134f8a147dcecda10db7f60cfc6af0578a25a5c53c87b3907a64385e0184/types_jsonschema-4.26.0.20260518-py3-none-any.whl.metadata\n  Downloading types_jsonschema-4.26.0.20260518-py3-none-any.whl.metadata (1.8 kB)\nRequirement already satisfied: numpy>=1.23.5 in <PROJECT_ROOT>\\.venv\\lib\\site-packages (from pandas-stubs) (2.4.6)\nRequirement already satisfied: referencing in <PROJECT_ROOT>\\.venv\\lib\\site-packages (from types-jsonschema) (0.37.0)\nRequirement already satisfied: attrs>=22.2.0 in <PROJECT_ROOT>\\.venv\\lib\\site-packages (from referencing->types-jsonschema) (26.1.0)\nRequirement already satisfied: rpds-py>=0.7.0 in <PROJECT_ROOT>\\.venv\\lib\\site-packages (from referencing->types-jsonschema) (2026.6.3)\nRequirement already satisfied: typing-extensions>=4.4.0 in <PROJECT_ROOT>\\.venv\\lib\\site-packages (from referencing->types-jsonschema) (4.16.0)\nDownloading pandas_stubs-3.0.5.260730-py3-none-any.whl (174 kB)\n   -------------------------------------- 174.8/174.8 kB 269.8 kB/s eta 0:00:00\nDownloading types_jsonschema-4.26.0.20260518-py3-none-any.whl (16 kB)\nInstalling collected packages: pandas-stubs, types-jsonschema\nSuccessfully installed pandas-stubs-3.0.5.260730 types-jsonschema-4.26.0.20260518\n",
+  "stderr": "\n[notice] A new release of pip is available: 23.2.1 -> 26.2.1\n[notice] To update, run: <PROJECT_ROOT>\\.venv\\Scripts\\python.exe -m pip install --upgrade pip\n"
+}

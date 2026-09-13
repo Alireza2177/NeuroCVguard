@@ -1,0 +1,15 @@
+# AI assistance record
+
+| Date | Tool/model | Assistance | Human review actually performed | Revision |
+|---|---|---|---|---|
+| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read the S00 foundation sources; drafted the minimal package, tests, configuration, README, and proposed license record; executed local installation/checks; recorded evidence and performed an AI scope/privacy review. | None recorded. The user authorized S00 implementation; acceptance remains pending. | Local S00 working files; no Git repository or commit. |
+| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read S01 sources and S00 evidence; implemented typed records, configuration, offline schemas and serialization; drafted contract/privacy tests and documentation; ran local verification and performed an implementing-agent review. | None recorded. The user explicitly instructed proceeding to S01 and stopping afterward; no human acceptance is inferred for either stage. | Local S01 working files; no Git repository or commit. |
+| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read S03 sources and existing S01 records; implemented in-memory inventory, protected components, exact-feature equality, fixed rule wording, tests and docs; ran local checks and implementation-AI review. | None recorded. The user explicitly selected S03 only; S02 remains unimplemented and prior acceptance is not inferred. | Local S03 working files; no Git repository or commit. |
+| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read S04 sources; implemented strict plan import/binding, outer/inner invariant audits and scoped public flags; drafted tests/docs; executed local QA and implementation-AI review. | None recorded. The user selected S04 only; previous acceptance remains pending and S02 remains unimplemented. | Local S04 files; no Git repository or commit. |
+| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read S05 sources; implemented standard participant/domain split generation, independent post-audit, sensitive exports and separate diagnostics; drafted tests/docs and performed implementation-AI review. | None recorded. The user selected S05 only; prior acceptance remains pending and S02 ingestion is unimplemented. | Local S05 files; no Git repository or commit. |
+
+| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read S06 sources; implemented participant-level association views, SciPy statistics, warnings and conservative privacy projection; drafted tests/docs and performed implementation-AI review. | None recorded. The user selected S06 only; prior acceptance remains pending and S02 ingestion is unimplemented. | Local S06 files; no Git repository or commit. |
+
+No independent reviewer, human authorship approval, public release approval,
+or comprehensive scientific validation is claimed. Later changes to review
+status must reflect actual review of the specified files.

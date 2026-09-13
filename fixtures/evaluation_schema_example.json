@@ -1,0 +1,36 @@
+{
+  "format": "neurocvguard.evaluation.private",
+  "schema_version": "1.0",
+  "tool_version": "0.0.0+fixture",
+  "sensitive": true,
+  "execution_status": "blocked",
+  "objective": "unseen_participant",
+  "diagnostic_only": false,
+  "cohort_digest": "f6d51b44032a7b7e5c652c2fc34e3702c306a6e188dd046c88bf5d87b6c2a612",
+  "feature_digest": "84434d552595a0ae25aa0689c20f08673da3aa24a7d300fea348e0cf3e7a4abe",
+  "config_digest": "4fa1d567e8491f616e4d440035411b454e61d95e742fd008aa901514df021963",
+  "class_order": [
+    "AD",
+    "CN"
+  ],
+  "positive_class": "AD",
+  "feature_columns": [
+    "feature_1",
+    "feature_2"
+  ],
+  "metric_unit": "participant",
+  "n_observations": 36,
+  "n_participants": 18,
+  "folds": [],
+  "fit_events": [],
+  "pooled_metrics": null,
+  "preflight_checks": [],
+  "limitations": [
+    "Blocked schema fixture only; no model was fitted and these hashes are illustrative fixture digests, not real dataset evidence."
+  ],
+  "provenance": {
+    "seed": 2026,
+    "versions": {},
+    "upstream_preprocessing_verified": false
+  }
+}

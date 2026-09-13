@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "qa/evidence/S05/check_closeout.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T11:10:41.976314+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "{\n  \"baseline_files_retained\": 311,\n  \"unchanged_baseline_files\": 296,\n  \"authorized_changed_files\": [\n    \"AI_ASSISTANCE.md\",\n    \"README.md\",\n    \"pyproject.toml\",\n    \"qa/acceptance_cases.json\",\n    \"qa/case_to_test_map.json\",\n    \"qa/requirements.json\",\n    \"src/neurocvguard/__init__.py\",\n    \"src/neurocvguard/_projection.py\",\n    \"src/neurocvguard/config.py\",\n    \"src/neurocvguard/errors.py\",\n    \"src/neurocvguard/io.py\",\n    \"src/neurocvguard/models.py\",\n    \"src/neurocvguard/rules.py\",\n    \"src/neurocvguard/serialization.py\",\n    \"state/PROJECT_STATUS.json\"\n  ],\n  \"prior_stage_status_and_evidence_unchanged\": true,\n  \"s02_and_later_stages_unchanged\": true,\n  \"normative_definitions_unchanged\": true,\n  \"passing_suite_tests\": 232,\n  \"s05_cases_mapped\": 10,\n  \"human_acceptance\": \"pending\"\n}\n",
+  "stderr": ""
+}

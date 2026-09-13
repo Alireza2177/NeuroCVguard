@@ -1,0 +1,289 @@
+{
+  "basis": "S03 pre-edit baseline; no Git repository",
+  "excluded": [
+    ".git",
+    ".hypothesis",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    ".venv-install",
+    "__pycache__",
+    "_build",
+    "build",
+    "dist"
+  ],
+  "note": "Excludes this inventory itself, bytecode and egg-info. Hashes include the human-review-pending handoff.",
+  "changes": [
+    {
+      "path": "AI_ASSISTANCE.md",
+      "kind": "modified",
+      "sha256": "877f66add26563caf7fa3cce3d8dfb2a8382a56a89c04f92f9ef398b801ebfe6"
+    },
+    {
+      "path": "README.md",
+      "kind": "modified",
+      "sha256": "c94dd36b16e98104c6d7f00ee349db6cfecd5bc7198252e8605e050ed6793a12"
+    },
+    {
+      "path": "docs/cohort_checks.md",
+      "kind": "added",
+      "sha256": "8f4c525fd4ed77e3e5f7e59ce899b2ff72363a3bdc9fd4788a10a69d990bf1ae"
+    },
+    {
+      "path": "pyproject.toml",
+      "kind": "modified",
+      "sha256": "20a82227d2cfa364b4d32da9d0a5e502f2f30a580d26b6d77a0582285fa5ad1d"
+    },
+    {
+      "path": "qa/acceptance_cases.json",
+      "kind": "modified",
+      "sha256": "a1c01da707e551e9b3330ac2a24c5accd5c9c404a4aa14bb09996da9b58a50c3"
+    },
+    {
+      "path": "qa/case_to_test_map.json",
+      "kind": "modified",
+      "sha256": "39524b5e0fc128149bc5d3499ba24383c2d59fdf4acf1961c46947a537eabc1c"
+    },
+    {
+      "path": "qa/evidence/S03/baseline.json",
+      "kind": "added",
+      "sha256": "eec8e4d59123f2fefb19e65c9babfb73171534609fb7e0f56ffdc62b30949656"
+    },
+    {
+      "path": "qa/evidence/S03/check_closeout.py",
+      "kind": "added",
+      "sha256": "3b5dc549b56abc4ed8d7d0867d4270cf49bdb962a58ce6a39d0f272f7d24da13"
+    },
+    {
+      "path": "qa/evidence/S03/check_installed.py",
+      "kind": "added",
+      "sha256": "badb514699fa6d76bb02d97b231270e872729f907f8ba7f3b40fc666440f3ed3"
+    },
+    {
+      "path": "qa/evidence/S03/closeout-format.json",
+      "kind": "added",
+      "sha256": "83a5e82ddbd9e77f0eb7d0e73e2eaee8e887dd728240807dbb400a49a0e31ccf"
+    },
+    {
+      "path": "qa/evidence/S03/closeout-preservation.json",
+      "kind": "added",
+      "sha256": "e29a91a952302190e031712cc2d5a647258df0fde00359f79fb1323028d2a24e"
+    },
+    {
+      "path": "qa/evidence/S03/commands.md",
+      "kind": "added",
+      "sha256": "5d16390d9566bcdaa1a163dcc028f7c8272721e303ef7242e6cea8ffe642094d"
+    },
+    {
+      "path": "qa/evidence/S03/doctests.json",
+      "kind": "added",
+      "sha256": "febfad870cfa3c6edcb4e2b7d138df1085e6ae3a85cf927a7a34bd1d7b420312"
+    },
+    {
+      "path": "qa/evidence/S03/doctests.xml",
+      "kind": "added",
+      "sha256": "0373d9831da4e837e800b12621fce1f6d77f767464d6b18e92768fad64d3e1c3"
+    },
+    {
+      "path": "qa/evidence/S03/documented-example-final.json",
+      "kind": "added",
+      "sha256": "b24fad8d04644fe914cc35dfde5cb59913a8d1fa9fcea012a8a28ea1aecc6ff8"
+    },
+    {
+      "path": "qa/evidence/S03/environment.json",
+      "kind": "added",
+      "sha256": "c560d763a55d1ff8d5020109701e4bccc16fa14edb83c9bc239bbd7d063b2450"
+    },
+    {
+      "path": "qa/evidence/S03/format-doc-example.json",
+      "kind": "added",
+      "sha256": "0ad29a97609f8880188dec8a4cddf3a6ba38ad268ec3555baee4d1f43d9e99fb"
+    },
+    {
+      "path": "qa/evidence/S03/format-final-sources.json",
+      "kind": "added",
+      "sha256": "e2c51626a566b675dda2b50bbf6001071719a569deac26efefd9fcf4269d85d5"
+    },
+    {
+      "path": "qa/evidence/S03/format-final.json",
+      "kind": "added",
+      "sha256": "868473d70ffe23b57544f7b6a990fbcf68b6fb6403a0210b2380eb19efdce66e"
+    },
+    {
+      "path": "qa/evidence/S03/format-passed.json",
+      "kind": "added",
+      "sha256": "0a4764bfe33fbaedb90d45a7757157218d4d0cfcfb08570ee00bb6e2b37ed05f"
+    },
+    {
+      "path": "qa/evidence/S03/format-refinements.json",
+      "kind": "added",
+      "sha256": "90cf829f2395c06d4c34d4c24eb1c3070e790efee36ef0261501605271c20b8d"
+    },
+    {
+      "path": "qa/evidence/S03/format-source.json",
+      "kind": "added",
+      "sha256": "fa3c9d6bd7f81f6d47ca039ccbc3e1a554f242948ee5b88592e651c7f0947bd2"
+    },
+    {
+      "path": "qa/evidence/S03/install-ordinary-retry.json",
+      "kind": "added",
+      "sha256": "f68a887c4ebfaa024149e00ea94313ffb925e6bb3154e516a1ecfbbb646d128d"
+    },
+    {
+      "path": "qa/evidence/S03/install-ordinary.json",
+      "kind": "added",
+      "sha256": "a0a2de002cc6b29044563589cbe14d55b16683c143c347fc488861731f7e6f30"
+    },
+    {
+      "path": "qa/evidence/S03/installed-environment.json",
+      "kind": "added",
+      "sha256": "871e7636412a31807dc7d20084f2ee3d2896207b69e9e1837ef7f61c73aa8dfe"
+    },
+    {
+      "path": "qa/evidence/S03/installed-pip-check.json",
+      "kind": "added",
+      "sha256": "44019ae66636daab7dad52c8d8a9f54e173be8a98d99871391a30248a377214d"
+    },
+    {
+      "path": "qa/evidence/S03/installed-smoke.json",
+      "kind": "added",
+      "sha256": "551e1d046e99667df0492c43f1165eb51355e2c6377e173570c6b783d15d65e4"
+    },
+    {
+      "path": "qa/evidence/S03/instruction_loading.md",
+      "kind": "added",
+      "sha256": "130452649c6e0c5b572d81028fe5aa65d0f6df3e69da15fabc9b472fb9c7a21d"
+    },
+    {
+      "path": "qa/evidence/S03/lint-final.json",
+      "kind": "added",
+      "sha256": "3efa2eed4b18d0b231f7811fd87ee081ab9804f7aa5ab5222332944f2688ed9a"
+    },
+    {
+      "path": "qa/evidence/S03/lint-import-fix.json",
+      "kind": "added",
+      "sha256": "249bdf4e53d0646e3dc82d16b05a39a44e591a40d2d12f5aeb37ad2f2085327c"
+    },
+    {
+      "path": "qa/evidence/S03/lint-initial.json",
+      "kind": "added",
+      "sha256": "f919f649cc40a77e624b5f69ad6a3df7b51b5d5114f134f751f4b6cd25fbc1d6"
+    },
+    {
+      "path": "qa/evidence/S03/mypy-final.json",
+      "kind": "added",
+      "sha256": "6fcf110c583336bf7744b7f30a7f30d8ab646397543f06dece34fe70604e8ecb"
+    },
+    {
+      "path": "qa/evidence/S03/mypy-initial.json",
+      "kind": "added",
+      "sha256": "3c3b39f52910040f6ce79d800dbb3479186c492ba593263ba5d2bacbbaf51202"
+    },
+    {
+      "path": "qa/evidence/S03/mypy-second.json",
+      "kind": "added",
+      "sha256": "bcb7ba3859c82c05044ebd478de97a201ce434322b3a138f12cc73f4fc1851f8"
+    },
+    {
+      "path": "qa/evidence/S03/pytest-final.json",
+      "kind": "added",
+      "sha256": "be6a67670a37a4cbd8ee0092cdf5c0980672a4bd0078c08e4c3a56bb01a4e108"
+    },
+    {
+      "path": "qa/evidence/S03/pytest-final.xml",
+      "kind": "added",
+      "sha256": "53f3376df50182ba207c68ac6ac92fed7b9f3b2dd121d796ede07c1b18aa7db8"
+    },
+    {
+      "path": "qa/evidence/S03/regression-initial.json",
+      "kind": "added",
+      "sha256": "28ca690348c059aa1a82c08031d562f7ad5772b6db3d79caae8433dba66e5a99"
+    },
+    {
+      "path": "qa/evidence/S03/review.md",
+      "kind": "added",
+      "sha256": "66a3511f2bfc91c2fb4e8830124ba9f0516c1b5b9a8ea31a1e68f54efa7299d6"
+    },
+    {
+      "path": "qa/evidence/S03/run_check.py",
+      "kind": "added",
+      "sha256": "a14f7ee03cb832bd50fab08bc28f4716e3e734c4030251d724907bea0baedb85"
+    },
+    {
+      "path": "qa/evidence/S03/s03a-inventory.json",
+      "kind": "added",
+      "sha256": "f4892333bf193167b1de2ac2d3a9933b41d73a94def9d83ec2010add57861305"
+    },
+    {
+      "path": "qa/evidence/S03/s03b-components.json",
+      "kind": "added",
+      "sha256": "03ab009978c972a3515cbaf4624e84c862b3ad4db4604e483dc51578cec15aaa"
+    },
+    {
+      "path": "qa/evidence/S03/s03c-equality.json",
+      "kind": "added",
+      "sha256": "fa72ccc53c67bbe1ef06fc6f41c1fe126bf51faa261a2e048949e6004c31f9aa"
+    },
+    {
+      "path": "qa/requirements.json",
+      "kind": "modified",
+      "sha256": "b68844b9f25e30c26e4b1e4b5e7b1b0c01912f7e83fe89f6c2981bf2d3824797"
+    },
+    {
+      "path": "src/neurocvguard/_projection.py",
+      "kind": "modified",
+      "sha256": "b3d675d43017956e939fbc0d0795dab35462fb042049a8110ac4f96d49e311a7"
+    },
+    {
+      "path": "src/neurocvguard/checks/__init__.py",
+      "kind": "added",
+      "sha256": "02584e27e7b414f52b0226d8182b1d6133df3cc170930ee2391093676a5bba5e"
+    },
+    {
+      "path": "src/neurocvguard/checks/cohort.py",
+      "kind": "added",
+      "sha256": "5700af5cf2959b299f1c0ce5c1c9a1ee6b7c5644457b359ce79e33d4c2c89d3b"
+    },
+    {
+      "path": "src/neurocvguard/identity.py",
+      "kind": "added",
+      "sha256": "8aa3efbfebb670581a0bda6bc6fe5e2d0832e23ce344b519fe50479c2e6f5a17"
+    },
+    {
+      "path": "src/neurocvguard/rules.py",
+      "kind": "added",
+      "sha256": "c192e95ae9e8dc8aba50e557ddd944aa9ec94ac3bc1784de777209276ffc4234"
+    },
+    {
+      "path": "state/PROJECT_STATUS.json",
+      "kind": "modified",
+      "sha256": "c5402e02f5b43500b77fa14a8859da4684150881bafb6ec2c7f621b4b9aab4b8"
+    },
+    {
+      "path": "state/handoffs/S03.md",
+      "kind": "added",
+      "sha256": "e14c8dfd1aa417aa35295531f1804c9af92ade5a64f8512fca35d0ef8322da6e"
+    },
+    {
+      "path": "tests/conftest.py",
+      "kind": "added",
+      "sha256": "c4bc325aaf61197cfe69adcd45dd6b2551a354ac886e6a8c29800fb97310d54f"
+    },
+    {
+      "path": "tests/test_cohort_checks.py",
+      "kind": "added",
+      "sha256": "769be7a6cc90e2e943e41b5193f3999bdba10d90c581cbd3735407f7c3357638"
+    },
+    {
+      "path": "tests/test_cohort_inventory.py",
+      "kind": "added",
+      "sha256": "6b0ec620c71e0009fa6f66a917c7472168fc8b847eebf75ab9f5ea9ff7814a69"
+    },
+    {
+      "path": "tests/test_identity.py",
+      "kind": "added",
+      "sha256": "20b2605d8450edeedd1461133e7c7d1e66b32b8eab816f31847fc68a075228ea"
+    }
+  ]
+}

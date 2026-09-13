@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv-install/Scripts/python.exe",
+    "qa/evidence/S01/check_installed.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T07:53:04.597919+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "PASS: installed S01 models/configuration and all six byte-identical packaged schemas\n",
+  "stderr": ""
+}

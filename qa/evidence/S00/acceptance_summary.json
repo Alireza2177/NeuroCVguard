@@ -1,0 +1,43 @@
+{
+  "stage": "S00",
+  "status": "READY_FOR_REVIEW",
+  "human_accepted": false,
+  "requirement": "REQ-S00",
+  "acceptance_cases": [
+    {
+      "id": "AT-S00-01",
+      "execution_status": "PASSED",
+      "verification_type": "automated"
+    },
+    {
+      "id": "AT-S00-02",
+      "execution_status": "PASSED",
+      "verification_type": "automated"
+    },
+    {
+      "id": "AT-S00-03",
+      "execution_status": "PASSED",
+      "verification_type": "file_hash_check_and_AI_review"
+    },
+    {
+      "id": "AT-S00-04",
+      "execution_status": "PASSED",
+      "verification_type": "automated_metadata_check_and_AI_review"
+    },
+    {
+      "id": "AT-S00-05",
+      "execution_status": "PASSED",
+      "verification_type": "AI_instruction_loading_record"
+    }
+  ],
+  "pytest": {
+    "tests": 11,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "evidence": "qa/evidence/S00/pytest-final.xml"
+  },
+  "evidence_references_and_test_nodes_verified": true,
+  "later_stages": "NOT_STARTED",
+  "public_release_authorized": false
+}

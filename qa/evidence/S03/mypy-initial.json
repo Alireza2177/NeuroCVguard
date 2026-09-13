@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "mypy",
+    "src/neurocvguard"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-13T08:15:22.373650+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "src\\neurocvguard\\identity.py:18: error: No overload variant of \"isna\" matches argument type \"object\"  [call-overload]\nsrc\\neurocvguard\\identity.py:18: note: Possible overload variants:\nsrc\\neurocvguard\\identity.py:18: note:     def isna(obj: DataFrame) -> DataFrame\nsrc\\neurocvguard\\identity.py:18: note:     def isna(obj: Series[Any]) -> Series[bool]\nsrc\\neurocvguard\\identity.py:18: note:     def [ScalarT: str | bytes | date | datetime | timedelta | <7 more items> | complex | integer[Any] | floating[Any] | complexfloating[Any, Any]] isna(obj: Index[Any] | ExtensionArray | list[ScalarT]) -> ndarray[tuple[int], dtype[numpy.bool[builtins.bool]]]\nsrc\\neurocvguard\\identity.py:18: note:     def [ShapeT: tuple[int, ...]] isna(obj: ndarray[ShapeT, dtype[Any]]) -> ndarray[ShapeT, dtype[numpy.bool[builtins.bool]]]\nsrc\\neurocvguard\\identity.py:18: note:     def isna(obj: list[Any]) -> ndarray[tuple[Any, ...], dtype[numpy.bool[builtins.bool]]]\nsrc\\neurocvguard\\identity.py:18: note:     def isna(obj: str | bytes | date | datetime | timedelta | <7 more items> | complex | integer[Any] | floating[Any] | complexfloating[Any, Any] | NaTType | NAType | None) -> TypeIs[NaTType | NAType | None]\nsrc\\neurocvguard\\checks\\cohort.py:269: error: No overload variant of \"isna\" matches argument type \"object\"  [call-overload]\nsrc\\neurocvguard\\checks\\cohort.py:269: note: Possible overload variants:\nsrc\\neurocvguard\\checks\\cohort.py:269: note:     def isna(obj: DataFrame) -> DataFrame\nsrc\\neurocvguard\\checks\\cohort.py:269: note:     def isna(obj: Series[Any]) -> Series[bool]\nsrc\\neurocvguard\\checks\\cohort.py:269: note:     def [ScalarT: str | bytes | date | datetime | timedelta | <7 more items> | complex | integer[Any] | floating[Any] | complexfloating[Any, Any]] isna(obj: Index[Any] | ExtensionArray | list[ScalarT]) -> ndarray[tuple[int], dtype[numpy.bool[builtins.bool]]]\nsrc\\neurocvguard\\checks\\cohort.py:269: note:     def [ShapeT: tuple[int, ...]] isna(obj: ndarray[ShapeT, dtype[Any]]) -> ndarray[ShapeT, dtype[numpy.bool[builtins.bool]]]\nsrc\\neurocvguard\\checks\\cohort.py:269: note:     def isna(obj: list[Any]) -> ndarray[tuple[Any, ...], dtype[numpy.bool[builtins.bool]]]\nsrc\\neurocvguard\\checks\\cohort.py:269: note:     def isna(obj: str | bytes | date | datetime | timedelta | <7 more items> | complex | integer[Any] | floating[Any] | complexfloating[Any, Any] | NaTType | NAType | None) -> TypeIs[NaTType | NAType | None]\nFound 2 errors in 2 files (checked 13 source files)\n",
+  "stderr": ""
+}
