@@ -4,7 +4,8 @@ Research-only Python software under development. **S01 provides typed records,
 strict configuration and serialization; S03 adds in-memory cohort checks;
 S04 adds supplied split audits; S05 adds deterministic outer plan generation
 and sensitive assignment exports; S06 adds participant-level categorical
-association diagnostics with explicit support counts and descriptive warnings.**
+association diagnostics with explicit support counts and descriptive warnings;
+S07 adds preprocessing declarations and fit-boundary validation.**
 The CLI provides help and version output only. The local development version
 is `0.1.0`, matching the foundation's target release; it is not a published or
 completed release.
@@ -81,7 +82,7 @@ omitted until confirmed; proposed values are under `tool.neurocvguard.release`.
 No DOI, publication, CI result, or support commitment is claimed.
 
 [AI_ASSISTANCE.md](AI_ASSISTANCE.md) records the assistance actually provided.
-S06 stops at human review. No further stage begins without a subsequent instruction.
+S07 stops at human review. No further stage begins without a subsequent instruction.
 
 ## Configuration and record API
 
@@ -161,3 +162,10 @@ See [the S06 guide](docs/association_diagnostics.md) for the executable syntheti
 example, pairwise denominators, null reasons and public/sensitive evidence
 boundary. These diagnostics are descriptive and do not establish causality,
 model shortcut use or scientific validity.
+
+## Preprocessing provenance
+
+[The S07 guide](docs/preprocessing_provenance.md) provides a tested example of
+`audit_cohort`, strict ledger loading, declared boundary checks and planned fit
+validation. Imported history never authenticates execution; no evaluator or
+observed fit logging is implemented yet.

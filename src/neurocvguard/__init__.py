@@ -12,6 +12,37 @@ if TYPE_CHECKING:
 __version__ = "0.1.0"
 
 
+def audit_cohort(
+    cohort: Cohort,
+    *,
+    config: AuditConfig,
+    ledger: dict[str, object] | None = None,
+) -> AuditReport:
+    """Audit constructed cohort data and declarations without fitting or writing.
+
+    Parameters
+    ----------
+    cohort : Cohort
+        Explicitly keyed in-memory metadata and optional aligned features.
+    config : AuditConfig
+        Matching roles and diagnostic settings.
+    ledger : dict or None, optional
+        Strict user-declaration contract; it cannot authenticate historical fitting.
+
+    Returns
+    -------
+    AuditReport
+        Scoped findings and persistent upstream limitations; see neurocvguard.audit.
+
+    Examples
+    --------
+    ``audit_cohort(cohort, config=config).to_dict()`` returns the public projection.
+    """
+    from neurocvguard.audit import audit_cohort as audit
+
+    return audit(cohort, config=config, ledger=ledger)
+
+
 def make_splits(cohort: Cohort, *, config: AuditConfig) -> SplitPlan:
     """Generate and independently audit deterministic outer assignments.
 

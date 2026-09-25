@@ -18,6 +18,7 @@ from neurocvguard.rules import (
     ASSOCIATION_RULES,
     COHORT_RULES,
     PLAN_RULES,
+    PROVENANCE_RULES,
     SPLIT_RULES,
     _public_message,
     get_rule,
@@ -90,6 +91,18 @@ def project_check(check: CheckResult) -> JSONObject:
             "sites are not leakage."
         )
     safe_evidence: JSONObject = {}
+    provenance_rule = check.rule_id in {rule.id for rule in PROVENANCE_RULES}
+    if provenance_rule:
+        definition = get_rule(check.rule_id)
+        message = (
+            definition.clear_message
+            if check.status in {CheckStatus.PASS, CheckStatus.NOT_APPLICABLE}
+            else "The declared fitting boundary is unassessable from the supplied context."
+            if check.rule_id == "NCG-PROV-003" and check.status == CheckStatus.NOT_ASSESSABLE
+            else definition.trigger_message
+        )
+        # No imported notes, transform names, event IDs or memberships are public.
+        safe_evidence = {"execution_verified": False}
     association_rule = check.rule_id in {rule.id for rule in ASSOCIATION_RULES}
     if association_rule:
         definition = get_rule(check.rule_id)
@@ -141,7 +154,7 @@ def project_check(check: CheckResult) -> JSONObject:
         "scope": {},
         "message": message,
         "recommendation": get_rule(check.rule_id).recommendation
-        if cohort_rule or split_rule or association_rule
+        if cohort_rule or split_rule or association_rule or provenance_rule
         else "Review this rule's required inputs and the sensitive local evidence "
         "before drawing conclusions.",
         "evidence": safe_evidence,

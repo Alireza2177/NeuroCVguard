@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-25T18:17:55.487830+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "E501 Line too long (106 > 100)\n  --> src\\neurocvguard\\audit.py:69:101\n   |\n67 |         limitations=(\n68 |             \"Imported preprocessing is declared, not authenticated execution history.\",\n69 |             \"Upstream preprocessing remains unverified; a Pipeline cannot repair earlier global fitting.\",\n   |                                                                                                     ^^^^^^\n70 |             \"Fold-specific declared fit IDs require a matching split plan for comparison.\",\n71 |             \"This cohort audit cannot establish participant/domain separation without a supplied plan.\",\n   |\n\nE501 Line too long (104 > 100)\n  --> src\\neurocvguard\\audit.py:71:101\n   |\n69 |             \"Upstream preprocessing remains unverified; a Pipeline cannot repair earlier global fitting.\",\n70 |             \"Fold-specific declared fit IDs require a matching split plan for comparison.\",\n71 |             \"This cohort audit cannot establish participant/domain separation without a supplied plan.\",\n   |                                                                                                     ^^^^\n72 |             \"S02 file ingestion is unimplemented; this API consumes constructed Cohort records.\",\n73 |         ),\n   |\n\nFound 2 errors.\n",
+  "stderr": ""
+}
