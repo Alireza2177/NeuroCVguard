@@ -1067,6 +1067,112 @@
       "requirement_id": "REQ-S06",
       "execution_status": "PASSED",
       "human_accepted": false
+    },
+    {
+      "case_id": "AT-S07-01",
+      "test_node_ids": [
+        "tests/test_preprocessing.py::test_at_s07_01_no_ledger"
+      ],
+      "evidence": [
+        "qa/evidence/S07/pytest-final.xml",
+        "qa/evidence/S07/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S07",
+      "requirement_id": "REQ-S07",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S07-02",
+      "test_node_ids": [
+        "tests/test_preprocessing.py::test_at_s07_02_declared_global_fit"
+      ],
+      "evidence": [
+        "qa/evidence/S07/pytest-final.xml",
+        "qa/evidence/S07/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S07",
+      "requirement_id": "REQ-S07",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S07-03",
+      "test_node_ids": [
+        "tests/test_preprocessing.py::test_at_s07_03_declared_outside_training_ids[False]",
+        "tests/test_preprocessing.py::test_at_s07_03_declared_outside_training_ids[True]"
+      ],
+      "evidence": [
+        "qa/evidence/S07/pytest-final.xml",
+        "qa/evidence/S07/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S07",
+      "requirement_id": "REQ-S07",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S07-04",
+      "test_node_ids": [
+        "tests/test_ledger.py::test_at_s07_04_forged_runtime_label"
+      ],
+      "evidence": [
+        "qa/evidence/S07/pytest-final.xml",
+        "qa/evidence/S07/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S07",
+      "requirement_id": "REQ-S07",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S07-05",
+      "test_node_ids": [
+        "tests/test_preprocessing.py::test_at_s07_05_fixed_conversion"
+      ],
+      "evidence": [
+        "qa/evidence/S07/pytest-final.xml",
+        "qa/evidence/S07/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S07",
+      "requirement_id": "REQ-S07",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S07-06",
+      "test_node_ids": [
+        "tests/test_preprocessing.py::test_at_s07_06_external_learned_transform"
+      ],
+      "evidence": [
+        "qa/evidence/S07/pytest-final.xml",
+        "qa/evidence/S07/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S07",
+      "requirement_id": "REQ-S07",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S07-07",
+      "test_node_ids": [
+        "tests/test_fit_boundaries.py::test_at_s07_07_no_ghost_fit_events"
+      ],
+      "evidence": [
+        "qa/evidence/S07/pytest-final.xml",
+        "qa/evidence/S07/pytest-final.json"
+      ],
+      "verification_type": "automated",
+      "stage": "S07",
+      "requirement_id": "REQ-S07",
+      "execution_status": "PASSED",
+      "human_accepted": false
     }
   ]
 }

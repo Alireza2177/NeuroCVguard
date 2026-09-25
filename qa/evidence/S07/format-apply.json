@@ -1,0 +1,28 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "src/neurocvguard/audit.py",
+    "src/neurocvguard/provenance.py",
+    "src/neurocvguard/fit_boundaries.py",
+    "src/neurocvguard/checks/preprocessing.py",
+    "src/neurocvguard/rules.py",
+    "src/neurocvguard/_projection.py",
+    "src/neurocvguard/__init__.py",
+    "tests/test_ledger.py",
+    "tests/test_preprocessing.py",
+    "tests/test_fit_boundaries.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-25T18:17:51.190475+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "10 files reformatted\n",
+  "stderr": ""
+}

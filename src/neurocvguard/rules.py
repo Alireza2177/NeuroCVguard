@@ -1,4 +1,4 @@
-"""Fixed S03/S04/S05/S06 rule metadata, not a dynamic registry or user-code mechanism."""
+"""Fixed S03-S07 rule metadata, not a dynamic registry or user-code mechanism."""
 
 from dataclasses import dataclass
 
@@ -314,13 +314,68 @@ ASSOCIATION_RULES = (
 )
 
 
+PROVENANCE_RULES = (
+    RuleDefinition(
+        "NCG-PROV-001",
+        "Upstream fitting history unknown",
+        Severity.WARNING,
+        EvidenceKind.UNASSESSABLE,
+        "No automatic certification from a supplied feature matrix.",
+        "Upstream preprocessing remains unassessable; declarations do not verify execution.",
+        "Upstream preprocessing remains unassessable; declarations do not verify execution.",
+        "Document the source, overlap and fitting scope of upstream transformations. "
+        "A controlled Pipeline cannot repair earlier global fitting.",
+        stage="S07",
+    ),
+    RuleDefinition(
+        "NCG-PROV-002",
+        "Declared global data-dependent fitting",
+        Severity.WARNING,
+        EvidenceKind.DECLARED,
+        "User-declared information use outside training scope; not reconstructed history.",
+        "The user declares data-dependent fitting on all cohort observations; "
+        "this is a declared global-fit warning, not observed historical proof.",
+        "No declared global-fit finding applies to this event.",
+        "Review the declared global learning and repeat learned preprocessing within "
+        "the relevant training subsets where feasible; later pipelines cannot undo it.",
+        stage="S07",
+    ),
+    RuleDefinition(
+        "NCG-PROV-003",
+        "Declared fitting IDs violate scope",
+        Severity.ERROR,
+        EvidenceKind.DECLARED,
+        "Qualified declaration-based boundary finding; does not prove historical execution.",
+        "Declared fitting IDs extend outside the relevant training subset; "
+        "this finding does not prove historical execution.",
+        "Declared fitting IDs are within the supplied training subset; execution is not verified.",
+        "Review the event and matching outer/inner plan. Supply explicit fit IDs and "
+        "restrict data-dependent learning to that training subset.",
+        stage="S07",
+    ),
+    RuleDefinition(
+        "NCG-PROV-005",
+        "Declared fixed non-learning transform",
+        Severity.INFO,
+        EvidenceKind.DECLARED,
+        "No training-fit isolation requirement solely for a fixed row-local conversion.",
+        "The operation is declared non-learning; this does not authenticate its behavior.",
+        "No training-fit isolation requirement follows solely from a declared fixed "
+        "row-local conversion; the non-learning declaration is not verified.",
+        "Confirm that the declared operation is fixed and row-local and assess any "
+        "target use separately; do not infer safety of other upstream operations.",
+        stage="S07",
+    ),
+)
+
+
 def get_rule(rule_id: str) -> RuleDefinition:
     """Return fixed rule metadata.
 
     Parameters
     ----------
     rule_id : str
-        An implemented NCG-COHORT, NCG-SPLIT, NCG-PLAN or NCG-ASSOC rule ID.
+        An implemented NCG-COHORT, NCG-SPLIT, NCG-PLAN NCG-ASSOC or NCG-PROV rule ID.
 
     Returns
     -------
@@ -337,7 +392,7 @@ def get_rule(rule_id: str) -> RuleDefinition:
     >>> get_rule("NCG-COHORT-001").stage
     'S03'
     """
-    for rule in (*COHORT_RULES, *SPLIT_RULES, *PLAN_RULES, *ASSOCIATION_RULES):
+    for rule in (*COHORT_RULES, *SPLIT_RULES, *PLAN_RULES, *ASSOCIATION_RULES, *PROVENANCE_RULES):
         if rule.id == rule_id:
             return rule
     raise KeyError(rule_id)
