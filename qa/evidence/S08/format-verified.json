@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "--check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T09:08:29.446215+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "unformatted: File would be reformatted\n  --> qa\\evidence\\S08\\check_closeout.py:69:23\n   |\n68 |     \"lint-final\",\n   -     \"format-verified\",\n69 +     \"format-verified\",\n70 |     \"installed-verified\",\n   |\n\n1 file would be reformatted, 173 files already formatted\n",
+  "stderr": ""
+}

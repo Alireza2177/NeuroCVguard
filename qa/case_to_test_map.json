@@ -1173,6 +1173,224 @@
       "requirement_id": "REQ-S07",
       "execution_status": "PASSED",
       "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-01",
+      "test_node_ids": [
+        "tests/test_report_projection.py::test_at_s08_01_default_id_redaction"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-02",
+      "test_node_ids": [
+        "tests/test_report_projection.py::test_at_s08_02_path_redaction"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-03",
+      "test_node_ids": [
+        "tests/test_report_projection.py::test_at_s08_03_domain_aliasing_and_idempotence"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-04",
+      "test_node_ids": [
+        "tests/test_report_projection.py::test_at_s08_04_small_cell_suppression"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-05",
+      "test_node_ids": [
+        "tests/test_report_security.py::test_at_s08_05_no_hidden_payload_leakage"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-06",
+      "test_node_ids": [
+        "tests/test_report_security.py::test_at_s08_06_html_injection"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-07",
+      "test_node_ids": [
+        "tests/test_report_security.py::test_at_s08_07_formula_export[=]",
+        "tests/test_report_security.py::test_at_s08_07_formula_export[+]",
+        "tests/test_report_security.py::test_at_s08_07_formula_export[-]",
+        "tests/test_report_security.py::test_at_s08_07_formula_export[@]",
+        "tests/test_report_security.py::test_at_s08_07_formula_export[\\t]",
+        "tests/test_report_security.py::test_at_s08_07_formula_export[\\r]",
+        "tests/test_report_security.py::test_at_s08_07_formula_export[\\n]",
+        "tests/test_report_security.py::test_at_s08_07_formula_export[   =]",
+        "tests/test_report_security.py::test_at_s08_07_formula_export[\\ufeff=]"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-08",
+      "test_node_ids": [
+        "tests/test_report_rendering.py::test_at_s08_08_no_network_render"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-09",
+      "test_node_ids": [
+        "tests/test_report_security.py::test_at_s08_09_explicit_sensitive_export"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-10",
+      "test_node_ids": [
+        "tests/test_report_security.py::test_at_s08_10_atomic_write_failure[1]",
+        "tests/test_report_security.py::test_at_s08_10_atomic_write_failure[2]",
+        "tests/test_report_security.py::test_at_s08_10_atomic_write_failure[3]"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-11",
+      "test_node_ids": [
+        "tests/test_report_security.py::test_at_s08_11_overwrite_refusal"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-12",
+      "test_node_ids": [
+        "tests/test_report_rendering.py::test_at_s08_12_coverage_visibility"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S08-13",
+      "test_node_ids": [
+        "tests/test_report_rendering.py::test_at_s08_13_rendering_does_not_recompute"
+      ],
+      "evidence": [
+        "qa/evidence/S08/pytest-verified.xml",
+        "qa/evidence/S08/pytest-verified.json",
+        "qa/evidence/S08/review.md"
+      ],
+      "verification_type": "automated",
+      "stage": "S08",
+      "requirement_id": "REQ-S08",
+      "execution_status": "PASSED",
+      "human_accepted": false
     }
   ]
 }

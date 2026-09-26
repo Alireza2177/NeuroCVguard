@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "mypy",
+    "src/neurocvguard"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T08:42:51.251526+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "src\\neurocvguard\\_report_tables.py:40: error: Item \"None\" of \"bool | int | float | str | tuple[FrozenJSONValue, ...] | Mapping[str, FrozenJSONValue] | None\" has no attribute \"__iter__\" (not iterable)  [union-attr]\nsrc\\neurocvguard\\_report_tables.py:40: error: Item \"bool\" of \"bool | int | float | str | tuple[FrozenJSONValue, ...] | Mapping[str, FrozenJSONValue] | None\" has no attribute \"__iter__\" (not iterable)  [union-attr]\nsrc\\neurocvguard\\_report_tables.py:40: error: Item \"int\" of \"bool | int | float | str | tuple[FrozenJSONValue, ...] | Mapping[str, FrozenJSONValue] | None\" has no attribute \"__iter__\" (not iterable)  [union-attr]\nsrc\\neurocvguard\\_report_tables.py:40: error: Item \"float\" of \"bool | int | float | str | tuple[FrozenJSONValue, ...] | Mapping[str, FrozenJSONValue] | None\" has no attribute \"__iter__\" (not iterable)  [union-attr]\nsrc\\neurocvguard\\_report_tables.py:47: error: Argument 1 to \"isfinite\" has incompatible type \"int | float | str | tuple[FrozenJSONValue, ...] | Mapping[str, FrozenJSONValue]\"; expected \"SupportsFloat | SupportsIndex\"  [arg-type]\nsrc\\neurocvguard\\_report_tables.py:47: error: Unsupported operand types for <= (\"int\" and \"str\")  [operator]\nsrc\\neurocvguard\\_report_tables.py:47: error: Unsupported operand types for <= (\"int\" and \"tuple[FrozenJSONValue, ...]\")  [operator]\nsrc\\neurocvguard\\_report_tables.py:47: error: Unsupported operand types for <= (\"int\" and \"Mapping[str, FrozenJSONValue]\")  [operator]\nsrc\\neurocvguard\\_report_tables.py:47: note: Right operand is of type \"int | float | str | tuple[FrozenJSONValue, ...] | Mapping[str, FrozenJSONValue]\"\nsrc\\neurocvguard\\_report_tables.py:47: error: Unsupported operand types for >= (\"int\" and \"Mapping[str, FrozenJSONValue]\")  [operator]\nsrc\\neurocvguard\\_report_tables.py:47: note: Left operand is of type \"int | float | str | tuple[FrozenJSONValue, ...] | Mapping[str, FrozenJSONValue]\"\nsrc\\neurocvguard\\_report_tables.py:47: error: Unsupported operand types for <= (\"str\" and \"int\")  [operator]\nsrc\\neurocvguard\\_report_tables.py:47: error: Unsupported operand types for <= (\"tuple[FrozenJSONValue, ...]\" and \"int\")  [operator]\nsrc\\neurocvguard\\_report_tables.py:59: error: Argument 1 to \"list\" has incompatible type \"bool | int | float | str | tuple[FrozenJSONValue, ...] | Mapping[str, FrozenJSONValue] | None\"; expected \"Iterable[Any]\"  [arg-type]\nsrc\\neurocvguard\\_report_tables.py:60: error: Dict entry 0 has incompatible type \"str\": \"int | float | str | tuple[FrozenJSONValue, ...] | Mapping[str, FrozenJSONValue] | None\"; expected \"str\": \"int | float | str | list[JSONValue] | dict[str, JSONValue] | None\"  [dict-item]\nFound 13 errors in 1 file (checked 24 source files)\n",
+  "stderr": ""
+}

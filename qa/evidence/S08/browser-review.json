@@ -1,0 +1,18 @@
+{
+  "activeAssetElements": 0,
+  "hash": "#coverage",
+  "headings": [
+    "1. Scope and objective",
+    "2. Execution and coverage",
+    "3. Actionable findings",
+    "4. Cohort and missingness",
+    "5. Partition checks",
+    "6. Acquisition and target associations",
+    "7. Evaluation and comparison",
+    "8. Provenance",
+    "9. Limitations",
+    "10. Recommended next actions",
+    "11. Rule and source references"
+  ],
+  "horizontalOverflow": false
+}

@@ -84,11 +84,12 @@ causal confounding, leakage, model bias or model shortcut use.
 
 Internal evidence and `to_dict(sensitive_details=True)` retain exact category
 labels, source columns, tables, expected counts, denominators and V. Treat them
-as sensitive local records. Default public serialization conservatively omits
-the entire linked numeric evidence, even for non-sparse tables. This prevents
-reconstructing small cells from totals or V. It retains fixed descriptive wording
-and safe null reasons. Privacy projection never changes the internal statistic.
-Rich aliasing/table display and HTML rendering are outside S06.
+as sensitive local records. Individual check serialization conservatively omits
+the entire linked numeric evidence, even for non-sparse tables. S08 whole-report
+projection can display validated tables with local aliases when every cell meets
+the report threshold. A suppressed table omits its linked cells, totals and V;
+safe null reasons remain. Privacy projection never changes the internal statistic.
+See [the reporting guide](reporting.md) for the S08 display boundary.
 
 The foundation acknowledges mlconfound's adjacent inferential work; these
 descriptive diagnostics do not implement or claim equivalent tests. See

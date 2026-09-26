@@ -1,4 +1,4 @@
-"""Fixed S03-S07 rule metadata, not a dynamic registry or user-code mechanism."""
+"""Fixed S03-S08 rule metadata, not a dynamic registry or user-code mechanism."""
 
 from dataclasses import dataclass
 
@@ -369,6 +369,22 @@ PROVENANCE_RULES = (
 )
 
 
+REPORT_RULES = (
+    RuleDefinition(
+        "NCG-REPORT-001",
+        "Sensitive operational output",
+        Severity.INFO,
+        EvidenceKind.OBSERVED,
+        "Identity-bearing split/private evaluation artifact; not a public report.",
+        "Operational split/private evaluation records contain sensitive identities.",
+        "This report does not export operational split or private evaluation records.",
+        "Keep operational records separate from public reports and review "
+        "authorization before sharing.",
+        stage="S08",
+    ),
+)
+
+
 def get_rule(rule_id: str) -> RuleDefinition:
     """Return fixed rule metadata.
 
@@ -392,7 +408,14 @@ def get_rule(rule_id: str) -> RuleDefinition:
     >>> get_rule("NCG-COHORT-001").stage
     'S03'
     """
-    for rule in (*COHORT_RULES, *SPLIT_RULES, *PLAN_RULES, *ASSOCIATION_RULES, *PROVENANCE_RULES):
+    for rule in (
+        *COHORT_RULES,
+        *SPLIT_RULES,
+        *PLAN_RULES,
+        *ASSOCIATION_RULES,
+        *PROVENANCE_RULES,
+        *REPORT_RULES,
+    ):
         if rule.id == rule_id:
             return rule
     raise KeyError(rule_id)

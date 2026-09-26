@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; base-uri 'none'; form-action 'none'">
+<title>NeuroCVguard — research report</title>
+<style>:root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #182c3c; background: #f3f5f6; }
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.6; }
+header, main, footer { max-width: 1120px; margin: auto; padding: 24px 32px; }
+header { border-top: 7px solid #25566c; background: #fff; }
+.eyebrow { color: #52616c; text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; }
+h1 { margin: 8px 0; font-size: 2.15rem; line-height: 1.2; }
+h2 { font-size: 1.45rem; border-bottom: 1px solid #cfdae0; padding-bottom: 8px; }
+h3 { font-size: 1rem; margin: 0 0 8px; }
+a { color: #164f75; text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid #955900; outline-offset: 4px; }
+.skip { position: absolute; left: -10000px; }
+.skip:focus { position: static; padding: 12px; }
+nav ul { display: flex; flex-wrap: wrap; gap: 8px 24px; padding-left: 20px; }
+section { margin-bottom: 30px; scroll-margin-top: 16px; }
+.notice { background: #fff3d9; border-left: 5px solid #916000; padding: 16px 20px; margin: 16px 0; }
+.sensitive { background: #fbe5e5; border-color: #962c2c; }
+.card { background: #fff; padding: 18px 20px; border: 1px solid #d5dfe4; border-radius: 6px; margin: 12px 0; overflow-wrap: anywhere; }
+.labels { display: flex; flex-wrap: wrap; gap: 8px; font-size: .85rem; margin: 8px 0; }
+.label { border: 1px solid #c8d4db; border-radius: 3px; padding: 1px 8px; background: #edf2f5; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; font-size: .92rem; }
+caption { text-align: left; font-weight: 600; margin: 10px 0; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid #d5dfe4; }
+th { background: #eaf0f3; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .82rem; background: #f6f8f9; padding: 12px; }
+.muted { color: #4f626e; }
+footer { border-top: 1px solid #c8d4db; font-size: .85rem; }
+@media (max-width: 650px) { header, main, footer { padding: 18px; } h1 { font-size: 1.7rem; } th, td { padding: 7px; } }
+@media print { :root { background: #fff; } header, main, footer { max-width: none; padding: 10px 0; } nav, .skip { display: none; } h2, h3 { break-after: avoid; } .card, tr { break-inside: avoid; } .table-wrap { overflow: visible; } a { color: inherit; } }</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to report</a>
+<header>
+<p class="eyebrow">NeuroCVguard · Local research report</p>
+<h1>Scope, findings and assessment coverage</h1>
+<p>Research support only. Technical completion does not establish scientific validity.</p>
+<p class="muted">Public projection · Private identifiers and free text omitted · No formal anonymization guarantee</p>
+<nav aria-label="Report contents"><ul>
+
+<li><a href="#scope">Scope</a></li>
+<li><a href="#coverage">Coverage</a></li>
+<li><a href="#findings">Findings</a></li>
+<li><a href="#cohort">Cohort</a></li>
+<li><a href="#partitions">Partitions</a></li>
+<li><a href="#associations">Associations</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#provenance">Provenance</a></li>
+<li><a href="#limitations">Limitations</a></li>
+<li><a href="#actions">Next actions</a></li>
+<li><a href="#references">References</a></li>
+</ul></nav>
+</header>
+
+<main id="main">
+<section id="scope"><h2>1. Scope and objective</h2>
+<p><strong>Objective:</strong> unseen participant · <strong>Result:</strong> audit · <strong>Execution:</strong> partial</p>
+<p>Version 0.1.0 · Schema 1.0. No audit, model fit or statistic is recomputed during rendering.</p></section>
+<section id="coverage"><h2>2. Execution and coverage</h2>
+<div class="notice"><strong>Incomplete assessment coverage</strong><p>Unassessable checks or missing assessment context remain. No overall validity verdict is provided.</p></div>
+<table><caption>Coverage of supplied checks</caption><thead><tr><th scope="col">Pass</th><th scope="col">Fail</th><th scope="col">Not assessable</th><th scope="col">Not applicable</th></tr></thead><tbody><tr><td>5</td><td>0</td><td>6</td><td>0</td></tr></tbody></table>
+
+
+<article class="card">
+<h3>NCG-COHORT-003</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">info</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: phase</p>
+<p>This cohort check has incomplete input coverage and remains unassessable.</p><p><strong>Next action:</strong> Preserve cross-domain identities; assess the requested held-out-domain plan separately.</p>
+
+
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-004</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">info</span><span class="label">Evidence: unassessable</span></div>
+
+<p>This cohort check has incomplete input coverage and remains unassessable.</p><p><strong>Next action:</strong> Investigate equality without merging identities or dropping rows; add a protected relationship only after independent verification.</p>
+
+
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-005</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: phase</p>
+<p>A metadata-dependent check has incomplete coverage; absent values were not inferred.</p><p><strong>Next action:</strong> Supply the explicitly mapped metadata or retain incomplete assessment coverage.</p>
+
+
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-005</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: session</p>
+<p>A metadata-dependent check has incomplete coverage; absent values were not inferred.</p><p><strong>Next action:</strong> Supply the explicitly mapped metadata or retain incomplete assessment coverage.</p>
+
+
+
+</article>
+
+<article class="card">
+<h3>NCG-ASSOC-003</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: phase</p>
+<p>The participant-level association is not assessable for this pair; review the recorded reason.</p><p><strong>Next action:</strong> Review missing values and within-person stability. For excessive categories, check whether the field is an identifier; do not choose a visit or merge levels automatically.</p>
+
+<p class="muted">Table details omitted. Linked cells, totals and statistics are not included in this projection. This may reflect privacy suppression or unavailable detail.</p>
+
+<p>Statistic: None · Reason: missing_field</p>
+</article>
+
+<article class="card">
+<h3>NCG-PROV-001</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+
+<p>Upstream preprocessing remains unassessable; declarations do not verify execution.</p><p><strong>Next action:</strong> Document the source, overlap and fitting scope of upstream transformations. A controlled Pipeline cannot repair earlier global fitting.</p>
+
+
+
+</article>
+
+</section>
+<section id="findings"><h2>3. Actionable findings</h2>
+<p>No triggered findings in the supplied record. Review incomplete coverage before drawing conclusions.</p></section>
+<section id="cohort"><h2>4. Cohort and missingness</h2>
+<p>40 observations · 20 participants</p>
+<p><strong>Supplied roles:</strong> observation_id, site, subject_id, target</p><p><strong>Missing/incomplete roles:</strong> phase, session</p>
+
+<article class="card">
+<h3>NCG-COHORT-001</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">field: subject_id</p>
+<p>This cohort has repeated participant observations; evaluate separation in the actual splits.</p><p><strong>Next action:</strong> Evaluate participant separation in the actual supplied splits.</p>
+
+
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-002</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">field: target</p>
+<p>Targets are constant within participants in the supplied cohort.</p><p><strong>Next action:</strong> For the constant-target baseline, explicitly curate a supported cohort upstream; do not automatically relabel visits.</p>
+
+
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-003</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">info</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: phase</p>
+<p>This cohort check has incomplete input coverage and remains unassessable.</p><p><strong>Next action:</strong> Preserve cross-domain identities; assess the requested held-out-domain plan separately.</p>
+
+
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-003</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">field: site</p>
+<p>Within-participant site/phase variation is descriptive; assess strict domain feasibility while preserving participant identity.</p><p><strong>Next action:</strong> Preserve cross-domain identities; assess the requested held-out-domain plan separately.</p>
+
+
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-004</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">info</span><span class="label">Evidence: unassessable</span></div>
+
+<p>This cohort check has incomplete input coverage and remains unassessable.</p><p><strong>Next action:</strong> Investigate equality without merging identities or dropping rows; add a protected relationship only after independent verification.</p>
+
+
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-005</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: phase</p>
+<p>A metadata-dependent check has incomplete coverage; absent values were not inferred.</p><p><strong>Next action:</strong> Supply the explicitly mapped metadata or retain incomplete assessment coverage.</p>
+
+
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-005</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: session</p>
+<p>A metadata-dependent check has incomplete coverage; absent values were not inferred.</p><p><strong>Next action:</strong> Supply the explicitly mapped metadata or retain incomplete assessment coverage.</p>
+
+
+
+</article>
+</section>
+<section id="partitions"><h2>5. Partition checks</h2>
+<p>No partition checks supplied.</p></section>
+<section id="associations"><h2>6. Acquisition and target associations</h2>
+
+<article class="card">
+<h3>NCG-ASSOC-001</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">field: site</p>
+<p>The descriptive association is below the configured review threshold; this is not a validity verdict.</p><p><strong>Next action:</strong> Review acquisition/target distributions under the stated objective. For a claim about new sites or phases, consider the corresponding held-out-domain design; do not infer causal bias or model shortcut use.</p>
+
+
+<div class="table-wrap"><table><caption>Descriptive participant counts · local category aliases</caption>
+<thead><tr><th scope="col">Acquisition category</th><th scope="col">Target 01</th><th scope="col">Target 02</th></tr></thead>
+<tbody><tr><th scope="row">Site 001</th><td>5</td><td>5</td></tr><tr><th scope="row">Site 002</th><td>5</td><td>5</td></tr></tbody></table></div>
+<p>Cramer&#39;s V; uncorrected Pearson chi-square; correction=False · Value: 0.0. Descriptive association is not proof of causality or model shortcut use.</p>
+
+
+</article>
+
+<article class="card">
+<h3>NCG-ASSOC-002</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">field: site</p>
+<p>No observed or expected cells are below the configured sparse-count threshold.</p><p><strong>Next action:</strong> Review sample coverage and sparse cells before interpreting the descriptive estimate; do not infer significance or merge categories automatically.</p>
+
+
+<div class="table-wrap"><table><caption>Descriptive participant counts · local category aliases</caption>
+<thead><tr><th scope="col">Acquisition category</th><th scope="col">Target 01</th><th scope="col">Target 02</th></tr></thead>
+<tbody><tr><th scope="row">Site 001</th><td>5</td><td>5</td></tr><tr><th scope="row">Site 002</th><td>5</td><td>5</td></tr></tbody></table></div>
+<p>Cramer&#39;s V; uncorrected Pearson chi-square; correction=False · Value: 0.0. Descriptive association is not proof of causality or model shortcut use.</p>
+
+
+</article>
+
+<article class="card">
+<h3>NCG-ASSOC-003</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: phase</p>
+<p>The participant-level association is not assessable for this pair; review the recorded reason.</p><p><strong>Next action:</strong> Review missing values and within-person stability. For excessive categories, check whether the field is an identifier; do not choose a visit or merge levels automatically.</p>
+
+<p class="muted">Table details omitted. Linked cells, totals and statistics are not included in this projection. This may reflect privacy suppression or unavailable detail.</p>
+
+<p>Statistic: None · Reason: missing_field</p>
+</article>
+</section>
+<section id="results"><h2>7. Evaluation and comparison</h2>
+<p>No model evaluation or comparison supplied.</p></section>
+<section id="provenance"><h2>8. Provenance</h2><p><strong>Upstream preprocessing was not verified.</strong> A Pipeline cannot repair earlier global fitting.</p>
+<pre>{
+  &#34;foundation_version&#34;: &#34;1.0.0&#34;,
+  &#34;versions&#34;: {
+    &#34;neurocvguard&#34;: &#34;0.1.0&#34;
+  },
+  &#34;sensitive_details&#34;: false,
+  &#34;upstream_preprocessing_verified&#34;: false
+}</pre>
+
+<article class="card">
+<h3>NCG-PROV-001</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+
+<p>Upstream preprocessing remains unassessable; declarations do not verify execution.</p><p><strong>Next action:</strong> Document the source, overlap and fitting scope of upstream transformations. A controlled Pipeline cannot repair earlier global fitting.</p>
+
+
+
+</article>
+</section>
+<section id="limitations"><h2>9. Limitations</h2><ul><li>No clinical advice, certification or universal leakage-free verdict.</li><li>Privacy projection is not formal anonymization; aggregates may still be sensitive.</li>
+<li>Upstream preprocessing is not verified; a valid record does not establish fold-local fitting.</li><li>Public projection omits free-text and open evidence; review the sensitive local record for details.</li><li>Aggregate counts and target class names can still be sensitive; this is not formal anonymization.</li></ul></section>
+<section id="actions"><h2>10. Recommended next actions</h2><ul><li>Review unassessable checks and supply missing context.</li><li>Freeze the evaluation plan and document later amendments.</li><li>Keep identity-bearing split plans and private evaluation records separate from shareable reports.</li>
+<li>NCG-COHORT-003: Preserve cross-domain identities; assess the requested held-out-domain plan separately.</li><li>NCG-COHORT-004: Investigate equality without merging identities or dropping rows; add a protected relationship only after independent verification.</li><li>NCG-COHORT-005: Supply the explicitly mapped metadata or retain incomplete assessment coverage.</li><li>NCG-COHORT-005: Supply the explicitly mapped metadata or retain incomplete assessment coverage.</li><li>NCG-ASSOC-003: Review missing values and within-person stability. For excessive categories, check whether the field is an identifier; do not choose a visit or merge levels automatically.</li><li>NCG-PROV-001: Document the source, overlap and fitting scope of upstream transformations. A controlled Pipeline cannot repair earlier global fitting.</li></ul></section>
+<section id="references"><h2>11. Rule and source references</h2>
+<p>Normative source: NeuroCVguard Foundation 1.0.0, scientific contract, report privacy and cross-contract clarifications. Association method: SciPy contingency.association (R08); adjacent inferential work: mlconfound (R09). No inferential equivalence is claimed.</p>
+<table><caption>Rules represented in this report</caption><thead><tr><th scope="col">Rule</th><th scope="col">Meaning</th></tr></thead><tbody><tr><th scope="row">NCG-ASSOC-001 · Association review threshold crossed</th><td>Descriptive review signal, not proof of causal confounding or shortcut use.</td></tr><tr><th scope="row">NCG-ASSOC-002 · Sparse contingency table</th><td>Small observed/expected counts make interpretation unstable; no p-value.</td></tr><tr><th scope="row">NCG-ASSOC-003 · Association not assessable</th><td>Missing, constant, unstable or excessive-category input prevents specified statistic.</td></tr><tr><th scope="row">NCG-COHORT-001 · Repeated observations</th><td>Inventory notice; repeated people are not by themselves a split violation.</td></tr><tr><th scope="row">NCG-COHORT-002 · Within-participant target variation</th><td>Valid longitudinal possibility; baseline/stratified planning unsupported without explicit curation.</td></tr><tr><th scope="row">NCG-COHORT-003 · Within-participant domain variation</th><td>Describe crossing sites/phases; strict domain planning must assess feasibility.</td></tr><tr><th scope="row">NCG-COHORT-004 · Exact feature equality across IDs</th><td>Observed equal vectors suggest review, not verified duplicate identity.</td></tr><tr><th scope="row">NCG-COHORT-005 · Missing optional metadata</th><td>Requested checks without required metadata are not_assessable.</td></tr><tr><th scope="row">NCG-PROV-001 · Upstream fitting history unknown</th><td>No automatic certification from a supplied feature matrix.</td></tr><tr><th scope="row">NCG-REPORT-001 · Sensitive operational output</th><td>Identity-bearing split/private evaluation artifact; not a public report.</td></tr></tbody></table></section>
+</main>
+<footer>NeuroCVguard 0.1.0 · Offline research report · Public projection</footer>
+</body></html>

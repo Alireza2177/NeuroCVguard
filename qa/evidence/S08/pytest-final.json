@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "--junitxml=qa/evidence/S08/pytest-final.xml"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T08:58:54.717806+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "........................................................................ [ 20%]\n........................................................................ [ 40%]\n........................................................................ [ 60%]\n..................................................................F..... [ 80%]\n.......................................................................  [100%]\n================================== FAILURES ===================================\n______________ test_path_and_email_target_labels_are_not_public _______________\n\n    def test_path_and_email_target_labels_are_not_public():\n        from test_contracts import evaluation\n    \n        from neurocvguard.models import EvaluationResult\n    \n        data = evaluation()\n        data[\"class_order\"] = [\"C:/Users/PRIVATE-user/data\", \"PRIVATE@email.invalid\"]\n        for metric in [data[\"pooled_metrics\"], *[fold[\"metrics\"] for fold in data[\"folds\"]]]:\n            for index, row in enumerate(metric[\"per_class\"]):\n                row[\"class_label\"] = data[\"class_order\"][index]\n>       result = EvaluationResult.from_dict(data)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\test_report_projection.py:59: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nsrc\\neurocvguard\\_records.py:102: in from_dict\n    return cls(**data)\n           ^^^^^^^^^^^\n<string>:25: in __init__\n    ???\nsrc\\neurocvguard\\_records.py:63: in __post_init__\n    self._validate_semantics()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = EvaluationResult(format='neurocvguard.evaluation.private', schema_version='1.0', tool_version='0.0.0+fixture', sensiti...t.',), provenance=mappingproxy({'seed': 2026, 'versions': mappingproxy({}), 'upstream_preprocessing_verified': False}))\n\n    def _validate_semantics(self) -> None:\n        if self.positive_class is not None and self.positive_class not in self.class_order:\n>           raise EvaluationError(\"positive_class must belong to class_order.\")\nE           neurocvguard.errors.EvaluationError: positive_class must belong to class_order.\n\nsrc\\neurocvguard\\models.py:448: EvaluationError\n=========================== short test summary info ===========================\nFAILED tests/test_report_projection.py::test_path_and_email_target_labels_are_not_public\n1 failed, 358 passed in 78.34s (0:01:18)\n",
+  "stderr": ""
+}

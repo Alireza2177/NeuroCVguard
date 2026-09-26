@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv-install/Scripts/python.exe",
+    "qa/evidence/S08/check_rendered.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T09:08:34.047722+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<PROJECT_ROOT>\\qa\\evidence\\S08\\check_rendered.py\", line 17, in <module>\n    assert actual == expected\n           ^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

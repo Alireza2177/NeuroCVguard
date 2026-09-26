@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; base-uri 'none'; form-action 'none'">
+<title>NeuroCVguard — research report</title>
+<style>{% include 'report.css' %}</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to report</a>
+<header>
+<p class="eyebrow">NeuroCVguard · Local research report</p>
+<h1>Scope, findings and assessment coverage</h1>
+<p>Research support only. Technical completion does not establish scientific validity.</p>
+{% if sensitive %}<div class="notice sensitive"><strong>Sensitive research output: do not publish without review.</strong><p>Explicit detailed export. Identifiers, labels and local evidence may be included.</p></div>
+{% else %}<p class="muted">Public projection · Private identifiers and free text omitted · No formal anonymization guarantee</p>{% endif %}
+<nav aria-label="Report contents"><ul>
+{% for id, title in [('scope','Scope'),('coverage','Coverage'),('findings','Findings'),('cohort','Cohort'),('partitions','Partitions'),('associations','Associations'),('results','Results'),('provenance','Provenance'),('limitations','Limitations'),('actions','Next actions'),('references','References')] %}
+<li><a href="#{{ id }}">{{ title }}</a></li>{% endfor %}
+</ul></nav>
+</header>
+{% macro finding(check) %}
+<article class="card">
+<h3>{{ check.rule_id }}</h3>
+<div class="labels"><span class="label">{{ check.status | replace('_',' ') }}</span><span class="label">{{ check.severity }}</span><span class="label">Evidence: {{ check.evidence_kind }}</span></div>
+{% if check.scope %}<p class="muted">{% for key, value in check.scope.items() %}{{ key | replace('_',' ') }}: {{ value }}{% if not loop.last %} · {% endif %}{% endfor %}</p>{% endif %}
+<p>{{ check.message }}</p><p><strong>Next action:</strong> {{ check.recommendation }}</p>
+{% set table = check.evidence.get('display_table') %}
+{% if table %}
+<div class="table-wrap"><table><caption>Descriptive participant counts · local category aliases</caption>
+<thead><tr><th scope="col">Acquisition category</th>{% for level in table.target_levels %}<th scope="col">{{ level }}</th>{% endfor %}</tr></thead>
+<tbody>{% for row in table.counts %}{% set i = loop.index0 %}<tr><th scope="row">{{ table.row_levels[i] }}</th>{% for count in row %}<td>{{ count }}</td>{% endfor %}</tr>{% endfor %}</tbody></table></div>
+<p>{{ table.estimator }} · Value: {{ table.statistic.value if table.statistic.value is not none else 'undefined' }}{% if table.statistic.reason %} ({{ table.statistic.reason }}){% endif %}. Descriptive association is not proof of causality or model shortcut use.</p>
+{% elif check.evidence.get('details_omitted') %}<p class="muted">Table details omitted. Linked cells, totals and statistics are not included in this projection. This may reflect privacy suppression or unavailable detail.</p>
+{% endif %}
+{% if sensitive and check.evidence %}<pre aria-label="Sensitive evidence">{{ check.evidence | pretty_json }}</pre>
+{% elif check.evidence.get('statistic') %}<p>Statistic: {{ check.evidence.statistic.value }} · Reason: {{ check.evidence.statistic.reason }}</p>{% endif %}
+</article>
+{% endmacro %}
+<main id="main">
+<section id="scope"><h2>1. Scope and objective</h2>
+{% if comparison_only %}<p>Comparison of precomputed design summaries. Objectives are stated separately for each design. Cohort inventory and check coverage were not supplied.</p>
+{% else %}<p><strong>Objective:</strong> {{ report.objective | replace('_',' ') }} · <strong>Result:</strong> {{ report.result_type }} · <strong>Execution:</strong> {{ report.execution_status }}</p>{% endif %}
+<p>Version {{ version }} · Schema {{ report.get('schema_version', '1.0 (comparison-summary)') }}. No audit, model fit or statistic is recomputed during rendering.</p></section>
+<section id="coverage"><h2>2. Execution and coverage</h2>
+{% if incomplete %}<div class="notice"><strong>Incomplete assessment coverage</strong><p>Unassessable checks or missing assessment context remain. No overall validity verdict is provided.</p></div>{% endif %}
+<table><caption>Coverage of supplied checks</caption><thead><tr><th scope="col">Pass</th><th scope="col">Fail</th><th scope="col">Not assessable</th><th scope="col">Not applicable</th></tr></thead><tbody><tr>{% for status in ['pass','fail','not_assessable','not_applicable'] %}<td>{{ counts[status] }}</td>{% endfor %}</tr></tbody></table>
+{% if not checks %}<p>No check inventory supplied.</p>{% endif %}
+{% for check in checks if check.status == 'not_assessable' %}{{ finding(check) }}{% endfor %}
+</section>
+<section id="findings"><h2>3. Actionable findings</h2>
+{% for check in checks if check.status == 'fail' %}{{ finding(check) }}{% else %}<p>No triggered findings in the supplied record. Review incomplete coverage before drawing conclusions.</p>{% endfor %}</section>
+<section id="cohort"><h2>4. Cohort and missingness</h2>
+{% if report.get('input_summary') %}<p>{{ report.input_summary.n_observations }} observations · {{ report.input_summary.n_participants }} participants</p>
+<p><strong>Supplied roles:</strong> {{ report.input_summary.supplied_roles | join(', ') or 'None recorded' }}</p><p><strong>Missing/incomplete roles:</strong> {{ report.input_summary.missing_roles | join(', ') or 'None recorded' }}</p>{% else %}<p>No cohort inventory supplied.</p>{% endif %}
+{% for check in checks if check.rule_id.startswith('NCG-COHORT-') %}{{ finding(check) }}{% endfor %}</section>
+<section id="partitions"><h2>5. Partition checks</h2>
+{% for check in checks if check.rule_id.startswith('NCG-SPLIT-') or check.rule_id.startswith('NCG-PLAN-') %}{{ finding(check) }}{% else %}<p>No partition checks supplied.</p>{% endfor %}</section>
+<section id="associations"><h2>6. Acquisition and target associations</h2>
+{% for check in checks if check.rule_id.startswith('NCG-ASSOC-') %}{{ finding(check) }}{% else %}<p>No association diagnostics supplied.</p>{% endfor %}</section>
+<section id="results"><h2>7. Evaluation and comparison</h2>
+{% if report.get('evaluation_summary') %}<p>Participant-level precomputed evaluation. Null metrics and reasons are retained; failed folds are not removed.</p><pre>{{ report.evaluation_summary | pretty_json }}</pre>
+{% elif comparison_only or report.get('comparison_summary') %}<p>Design differences are descriptive, not causal estimates of leakage.</p><pre>{{ (report if comparison_only else report.comparison_summary) | pretty_json }}</pre>
+{% else %}<p>No model evaluation or comparison supplied.</p>{% endif %}</section>
+<section id="provenance"><h2>8. Provenance</h2><p><strong>Upstream preprocessing was not verified.</strong> A Pipeline cannot repair earlier global fitting.</p>
+{% if report.get('provenance') %}<pre>{{ report.provenance | pretty_json }}</pre>{% endif %}
+{% for check in checks if check.rule_id.startswith('NCG-PROV-') %}{{ finding(check) }}{% endfor %}</section>
+<section id="limitations"><h2>9. Limitations</h2><ul><li>No clinical advice, certification or universal leakage-free verdict.</li><li>Privacy projection is not formal anonymization; aggregates may still be sensitive.</li>
+{% for item in report.get('limitations', []) %}<li>{{ item }}</li>{% endfor %}</ul></section>
+<section id="actions"><h2>10. Recommended next actions</h2><ul><li>Review unassessable checks and supply missing context.</li><li>Freeze the evaluation plan and document later amendments.</li><li>Keep identity-bearing split plans and private evaluation records separate from shareable reports.</li>
+{% for check in checks if check.status in ['fail','not_assessable'] %}<li>{{ check.rule_id }}: {{ check.recommendation }}</li>{% endfor %}</ul></section>
+<section id="references"><h2>11. Rule and source references</h2>
+<p>Normative source: NeuroCVguard Foundation 1.0.0, scientific contract, report privacy and cross-contract clarifications. Association method: SciPy contingency.association (R08); adjacent inferential work: mlconfound (R09). No inferential equivalence is claimed.</p>
+<table><caption>Rules represented in this report</caption><thead><tr><th scope="col">Rule</th><th scope="col">Meaning</th></tr></thead><tbody>{% for rule in references %}<tr><th scope="row">{{ rule.id }} · {{ rule.name }}</th><td>{{ rule.meaning }}</td></tr>{% endfor %}</tbody></table></section>
+</main>
+<footer>NeuroCVguard {{ version }} · Offline research report · {{ 'Sensitive details explicitly enabled' if sensitive else 'Public projection' }}</footer>
+</body></html>
