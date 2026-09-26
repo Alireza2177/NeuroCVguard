@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv-install/Scripts/python.exe",
+    "-m",
+    "pip",
+    "install",
+    "hatchling"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T11:23:03.673174+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "Collecting hatchling\n  Using cached hatchling-1.32.4-py3-none-any.whl.metadata (3.9 kB)\nCollecting packaging>=24.2 (from hatchling)\n  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)\nCollecting pathspec>=0.10.1 (from hatchling)\n  Using cached pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)\nCollecting pluggy>=1.0.0 (from hatchling)\n  Using cached pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)\nCollecting tomlkit>=0.11.1 (from hatchling)\n  Using cached tomlkit-0.15.1-py3-none-any.whl.metadata (3.3 kB)\nCollecting trove-classifiers (from hatchling)\n  Using cached trove_classifiers-2026.9.21.13-py3-none-any.whl.metadata (2.4 kB)\nUsing cached hatchling-1.32.4-py3-none-any.whl (78 kB)\nUsing cached packaging-26.3-py3-none-any.whl (129 kB)\nUsing cached pathspec-1.1.1-py3-none-any.whl (57 kB)\nUsing cached pluggy-1.6.0-py3-none-any.whl (20 kB)\nUsing cached tomlkit-0.15.1-py3-none-any.whl (49 kB)\nUsing cached trove_classifiers-2026.9.21.13-py3-none-any.whl (14 kB)\nInstalling collected packages: trove-classifiers, tomlkit, pluggy, pathspec, packaging, hatchling\nSuccessfully installed hatchling-1.32.4 packaging-26.3 pathspec-1.1.1 pluggy-1.6.0 tomlkit-0.15.1 trove-classifiers-2026.9.21.13\n",
+  "stderr": "\n[notice] A new release of pip is available: 24.0 -> 26.2.1\n[notice] To update, run: <PROJECT_ROOT>\\.venv-install\\Scripts\\python.exe -m pip install --upgrade pip\n"
+}

@@ -18,6 +18,10 @@
 
 | 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S09 command handlers, shared orchestration, exit/output policy and configured report projection; drafted tests and docs, ran local command journeys and regression checks, and reviewed the implementation diff. | None recorded. The user authorized S02 then S09; acceptance remains pending and S10 is not authorized. | Local S09 changes from f4adbe1, following the local S02 prerequisite. |
 
+| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S10 fixed-C evaluation, observed fit boundaries, participant metrics, private/public exports and evaluate CLI; added independent fit/metric tests, docs and actual local verification. Identified a schema conflict and implemented only the extension explicitly approved in ADR-S10-001. | The user approved the optional private plan-provenance schema extension. No scientific code review or stage acceptance is recorded; S11 remains unstarted. | Local S10 changes from f2d995d. |
+
+| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S11 inner-plan derivation, explicit nested C selection and fresh outer refitting; added adversarial isolation and scoring tests, documentation and recorded local verification. | User requested S11. No human scientific review or stage acceptance is recorded. S12 remains unstarted. | Local S11 changes on top of uncommitted S10 work from f2d995d. |
+
 No independent reviewer, human authorship approval, public release approval,
 or comprehensive scientific validation is claimed. Later changes to review
 status must reflect actual review of the specified files.

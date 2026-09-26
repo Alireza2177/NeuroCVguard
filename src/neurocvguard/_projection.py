@@ -18,6 +18,7 @@ from neurocvguard.models import (
 from neurocvguard.rules import (
     ASSOCIATION_RULES,
     COHORT_RULES,
+    EVALUATION_RULES,
     PLAN_RULES,
     PROVENANCE_RULES,
     SPLIT_RULES,
@@ -45,6 +46,15 @@ _LIMITATIONS = (
     "this is not formal anonymization.",
 )
 _SENSITIVE = "Sensitive research output: do not publish without review."
+_EVALUATION_LIMITATIONS = (
+    "When tuning is enabled, inner selection uses pooled participant balanced accuracy and "
+    "protects participants/components; it does not claim held-out-site or held-out-phase "
+    "inner evaluation. Scores within 1e-12 of the maximum tie; smallest C wins.",
+    "Research baseline only; no clinical validity or inferential confidence interval.",
+    "Classifier loss weights balance participants; imputation and scaling use "
+    "training-observation statistics.",
+    "A failed fold prevents a pooled complete-CV score; undefined metrics retain null reasons.",
+)
 _GROUPS = ("COHORT", "SPLIT", "PLAN", "ASSOC", "PROV", "EVAL", "REPORT")
 
 
@@ -92,6 +102,28 @@ def project_check(check: CheckResult) -> JSONObject:
             "sites are not leakage."
         )
     safe_evidence: JSONObject = {}
+    evaluation_rule = check.rule_id in {rule.id for rule in EVALUATION_RULES}
+    if evaluation_rule:
+        definition = get_rule(check.rule_id)
+        if check.status in {CheckStatus.PASS, CheckStatus.FAIL}:
+            message = (
+                definition.trigger_message
+                if check.status == CheckStatus.FAIL
+                else definition.clear_message
+            )
+        reason = check.evidence.get("reason")
+        if isinstance(reason, str) and reason in {
+            "fit_did_not_converge",
+            "fit_value_error",
+            "fit_floating_point_error",
+            "fit_linear_algebra_error",
+            "prediction_failed_or_invalid",
+            "internal_fit_boundary_violation",
+            "empty_scored_set",
+            "positive_class_unspecified",
+            "missing_true_class",
+        }:
+            safe_evidence["reason"] = reason
     provenance_rule = check.rule_id in {rule.id for rule in PROVENANCE_RULES}
     if provenance_rule:
         definition = get_rule(check.rule_id)
@@ -155,7 +187,7 @@ def project_check(check: CheckResult) -> JSONObject:
         "scope": {},
         "message": message,
         "recommendation": get_rule(check.rule_id).recommendation
-        if cohort_rule or split_rule or association_rule or provenance_rule
+        if cohort_rule or split_rule or association_rule or provenance_rule or evaluation_rule
         else "Review this rule's required inputs and the sensitive local evidence "
         "before drawing conclusions.",
         "evidence": safe_evidence,
@@ -337,6 +369,16 @@ def _evaluation_summary(
 
 def project_evaluation(result: EvaluationResult, sensitive: bool, threshold: int) -> JSONObject:
     _options(sensitive, threshold)
+    roles: dict[str, list[JSONValue]] = {"supplied_roles": [], "missing_roles": []}
+    for check in result.preflight_checks:
+        inventory = check.evidence.get("input_summary")
+        if check.rule_id == "NCG-COHORT-001" and isinstance(inventory, Mapping):
+            for key in roles:
+                values = inventory.get(key, ())
+                if isinstance(values, (tuple, list)):
+                    roles[key] = [
+                        value for value in values if isinstance(value, str) and value in _ROLES
+                    ]
     summary: JSONObject = {
         "diagnostic_only": result.diagnostic_only,
         "metric_unit": result.metric_unit,
@@ -360,20 +402,25 @@ def project_evaluation(result: EvaluationResult, sensitive: bool, threshold: int
         "tool_version": result.tool_version if sensitive else _version(result.tool_version),
         "result_type": "evaluation",
         "objective": result.objective.value,
-        "execution_status": {
-            "completed": "completed",
-            "incomplete": "partial",
-            "blocked": "blocked",
-        }[result.execution_status.value],
+        "execution_status": (
+            "blocked"
+            if result.execution_status.value == "blocked"
+            else "partial"
+            if result.execution_status.value == "incomplete"
+            or any(check.status == CheckStatus.NOT_ASSESSABLE for check in result.preflight_checks)
+            else "completed"
+        ),
         "input_summary": {
             "n_observations": result.n_observations,
             "n_participants": result.n_participants,
-            "supplied_roles": [],
-            "missing_roles": [],
+            "supplied_roles": roles["supplied_roles"],
+            "missing_roles": roles["missing_roles"],
         },
         "checks": _checks(result.preflight_checks, sensitive, threshold),
         "limitations": _json_value(
-            list(result.limitations) + [_SENSITIVE] if sensitive else list(_LIMITATIONS)
+            list(result.limitations) + [_SENSITIVE]
+            if sensitive
+            else list((*_LIMITATIONS, *_EVALUATION_LIMITATIONS))
         ),
         "provenance": {
             "foundation_version": "1.0.0",
@@ -441,7 +488,10 @@ def project_report(report: AuditReport, sensitive: bool, threshold: int) -> JSON
         )
     else:
         data["tool_version"] = _version(report.tool_version)
-        data["limitations"] = _json_value(list(_LIMITATIONS))
+        data["limitations"] = _json_value(
+            list(_LIMITATIONS)
+            + (list(_EVALUATION_LIMITATIONS) if report.result_type == "evaluation" else [])
+        )
         data["provenance"] = {
             "foundation_version": _version(str(provenance["foundation_version"])),
             "versions": {"neurocvguard": __version__},

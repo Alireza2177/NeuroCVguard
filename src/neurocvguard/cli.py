@@ -40,7 +40,9 @@ def _parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Show sanitized stack locations on internal failures (place before command).",
     )
-    commands = parser.add_subparsers(dest="command", metavar="{init,validate,audit,split,report}")
+    commands = parser.add_subparsers(
+        dest="command", metavar="{init,validate,audit,split,evaluate,report}"
+    )
     descriptions = {
         "init": "Write an editable strict JSON starter. No columns are inferred.",
         "validate": (
@@ -58,6 +60,10 @@ def _parser() -> argparse.ArgumentParser:
             "Render compatible exported report JSON without recomputing findings "
             "or recovering redacted details."
         ),
+        "evaluate": (
+            "Run participant classification with train-only fitting and optional nested C "
+            "selection. Writes a sensitive private result and separate research reports."
+        ),
     }
     examples = {
         "init": "init --out config.json",
@@ -65,6 +71,10 @@ def _parser() -> argparse.ArgumentParser:
         "audit": "audit --cohort cohort.tsv --config config.json --out local_outputs/audit",
         "split": "split --cohort cohort.tsv --config config.json --out local_outputs/splits",
         "report": "report --input local_outputs/audit/report.json --out local_outputs/rerender",
+        "evaluate": (
+            "evaluate --cohort cohort.tsv --features features.tsv --splits plan.json "
+            "--config config.json --out local_outputs/evaluation"
+        ),
     }
     for name, description in descriptions.items():
         command = commands.add_parser(
@@ -74,7 +84,7 @@ def _parser() -> argparse.ArgumentParser:
             epilog="Example: neurocvguard " + examples[name],
             allow_abbrev=False,
         )
-        if name in {"validate", "audit", "split"}:
+        if name in {"validate", "audit", "split", "evaluate"}:
             command.add_argument(
                 "--cohort", required=True, help="Local CSV/TSV observation manifest."
             )
@@ -99,6 +109,13 @@ def _parser() -> argparse.ArgumentParser:
             command.add_argument(
                 "--ledger", help="Local JSON user declarations, not verified history."
             )
+        if name == "evaluate":
+            command.add_argument(
+                "--features", required=True, help="Explicitly keyed numeric feature table."
+            )
+            command.add_argument(
+                "--splits", required=True, help="Complete single-repeat CV plan or assignment TSV."
+            )
         if name == "report":
             command.add_argument(
                 "--input",
@@ -113,7 +130,7 @@ def _parser() -> argparse.ArgumentParser:
         command.add_argument(
             "--overwrite", action="store_true", help="Explicitly replace named outputs only."
         )
-        if name in {"validate", "audit", "report"}:
+        if name in {"validate", "audit", "report", "evaluate"}:
             command.add_argument(
                 "--sensitive-details",
                 action="store_true",
@@ -240,6 +257,43 @@ def _run(args: argparse.Namespace, log: logging.Logger) -> int:
         _paths(paths)
         return 0
     plan = load_split_plan(args.splits, cohort=cohort, config=config) if args.splits else None
+    if args.command == "evaluate":
+        from neurocvguard import evaluate_baseline
+        from neurocvguard.reporting import write_evaluation
+
+        assert plan is not None
+        log.warning(
+            "Sensitive operational output: evaluation.private.json contains fit IDs, "
+            "memberships and complete metrics. Do not publish without review."
+        )
+        log.info("Checking all evaluation prerequisites before fitting fresh outer pipelines.")
+        evaluated = evaluate_baseline(cohort, plan, config=config)
+        if args.sensitive_details or config.report.sensitive_details:
+            log.warning("Sensitive report requested. Do not publish without review.")
+        paths = write_evaluation(
+            evaluated,
+            config=config,
+            output_dir=args.out,
+            sensitive_details=args.sensitive_details,
+            overwrite=args.overwrite,
+        )
+        _paths(paths)
+        completed = sum(fold.status == "completed" for fold in evaluated.folds)
+        print(
+            f"evaluate: execution={evaluated.execution_status.value}; "
+            f"folds_completed={completed}/{len(evaluated.folds)}; metric_unit=participant"
+        )
+        print("Research baseline only; upstream preprocessing remains unverified.")
+        if any(check.rule_id == "NCG-PROV-004" for check in evaluated.preflight_checks):
+            log.error("Internal fit-boundary defect; investigate before using any result.")
+            return 1
+        if evaluated.execution_status != "completed":
+            log.error(
+                "Evaluation is incomplete; failed folds are retained "
+                "and no pooled score is available."
+            )
+            return 4
+        return 0
     ledger_path = getattr(args, "ledger", None)
     ledger: dict[str, object] | None = (
         dict(_read_json(ledger_path, max_input_mb=config.limits.max_input_mb))

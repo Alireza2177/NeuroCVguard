@@ -421,8 +421,8 @@ def make_splits(cohort: Cohort, *, config: AuditConfig) -> SplitPlan:
         )
     if config.evaluation.tune:
         raise UnsupportedDesignError(
-            "S05 generates outer folds only; nested tuning generation is not "
-            "implemented. Request outer planning with evaluation.tune=false explicitly."
+            "make_splits generates outer folds only. Request outer planning with "
+            "evaluation.tune=false; evaluate_baseline can derive inner folds with tune=true."
         )
     table = _participants(cohort, config)
     checks: list[CheckResult] = []

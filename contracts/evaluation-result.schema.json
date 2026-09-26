@@ -892,6 +892,163 @@
         "upstream_preprocessing_verified"
       ],
       "additionalProperties": false
+    },
+    "plan_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "actual_plan": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "plan_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+$"
+        },
+        "origin": {
+          "enum": [
+            "imported",
+            "generated"
+          ]
+        },
+        "cohort_digest": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "objective": {
+          "enum": [
+            "unseen_participant",
+            "unseen_site",
+            "unseen_phase",
+            "audit_only"
+          ]
+        },
+        "scheme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "folds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "repeat_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "fold_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "train_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "test_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "inner_folds": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "inner_fold_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "train_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
+                    },
+                    "validation_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
+                    }
+                  },
+                  "required": [
+                    "inner_fold_id",
+                    "train_ids",
+                    "validation_ids"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "repeat_id",
+              "fold_id",
+              "train_ids",
+              "test_ids"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "schema_version",
+        "plan_id",
+        "origin",
+        "cohort_digest",
+        "objective",
+        "scheme",
+        "seed",
+        "folds"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "origin": {
+                "const": "generated"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "cohort_digest": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          }
+        }
+      ]
     }
   },
   "required": [
@@ -918,5 +1075,13 @@
     "limitations",
     "provenance"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "dependentRequired": {
+    "plan_digest": [
+      "actual_plan"
+    ],
+    "actual_plan": [
+      "plan_digest"
+    ]
+  }
 }

@@ -1,0 +1,22 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "tests/test_nested_candidates.py",
+    "tests/test_evaluation_fits.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T13:36:09.688690+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": ".................                                                        [100%]\n17 passed in 12.62s\n",
+  "stderr": ""
+}

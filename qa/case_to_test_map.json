@@ -1824,6 +1824,399 @@
       "requirement_id": "REQ-S09",
       "execution_status": "PASSED",
       "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-01",
+      "test_node_ids": [
+        "tests/test_evaluation_fits.py::test_at_s10_01_training_only_scaler"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-02",
+      "test_node_ids": [
+        "tests/test_evaluation_fits.py::test_at_s10_02_actual_fit_ids",
+        "tests/test_evaluation_runner.py::test_at_s10_02_transformer_fit_spies"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-03",
+      "test_node_ids": [
+        "tests/test_evaluation_fits.py::test_at_s10_03_fresh_objects"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-04",
+      "test_node_ids": [
+        "tests/test_evaluation_preflight.py::test_at_s10_04_participant_loss_weights"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-05",
+      "test_node_ids": [
+        "tests/test_evaluation_metrics.py::test_at_s10_05_mean_probabilities_not_votes"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-06",
+      "test_node_ids": [
+        "tests/test_evaluation_fits.py::test_at_s10_06_explicit_class_mapping"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-07",
+      "test_node_ids": [
+        "tests/test_evaluation_fits.py::test_at_s10_07_all_missing_training_feature"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-08",
+      "test_node_ids": [
+        "tests/test_evaluation_preflight.py::test_at_s10_08_changing_target_refused"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-09",
+      "test_node_ids": [
+        "tests/test_evaluation_cli.py::test_at_s10_09_real_single_class_fold",
+        "tests/test_evaluation_metrics.py::test_at_s10_09_single_class_test"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-10",
+      "test_node_ids": [
+        "tests/test_evaluation_metrics.py::test_at_s10_10_unspecified_positive_class"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-11",
+      "test_node_ids": [
+        "tests/test_evaluation_metrics.py::test_at_s10_11_binary_metric_oracle",
+        "tests/test_evaluation_metrics.py::test_at_s10_11_multiclass_oracle_declared_order"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-12",
+      "test_node_ids": [
+        "tests/test_evaluation_fits.py::test_at_s10_12_convergence_failure"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-13",
+      "test_node_ids": [
+        "tests/test_evaluation_runner.py::test_at_s10_13_failed_fold_never_easy_fold_average[value]",
+        "tests/test_evaluation_runner.py::test_at_s10_13_failed_fold_never_easy_fold_average[convergence]"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-14",
+      "test_node_ids": [
+        "tests/test_evaluation_preflight.py::test_at_s10_14_scope_guards[holdout]",
+        "tests/test_evaluation_preflight.py::test_at_s10_14_scope_guards[repeats]",
+        "tests/test_evaluation_preflight.py::test_at_s10_14_scope_guards[audit_only]",
+        "tests/test_evaluation_preflight.py::test_at_s10_14_scope_guards[tune]",
+        "tests/test_evaluation_preflight.py::test_at_s10_14_scope_guards[diagnostic]"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-15",
+      "test_node_ids": [
+        "tests/test_evaluation_cli.py::test_at_s10_15_cli_private_public_and_api"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S10-16",
+      "test_node_ids": [
+        "tests/test_evaluation_cli.py::test_at_s10_16_no_model_deserialization[--features]",
+        "tests/test_evaluation_cli.py::test_at_s10_16_no_model_deserialization[--config]"
+      ],
+      "evidence": [
+        "qa/evidence/S10/pytest-final.json",
+        "qa/evidence/S10/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S10",
+      "requirement_id": "REQ-S10",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S11-01",
+      "test_node_ids": [
+        "tests/test_nested_runner.py::test_at_s11_01_actual_imputer_scaler_and_pipeline_inputs"
+      ],
+      "evidence": [
+        "qa/evidence/S11/pytest-final.json",
+        "qa/evidence/S11/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S11",
+      "requirement_id": "REQ-S11",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S11-02",
+      "test_node_ids": [
+        "tests/test_nested_runner.py::test_at_s11_02_outer_test_changes_cannot_choose_C[labels]",
+        "tests/test_nested_runner.py::test_at_s11_02_outer_test_changes_cannot_choose_C[features]"
+      ],
+      "evidence": [
+        "qa/evidence/S11/pytest-final.json",
+        "qa/evidence/S11/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S11",
+      "requirement_id": "REQ-S11",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S11-03",
+      "test_node_ids": [
+        "tests/test_nested_candidates.py::test_at_s11_03_same_memberships_every_candidate"
+      ],
+      "evidence": [
+        "qa/evidence/S11/pytest-final.json",
+        "qa/evidence/S11/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S11",
+      "requirement_id": "REQ-S11",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S11-04",
+      "test_node_ids": [
+        "tests/test_nested_candidates.py::test_at_s11_04_fresh_pipeline_and_transformers"
+      ],
+      "evidence": [
+        "qa/evidence/S11/pytest-final.json",
+        "qa/evidence/S11/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S11",
+      "requirement_id": "REQ-S11",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S11-05",
+      "test_node_ids": [
+        "tests/test_nested_candidates.py::test_at_s11_05_smallest_C_ties_with_global_maximum[pairs0-0.1]",
+        "tests/test_nested_candidates.py::test_at_s11_05_smallest_C_ties_with_global_maximum[pairs1-0.1]",
+        "tests/test_nested_candidates.py::test_at_s11_05_smallest_C_ties_with_global_maximum[pairs2-1]",
+        "tests/test_nested_candidates.py::test_at_s11_05_smallest_C_ties_with_global_maximum[pairs3-1]"
+      ],
+      "evidence": [
+        "qa/evidence/S11/pytest-final.json",
+        "qa/evidence/S11/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S11",
+      "requirement_id": "REQ-S11",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S11-06",
+      "test_node_ids": [
+        "tests/test_nested_candidates.py::test_at_s11_06_pooled_people_outvote_fold_means_and_repeated_rows"
+      ],
+      "evidence": [
+        "qa/evidence/S11/pytest-final.json",
+        "qa/evidence/S11/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S11",
+      "requirement_id": "REQ-S11",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S11-07",
+      "test_node_ids": [
+        "tests/test_inner_plans.py::test_at_s11_07_missing_inner_training_class_blocks_every_fit",
+        "tests/test_inner_plans.py::test_at_s11_07_infeasible_inner_count_fails_without_fitting",
+        "tests/test_nested_candidates.py::test_at_s11_07_failed_candidate_prevents_selection",
+        "tests/test_nested_cli.py::test_at_s11_07_cli_infeasible_inner_request_exits_three",
+        "tests/test_nested_runner.py::test_at_s11_07_inner_failure_retained_and_no_outer_fallback"
+      ],
+      "evidence": [
+        "qa/evidence/S11/pytest-final.json",
+        "qa/evidence/S11/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S11",
+      "requirement_id": "REQ-S11",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S11-08",
+      "test_node_ids": [
+        "tests/test_nested_runner.py::test_at_s11_08_refit_fresh_on_entire_outer_train_at_selected_C"
+      ],
+      "evidence": [
+        "qa/evidence/S11/pytest-final.json",
+        "qa/evidence/S11/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S11",
+      "requirement_id": "REQ-S11",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S11-09",
+      "test_node_ids": [
+        "tests/test_inner_plans.py::test_at_s11_09_generated_plan_is_detached_and_roundtrips",
+        "tests/test_nested_runner.py::test_at_s11_09_derived_private_plan_and_public_projection"
+      ],
+      "evidence": [
+        "qa/evidence/S11/pytest-final.json",
+        "qa/evidence/S11/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S11",
+      "requirement_id": "REQ-S11",
+      "execution_status": "PASSED",
+      "human_accepted": false
     }
   ]
 }

@@ -1352,8 +1352,8 @@
     "expected": "Fitted scaler statistics match train-only reference, not all data.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-02",
@@ -1364,8 +1364,8 @@
     "expected": "Only current training IDs observed.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-03",
@@ -1376,8 +1376,8 @@
     "expected": "No shared fitted state or reused fitted pipeline.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-04",
@@ -1388,8 +1388,8 @@
     "expected": "Classifier weights sum to one for each participant.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-05",
@@ -1400,8 +1400,8 @@
     "expected": "Participant prediction derives from mean probabilities, not majority votes.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-06",
@@ -1412,8 +1412,8 @@
     "expected": "Mapped probabilities/metrics agree with declared class labels.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-07",
@@ -1424,8 +1424,8 @@
     "expected": "Documented imputer handling and diagnostic; no global imputation.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-08",
@@ -1436,8 +1436,8 @@
     "expected": "UnsupportedDesignError rather than baseline relabeling.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-09",
@@ -1448,8 +1448,8 @@
     "expected": "AUC and class-complete metrics null with reasons; accuracy still available.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-10",
@@ -1460,8 +1460,8 @@
     "expected": "Binary AUC null with explicit reason; other metrics computed.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-11",
@@ -1472,8 +1472,8 @@
     "expected": "Accuracy, class recall and complete-class metrics match independent calculations.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-12",
@@ -1484,8 +1484,8 @@
     "expected": "Failed fold/run status, no complete pooled score.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-13",
@@ -1496,8 +1496,8 @@
     "expected": "No pooled complete-CV metric presented.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-14",
@@ -1508,8 +1508,8 @@
     "expected": "Explicit refusal; partition audit remains available.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-15",
@@ -1520,8 +1520,8 @@
     "expected": "Sensitive private result separate from sanitized report pair.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-16",
@@ -1532,8 +1532,8 @@
     "expected": "Refusal without execution.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S11-01",
@@ -1544,8 +1544,8 @@
     "expected": "Inner validation and outer test absent from all fit calls.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S11-02",
@@ -1556,8 +1556,8 @@
     "expected": "Chosen C remains unchanged for that outer fold.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S11-03",
@@ -1568,8 +1568,8 @@
     "expected": "Exact same folds across candidate values.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S11-04",
@@ -1580,8 +1580,8 @@
     "expected": "Independent clones, no fitted-state carryover.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S11-05",
@@ -1592,8 +1592,8 @@
     "expected": "Smallest numeric C selected.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S11-06",
@@ -1604,8 +1604,8 @@
     "expected": "Selection uses pooled participant balanced accuracy, not row-weighted mean fold accuracy.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S11-07",
@@ -1616,8 +1616,8 @@
     "expected": "Tuning fails explicitly; no default-C fallback.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S11-08",
@@ -1628,8 +1628,8 @@
     "expected": "Fresh fit on all and only outer train.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S11-09",
@@ -1640,8 +1640,8 @@
     "expected": "Original plan unchanged; derived run records actual inner memberships.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S12-01",

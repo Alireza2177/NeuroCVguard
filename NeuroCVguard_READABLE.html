@@ -1093,6 +1093,18 @@ python -m twine check dist/*
 <p>A public evaluation summary may include fold_metrics and metrics_hidden_reason. If a confusion table has a positive cell below the report suppression threshold, hide that entire public MetricSet (set it to null) and record privacy_small_cells. Do not leave enough per-class support, confusion cells or derived scores in another public field to reconstruct the hidden table. The private evaluation record retains complete metrics for authorized local use.</p>
 <p>Apply the same rule to public comparison metrics and derived deltas. Acquisition tables follow chapter 13. Counts of observations/participants and class names remain summary information, so the software still does not promise formal anonymization. A user can explicitly request a sensitive local detailed report. Synthetic demos may explicitly enable details because their generator creates fictitious data; they must label that choice and never infer synthetic status from an arbitrary input filename.</p>
 <p>Public report schema summary fields are projections, not substitutes for private operational evaluation records. Per-fold public metrics are included when available and not suppressed. A hidden metric and a mathematically undefined metric have different reason strings and must be explained differently.</p>
+<h2>20.8 Private evaluated-plan retention (approved ADR-S10-001)</h2>
+<p>The private evaluation schema additionally permits paired optional <code>plan_digest</code>
+and <code>actual_plan</code> fields. <code>actual_plan</code> follows the complete split-plan contract;
+<code>plan_digest</code> is SHA-256 of its canonical operational JSON. The controlled runner
+always emits both, including for incomplete runs. Its fold references, objective,
+cohort digest and recorded fit memberships must agree with the retained plan.
+Neither field is included in the public report projection.</p>
+<p>Existing schema 1.0 records without both fields remain readable by the updated
+reader and must not be assigned invented memberships or digests. Older readers
+with the original closed schema reject extended records; update those readers.
+This additive extension resolves the missing plan provenance required by §11.8.
+It changes no scientific rule and does not authenticate imported history.</p>
 <hr />
 <p><a id="spec-21_sources"></a></p>
 <h1>21 — Source register and evidence boundaries</h1>
@@ -4818,7 +4830,7 @@ python -m twine check dist/*
 <p>Draft an ADR with benefits, risks, compatibility, resource cost, evidence needs and exact acceptance tests. Do not implement a new scientific behavior or weaken a guard merely because it makes the current dataset run. Maintain visible blocked status until the human approves a defensible change.</p>
 <hr />
 <h1>Appendix — record templates</h1>
-<h2>File: <code>templates/ADR.md</code></h2>
+<h2>File: <code>templates\ADR.md</code></h2>
 <h1>ADR-NNNN — decision title</h1>
 <p>Status: proposed / accepted / rejected / superseded
 Date:
@@ -4834,7 +4846,7 @@ Affected requirements, rules, schemas and stages:</p>
 <p>List new/changed acceptance cases, independent oracle and required regression checks.</p>
 <h2>Approval and consequences</h2>
 <p>Record actual approval, not a presumed answer. Update the normative sources and regenerate reading copies only after approval.</p>
-<h2>File: <code>templates/AI_ASSISTANCE_RECORD.md</code></h2>
+<h2>File: <code>templates\AI_ASSISTANCE_RECORD.md</code></h2>
 <h1>AI assistance record template</h1>
 <p>Project records should state what actually happened, not a generic assertion of complete human review.</p>
 <table>
@@ -4850,7 +4862,7 @@ Affected requirements, rules, schemas and stages:</p>
 </table>
 <p>Examples of scope: architecture suggestions, implementation drafting, test scaffolding, debugging, documentation editing. Unknown model versions should be described as unknown, not invented.</p>
 <p>Public wording is finalized by the maintainer and must match the target venue's current rules. AI tools are not human coauthors. Do not fabricate reviewers, exhaustive verification, development history or adoption.</p>
-<h2>File: <code>templates/HANDOFF.md</code></h2>
+<h2>File: <code>templates\HANDOFF.md</code></h2>
 <h1>Stage handoff — fill with actual evidence</h1>
 <p>Stage ID:
 Date:
@@ -4878,7 +4890,7 @@ Human acceptance: pending unless explicitly provided</p>
 <p>List approved ADRs, unresolved questions and any known defects. State whether scientific behavior, inputs or outputs changed.</p>
 <h2>Next action</h2>
 <p>Specify the next bounded stage/package and required human decisions. Public publication is not implied.</p>
-<h2>File: <code>templates/MAINTAINER_REVIEW.md</code></h2>
+<h2>File: <code>templates\MAINTAINER_REVIEW.md</code></h2>
 <h1>Maintainer understanding and usability review</h1>
 <p>Before public release, the human maintainer should demonstrate the following with the real implementation and fixtures:</p>
 <ol>
@@ -4889,7 +4901,7 @@ Human acceptance: pending unless explicitly provided</p>
 <li>Find the sensitive operational outputs and explain why a suppressed public report is not a formal anonymization guarantee.</li>
 </ol>
 <p>Record who performed this review, concrete findings and fixes. For a separate user trial, record an actual newcomer completing install/demo/mapping without coaching. Agent-only review must remain labeled agent-only.</p>
-<h2>File: <code>templates/RELEASE_CHECKLIST.md</code></h2>
+<h2>File: <code>templates\RELEASE_CHECKLIST.md</code></h2>
 <h1>v0.1.0 release checklist — no box is pre-approved</h1>
 <ul>
 <li>[ ] Selected release commit and version are recorded.</li>
@@ -4919,7 +4931,7 @@ Links to actual evidence:</p>
 <hr />
 <h1>Appendix — exact JSON schemas</h1>
 <p>These are standalone local schemas. Semantic invariants remain mandatory in addition to structural schema validation.</p>
-<h2>File: <code>contracts/audit-report.schema.json</code></h2>
+<h2>File: <code>contracts\audit-report.schema.json</code></h2>
 <pre><code class="language-json">{
   &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
   &quot;$id&quot;: &quot;urn:neurocvguard:schema:audit-report:1.0&quot;,
@@ -6158,7 +6170,7 @@ Links to actual evidence:</p>
   ]
 }
 </code></pre>
-<h2>File: <code>contracts/comparison-summary.schema.json</code></h2>
+<h2>File: <code>contracts\comparison-summary.schema.json</code></h2>
 <pre><code class="language-json">{
   &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
   &quot;$id&quot;: &quot;urn:neurocvguard:schema:comparison-summary:1.0&quot;,
@@ -6535,7 +6547,7 @@ Links to actual evidence:</p>
   &quot;additionalProperties&quot;: false
 }
 </code></pre>
-<h2>File: <code>contracts/config.schema.json</code></h2>
+<h2>File: <code>contracts\config.schema.json</code></h2>
 <pre><code class="language-json">{
   &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
   &quot;$id&quot;: &quot;urn:neurocvguard:schema:config:1.0&quot;,
@@ -6832,7 +6844,7 @@ Links to actual evidence:</p>
   ]
 }
 </code></pre>
-<h2>File: <code>contracts/evaluation-result.schema.json</code></h2>
+<h2>File: <code>contracts\evaluation-result.schema.json</code></h2>
 <pre><code class="language-json">{
   &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
   &quot;$id&quot;: &quot;urn:neurocvguard:schema:evaluation-result:1.0&quot;,
@@ -7727,6 +7739,163 @@ Links to actual evidence:</p>
         &quot;upstream_preprocessing_verified&quot;
       ],
       &quot;additionalProperties&quot;: false
+    },
+    &quot;plan_digest&quot;: {
+      &quot;type&quot;: &quot;string&quot;,
+      &quot;pattern&quot;: &quot;^[0-9a-f]{64}$&quot;
+    },
+    &quot;actual_plan&quot;: {
+      &quot;type&quot;: &quot;object&quot;,
+      &quot;properties&quot;: {
+        &quot;schema_version&quot;: {
+          &quot;const&quot;: &quot;1.0&quot;
+        },
+        &quot;plan_id&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;pattern&quot;: &quot;^[A-Za-z0-9_.-]+$&quot;
+        },
+        &quot;origin&quot;: {
+          &quot;enum&quot;: [
+            &quot;imported&quot;,
+            &quot;generated&quot;
+          ]
+        },
+        &quot;cohort_digest&quot;: {
+          &quot;type&quot;: [
+            &quot;string&quot;,
+            &quot;null&quot;
+          ],
+          &quot;pattern&quot;: &quot;^[0-9a-f]{64}$&quot;
+        },
+        &quot;objective&quot;: {
+          &quot;enum&quot;: [
+            &quot;unseen_participant&quot;,
+            &quot;unseen_site&quot;,
+            &quot;unseen_phase&quot;,
+            &quot;audit_only&quot;
+          ]
+        },
+        &quot;scheme&quot;: {
+          &quot;type&quot;: &quot;string&quot;,
+          &quot;minLength&quot;: 1
+        },
+        &quot;seed&quot;: {
+          &quot;type&quot;: [
+            &quot;integer&quot;,
+            &quot;null&quot;
+          ],
+          &quot;minimum&quot;: 0
+        },
+        &quot;folds&quot;: {
+          &quot;type&quot;: &quot;array&quot;,
+          &quot;items&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;repeat_id&quot;: {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;minLength&quot;: 1
+              },
+              &quot;fold_id&quot;: {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;minLength&quot;: 1
+              },
+              &quot;train_ids&quot;: {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: {
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;minLength&quot;: 1
+                },
+                &quot;minItems&quot;: 1,
+                &quot;uniqueItems&quot;: true
+              },
+              &quot;test_ids&quot;: {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: {
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;minLength&quot;: 1
+                },
+                &quot;minItems&quot;: 1,
+                &quot;uniqueItems&quot;: true
+              },
+              &quot;inner_folds&quot;: {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: {
+                  &quot;type&quot;: &quot;object&quot;,
+                  &quot;properties&quot;: {
+                    &quot;inner_fold_id&quot;: {
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;minLength&quot;: 1
+                    },
+                    &quot;train_ids&quot;: {
+                      &quot;type&quot;: &quot;array&quot;,
+                      &quot;items&quot;: {
+                        &quot;type&quot;: &quot;string&quot;,
+                        &quot;minLength&quot;: 1
+                      },
+                      &quot;minItems&quot;: 1,
+                      &quot;uniqueItems&quot;: true
+                    },
+                    &quot;validation_ids&quot;: {
+                      &quot;type&quot;: &quot;array&quot;,
+                      &quot;items&quot;: {
+                        &quot;type&quot;: &quot;string&quot;,
+                        &quot;minLength&quot;: 1
+                      },
+                      &quot;minItems&quot;: 1,
+                      &quot;uniqueItems&quot;: true
+                    }
+                  },
+                  &quot;required&quot;: [
+                    &quot;inner_fold_id&quot;,
+                    &quot;train_ids&quot;,
+                    &quot;validation_ids&quot;
+                  ],
+                  &quot;additionalProperties&quot;: false
+                },
+                &quot;minItems&quot;: 0
+              }
+            },
+            &quot;required&quot;: [
+              &quot;repeat_id&quot;,
+              &quot;fold_id&quot;,
+              &quot;train_ids&quot;,
+              &quot;test_ids&quot;
+            ],
+            &quot;additionalProperties&quot;: false
+          },
+          &quot;minItems&quot;: 1
+        }
+      },
+      &quot;required&quot;: [
+        &quot;schema_version&quot;,
+        &quot;plan_id&quot;,
+        &quot;origin&quot;,
+        &quot;cohort_digest&quot;,
+        &quot;objective&quot;,
+        &quot;scheme&quot;,
+        &quot;seed&quot;,
+        &quot;folds&quot;
+      ],
+      &quot;additionalProperties&quot;: false,
+      &quot;allOf&quot;: [
+        {
+          &quot;if&quot;: {
+            &quot;properties&quot;: {
+              &quot;origin&quot;: {
+                &quot;const&quot;: &quot;generated&quot;
+              }
+            }
+          },
+          &quot;then&quot;: {
+            &quot;properties&quot;: {
+              &quot;cohort_digest&quot;: {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;pattern&quot;: &quot;^[0-9a-f]{64}$&quot;
+              }
+            }
+          }
+        }
+      ]
     }
   },
   &quot;required&quot;: [
@@ -7753,10 +7922,18 @@ Links to actual evidence:</p>
     &quot;limitations&quot;,
     &quot;provenance&quot;
   ],
-  &quot;additionalProperties&quot;: false
+  &quot;additionalProperties&quot;: false,
+  &quot;dependentRequired&quot;: {
+    &quot;plan_digest&quot;: [
+      &quot;actual_plan&quot;
+    ],
+    &quot;actual_plan&quot;: [
+      &quot;plan_digest&quot;
+    ]
+  }
 }
 </code></pre>
-<h2>File: <code>contracts/preprocessing-ledger.schema.json</code></h2>
+<h2>File: <code>contracts\preprocessing-ledger.schema.json</code></h2>
 <pre><code class="language-json">{
   &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
   &quot;$id&quot;: &quot;urn:neurocvguard:schema:preprocessing-ledger:1.0&quot;,
@@ -7860,7 +8037,7 @@ Links to actual evidence:</p>
   &quot;additionalProperties&quot;: false
 }
 </code></pre>
-<h2>File: <code>contracts/split-plan.schema.json</code></h2>
+<h2>File: <code>contracts\split-plan.schema.json</code></h2>
 <pre><code class="language-json">{
   &quot;$schema&quot;: &quot;https://json-schema.org/draft/2020-12/schema&quot;,
   &quot;$id&quot;: &quot;urn:neurocvguard:schema:split-plan:1.0&quot;,
@@ -8025,7 +8202,7 @@ Links to actual evidence:</p>
 <p>The clean cohort has 18 participants, two visits each, two classes and three sites. The clean 3-fold plan is participant-disjoint; the leaky 2-fold plan splits visits so every person crosses train/test. The shuffled feature table tests a keyed join. Target-changing and cross-site variants test explicit scope/feasibility behavior. The global-PCA ledger is a declared-history test. The example public report tests a schema only and is labeled accordingly.</p>
 <p><code>config_invalid_unknown_key.json</code> is intentionally structurally invalid. <code>splits_unknown_id.json</code> is structurally valid JSON but intentionally semantically invalid for the cohort. A validator must distinguish these two failure classes.</p>
 <p>These files can be committed as synthetic tests. Never replace them with restricted ADNI, AIBL or identifiable clinical records.</p>
-<h2>File: <code>fixtures/assignments_clean.tsv</code></h2>
+<h2>File: <code>fixtures\assignments_clean.tsv</code></h2>
 <pre><code class="language-text">repeat_id	fold_id	role	observation_id
 0	fold-000	train	obs-001-1
 0	fold-000	train	obs-001-2
@@ -8136,7 +8313,7 @@ Links to actual evidence:</p>
 0	fold-002	test	obs-017-1
 0	fold-002	test	obs-017-2
 </code></pre>
-<h2>File: <code>fixtures/cohort_changing_target.tsv</code></h2>
+<h2>File: <code>fixtures\cohort_changing_target.tsv</code></h2>
 <pre><code class="language-text">observation_id	subject_id	diagnosis	session_id	site
 obs-001-1	sub-001	CN	ses-01	site-1
 obs-001-2	sub-001	AD	ses-02	site-1
@@ -8175,7 +8352,7 @@ obs-017-2	sub-017	CN	ses-02	site-3
 obs-018-1	sub-018	AD	ses-01	site-3
 obs-018-2	sub-018	AD	ses-02	site-3
 </code></pre>
-<h2>File: <code>fixtures/cohort_clean.tsv</code></h2>
+<h2>File: <code>fixtures\cohort_clean.tsv</code></h2>
 <pre><code class="language-text">observation_id	subject_id	diagnosis	session_id	site
 obs-001-1	sub-001	CN	ses-01	site-1
 obs-001-2	sub-001	CN	ses-02	site-1
@@ -8214,7 +8391,7 @@ obs-017-2	sub-017	CN	ses-02	site-3
 obs-018-1	sub-018	AD	ses-01	site-3
 obs-018-2	sub-018	AD	ses-02	site-3
 </code></pre>
-<h2>File: <code>fixtures/cohort_cross_site.tsv</code></h2>
+<h2>File: <code>fixtures\cohort_cross_site.tsv</code></h2>
 <pre><code class="language-text">observation_id	subject_id	diagnosis	session_id	site
 obs-001-1	sub-001	CN	ses-01	site-1
 obs-001-2	sub-001	CN	ses-02	site-2
@@ -8253,7 +8430,7 @@ obs-017-2	sub-017	CN	ses-02	site-3
 obs-018-1	sub-018	AD	ses-01	site-3
 obs-018-2	sub-018	AD	ses-02	site-3
 </code></pre>
-<h2>File: <code>fixtures/comparison_schema_example.json</code></h2>
+<h2>File: <code>fixtures\comparison_schema_example.json</code></h2>
 <pre><code class="language-json">{
   &quot;designs&quot;: [
     {
@@ -8283,7 +8460,7 @@ obs-018-2	sub-018	AD	ses-02	site-3
   &quot;interpretation&quot;: &quot;This is an unexecuted synthetic schema example, not a research result.&quot;
 }
 </code></pre>
-<h2>File: <code>fixtures/config.json</code></h2>
+<h2>File: <code>fixtures\config.json</code></h2>
 <pre><code class="language-json">{
   &quot;schema_version&quot;: &quot;1.0&quot;,
   &quot;columns&quot;: {
@@ -8336,7 +8513,7 @@ obs-018-2	sub-018	AD	ses-02	site-3
   }
 }
 </code></pre>
-<h2>File: <code>fixtures/config_invalid_unknown_key.json</code></h2>
+<h2>File: <code>fixtures\config_invalid_unknown_key.json</code></h2>
 <pre><code class="language-json">{
   &quot;schema_version&quot;: &quot;1.0&quot;,
   &quot;columns&quot;: {
@@ -8390,7 +8567,7 @@ obs-018-2	sub-018	AD	ses-02	site-3
   }
 }
 </code></pre>
-<h2>File: <code>fixtures/evaluation_schema_example.json</code></h2>
+<h2>File: <code>fixtures\evaluation_schema_example.json</code></h2>
 <pre><code class="language-json">{
   &quot;format&quot;: &quot;neurocvguard.evaluation.private&quot;,
   &quot;schema_version&quot;: &quot;1.0&quot;,
@@ -8428,7 +8605,7 @@ obs-018-2	sub-018	AD	ses-02	site-3
   }
 }
 </code></pre>
-<h2>File: <code>fixtures/features_shuffled.tsv</code></h2>
+<h2>File: <code>fixtures\features_shuffled.tsv</code></h2>
 <pre><code class="language-text">observation_id	feature_1	feature_2
 obs-018-2	0.62	0.48
 obs-018-1	0.61	0.5
@@ -8467,7 +8644,7 @@ obs-002-1	0.41	0.24
 obs-001-2	0.22	0.09
 obs-001-1	0.21	0.11
 </code></pre>
-<h2>File: <code>fixtures/known_answers.json</code></h2>
+<h2>File: <code>fixtures\known_answers.json</code></h2>
 <pre><code class="language-json">{
   &quot;fixture_status&quot;: &quot;hand-checkable expectations, not application run results&quot;,
   &quot;cohort&quot;: {
@@ -8527,7 +8704,7 @@ obs-001-1	0.21	0.11
   &quot;unknown_id_plan&quot;: &quot;structurally JSON-valid but fails cohort membership validation&quot;
 }
 </code></pre>
-<h2>File: <code>fixtures/ledger_declared_global.json</code></h2>
+<h2>File: <code>fixtures\ledger_declared_global.json</code></h2>
 <pre><code class="language-json">{
   &quot;schema_version&quot;: &quot;1.0&quot;,
   &quot;source&quot;: &quot;user_declaration&quot;,
@@ -8547,7 +8724,7 @@ obs-001-1	0.21	0.11
   ]
 }
 </code></pre>
-<h2>File: <code>fixtures/manifest.json</code></h2>
+<h2>File: <code>fixtures\manifest.json</code></h2>
 <pre><code class="language-json">[
   {
     &quot;path&quot;: &quot;fixtures/config.json&quot;,
@@ -8596,7 +8773,7 @@ obs-001-1	0.21	0.11
   }
 ]
 </code></pre>
-<h2>File: <code>fixtures/report_schema_example.json</code></h2>
+<h2>File: <code>fixtures\report_schema_example.json</code></h2>
 <pre><code class="language-json">{
   &quot;schema_version&quot;: &quot;1.0&quot;,
   &quot;tool_version&quot;: &quot;0.0.0+fixture&quot;,
@@ -8643,7 +8820,7 @@ obs-001-1	0.21	0.11
   }
 }
 </code></pre>
-<h2>File: <code>fixtures/splits_clean.json</code></h2>
+<h2>File: <code>fixtures\splits_clean.json</code></h2>
 <pre><code class="language-json">{
   &quot;schema_version&quot;: &quot;1.0&quot;,
   &quot;plan_id&quot;: &quot;fixture-clean&quot;,
@@ -8791,7 +8968,7 @@ obs-001-1	0.21	0.11
   ]
 }
 </code></pre>
-<h2>File: <code>fixtures/splits_participant_overlap.json</code></h2>
+<h2>File: <code>fixtures\splits_participant_overlap.json</code></h2>
 <pre><code class="language-json">{
   &quot;schema_version&quot;: &quot;1.0&quot;,
   &quot;plan_id&quot;: &quot;fixture-participant-overlap&quot;,
@@ -8894,7 +9071,7 @@ obs-001-1	0.21	0.11
   ]
 }
 </code></pre>
-<h2>File: <code>fixtures/splits_unknown_id.json</code></h2>
+<h2>File: <code>fixtures\splits_unknown_id.json</code></h2>
 <pre><code class="language-json">{
   &quot;schema_version&quot;: &quot;1.0&quot;,
   &quot;plan_id&quot;: &quot;fixture-unknown-id&quot;,

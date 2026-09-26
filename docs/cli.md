@@ -1,9 +1,9 @@
 # Local audit commands
 
-S09 provides `init`, `validate`, `audit`, `split` and `report`. These commands use
-the same cohort, partition and provenance APIs as Python callers. Evaluation,
-comparison computation and the synthetic demo are not CLI commands at this stage.
-All input is local; the commands download nothing and perform no model fitting.
+S09 provides `init`, `validate`, `audit`, `split` and `report`; S10 adds `evaluate`.
+These commands use the same APIs as Python callers. Comparison computation and
+the synthetic demo remain unavailable. All input is local and commands download
+nothing. Only `evaluate` performs controlled model fitting.
 
 After installing the package, use `neurocvguard` or `python -m neurocvguard`
 interchangeably. Each command has `--help`. With no command, help is printed and
@@ -62,7 +62,7 @@ recovered. Rendering does not fit, audit or recalculate statistics.
 | 1 | Unexpected internal failure |
 | 2 | Invocation, configuration, structural input or output error |
 | 3 | Findings crossed the threshold, or the requested design was infeasible |
-| 4 | Reserved for later evaluation failures after fitting begins; unused in S09 |
+| 4 | Expected evaluation/runtime failure after fitting begins; incomplete results retained |
 
 For `validate` and `audit`, `--fail-on error` is the default. It returns 3 for an
 error-severity `fail` or `not_assessable` check. `--fail-on warning` also includes
@@ -90,3 +90,16 @@ The lower-level `neurocvguard.workflows.audit_workflow` combines the existing au
 APIs without discarding duplicate scopes. For matching configured Python output,
 use `neurocvguard.reporting.write_configured_report`; the small root `write_report`
 API retains its default threshold. No API reads implicit project configuration.
+
+## Fixed-C or nested evaluation
+
+Use `evaluate --cohort cohort.tsv --features features.tsv --splits plan.json
+--config config.json --out local_outputs/evaluation`. The feature table and
+complete single-repeat CV plan are required. The command checks all prerequisites
+before any fit and writes sensitive `evaluation.private.json` plus projected
+reports. It accepts `--overwrite` and `--sensitive-details`. It does not accept
+`--fail-on`; incomplete fitting returns 4 regardless of findings severity.
+See [evaluation](evaluation.md) for training boundaries, weights, exact metrics,
+failure policy and schema migration. S11 supports `evaluation.tune=true` with the
+explicit C grid and inner fold count. Supplied inner assignments are used or
+derived from outer training only; infeasible tuning has no fixed-C fallback.

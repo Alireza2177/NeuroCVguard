@@ -1,0 +1,23 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "tests/test_evaluation_cli.py",
+    "tests/test_cli_commands.py",
+    "tests/test_report_rendering.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T11:06:44.743876+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "..........................                                               [100%]\n26 passed in 29.02s\n",
+  "stderr": ""
+}

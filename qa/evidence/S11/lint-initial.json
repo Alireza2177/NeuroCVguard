@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T13:41:09.883546+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "I001 [*] Import block is un-sorted or un-formatted\n  --> src\\neurocvguard\\_evaluation_inputs.py:3:1\n   |\n 1 |   \"\"\"Preflight and fixed sklearn pipeline construction; no fitting occurs here.\"\"\"\n 2 |\n 3 | / from __future__ import annotations\n 4 | |\n 5 | | from collections import Counter\n 6 | | from dataclasses import dataclass, replace\n 7 | |\n 8 | | import numpy as np\n 9 | | import numpy.typing as npt\n10 | | import pandas as pd\n11 | | from sklearn.impute import SimpleImputer\n12 | | from sklearn.linear_model import LogisticRegression\n13 | | from sklearn.pipeline import Pipeline\n14 | | from sklearn.preprocessing import StandardScaler\n15 | |\n16 | | from neurocvguard._tables import _dimensions\n17 | | from neurocvguard._inner_plans import with_inner_plans\n18 | | from neurocvguard.config import AuditConfig, Objective\n19 | | from neurocvguard.errors import ConfigurationError, InputValidationError, UnsupportedDesignError\n20 | | from neurocvguard.io import load_cohort, load_split_plan\n21 | | from neurocvguard.models import AuditReport, Cohort, SplitPlan\n22 | | from neurocvguard.workflows import audit_workflow\n   | |_________________________________________________^\nhelp: Organize imports\n   |\n15 |\n16 + from neurocvguard._inner_plans import with_inner_plans\n17 | from neurocvguard._tables import _dimensions\n   - from neurocvguard._inner_plans import with_inner_plans\n18 | from neurocvguard.config import AuditConfig, Objective\n   |\n\nE501 Line too long (115 > 100)\n   --> src\\neurocvguard\\_evaluation_inputs.py:108:101\n    |\n106 |         if summary.evidence.get(\"evaluation_permitted\") is not True:\n107 |             raise UnsupportedDesignError(\n108 |                 \"Tuning requires valid inner partitions and all inner training classes; no fallback was attempted.\"\n    |                                                                                                     ^^^^^^^^^^^^^^^\n109 |             )\n110 |     selected = validated.features\n    |\n\nI001 [*] Import block is un-sorted or un-formatted\n  --> src\\neurocvguard\\_tuning.py:3:1\n   |\n 1 |   \"\"\"Explicit nested C selection from pooled inner participant predictions only.\"\"\"\n 2 |\n 3 | / from dataclasses import dataclass, replace\n 4 | |\n 5 | | import numpy as np\n 6 | | import numpy.typing as npt\n 7 | | from sklearn.pipeline import Pipeline\n 8 | |\n 9 | | from neurocvguard._evaluation_fits import fit_inner\n10 | | from neurocvguard._evaluation_inputs import EvaluationInputs\n11 | | from neurocvguard.config import AuditConfig\n12 | | from neurocvguard.metrics import aggregate_participants, participant_metrics\n13 | | from neurocvguard.models import CandidateScore, CheckResult, FitEvent, SplitFold\n   | |________________________________________________________________________________^\nhelp: Organize imports\n   |\n14 |\n   -\n15 | TUNING_POLICY = (\n   |\n\nFound 3 errors.\n[*] 2 fixable with the `--fix` option.\n",
+  "stderr": ""
+}
