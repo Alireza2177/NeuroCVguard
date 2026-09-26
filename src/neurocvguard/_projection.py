@@ -500,6 +500,8 @@ def project_comparison(result: ComparisonResult, sensitive: bool, threshold: int
 
 
 def project_report(report: AuditReport, sensitive: bool, threshold: int) -> JSONObject:
+    from neurocvguard.synthetic import SYNTHETIC_NOTICE
+
     _options(sensitive, threshold)
     data = report._as_dict()
     data["checks"] = _checks(report.checks, sensitive, threshold)
@@ -521,6 +523,8 @@ def project_report(report: AuditReport, sensitive: bool, threshold: int) -> JSON
             "sensitive_details": False,
             "upstream_preprocessing_verified": False,
         }
+        if SYNTHETIC_NOTICE in report.limitations:
+            cast(list[JSONValue], data["limitations"]).append(SYNTHETIC_NOTICE)
         summary = cast(JSONObject, data["input_summary"])
         for role in ("supplied_roles", "missing_roles"):
             summary[role] = [value for value in cast(list[str], summary[role]) if value in _ROLES]

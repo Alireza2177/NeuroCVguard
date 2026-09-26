@@ -1,0 +1,26 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "--select",
+    "I,F401",
+    "--fix",
+    "src/neurocvguard/demo.py",
+    "src/neurocvguard/synthetic.py",
+    "src/neurocvguard/cli.py",
+    "tests/test_synthetic.py",
+    "examples"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T20:05:07.661468+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "Found 3 errors (3 fixed, 0 remaining).\n",
+  "stderr": ""
+}

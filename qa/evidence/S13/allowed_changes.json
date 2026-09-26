@@ -1,0 +1,15 @@
+[
+  "AI_ASSISTANCE.md",
+  "README.md",
+  "docs/cli.md",
+  "pyproject.toml",
+  "src/neurocvguard/_projection.py",
+  "src/neurocvguard/cli.py",
+  "src/neurocvguard/reporting.py",
+  "src/neurocvguard/templates/report.html",
+  "state/PROJECT_STATUS.json",
+  "tests/test_cli_commands.py",
+  "qa/acceptance_cases.json",
+  "qa/case_to_test_map.json",
+  "qa/requirements.json"
+]

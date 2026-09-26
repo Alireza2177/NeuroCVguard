@@ -24,6 +24,8 @@
 
 | 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S12 private-record comparisons, narrow diagnostic eligibility and raw observation pooling, CLI/report context and privacy handling; added adversarial tests, docs and recorded local checks. Performed implementing-agent scientific/privacy review. | User requested S12 and explicitly approved the optional comparison context extension in ADR-S12-001. No human code/scientific review or stage acceptance is recorded. | Local S12 changes from 6acfed4. |
 
+| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S13 local RNG generators, offline demo, five packaged tutorials, fixed synthetic labeling, tests and documentation; executed real synthetic workflows and recorded their outputs. Browser screenshot capture was rejected by the browser security policy; no screenshot or visual review is claimed. | User requested S13 and explicitly approved the screenshot-only exception in ADR-S13-001. No human scientific review or stage acceptance is recorded. | Local S13 changes from e8eef64. |
+
 No independent reviewer, human authorship approval, public release approval,
 or comprehensive scientific validation is claimed. Later changes to review
 status must reflect actual review of the specified files.

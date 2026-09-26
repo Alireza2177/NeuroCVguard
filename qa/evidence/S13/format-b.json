@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "src/neurocvguard/demo.py",
+    "src/neurocvguard/synthetic.py",
+    "src/neurocvguard/cli.py",
+    "tests/test_demo.py",
+    "tests/test_examples.py",
+    "tests/test_cli_commands.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T20:08:54.910112+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "4 files reformatted, 2 files left unchanged\n",
+  "stderr": ""
+}

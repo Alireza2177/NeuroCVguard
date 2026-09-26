@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T20:08:57.737660+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "E501 Line too long (103 > 100)\n   --> src\\neurocvguard\\cli.py:278:101\n    |\n276 |         )\n277 |         print(\n278 |             f\"demo: synthetic=true; scenario={args.scenario}; execution={demo_result.execution_status}\"\n    |                                                                                                     ^^^\n279 |         )\n280 |         print(\"Open report.html in the requested output directory; provenance: demo.private.json.\")\n    |\n\nE501 Line too long (101 > 100)\n   --> src\\neurocvguard\\demo.py:247:101\n    |\n245 |             SYNTHETIC_NOTICE + \"\\nScenario: \" + scenario + \"\\n\"\n246 |             \"Generated locally; no download or account. Default reports are privacy-projected.\\n\"\n247 |             \"*.plan.json, *.evaluation.private.json and demo.private.json are operational records.\\n\"\n    |                                                                                                     ^\n248 |             \"Even these fictitious operational records are marked private to teach the boundary.\\n\"\n249 |             \"Repeated scenario is an opt-in invalid diagnostic; never use it as a recommended fix.\\n\"\n    |\n\nE501 Line too long (101 > 100)\n   --> src\\neurocvguard\\demo.py:249:101\n    |\n247 |             \"*.plan.json, *.evaluation.private.json and demo.private.json are operational records.\\n\"\n248 |             \"Even these fictitious operational records are marked private to teach the boundary.\\n\"\n249 |             \"Repeated scenario is an opt-in invalid diagnostic; never use it as a recommended fix.\\n\"\n    |                                                                                                     ^\n250 |             \"Site-held-out and participant-disjoint estimates answer different questions.\\n\"\n251 |             \"Unknown upstream preprocessing remains unassessable. Freeze real evaluation plans.\\n\"\n    |\n\nF401 [*] `neurocvguard.load_config` imported but unused\n  --> tests\\test_demo.py:15:26\n   |\n13 | from test_contracts import fixture\n14 |\n15 | from neurocvguard import load_config, write_report\n   |                          ^^^^^^^^^^^\n16 | from neurocvguard.cli import main\n17 | from neurocvguard.demo import run_demo\n   |\nhelp: Remove unused import: `neurocvguard.load_config`\n   |\n14 |\n   - from neurocvguard import load_config, write_report\n15 + from neurocvguard import write_report\n16 | from neurocvguard.cli import main\n   |\n\nF401 [*] `neurocvguard.models.SplitPlan` imported but unused\n  --> tests\\test_demo.py:19:64\n   |\n17 | from neurocvguard.demo import run_demo\n18 | from neurocvguard.errors import InputValidationError\n19 | from neurocvguard.models import AuditReport, EvaluationResult, SplitPlan\n   |                                                                ^^^^^^^^^\n20 | from neurocvguard.synthetic import SCENARIOS, SYNTHETIC_NOTICE\n   |\nhelp: Remove unused import: `neurocvguard.models.SplitPlan`\n   |\n18 | from neurocvguard.errors import InputValidationError\n   - from neurocvguard.models import AuditReport, EvaluationResult, SplitPlan\n19 + from neurocvguard.models import AuditReport, EvaluationResult\n20 | from neurocvguard.synthetic import SCENARIOS, SYNTHETIC_NOTICE\n   |\n\nFound 5 errors.\n[*] 2 fixable with the `--fix` option.\n",
+  "stderr": ""
+}

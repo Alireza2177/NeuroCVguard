@@ -10,7 +10,8 @@ S08 adds privacy-projected JSON and offline HTML reports;
 S09 exposes init, validate, audit, split and report commands;
 S10 adds fixed-C participant classification through evaluate;
 S11 adds nested participant-aware C selection;
-S12 adds descriptive design comparisons and explicitly gated overlap diagnostics.**
+S12 adds descriptive design comparisons and explicitly gated overlap diagnostics;
+S13 adds deterministic synthetic scenarios, an offline demo and five tutorials.**
 See [the CLI guide](docs/cli.md) for a complete local workflow. The local development version
 is `0.1.0`, matching the foundation's target release; it is not a published or
 completed release.
@@ -19,7 +20,8 @@ S02 now provides strict local CSV/TSV loading and keyed feature joins through
 `load_cohort`; see [the input guide](docs/input_tables.md). It was completed as the
 explicitly authorized prerequisite for S09 after initially being skipped.
 See [design comparison](docs/comparison.md) for the private-record workflow and
-diagnostic restrictions. The synthetic demo remains unimplemented.
+diagnostic restrictions. The [synthetic guide](docs/synthetic_examples.md) describes
+the implemented offline demos and their limitations.
 The intended research scope is defined in [START_HERE.md](START_HERE.md)
 and [spec/00_project_charter.md](spec/00_project_charter.md). This software does
 not provide clinical advice or certify scientific validity.
@@ -89,9 +91,30 @@ omitted until confirmed; proposed values are under `tool.neurocvguard.release`.
 No DOI, publication, CI result, or support commitment is claimed.
 
 [AI_ASSISTANCE.md](AI_ASSISTANCE.md) records the assistance actually provided.
-S12 verification and review status are recorded in [its handoff](state/handoffs/S12.md).
-S13 remains unstarted; further work needs
+S13 verification and the approved screenshot-only exception are recorded in
+[its handoff](state/handoffs/S13.md). S14 remains unstarted; further work needs
 a subsequent instruction.
+
+## Try the offline synthetic demo
+
+```powershell
+.venv/Scripts/python.exe -m neurocvguard demo --out local_outputs/demo
+```
+
+Open `local_outputs/demo/report.html`. This generates only fictitious tabular
+data, audits the explicit input/feature join, makes participant-disjoint folds,
+runs the research baseline and writes local reports and private operational
+records. It needs no account, download or real participant data. Existing outputs
+require a new directory or explicit `--overwrite`.
+
+The opt-in `--scenario repeated` compares an intentionally invalid row-random
+diagnostic with participant-disjoint evaluation. `--scenario site_shift` compares
+different domain objectives. Neither chooses a scientifically winning design or
+estimates a universal causal leakage amount. Seeds are fixed and never selected
+for a favorable score. See [actual executed outputs](qa/evidence/S13/executed/runs.json)
+and the [actual default report](qa/evidence/S13/executed/demo-clean/report.html).
+The browser tool blocked the local report URL, and the user approved a
+screenshot-only exception for S13. No presentation capture is claimed.
 
 ## Configuration and record API
 

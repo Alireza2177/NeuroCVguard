@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T20:17:15.486696+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "E501 Line too long (106 > 100)\n  --> qa\\evidence\\S13\\check_captured.py:38:101\n   |\n36 |     assert \"command_path_redaction\" in manifest\n37 | print(\n38 |     \"8 retained runs: checksums, parameters, actual metrics and HTML values match. No screenshot claimed.\"\n   |                                                                                                     ^^^^^^\n39 | )\n   |\n\nFound 1 error.\n",
+  "stderr": ""
+}

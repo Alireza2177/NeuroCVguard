@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "neurocvguard",
+    "demo",
+    "--out",
+    "qa/evidence/S13/smoke-clean"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T20:04:23.327057+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "demo: synthetic=true; scenario=clean; execution=completed\nOpen report.html in the requested output directory; provenance: demo.private.json.\n",
+  "stderr": "WARNING: Fully synthetic demonstration; no patient data. These are fictitious tabular mechanisms, not biologically realistic brain models or clinical results.\nWARNING: Operational plans, evaluations and demo.private.json are separately private.\n"
+}

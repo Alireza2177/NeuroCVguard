@@ -1760,8 +1760,8 @@
     "expected": "Exactly matching IDs, labels and numeric outputs in supported environment.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S13-02",
@@ -1772,8 +1772,8 @@
     "expected": "Unchanged after demo generation.",
     "method": "property",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S13-03",
@@ -1784,8 +1784,8 @@
     "expected": "Documented mechanism changes without hidden unrelated settings.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S13-04",
@@ -1796,8 +1796,8 @@
     "expected": "Complete synthetic workflow and local report.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S13-05",
@@ -1808,8 +1808,8 @@
     "expected": "No missing hidden files or interactive state.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S13-06",
@@ -1820,8 +1820,8 @@
     "expected": "Fictitious data explicitly labeled; no real patient claims.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S13-07",
@@ -1832,8 +1832,8 @@
     "expected": "Values match actual run or are explicitly hypothetical, never fabricated.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S14-01",

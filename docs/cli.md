@@ -1,9 +1,9 @@
 # Local audit commands
 
 S09 provides `init`, `validate`, `audit`, `split` and `report`; S10 adds `evaluate`
-and S12 adds `compare`. These commands use the same APIs as Python callers.
-The synthetic demo remains unavailable. All input is local and commands download
-nothing. Only `evaluate` performs controlled model fitting.
+and S12 adds `compare`; S13 adds `demo`. These commands use the same APIs as Python
+callers. All input is local and commands download nothing. `evaluate` and the
+synthetic `demo` perform controlled model fitting.
 
 After installing the package, use `neurocvguard` or `python -m neurocvguard`
 interchangeably. Each command has `--help`. With no command, help is printed and
@@ -121,3 +121,25 @@ differences are null; malformed records or output conflicts return 2.
 configuration. It accepts `--overwrite` and explicit `--sensitive-details`.
 Names become public aliases. See [comparison](comparison.md) for context fields,
 privacy, interpretation and the diagnostic-only evaluation flag.
+
+## Offline synthetic demo
+
+```text
+neurocvguard demo --out local_outputs/demo
+neurocvguard demo --scenario repeated --out local_outputs/repeated
+neurocvguard demo --scenario site_shift --out local_outputs/site-shift
+```
+
+The default is `clean`, a participant-disjoint workflow with two observations per
+person. Every scenario generates its own explicitly fictitious local input;
+there is no dataset path option, network access or account. The repeated scenario
+explicitly requests the invalid row-random diagnostic and retains its warning.
+Site-held-out evaluation changes the target distribution and objective.
+
+The output directory contains `report.html`, its JSON/manifest, generated TSVs,
+explicit configs and separate marked private plans/evaluations/provenance.
+`--sensitive-details` explicitly shows complete fictitious metrics and labels with
+a visible warning. Synthetic labeling never enables that option by itself.
+`--overwrite` permits replacement of named artifacts only; unrelated files remain.
+Exit 4 retains an incomplete result after expected fit failures; no fallback occurs.
+See [the synthetic guide](synthetic_examples.md) for all parameters and scripts.

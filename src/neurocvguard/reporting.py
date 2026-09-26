@@ -17,6 +17,7 @@ from neurocvguard.errors import InputValidationError
 from neurocvguard.models import AuditReport, ComparisonResult, EvaluationResult
 from neurocvguard.rules import get_rule
 from neurocvguard.serialization import JSONObject, JSONValue, canonical_json
+from neurocvguard.synthetic import SYNTHETIC_NOTICE
 
 ReportRecord = AuditReport | EvaluationResult | ComparisonResult
 
@@ -68,6 +69,7 @@ def _render(data: JSONObject, sensitive: bool) -> str:
             checks=checks,
             counts=counts,
             sensitive=sensitive,
+            synthetic_notice=SYNTHETIC_NOTICE,
             references=references,
             version=__version__,
             comparison_only="designs" in data,
