@@ -13,6 +13,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
+from neurocvguard._diagnostics import evaluation_eligibility, validate_diagnostic_request
 from neurocvguard._inner_plans import with_inner_plans
 from neurocvguard._tables import _dimensions
 from neurocvguard.config import AuditConfig, Objective
@@ -33,6 +34,7 @@ class EvaluationInputs:
     targets: pd.Series[str]
     participants: pd.Series[str]
     classes: tuple[str, ...]
+    diagnostic_only: bool = False
 
 
 def preflight(cohort: Cohort, plan: SplitPlan, config: AuditConfig) -> EvaluationInputs:
@@ -47,8 +49,7 @@ def preflight(cohort: Cohort, plan: SplitPlan, config: AuditConfig) -> Evaluatio
     bound = load_split_plan(dict(plan.to_operational_dict()), cohort=validated, config=config)
     if config.study.objective == Objective.AUDIT_ONLY:
         raise UnsupportedDesignError("audit_only supports partition inspection, not evaluation.")
-    if config.evaluation.diagnostic_allow_subject_overlap:
-        raise UnsupportedDesignError("Diagnostic overlap evaluation is not implemented in S10.")
+    validate_diagnostic_request(config)
     if len(bound.folds) < 2 or len({fold.repeat_id for fold in bound.folds}) != 1:
         raise UnsupportedDesignError(
             "Evaluation requires complete CV with two or more folds and one repeat."
@@ -84,30 +85,20 @@ def preflight(cohort: Cohort, plan: SplitPlan, config: AuditConfig) -> Evaluatio
     # assignments are allowed here; invalid supplied assignments are never replaced.
     outer_config = replace(config, evaluation=replace(config.evaluation, tune=False))
     audit = audit_workflow(validated, config=outer_config, plan=bound)
-    summary = next(check for check in audit.checks if check.scope.get("field") == "split_summary")
-    if summary.evidence.get("evaluation_permitted") is not True:
-        raise UnsupportedDesignError(
-            "Evaluation requires complete, protected and objective-valid partitions with all "
-            "training classes. Run audit to inspect the scoped violations."
-        )
+    diagnostic = evaluation_eligibility(audit, config)
     # Independently require exactly one test fold per participant, not just per row.
     participants = metadata[config.columns.subject_id]
     tested = Counter(
         person for fold in bound.folds for person in set(participants.loc[list(fold.test_ids)])
     )
-    if set(tested) != set(participants) or any(count != 1 for count in tested.values()):
+    if set(tested) != set(participants) or (
+        not diagnostic and any(count != 1 for count in tested.values())
+    ):
         raise UnsupportedDesignError("Each participant must be tested in exactly one outer fold.")
     if config.evaluation.tune:
         bound = with_inner_plans(validated, bound, config)
         audit = audit_workflow(validated, config=config, plan=bound)
-        summary = next(
-            check for check in audit.checks if check.scope.get("field") == "split_summary"
-        )
-        if summary.evidence.get("evaluation_permitted") is not True:
-            raise UnsupportedDesignError(
-                "Tuning requires valid inner partitions and all inner training classes; "
-                "no fallback was attempted."
-            )
+        diagnostic = evaluation_eligibility(audit, config)
     selected = validated.features
     assert selected is not None
     return EvaluationInputs(
@@ -118,6 +109,7 @@ def preflight(cohort: Cohort, plan: SplitPlan, config: AuditConfig) -> Evaluatio
         metadata[target],
         participants,
         classes,
+        diagnostic,
     )
 
 

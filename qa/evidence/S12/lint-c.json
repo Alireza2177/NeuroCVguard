@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T16:46:18.598411+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "E501 Line too long (142 > 100)\n  --> src\\neurocvguard\\cli.py:82:101\n   |\n80 | \u2026valuation\"\n81 | \u2026\n82 | \u2026.private.json --result B=run-b/evaluation.private.json --out local_outputs/comparison\",\n   |                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n83 | \u2026\n84 | \u2026\n   |\n\nE501 Line too long (109 > 100)\n   --> src\\neurocvguard\\cli.py:282:101\n    |\n280 |         _paths(paths)\n281 |         print(\n282 |             f\"compare: designs={len(compared.designs)}; signed score_difference=A-B; metric_unit=participant\"\n    |                                                                                                     ^^^^^^^^^\n283 |         )\n284 |         print(\n    |\n\nE501 Line too long (105 > 100)\n   --> src\\neurocvguard\\cli.py:285:101\n    |\n283 |         )\n284 |         print(\n285 |             \"Descriptive design differences, not causal estimates of leakage. No design winner selected.\"\n    |                                                                                                     ^^^^^\n286 |         )\n287 |         return 0\n    |\n\nE501 Line too long (114 > 100)\n   --> src\\neurocvguard\\cli.py:319:101\n    |\n317 |             log.warning(\n318 |                 \"Diagnostic only; valid_for_objective=false. Do not report as evidence \"\n319 |                 \"for unseen-participant generalization. Participant aggregation does not repair training leakage.\"\n    |                                                                                                     ^^^^^^^^^^^^^^\n320 |             )\n321 |         if args.sensitive_details or config.report.sensitive_details:\n    |\n\nI001 [*] Import block is un-sorted or un-formatted\n  --> tests\\test_comparison_cli.py:3:1\n   |\n 1 |   \"\"\"S12.C CLI, report context, explicit warnings and linked privacy suppression.\"\"\"\n 2 |\n 3 | / import json\n 4 | | from dataclasses import replace\n 5 | |\n 6 | | import pytest\n 7 | | from sklearn.pipeline import Pipeline\n 8 | | from test_cli_commands import process\n 9 | | from test_comparison import record\n10 | | from test_evaluation_cli import arguments\n11 | | from test_diagnostic_evaluation import diagnostic_inputs\n12 | |\n13 | | from neurocvguard import compare_designs, write_report\n14 | | from neurocvguard.cli import main\n15 | | from neurocvguard.models import AuditReport, ComparisonResult\n16 | | from neurocvguard.reporting import render_report\n17 | | from neurocvguard.serialization import canonical_json\n   | |_____________________________________________________^\nhelp: Organize imports\n   |\n9  | from test_comparison import record\n10 + from test_diagnostic_evaluation import diagnostic_inputs\n11 | from test_evaluation_cli import arguments\n   - from test_diagnostic_evaluation import diagnostic_inputs\n12 |\n   |\n\nFound 5 errors.\n[*] 1 fixable with the `--fix` option.\n",
+  "stderr": ""
+}

@@ -20,6 +20,13 @@ if TYPE_CHECKING:
 __version__ = "0.1.0"
 
 
+def compare_designs(results: dict[str, EvaluationResult]) -> ComparisonResult:
+    """Compare private records descriptively; see neurocvguard.comparison.compare_designs."""
+    from neurocvguard.comparison import compare_designs as compare
+
+    return compare(results)
+
+
 def evaluate_baseline(cohort: Cohort, plan: SplitPlan, *, config: AuditConfig) -> EvaluationResult:
     """Run classification with optional nested C selection; see evaluation.evaluate_baseline."""
     from neurocvguard.evaluation import evaluate_baseline as evaluate

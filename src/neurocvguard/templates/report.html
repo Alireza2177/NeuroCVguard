@@ -8,11 +8,17 @@
 <style>{% include 'report.css' %}</style>
 </head>
 <body>
+{% set evaluation = report.get('evaluation_summary') %}
+{% set comparison = report if comparison_only else report.get('comparison_summary') %}
 <a class="skip" href="#main">Skip to report</a>
 <header>
 <p class="eyebrow">NeuroCVguard · Local research report</p>
 <h1>Scope, findings and assessment coverage</h1>
 <p>Research support only. Technical completion does not establish scientific validity.</p>
+{% if (evaluation and evaluation.diagnostic_only) or (comparison and (comparison.designs | selectattr('diagnostic_only') | list)) %}
+<div class="notice"><strong>Diagnostic only · valid_for_objective=false</strong>
+<p>Do not report as evidence for unseen-participant generalization. Participant-level aggregation does not remove the training leakage already present.</p></div>
+{% endif %}
 {% if sensitive %}<div class="notice sensitive"><strong>Sensitive research output: do not publish without review.</strong><p>Explicit detailed export. Identifiers, labels and local evidence may be included.</p></div>
 {% else %}<p class="muted">Public projection · Private identifiers and free text omitted · No formal anonymization guarantee</p>{% endif %}
 <nav aria-label="Report contents"><ul>
@@ -61,7 +67,23 @@
 {% for check in checks if check.rule_id.startswith('NCG-ASSOC-') %}{{ finding(check) }}{% else %}<p>No association diagnostics supplied.</p>{% endfor %}</section>
 <section id="results"><h2>7. Evaluation and comparison</h2>
 {% if report.get('evaluation_summary') %}<p>Participant-level precomputed evaluation. Null metrics and reasons are retained; failed folds are not removed.</p><pre>{{ report.evaluation_summary | pretty_json }}</pre>
-{% elif comparison_only or report.get('comparison_summary') %}<p>Design differences are descriptive, not causal estimates of leakage.</p><pre>{{ (report if comparison_only else report.comparison_summary) | pretty_json }}</pre>
+{% elif comparison %}
+<p>{{ comparison.interpretation }}</p>
+<div class="table-wrap"><table><caption>Precomputed participant metrics · 0–1 scale</caption>
+<thead><tr><th scope="col">Design</th><th scope="col">Objective</th><th scope="col">Diagnostic only</th>{% for metric in ['accuracy','balanced_accuracy','macro_f1','roc_auc'] %}<th scope="col">{{ metric | replace('_',' ') }}</th>{% endfor %}</tr></thead>
+<tbody>{% for design in comparison.designs %}<tr><th scope="row">{{ design.name }}</th><td>{{ design.objective }}</td><td>{{ design.diagnostic_only }}</td>
+{% for metric in ['accuracy','balanced_accuracy','macro_f1','roc_auc'] %}<td>{% if design.metrics %}{{ design.metrics[metric].value if design.metrics[metric].value is not none else 'Undefined' }}{% if design.metrics[metric].reason %} ({{ design.metrics[metric].reason }}){% endif %}{% else %}Unavailable or privacy-suppressed{% endif %}</td>{% endfor %}</tr>{% endfor %}</tbody></table></div>
+{% for design in comparison.designs %}<article class="card"><h3>{{ design.name }} · recorded context</h3>
+{% set context = design.get('context') %}
+{% if context %}<p>Execution: {{ context.execution_status }} · {{ context.n_completed_folds }}/{{ context.n_folds }} folds completed · {{ context.n_participants }} participants · {{ context.n_observations }} observations</p>
+<p>Training participants per fold: {{ context.training_participants_min }}–{{ context.training_participants_max }} · {{ context.n_features }} selected features · metric unit: {{ context.metric_unit }}</p>
+<p>Cohort identity: {{ context.cohort_reference }} · Feature identity: {{ context.feature_reference }}. These are local aliases for equal recorded digests, not authenticated identities.</p>
+<p>Classes: {{ context.class_order | join(', ') }} · Positive class: {{ context.positive_class if context.positive_class is not none else 'Unspecified' }}</p>
+<p>Prescribed baseline: median imputation, standard scaling, logistic regression. Recorded C values: {{ context.recorded_C_values | join(', ') or 'None recorded' }} · Tuning recorded: {{ context.tuning_recorded }}. Consult the original configuration for complete model settings.</p>
+{% else %}<p>Legacy summary: design context was not recorded; no missing settings were inferred.</p>{% endif %}
+{% if design.metrics %}<table><caption>Pooled participant class support</caption><thead><tr><th scope="col">Class</th><th scope="col">Support</th><th scope="col">Recall</th></tr></thead><tbody>{% for item in design.metrics.per_class %}<tr><th scope="row">{{ item.class_label }}</th><td>{{ item.support }}</td><td>{{ item.recall if item.recall is not none else 'Undefined' }}</td></tr>{% endfor %}</tbody></table>{% else %}<p>Complete pooled class support is unavailable or privacy-suppressed.</p>{% endif %}
+<p>Upstream preprocessing remains unverified. Review the original evaluation's scoped findings and limitations.</p></article>{% endfor %}
+<div class="table-wrap"><table><caption>Signed score_difference · A minus B in metric units</caption><thead><tr><th scope="col">A</th><th scope="col">B</th><th scope="col">Metric</th><th scope="col">Difference</th><th scope="col">Unavailable reason</th></tr></thead><tbody>{% for item in comparison.differences %}<tr><th scope="row">{{ item.design_a }}</th><td>{{ item.design_b }}</td><td>{{ item.metric }}</td><td>{{ item.difference if item.difference is not none else 'Null' }}</td><td>{{ item.reasons | join(', ') }}</td></tr>{% endfor %}</tbody></table></div>
 {% else %}<p>No model evaluation or comparison supplied.</p>{% endif %}</section>
 <section id="provenance"><h2>8. Provenance</h2><p><strong>Upstream preprocessing was not verified.</strong> A Pipeline cannot repair earlier global fitting.</p>
 {% if report.get('provenance') %}<pre>{{ report.provenance | pretty_json }}</pre>{% endif %}

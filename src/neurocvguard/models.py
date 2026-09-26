@@ -556,15 +556,63 @@ class EvaluationResult(Record):
 
 
 @dataclass(frozen=True)
+class ComparisonContext(PlainRecord):
+    """Optional recorded design context; digest equivalence uses local aliases."""
+
+    _schema_name: ClassVar[str] = "comparison-summary"
+    _schema_path: ClassVar[tuple[str | int, ...]] = (
+        "properties",
+        "designs",
+        "items",
+        "properties",
+        "context",
+    )
+    execution_status: EvaluationStatus
+    metric_unit: str
+    cohort_reference: str
+    feature_reference: str
+    n_folds: int
+    n_completed_folds: int
+    n_participants: int
+    n_observations: int
+    n_features: int
+    training_participants_min: int
+    training_participants_max: int
+    class_order: tuple[str, ...]
+    positive_class: str | None
+    model: str
+    recorded_C_values: tuple[float, ...]
+    tuning_recorded: bool
+
+    def _validate_semantics(self) -> None:
+        if self.n_completed_folds > self.n_folds or not (
+            self.training_participants_min <= self.training_participants_max <= self.n_participants
+        ):
+            raise InputValidationError("Comparison context counts are inconsistent.")
+        if self.positive_class is not None and self.positive_class not in self.class_order:
+            raise InputValidationError("Comparison positive class must belong to class_order.")
+
+
+@dataclass(frozen=True)
 class ComparisonDesign(PlainRecord):
     """Named design, objective and supplied metrics; no comparison is computed."""
 
     _schema_name: ClassVar[str] = "comparison-summary"
     _schema_path: ClassVar[tuple[str | int, ...]] = ("properties", "designs", "items")
+    _omit_none: ClassVar[tuple[str, ...]] = ("context",)
     name: str
     objective: Objective
     diagnostic_only: bool
     metrics: MetricSet | None
+    context: ComparisonContext | None = None
+
+    def _validate_semantics(self) -> None:
+        if self.context is not None and self.metrics is not None:
+            if (
+                self.metrics.n_participants != self.context.n_participants
+                or tuple(c.class_label for c in self.metrics.per_class) != self.context.class_order
+            ):
+                raise InputValidationError("Comparison metrics must match their design context.")
 
 
 @dataclass(frozen=True)

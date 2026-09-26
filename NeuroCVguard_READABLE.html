@@ -1105,6 +1105,21 @@ reader and must not be assigned invented memberships or digests. Older readers
 with the original closed schema reject extended records; update those readers.
 This additive extension resolves the missing plan provenance required by §11.8.
 It changes no scientific rule and does not authenticate imported history.</p>
+<h2>20.9 Comparison context (approved ADR-S12-001)</h2>
+<p>Comparison designs may additionally contain the optional closed <code>context</code> object
+specified in the comparison-summary schema. The comparison runner populates it
+from the private records: execution status, participant metric unit, local
+cohort/feature equivalence aliases, fold/sample/feature counts, training-size
+range, classes/positive class, prescribed baseline family, recorded C values and
+whether tuning was recorded. Class support remains in the existing MetricSet.</p>
+<p>Aliases express equal recorded digests within this comparison only; they do not
+expose raw digests, authenticate identity, or establish causal comparability.
+Original configuration is required for unrecorded model settings. Public context
+uses the established class-label projection and never includes feature names or
+private identities. Whole-metric suppression still applies.</p>
+<p>Legacy records without context remain readable without invented context. Older
+closed-schema readers require updating for extended records. Standalone and
+embedded normative/packaged schemas must agree. No scientific rule is changed.</p>
 <hr />
 <p><a id="spec-21_sources"></a></p>
 <h1>21 — Source register and evidence boundaries</h1>
@@ -6054,6 +6069,105 @@ Links to actual evidence:</p>
                     &quot;type&quot;: &quot;null&quot;
                   }
                 ]
+              },
+              &quot;context&quot;: {
+                &quot;type&quot;: &quot;object&quot;,
+                &quot;properties&quot;: {
+                  &quot;execution_status&quot;: {
+                    &quot;enum&quot;: [
+                      &quot;completed&quot;,
+                      &quot;incomplete&quot;,
+                      &quot;blocked&quot;
+                    ]
+                  },
+                  &quot;metric_unit&quot;: {
+                    &quot;const&quot;: &quot;participant&quot;
+                  },
+                  &quot;cohort_reference&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;pattern&quot;: &quot;^cohort-[0-9]+$&quot;
+                  },
+                  &quot;feature_reference&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;pattern&quot;: &quot;^features-[0-9]+$&quot;
+                  },
+                  &quot;n_folds&quot;: {
+                    &quot;type&quot;: &quot;integer&quot;,
+                    &quot;minimum&quot;: 0
+                  },
+                  &quot;n_completed_folds&quot;: {
+                    &quot;type&quot;: &quot;integer&quot;,
+                    &quot;minimum&quot;: 0
+                  },
+                  &quot;n_participants&quot;: {
+                    &quot;type&quot;: &quot;integer&quot;,
+                    &quot;minimum&quot;: 0
+                  },
+                  &quot;n_observations&quot;: {
+                    &quot;type&quot;: &quot;integer&quot;,
+                    &quot;minimum&quot;: 0
+                  },
+                  &quot;n_features&quot;: {
+                    &quot;type&quot;: &quot;integer&quot;,
+                    &quot;minimum&quot;: 0
+                  },
+                  &quot;training_participants_min&quot;: {
+                    &quot;type&quot;: &quot;integer&quot;,
+                    &quot;minimum&quot;: 0
+                  },
+                  &quot;training_participants_max&quot;: {
+                    &quot;type&quot;: &quot;integer&quot;,
+                    &quot;minimum&quot;: 0
+                  },
+                  &quot;class_order&quot;: {
+                    &quot;type&quot;: &quot;array&quot;,
+                    &quot;items&quot;: {
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;minLength&quot;: 1
+                    },
+                    &quot;minItems&quot;: 2,
+                    &quot;uniqueItems&quot;: true
+                  },
+                  &quot;positive_class&quot;: {
+                    &quot;type&quot;: [
+                      &quot;string&quot;,
+                      &quot;null&quot;
+                    ]
+                  },
+                  &quot;model&quot;: {
+                    &quot;const&quot;: &quot;prescribed_logistic_baseline&quot;
+                  },
+                  &quot;recorded_C_values&quot;: {
+                    &quot;type&quot;: &quot;array&quot;,
+                    &quot;items&quot;: {
+                      &quot;type&quot;: &quot;number&quot;,
+                      &quot;exclusiveMinimum&quot;: 0
+                    },
+                    &quot;uniqueItems&quot;: true
+                  },
+                  &quot;tuning_recorded&quot;: {
+                    &quot;type&quot;: &quot;boolean&quot;
+                  }
+                },
+                &quot;required&quot;: [
+                  &quot;execution_status&quot;,
+                  &quot;metric_unit&quot;,
+                  &quot;cohort_reference&quot;,
+                  &quot;feature_reference&quot;,
+                  &quot;n_folds&quot;,
+                  &quot;n_completed_folds&quot;,
+                  &quot;n_participants&quot;,
+                  &quot;n_observations&quot;,
+                  &quot;n_features&quot;,
+                  &quot;training_participants_min&quot;,
+                  &quot;training_participants_max&quot;,
+                  &quot;class_order&quot;,
+                  &quot;positive_class&quot;,
+                  &quot;model&quot;,
+                  &quot;recorded_C_values&quot;,
+                  &quot;tuning_recorded&quot;
+                ],
+                &quot;additionalProperties&quot;: false
               }
             },
             &quot;required&quot;: [
@@ -6475,6 +6589,105 @@ Links to actual evidence:</p>
                 &quot;type&quot;: &quot;null&quot;
               }
             ]
+          },
+          &quot;context&quot;: {
+            &quot;type&quot;: &quot;object&quot;,
+            &quot;properties&quot;: {
+              &quot;execution_status&quot;: {
+                &quot;enum&quot;: [
+                  &quot;completed&quot;,
+                  &quot;incomplete&quot;,
+                  &quot;blocked&quot;
+                ]
+              },
+              &quot;metric_unit&quot;: {
+                &quot;const&quot;: &quot;participant&quot;
+              },
+              &quot;cohort_reference&quot;: {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;pattern&quot;: &quot;^cohort-[0-9]+$&quot;
+              },
+              &quot;feature_reference&quot;: {
+                &quot;type&quot;: &quot;string&quot;,
+                &quot;pattern&quot;: &quot;^features-[0-9]+$&quot;
+              },
+              &quot;n_folds&quot;: {
+                &quot;type&quot;: &quot;integer&quot;,
+                &quot;minimum&quot;: 0
+              },
+              &quot;n_completed_folds&quot;: {
+                &quot;type&quot;: &quot;integer&quot;,
+                &quot;minimum&quot;: 0
+              },
+              &quot;n_participants&quot;: {
+                &quot;type&quot;: &quot;integer&quot;,
+                &quot;minimum&quot;: 0
+              },
+              &quot;n_observations&quot;: {
+                &quot;type&quot;: &quot;integer&quot;,
+                &quot;minimum&quot;: 0
+              },
+              &quot;n_features&quot;: {
+                &quot;type&quot;: &quot;integer&quot;,
+                &quot;minimum&quot;: 0
+              },
+              &quot;training_participants_min&quot;: {
+                &quot;type&quot;: &quot;integer&quot;,
+                &quot;minimum&quot;: 0
+              },
+              &quot;training_participants_max&quot;: {
+                &quot;type&quot;: &quot;integer&quot;,
+                &quot;minimum&quot;: 0
+              },
+              &quot;class_order&quot;: {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: {
+                  &quot;type&quot;: &quot;string&quot;,
+                  &quot;minLength&quot;: 1
+                },
+                &quot;minItems&quot;: 2,
+                &quot;uniqueItems&quot;: true
+              },
+              &quot;positive_class&quot;: {
+                &quot;type&quot;: [
+                  &quot;string&quot;,
+                  &quot;null&quot;
+                ]
+              },
+              &quot;model&quot;: {
+                &quot;const&quot;: &quot;prescribed_logistic_baseline&quot;
+              },
+              &quot;recorded_C_values&quot;: {
+                &quot;type&quot;: &quot;array&quot;,
+                &quot;items&quot;: {
+                  &quot;type&quot;: &quot;number&quot;,
+                  &quot;exclusiveMinimum&quot;: 0
+                },
+                &quot;uniqueItems&quot;: true
+              },
+              &quot;tuning_recorded&quot;: {
+                &quot;type&quot;: &quot;boolean&quot;
+              }
+            },
+            &quot;required&quot;: [
+              &quot;execution_status&quot;,
+              &quot;metric_unit&quot;,
+              &quot;cohort_reference&quot;,
+              &quot;feature_reference&quot;,
+              &quot;n_folds&quot;,
+              &quot;n_completed_folds&quot;,
+              &quot;n_participants&quot;,
+              &quot;n_observations&quot;,
+              &quot;n_features&quot;,
+              &quot;training_participants_min&quot;,
+              &quot;training_participants_max&quot;,
+              &quot;class_order&quot;,
+              &quot;positive_class&quot;,
+              &quot;model&quot;,
+              &quot;recorded_C_values&quot;,
+              &quot;tuning_recorded&quot;
+            ],
+            &quot;additionalProperties&quot;: false
           }
         },
         &quot;required&quot;: [

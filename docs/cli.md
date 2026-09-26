@@ -1,8 +1,8 @@
 # Local audit commands
 
-S09 provides `init`, `validate`, `audit`, `split` and `report`; S10 adds `evaluate`.
-These commands use the same APIs as Python callers. Comparison computation and
-the synthetic demo remain unavailable. All input is local and commands download
+S09 provides `init`, `validate`, `audit`, `split` and `report`; S10 adds `evaluate`
+and S12 adds `compare`. These commands use the same APIs as Python callers.
+The synthetic demo remains unavailable. All input is local and commands download
 nothing. Only `evaluate` performs controlled model fitting.
 
 After installing the package, use `neurocvguard` or `python -m neurocvguard`
@@ -103,3 +103,21 @@ See [evaluation](evaluation.md) for training boundaries, weights, exact metrics,
 failure policy and schema migration. S11 supports `evaluation.tune=true` with the
 explicit C grid and inner fold count. Supplied inner assignments are used or
 derived from outer training only; infeasible tuning has no fixed-C fallback.
+
+## Compare existing private evaluations
+
+```text
+neurocvguard compare --result A=local_outputs/a/evaluation.private.json --result B=local_outputs/b/evaluation.private.json --out local_outputs/comparison
+```
+
+Repeat `--result NAME=PATH` for at least two unique names. This command loads strict
+private JSON, computes signed A-minus-B differences and writes projected JSON,
+HTML and a version manifest without fitting. Public reports cannot replace the
+private records. Incomplete or incomparable designs remain visible with null
+differences and reasons. Exit 0 means the comparison was produced, even when
+differences are null; malformed records or output conflicts return 2.
+
+`compare` uses the default public small-cell threshold of 5 and has no implicit
+configuration. It accepts `--overwrite` and explicit `--sensitive-details`.
+Names become public aliases. See [comparison](comparison.md) for context fields,
+privacy, interpretation and the diagnostic-only evaluation flag.

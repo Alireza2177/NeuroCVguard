@@ -41,7 +41,7 @@ def _parser() -> argparse.ArgumentParser:
         help="Show sanitized stack locations on internal failures (place before command).",
     )
     commands = parser.add_subparsers(
-        dest="command", metavar="{init,validate,audit,split,evaluate,report}"
+        dest="command", metavar="{init,validate,audit,split,evaluate,compare,report}"
     )
     descriptions = {
         "init": "Write an editable strict JSON starter. No columns are inferred.",
@@ -64,6 +64,10 @@ def _parser() -> argparse.ArgumentParser:
             "Run participant classification with train-only fitting and optional nested C "
             "selection. Writes a sensitive private result and separate research reports."
         ),
+        "compare": (
+            "Compare two or more local evaluation.private.json records without fitting. "
+            "Signed differences are descriptive, not causal; public reports omit private digests."
+        ),
     }
     examples = {
         "init": "init --out config.json",
@@ -74,6 +78,10 @@ def _parser() -> argparse.ArgumentParser:
         "evaluate": (
             "evaluate --cohort cohort.tsv --features features.tsv --splits plan.json "
             "--config config.json --out local_outputs/evaluation"
+        ),
+        "compare": (
+            "compare --result A=run-a/evaluation.private.json "
+            "--result B=run-b/evaluation.private.json --out local_outputs/comparison"
         ),
     }
     for name, description in descriptions.items():
@@ -122,6 +130,14 @@ def _parser() -> argparse.ArgumentParser:
                 required=True,
                 help="Compatible report.json; standalone comparison needs its version manifest.",
             )
+        if name == "compare":
+            command.add_argument(
+                "--result",
+                action="append",
+                required=True,
+                metavar="NAME=PATH",
+                help="Repeat for distinct design names and private operational JSON records.",
+            )
         command.add_argument(
             "--out",
             required=name != "validate",
@@ -130,7 +146,7 @@ def _parser() -> argparse.ArgumentParser:
         command.add_argument(
             "--overwrite", action="store_true", help="Explicitly replace named outputs only."
         )
-        if name in {"validate", "audit", "report", "evaluate"}:
+        if name in {"validate", "audit", "report", "evaluate", "compare"}:
             command.add_argument(
                 "--sensitive-details",
                 action="store_true",
@@ -240,6 +256,40 @@ def _run(args: argparse.Namespace, log: logging.Logger) -> int:
         print("Report rendered from precomputed values; redacted details cannot be recovered.")
         _paths(paths)
         return 0
+    if args.command == "compare":
+        from neurocvguard import compare_designs
+        from neurocvguard.comparison import load_evaluation
+
+        log.info("Reading private operational evaluations; no fitting or score selection.")
+        results = {}
+        for supplied in args.result:
+            name, separator, path = supplied.partition("=")
+            if not separator or not name or not path or name in results:
+                raise InputValidationError("Supply distinct --result name=path arguments.")
+            results[name] = load_evaluation(path)
+        compared = compare_designs(results)
+        if any(design.diagnostic_only for design in compared.designs):
+            log.warning(
+                "Diagnostic only: do not report as evidence for unseen-participant generalization."
+            )
+        if args.sensitive_details:
+            log.warning("Sensitive report requested. Do not publish without review.")
+        paths = write_report(
+            compared,
+            output_dir=args.out,
+            sensitive_details=args.sensitive_details,
+            overwrite=args.overwrite,
+        )
+        _paths(paths)
+        print(
+            f"compare: designs={len(compared.designs)}; "
+            "signed score_difference=A-B; metric_unit=participant"
+        )
+        print(
+            "Descriptive design differences, not causal estimates of leakage. "
+            "No design winner selected."
+        )
+        return 0
     log.info("Validating configuration and explicitly keyed local inputs.")
     config = load_config(args.config)
     cohort = load_cohort(args.cohort, config=config, features=getattr(args, "features", None))
@@ -268,6 +318,12 @@ def _run(args: argparse.Namespace, log: logging.Logger) -> int:
         )
         log.info("Checking all evaluation prerequisites before fitting fresh outer pipelines.")
         evaluated = evaluate_baseline(cohort, plan, config=config)
+        if evaluated.diagnostic_only:
+            log.warning(
+                "Diagnostic only; valid_for_objective=false. Do not report as evidence "
+                "for unseen-participant generalization. "
+                "Participant aggregation does not repair training leakage."
+            )
         if args.sensitive_details or config.report.sensitive_details:
             log.warning("Sensitive report requested. Do not publish without review.")
         paths = write_evaluation(
@@ -378,6 +434,15 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
         return 3
     except (NeuroCVguardError, OSError):
+        if args.command == "compare":
+            log.error(
+                "Compare requires at least two distinct --result name=path arguments pointing "
+                "to local evaluation.private.json operational records. Public report.json "
+                "omits required digests and fit metadata; do not reconstruct them. Check "
+                "schema 1.0, local JSON limits and output conflicts; choose a fresh output "
+                "directory or explicit --overwrite."
+            )
+            return 2
         log.error(
             "Input or output validation failed. Check compatible schema 1.0, local formats, "
             "string keys, selected columns, resource limits and existing outputs; use a new "

@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "qa/evidence/S12/extend_context.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T16:25:33.886845+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "Added optional closed design context to standalone and embedded schema copies.\n",
+  "stderr": ""
+}

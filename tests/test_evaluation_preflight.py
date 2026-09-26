@@ -82,6 +82,9 @@ def test_at_s10_14_scope_guards(scope):
                 diagnostic_allow_subject_overlap=True,
             ),
         )
+        # S12 implements the narrow option; it does not relabel an ordinary plan.
+        assert preflight(cohort, plan, config).diagnostic_only is False
+        return
     with pytest.raises(UnsupportedDesignError):
         preflight(cohort, plan, config)
     assert audit_splits(cohort, plan, config=config).checks

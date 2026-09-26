@@ -8,6 +8,7 @@ import numpy as np
 import numpy.typing as npt
 
 from neurocvguard import __version__
+from neurocvguard._diagnostics import DIAGNOSTIC_LIMITATION
 from neurocvguard._evaluation_fits import FitOutcome, evaluation_check, fit_outer
 from neurocvguard._evaluation_inputs import fixed_pipeline, preflight
 from neurocvguard._tuning import TUNING_POLICY, tune_C
@@ -88,6 +89,15 @@ def evaluate_baseline(cohort: Cohort, plan: SplitPlan, *, config: AuditConfig) -
         for check in inputs.audit.checks
     ]
     people: list[str] = []
+    predicted_ids: list[str] = []
+    if inputs.diagnostic_only:
+        checks.append(
+            evaluation_check(
+                "NCG-EVAL-003",
+                {"field": "diagnostic"},
+                {"diagnostic_only": True, "valid_for_objective": False},
+            )
+        )
     truths: list[str] = []
     probabilities: list[npt.NDArray[np.float64]] = []
     for fold in sorted(inputs.plan.folds, key=lambda item: (item.repeat_id, item.fold_id)):
@@ -124,9 +134,17 @@ def evaluate_baseline(cohort: Cohort, plan: SplitPlan, *, config: AuditConfig) -
                 class_order=inputs.classes,
                 positive_class=config.evaluation.positive_class,
             )
-            people.extend(ids)
-            truths.extend(labels)
-            probabilities.append(means)
+            predicted_ids.extend(fold.test_ids)
+            if inputs.diagnostic_only:
+                # Do not average fold means: participants may contribute unequal
+                # numbers of observations to different diagnostic test folds.
+                people.extend(test_people)
+                truths.extend(inputs.targets.loc[list(fold.test_ids)])
+                probabilities.append(outcome.probabilities)
+            else:
+                people.extend(ids)
+                truths.extend(labels)
+                probabilities.append(means)
             checks.extend(
                 _undefined_checks(metrics, {"repeat_id": fold.repeat_id, "fold_id": fold.fold_id})
             )
@@ -146,11 +164,19 @@ def evaluate_baseline(cohort: Cohort, plan: SplitPlan, *, config: AuditConfig) -
     complete = all(fold.status == FoldStatus.COMPLETED for fold in folds)
     pooled = None
     if complete:
+        if sorted(predicted_ids) != sorted(inputs.cohort.observation_order):
+            raise RuntimeError("Internal observation out-of-fold coverage defect.")
+        pooled_probabilities = np.concatenate(probabilities)
+        if inputs.diagnostic_only:
+            pooled_people, pooled_truths, pooled_probabilities = aggregate_participants(
+                tuple(people), tuple(truths), pooled_probabilities
+            )
+            people, truths = list(pooled_people), list(pooled_truths)
         if len(people) != len(set(people)) or set(people) != set(inputs.participants):
             raise RuntimeError("Internal participant out-of-fold coverage defect.")
         pooled = participant_metrics(
             tuple(truths),
-            np.concatenate(probabilities),
+            pooled_probabilities,
             class_order=inputs.classes,
             positive_class=config.evaluation.positive_class,
         )
@@ -171,7 +197,7 @@ def evaluate_baseline(cohort: Cohort, plan: SplitPlan, *, config: AuditConfig) -
         sensitive=True,
         execution_status=EvaluationStatus.COMPLETED if complete else EvaluationStatus.INCOMPLETE,
         objective=config.study.objective,
-        diagnostic_only=False,
+        diagnostic_only=inputs.diagnostic_only,
         cohort_digest=cohort_digest(inputs.cohort),
         feature_digest=feature_digest(inputs.cohort),
         config_digest=json_digest(config.to_dict()),
@@ -187,6 +213,7 @@ def evaluate_baseline(cohort: Cohort, plan: SplitPlan, *, config: AuditConfig) -
         preflight_checks=tuple(checks),
         limitations=(
             *inputs.audit.limitations,
+            *((DIAGNOSTIC_LIMITATION,) if inputs.diagnostic_only else ()),
             *((TUNING_POLICY,) if config.evaluation.tune else ()),
             "Research baseline only; no clinical validity or inferential confidence interval.",
             "Classifier loss weights balance participants within each fit; imputation and "

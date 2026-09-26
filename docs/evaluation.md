@@ -1,4 +1,4 @@
-# Research baseline and nested C selection (S10–S11)
+# Research baseline and nested C selection (S10–S12)
 
 `evaluate_baseline` runs one explicitly planned complete cross-validation repeat.
 It supports constant participant targets with two or more string classes. It
@@ -60,8 +60,10 @@ actual calls, IDs, C and outcomes. A rejected boundary creates no fictional fit
 event. Prediction can fail after a completed fit; fold and fit statuses remain
 distinct. No fitted estimator is saved.
 
-Diagnostic participant-overlap evaluation remains unsupported. With `tune=false`,
-the runner fits only the outer models at the configured fixed C.
+With `tune=false`, the runner fits only the outer models at the configured fixed C.
+S12 permits only the explicitly gated outer participant-overlap diagnostic
+described in [comparison](comparison.md). All original audit failures remain;
+these runs are invalid evidence for unseen-participant generalization.
 
 ## Nested regularization selection
 
@@ -121,7 +123,11 @@ The public projection omits candidate scores and identity-bearing memberships.
 Average each participant's held-out probability vectors arithmetically, then pick
 the largest mean. This is not majority voting across observations. Ties select the
 first class in the recorded lexically sorted class order. The runner independently
-requires exactly one out-of-fold participant prediction per complete run.
+requires exactly one out-of-fold participant prediction per ordinary complete run.
+In the narrow diagnostic exception, each observation must occur in exactly one
+outer test fold. Pool all raw held-out observation probabilities across folds
+before taking one mean per participant; never average fold means with unequal
+visit counts. This aggregation does not remove training leakage.
 
 Accuracy is defined for any nonempty scored set. Balanced accuracy averages recall
 across the entire declared class set; macro-F1 uses that same class set. Both are

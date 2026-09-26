@@ -63,8 +63,8 @@ def test_at_s09_02_init_editable(tmp_path, capsys):
 
 def test_at_s09_08_unimplemented_commands(tmp_path):
     help_result = process(["--help"], tmp_path)
-    assert "{init,validate,audit,split,evaluate,report}" in help_result.stdout
-    # S10 implements evaluate; later commands must still be rejected.
+    assert "{init,validate,audit,split,evaluate,compare,report}" in help_result.stdout
+    # S12 compare requires records; S13 demo is still unimplemented.
     for command in ("compare", "demo"):
         assert process([command], tmp_path).returncode == 2
 

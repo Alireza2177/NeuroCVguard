@@ -9,7 +9,8 @@ S07 adds preprocessing declarations and fit-boundary validation;
 S08 adds privacy-projected JSON and offline HTML reports;
 S09 exposes init, validate, audit, split and report commands;
 S10 adds fixed-C participant classification through evaluate;
-S11 adds nested participant-aware C selection.**
+S11 adds nested participant-aware C selection;
+S12 adds descriptive design comparisons and explicitly gated overlap diagnostics.**
 See [the CLI guide](docs/cli.md) for a complete local workflow. The local development version
 is `0.1.0`, matching the foundation's target release; it is not a published or
 completed release.
@@ -17,8 +18,9 @@ completed release.
 S02 now provides strict local CSV/TSV loading and keyed feature joins through
 `load_cohort`; see [the input guide](docs/input_tables.md). It was completed as the
 explicitly authorized prerequisite for S09 after initially being skipped.
-Diagnostic overlap evaluation, comparison computation and the
-synthetic demo remain unimplemented. The intended research scope is defined in [START_HERE.md](START_HERE.md)
+See [design comparison](docs/comparison.md) for the private-record workflow and
+diagnostic restrictions. The synthetic demo remains unimplemented.
+The intended research scope is defined in [START_HERE.md](START_HERE.md)
 and [spec/00_project_charter.md](spec/00_project_charter.md). This software does
 not provide clinical advice or certify scientific validity.
 
@@ -87,8 +89,8 @@ omitted until confirmed; proposed values are under `tool.neurocvguard.release`.
 No DOI, publication, CI result, or support commitment is claimed.
 
 [AI_ASSISTANCE.md](AI_ASSISTANCE.md) records the assistance actually provided.
-S11 verification and review status are recorded in [its handoff](state/handoffs/S11.md).
-S12 remains unstarted; further work needs
+S12 verification and review status are recorded in [its handoff](state/handoffs/S12.md).
+S13 remains unstarted; further work needs
 a subsequent instruction.
 
 ## Configuration and record API

@@ -18,6 +18,7 @@ from neurocvguard.models import (
 from neurocvguard.rules import (
     ASSOCIATION_RULES,
     COHORT_RULES,
+    DIAGNOSTIC_RULES,
     EVALUATION_RULES,
     PLAN_RULES,
     PROVENANCE_RULES,
@@ -102,7 +103,7 @@ def project_check(check: CheckResult) -> JSONObject:
             "sites are not leakage."
         )
     safe_evidence: JSONObject = {}
-    evaluation_rule = check.rule_id in {rule.id for rule in EVALUATION_RULES}
+    evaluation_rule = check.rule_id in {rule.id for rule in (*EVALUATION_RULES, *DIAGNOSTIC_RULES)}
     if evaluation_rule:
         definition = get_rule(check.rule_id)
         if check.status in {CheckStatus.PASS, CheckStatus.FAIL}:
@@ -434,6 +435,8 @@ def project_evaluation(result: EvaluationResult, sensitive: bool, threshold: int
 
 
 def project_comparison(result: ComparisonResult, sensitive: bool, threshold: int) -> JSONObject:
+    from neurocvguard.comparison import INTERPRETATION, MISMATCH_REASONS
+
     _options(sensitive, threshold)
     if sensitive:
         return result._as_dict()
@@ -451,6 +454,20 @@ def project_comparison(result: ComparisonResult, sensitive: bool, threshold: int
         }
         for design in result.designs
     ]
+    for design, projected in zip(result.designs, designs, strict=True):
+        if design.context is not None:
+            context = design.context._as_dict()
+            labels = {
+                label: _public_class_label(label, i)
+                for i, label in enumerate(design.context.class_order)
+            }
+            context["class_order"] = list(labels.values())
+            context["positive_class"] = (
+                labels.get(design.context.positive_class)
+                if design.context.positive_class is not None
+                else None
+            )
+            cast(JSONObject, projected)["context"] = context
     differences: list[JSONValue] = []
     for difference in result.differences:
         hide = difference.design_a in hidden or difference.design_b in hidden
@@ -462,7 +479,14 @@ def project_comparison(result: ComparisonResult, sensitive: bool, threshold: int
                 "difference": None if hide else difference.difference,
                 "reasons": ["privacy_small_cells"]
                 if hide
-                else (["metric_unavailable"] if difference.difference is None else []),
+                else (
+                    [
+                        reason if reason in MISMATCH_REASONS else "metric_unavailable"
+                        for reason in difference.reasons
+                    ]
+                    if difference.difference is None
+                    else []
+                ),
             }
         )
     return validate_document(
@@ -470,8 +494,7 @@ def project_comparison(result: ComparisonResult, sensitive: bool, threshold: int
         {
             "designs": designs,
             "differences": differences,
-            "interpretation": "Design differences are descriptive, not causal estimates "
-            "of leakage. Small-cell metrics are withheld when applicable.",
+            "interpretation": INTERPRETATION,
         },
     )
 
