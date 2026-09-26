@@ -71,7 +71,8 @@ def audit_cohort(
             "Fold-specific declared fit IDs require a matching split plan for comparison.",
             "This cohort audit cannot establish participant/domain separation "
             "without a supplied plan.",
-            "S02 file ingestion is unimplemented; this API consumes constructed Cohort records.",
+            "Input identity namespaces must be harmonized upstream; "
+            "aliases cannot be resolved automatically.",
         ),
         provenance={
             "foundation_version": "1.0.0",
@@ -141,8 +142,8 @@ def audit_splits(cohort: Cohort, plan: SplitPlan, *, config: AuditConfig) -> Aud
                 "verdict is issued."
             ),
             (
-                "S02 cohort/feature file ingestion is not implemented; this API consumes "
-                "in-memory Cohort records."
+                "Input identity namespaces must be harmonized upstream; "
+                "site prefixes do not establish distinct participant identities."
             ),
             (
                 "Only one complete repeat with at least two outer folds is within ordinary "

@@ -78,15 +78,15 @@ def test_installed_version_matches_metadata(tmp_path: Path) -> None:
     ("arguments", "code", "expected"),
     [
         (["--version"], 0, "neurocvguard 0.1.0"),
-        (["--help"], 0, "Only help and version are available"),
-        ([], 0, "Only help and version are available"),
-        (["audit"], 2, "unrecognized arguments: audit"),
+        (["--help"], 0, "Local research audits and offline reports"),
+        ([], 2, "Choose a subcommand"),
+        (["audit"], 2, "Invalid invocation"),
     ],
 )
 def test_entry_points(
     tmp_path: Path, entry: str, arguments: list[str], code: int, expected: str
 ) -> None:
-    """AT-S00-02/04: expose working version/help, reject future commands."""
+    """AT-S00-02/04 updated for S09: help/version and required command inputs."""
     executable = Path(sysconfig.get_path("scripts")) / (
         "neurocvguard.exe" if sys.platform == "win32" else "neurocvguard"
     )

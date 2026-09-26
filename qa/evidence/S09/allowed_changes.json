@@ -1,0 +1,12 @@
+[
+  "src/neurocvguard/__init__.py",
+  "src/neurocvguard/__main__.py",
+  "src/neurocvguard/reporting.py",
+  "tests/test_bootstrap.py",
+  "README.md",
+  "AI_ASSISTANCE.md",
+  "qa/acceptance_cases.json",
+  "qa/case_to_test_map.json",
+  "qa/requirements.json",
+  "state/PROJECT_STATUS.json"
+]

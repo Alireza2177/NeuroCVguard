@@ -1,10 +1,10 @@
 # S03 cohort checks
 
-S03 provides pure in-memory checks on an explicitly constructed `Cohort`. The
-user selected S03 directly after S01; S02 is still NOT_STARTED. There is no public
-file reader, feature join, split audit, planner, evaluator or report renderer yet.
-The S03 entry work therefore exercises synthetic validated in-memory records,
-not an implemented S02 ingestion pipeline. Human acceptance remains separate.
+S03 provides pure in-memory checks on an explicitly constructed `Cohort`. It was
+originally implemented before S02 using synthetic in-memory records. The completed
+[S02 loader](input_tables.md) now supplies strict local inputs; split audits,
+planning and reporting are provided by later implemented stages. Human acceptance
+remains separate, and no evaluator is claimed here.
 
 ## Complete synthetic example
 

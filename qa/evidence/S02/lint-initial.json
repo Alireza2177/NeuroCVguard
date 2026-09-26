@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T10:01:34.277524+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "E501 Line too long (117 > 100)\n  --> src\\neurocvguard\\_features.py:30:101\n   |\n28 |     if not math.isfinite(number):\n29 |         raise InputValidationError(\n30 |             \"Selected feature contains infinity or unrecognized missing text; use finite numbers, empty text or n/a.\"\n   |                                                                                                     ^^^^^^^^^^^^^^^^^\n31 |         )\n32 |     return number\n   |\n\nE501 Line too long (101 > 100)\n  --> src\\neurocvguard\\_tables.py:59:101\n   |\n57 |     ):\n58 |         raise InputValidationError(\n59 |             \"Use a local uncompressed .csv or .tsv table; remote and binary sources are unsupported.\"\n   |                                                                                                     ^\n60 |         )\n61 |     limit = config.limits.max_input_mb * 1024 * 1024\n   |\n\nE501 Line too long (106 > 100)\n  --> src\\neurocvguard\\_tables.py:81:101\n   |\n79 |             if len(row) != len(header):\n80 |                 raise InputValidationError(\n81 |                     f\"Malformed table record {count}; match the header field count without dropping rows.\"\n   |                                                                                                     ^^^^^^\n82 |                 )\n83 |             rows.append([None if cell in {\"\", \"n/a\"} else cell for cell in row])\n   |\n\nE501 Line too long (107 > 100)\n   --> src\\neurocvguard\\_tables.py:121:101\n    |\n119 |         if any(not _missing(value) and not isinstance(value, str) for value in data[name]):\n120 |             raise InputValidationError(\n121 |                 \"Mapped categorical roles require strings or missing scalars; convert explicitly upstream.\"\n    |                                                                                                     ^^^^^^^\n122 |             )\n123 |         data[name] = pd.Series(\n    |\n\nI001 [*] Import block is un-sorted or un-formatted\n  --> src\\neurocvguard\\io.py:3:1\n   |\n 1 |   \"\"\"Strict local cohort and split-plan input with explicit identity binding.\"\"\"\n 2 |\n 3 | / import csv\n 4 | | import io\n 5 | | import os\n 6 | | import tempfile\n 7 | | from dataclasses import replace\n 8 | | from pathlib import Path\n 9 | |\n10 | | import pandas as pd\n11 | |\n12 | | from neurocvguard._features import align_features, numeric_value\n13 | | from neurocvguard._tables import read_metadata\n14 | |\n15 | | from neurocvguard.config import AuditConfig\n16 | | from neurocvguard.errors import ConfigurationError, InputValidationError, SplitValidationError\n17 | | from neurocvguard.identity import _missing, _valid_label, _validated_metadata\n18 | | from neurocvguard.models import AuditReport, Cohort, PlanOrigin, ReportStatus, SplitFold, SplitPlan\n19 | | from neurocvguard.serialization import (\n20 | |     JSONObject,\n21 | |     JSONValue,\n22 | |     canonical_json,\n23 | |     json_digest,\n24 | |     strict_json_loads,\n25 | | )\n   | |_^\nhelp: Organize imports\n   |\n13 | from neurocvguard._tables import read_metadata\n   -\n14 | from neurocvguard.config import AuditConfig\n   |\n\nFound 5 errors.\n[*] 1 fixable with the `--fix` option.\n",
+  "stderr": ""
+}

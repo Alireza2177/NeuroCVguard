@@ -55,7 +55,7 @@
       "AT-S02-17",
       "AT-S02-18"
     ],
-    "status": "NOT_IMPLEMENTED"
+    "status": "IMPLEMENTED"
   },
   {
     "id": "REQ-S03",
@@ -189,7 +189,7 @@
       "AT-S09-08",
       "AT-S09-09"
     ],
-    "status": "NOT_IMPLEMENTED"
+    "status": "IMPLEMENTED"
   },
   {
     "id": "REQ-S10",

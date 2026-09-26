@@ -1391,6 +1391,439 @@
       "requirement_id": "REQ-S08",
       "execution_status": "PASSED",
       "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-01",
+      "test_node_ids": [
+        "tests/test_input_tables.py::test_at_s02_01_leading_zeros"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-02",
+      "test_node_ids": [
+        "tests/test_input_tables.py::test_at_s02_02_duplicate_headers"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-03",
+      "test_node_ids": [
+        "tests/test_input_tables.py::test_at_s02_03_bom_and_unicode"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-04",
+      "test_node_ids": [
+        "tests/test_input_tables.py::test_at_s02_04_whitespace_identity[ PRIVATE]",
+        "tests/test_input_tables.py::test_at_s02_04_whitespace_identity[PRIVATE ]",
+        "tests/test_input_tables.py::test_at_s02_04_whitespace_identity[PRIVATE\\x01]"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-05",
+      "test_node_ids": [
+        "tests/test_input_tables.py::test_at_s02_05_missing_critical_id[\\tp]",
+        "tests/test_input_tables.py::test_at_s02_05_missing_critical_id[o\\t]",
+        "tests/test_input_tables.py::test_at_s02_05_missing_critical_id[n/a\\tp]"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-06",
+      "test_node_ids": [
+        "tests/test_input_tables.py::test_at_s02_06_na_vocabulary"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-07",
+      "test_node_ids": [
+        "tests/test_input_tables.py::test_at_s02_07_duplicate_observations"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-08",
+      "test_node_ids": [
+        "tests/test_feature_inputs.py::test_at_s02_08_shuffled_feature_rows"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-09",
+      "test_node_ids": [
+        "tests/test_feature_inputs.py::test_at_s02_09_missing_key"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-10",
+      "test_node_ids": [
+        "tests/test_feature_inputs.py::test_at_s02_10_extra_key"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-11",
+      "test_node_ids": [
+        "tests/test_feature_inputs.py::test_at_s02_11_prohibited_predictors[subject_id]",
+        "tests/test_feature_inputs.py::test_at_s02_11_prohibited_predictors[diagnosis]",
+        "tests/test_feature_inputs.py::test_at_s02_11_prohibited_predictors[site]",
+        "tests/test_feature_inputs.py::test_at_s02_11_prohibited_predictors[observation_id]"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-12",
+      "test_node_ids": [
+        "tests/test_feature_inputs.py::test_at_s02_12_numeric_coercion[PRIVATE-text]",
+        "tests/test_feature_inputs.py::test_at_s02_12_numeric_coercion[inf0]",
+        "tests/test_feature_inputs.py::test_at_s02_12_numeric_coercion[inf1]",
+        "tests/test_feature_inputs.py::test_at_s02_12_numeric_coercion[NaN]",
+        "tests/test_feature_inputs.py::test_at_s02_12_numeric_coercion[True]",
+        "tests/test_feature_inputs.py::test_at_s02_12_numeric_coercion[(1+2j)]"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-13",
+      "test_node_ids": [
+        "tests/test_input_tables.py::test_at_s02_13_dataframe_identity_type"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-14",
+      "test_node_ids": [
+        "tests/test_feature_inputs.py::test_at_s02_14_no_input_mutation"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-15",
+      "test_node_ids": [
+        "tests/test_input_guards.py::test_at_s02_15_unsupported_sources[https://invalid.example/cohort.csv]",
+        "tests/test_input_guards.py::test_at_s02_15_unsupported_sources[ftp://invalid.example/a.tsv]",
+        "tests/test_input_guards.py::test_at_s02_15_unsupported_sources[a.xlsx]",
+        "tests/test_input_guards.py::test_at_s02_15_unsupported_sources[a.pkl]",
+        "tests/test_input_guards.py::test_at_s02_15_unsupported_sources[a.joblib]",
+        "tests/test_input_guards.py::test_at_s02_15_unsupported_sources[a.csv.gz]",
+        "tests/test_input_guards.py::test_at_s02_15_unsupported_sources[//host/share/a.tsv]"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-16",
+      "test_node_ids": [
+        "tests/test_input_guards.py::test_at_s02_16_allocation_guard[rows]",
+        "tests/test_input_guards.py::test_at_s02_16_allocation_guard[features]",
+        "tests/test_input_guards.py::test_at_s02_16_allocation_guard[dense]"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-17",
+      "test_node_ids": [
+        "tests/test_input_guards.py::test_at_s02_17_digest_invariance"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S02-18",
+      "test_node_ids": [
+        "tests/test_input_guards.py::test_at_s02_18_paths_with_spaces"
+      ],
+      "evidence": [
+        "qa/evidence/S02/pytest-final.json",
+        "qa/evidence/S02/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S02",
+      "requirement_id": "REQ-S02",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S09-01",
+      "test_node_ids": [
+        "tests/test_cli_commands.py::test_at_s09_01_cli_module_parity[args0]",
+        "tests/test_cli_commands.py::test_at_s09_01_cli_module_parity[args1]",
+        "tests/test_cli_commands.py::test_at_s09_01_cli_module_parity[args2]",
+        "tests/test_cli_commands.py::test_at_s09_01_cli_module_parity[args3]",
+        "tests/test_cli_commands.py::test_at_s09_01_cli_module_parity[args4]",
+        "tests/test_cli_journey.py::test_at_s09_01_findings_exit_parity"
+      ],
+      "evidence": [
+        "qa/evidence/S09/pytest-final.json",
+        "qa/evidence/S09/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S09",
+      "requirement_id": "REQ-S09",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S09-02",
+      "test_node_ids": [
+        "tests/test_cli_commands.py::test_at_s09_02_init_editable"
+      ],
+      "evidence": [
+        "qa/evidence/S09/pytest-final.json",
+        "qa/evidence/S09/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S09",
+      "requirement_id": "REQ-S09",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S09-03",
+      "test_node_ids": [
+        "tests/test_cli_policy.py::test_at_s09_03_threshold_after_report"
+      ],
+      "evidence": [
+        "qa/evidence/S09/pytest-final.json",
+        "qa/evidence/S09/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S09",
+      "requirement_id": "REQ-S09",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S09-04",
+      "test_node_ids": [
+        "tests/test_cli_policy.py::test_at_s09_04_malformed_config[{\"PRIVATE-key\": 2}]",
+        "tests/test_cli_policy.py::test_at_s09_04_malformed_config[{\"schema_version\":\"99\"}]",
+        "tests/test_cli_policy.py::test_at_s09_04_malformed_config[{\"schema_version\":\"1.0\",\"schema_version\":\"1.0\"}]",
+        "tests/test_cli_policy.py::test_at_s09_04_malformed_config[{invalid]"
+      ],
+      "evidence": [
+        "qa/evidence/S09/pytest-final.json",
+        "qa/evidence/S09/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S09",
+      "requirement_id": "REQ-S09",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S09-05",
+      "test_node_ids": [
+        "tests/test_cli_policy.py::test_at_s09_05_none_preserves_findings"
+      ],
+      "evidence": [
+        "qa/evidence/S09/pytest-final.json",
+        "qa/evidence/S09/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S09",
+      "requirement_id": "REQ-S09",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S09-06",
+      "test_node_ids": [
+        "tests/test_cli_policy.py::test_at_s09_06_streams_and_overwrite"
+      ],
+      "evidence": [
+        "qa/evidence/S09/pytest-final.json",
+        "qa/evidence/S09/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S09",
+      "requirement_id": "REQ-S09",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S09-07",
+      "test_node_ids": [
+        "tests/test_cli_policy.py::test_at_s09_07_sensitive_split_announcement"
+      ],
+      "evidence": [
+        "qa/evidence/S09/pytest-final.json",
+        "qa/evidence/S09/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S09",
+      "requirement_id": "REQ-S09",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S09-08",
+      "test_node_ids": [
+        "tests/test_cli_commands.py::test_at_s09_08_unimplemented_commands"
+      ],
+      "evidence": [
+        "qa/evidence/S09/pytest-final.json",
+        "qa/evidence/S09/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S09",
+      "requirement_id": "REQ-S09",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S09-09",
+      "test_node_ids": [
+        "tests/test_cli_journey.py::test_at_s09_09_complete_journey_and_api"
+      ],
+      "evidence": [
+        "qa/evidence/S09/pytest-final.json",
+        "qa/evidence/S09/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S09",
+      "requirement_id": "REQ-S09",
+      "execution_status": "PASSED",
+      "human_accepted": false
     }
   ]
 }
