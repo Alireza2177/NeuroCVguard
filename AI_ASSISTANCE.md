@@ -22,6 +22,8 @@
 
 | 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S11 inner-plan derivation, explicit nested C selection and fresh outer refitting; added adversarial isolation and scoring tests, documentation and recorded local verification. | User requested S11. No human scientific review or stage acceptance is recorded. S12 remains unstarted. | Local S11 changes on top of uncommitted S10 work from f2d995d. |
 
+| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S12 private-record comparisons, narrow diagnostic eligibility and raw observation pooling, CLI/report context and privacy handling; added adversarial tests, docs and recorded local checks. Performed implementing-agent scientific/privacy review. | User requested S12 and explicitly approved the optional comparison context extension in ADR-S12-001. No human code/scientific review or stage acceptance is recorded. | Local S12 changes from 6acfed4. |
+
 No independent reviewer, human authorship approval, public release approval,
 or comprehensive scientific validation is claimed. Later changes to review
 status must reflect actual review of the specified files.

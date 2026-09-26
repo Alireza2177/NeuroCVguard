@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "tests/test_comparison_cli.py",
+    "tests/test_cli_commands.py",
+    "tests/test_report_rendering.py",
+    "tests/test_report_projection.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T16:38:36.367306+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "F.........................F..........                                    [100%]\n================================== FAILURES ===================================\n_______________ test_compare_cli_api_parity_no_fit_and_rerender _______________\n\ntmp_path = WindowsPath('<USER_HOME>/AppData/Local/Temp/pytest-of-Alireza217/pytest-56/test_compare_cli_api_parity_no0')\nmonkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001ED15E0B3D0>\ncapsys = <_pytest.capture.CaptureFixture object at 0x000001ED15E0BA10>\n\n    def test_compare_cli_api_parity_no_fit_and_rerender(tmp_path, monkeypatch, capsys):\n        paths, results = files(tmp_path)\n        monkeypatch.setattr(Pipeline, \"fit\", lambda *a, **k: pytest.fail(\"compare fitted a model\"))\n        output = tmp_path / \"out\"\n        args = compare_args(paths, output)\n        assert main(args) == 0\n        logged = capsys.readouterr()\n        assert \"signed score_difference=A-B\" in logged.out\n        assert \"private-observation\" not in logged.out + logged.err\n        public = json.loads((output / \"report.json\").read_text())\n>       assert public == compare_designs(dict(zip((\"A\", \"B\"), results, strict=True))).to_dict()\nE       AssertionError: assert {'designs': [...lic reports.'} == {'designs': [...lic reports.'}\nE         \nE         Omitting 2 identical items, use -vv to show\nE         Differing items:\nE         {'interpretation': 'Signed score_difference is design A minus design B in participant metric units (0\u00e2\u20ac\u201c1 scale). Desi...equire the original configuration. Small-cell metrics and their dependent differences are withheld in public reports.'} != {'interpretation': 'Signed score_difference is design A minus design B in participant metric units (0\u20131 scale). Design...equire the original configuration. Small-cell metrics and their dependent differences are withheld in public reports.'}\nE         Use -v to get more diff\n\ntests\\test_comparison_cli.py:42: AssertionError\n_______ test_comparison_has_version_manifest_without_invented_inventory _______\n\ntmp_path = WindowsPath('<USER_HOME>/AppData/Local/Temp/pytest-of-Alireza217/pytest-56/test_comparison_has_version_ma0')\n\n    def test_comparison_has_version_manifest_without_invented_inventory(tmp_path):\n        record = ComparisonResult.from_dict(fixture(\"comparison_schema_example\"))\n        paths = write_report(record, output_dir=tmp_path)\n>       assert json.loads(paths[\"json\"].read_text()) == record.to_dict()\nE       AssertionError: assert {'designs': [...lic reports.'} == {'designs': [...lic reports.'}\nE         \nE         Omitting 2 identical items, use -vv to show\nE         Differing items:\nE         {'interpretation': 'Signed score_difference is design A minus design B in participant metric units (0\u00e2\u20ac\u201c1 scale). Desi...equire the original configuration. Small-cell metrics and their dependent differences are withheld in public reports.'} != {'interpretation': 'Signed score_difference is design A minus design B in participant metric units (0\u20131 scale). Design...equire the original configuration. Small-cell metrics and their dependent differences are withheld in public reports.'}\nE         Use -v to get more diff\n\ntests\\test_report_rendering.py:123: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_comparison_cli.py::test_compare_cli_api_parity_no_fit_and_rerender\nFAILED tests/test_report_rendering.py::test_comparison_has_version_manifest_without_invented_inventory\n2 failed, 35 passed in 54.96s\n",
+  "stderr": ""
+}

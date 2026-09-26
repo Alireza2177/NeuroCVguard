@@ -1652,8 +1652,8 @@
     "expected": "Negative delta preserved.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S12-02",
@@ -1664,8 +1664,8 @@
     "expected": "Delta null and mismatch reason.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S12-03",
@@ -1676,8 +1676,8 @@
     "expected": "No misleading paired delta.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S12-04",
@@ -1688,8 +1688,8 @@
     "expected": "Evaluation blocked.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S12-05",
@@ -1700,8 +1700,8 @@
     "expected": "Runs labeled diagnostic_only and invalid for stated generalization.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S12-06",
@@ -1712,8 +1712,8 @@
     "expected": "Still blocked.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S12-07",
@@ -1724,8 +1724,8 @@
     "expected": "Still blocked.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S12-08",
@@ -1736,8 +1736,8 @@
     "expected": "Actionable request for operational evaluation record; no guessed digests.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S12-09",
@@ -1748,8 +1748,8 @@
     "expected": "Interpretation distinguishes changed distribution from causal leakage quantity.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S13-01",

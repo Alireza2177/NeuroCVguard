@@ -1,0 +1,30 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "src/neurocvguard/comparison.py",
+    "src/neurocvguard/_diagnostics.py",
+    "src/neurocvguard/_evaluation_inputs.py",
+    "src/neurocvguard/evaluation.py",
+    "src/neurocvguard/models.py",
+    "src/neurocvguard/__init__.py",
+    "src/neurocvguard/_projection.py",
+    "src/neurocvguard/rules.py",
+    "tests/test_comparison.py",
+    "tests/test_diagnostic_evaluation.py",
+    "tests/test_evaluation_preflight.py",
+    "qa/evidence/S12"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T16:34:19.716809+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "14 files reformatted, 3 files left unchanged\n",
+  "stderr": ""
+}

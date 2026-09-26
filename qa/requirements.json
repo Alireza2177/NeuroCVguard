@@ -247,7 +247,7 @@
       "AT-S12-08",
       "AT-S12-09"
     ],
-    "status": "NOT_IMPLEMENTED"
+    "status": "IMPLEMENTED"
   },
   {
     "id": "REQ-S13",

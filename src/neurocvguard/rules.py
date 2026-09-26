@@ -435,6 +435,23 @@ EVALUATION_RULES = (
 )
 
 
+DIAGNOSTIC_RULES = (
+    RuleDefinition(
+        "NCG-EVAL-003",
+        "Intentionally invalid diagnostic evaluation",
+        Severity.WARNING,
+        EvidenceKind.OBSERVED,
+        "Do not use as evidence for unseen-participant generalization.",
+        "Diagnostic only; valid_for_objective=false. Do not report as evidence for "
+        "unseen-participant generalization. "
+        "Participant aggregation does not repair training leakage.",
+        "No intentional diagnostic evaluation was performed.",
+        "Use an explicitly justified participant-disjoint design for an unseen-participant claim.",
+        stage="S12",
+    ),
+)
+
+
 def get_rule(rule_id: str) -> RuleDefinition:
     """Return fixed rule metadata.
 
@@ -466,6 +483,7 @@ def get_rule(rule_id: str) -> RuleDefinition:
         *PROVENANCE_RULES,
         *REPORT_RULES,
         *EVALUATION_RULES,
+        *DIAGNOSTIC_RULES,
     ):
         if rule.id == rule_id:
             return rule

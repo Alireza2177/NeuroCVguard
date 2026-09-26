@@ -2217,6 +2217,162 @@
       "requirement_id": "REQ-S11",
       "execution_status": "PASSED",
       "human_accepted": false
+    },
+    {
+      "case_id": "AT-S12-01",
+      "test_node_ids": [
+        "tests/test_comparison.py::test_at_s12_01_signed_difference_and_determinism"
+      ],
+      "evidence": [
+        "qa/evidence/S12/pytest-final.json",
+        "qa/evidence/S12/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S12",
+      "requirement_id": "REQ-S12",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S12-02",
+      "test_node_ids": [
+        "tests/test_comparison.py::test_at_s12_02_cohort_mismatch_is_null_with_reason"
+      ],
+      "evidence": [
+        "qa/evidence/S12/pytest-final.json",
+        "qa/evidence/S12/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S12",
+      "requirement_id": "REQ-S12",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S12-03",
+      "test_node_ids": [
+        "tests/test_comparison.py::test_at_s12_03_incompatible_inputs_no_delta[feature_digest-bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb-feature_mismatch]",
+        "tests/test_comparison.py::test_at_s12_03_incompatible_inputs_no_delta[feature_columns-value1-feature_mismatch]",
+        "tests/test_comparison.py::test_at_s12_03_incompatible_inputs_no_delta[positive_class-CN-class_definitions_mismatch]",
+        "tests/test_comparison.py::test_at_s12_03_incompatible_inputs_no_delta[n_observations-81-cohort_counts_mismatch]",
+        "tests/test_comparison.py::test_at_s12_03_unsupported_metric_unit_refused_before_comparison"
+      ],
+      "evidence": [
+        "qa/evidence/S12/pytest-final.json",
+        "qa/evidence/S12/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S12",
+      "requirement_id": "REQ-S12",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S12-04",
+      "test_node_ids": [
+        "tests/test_diagnostic_evaluation.py::test_at_s12_04_default_off_refuses_before_fit"
+      ],
+      "evidence": [
+        "qa/evidence/S12/pytest-final.json",
+        "qa/evidence/S12/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S12",
+      "requirement_id": "REQ-S12",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S12-05",
+      "test_node_ids": [
+        "tests/test_comparison_cli.py::test_at_s12_05_diagnostic_cli_and_every_report_keeps_warning",
+        "tests/test_diagnostic_evaluation.py::test_at_s12_05_narrow_permit_preserves_audit_and_row_fit_boundaries[False]",
+        "tests/test_diagnostic_evaluation.py::test_at_s12_05_narrow_permit_preserves_audit_and_row_fit_boundaries[True]",
+        "tests/test_diagnostic_evaluation.py::test_at_s12_05_pool_all_observations_not_fold_means"
+      ],
+      "evidence": [
+        "qa/evidence/S12/pytest-final.json",
+        "qa/evidence/S12/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S12",
+      "requirement_id": "REQ-S12",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S12-06",
+      "test_node_ids": [
+        "tests/test_diagnostic_evaluation.py::test_at_s12_06_structural_and_class_constraints_never_waived[observation_overlap]",
+        "tests/test_diagnostic_evaluation.py::test_at_s12_06_structural_and_class_constraints_never_waived[unknown]",
+        "tests/test_diagnostic_evaluation.py::test_at_s12_06_structural_and_class_constraints_never_waived[coverage]",
+        "tests/test_diagnostic_evaluation.py::test_at_s12_06_structural_and_class_constraints_never_waived[repeat]",
+        "tests/test_diagnostic_evaluation.py::test_at_s12_06_structural_and_class_constraints_never_waived[holdout]",
+        "tests/test_diagnostic_evaluation.py::test_at_s12_06_structural_and_class_constraints_never_waived[training_class]"
+      ],
+      "evidence": [
+        "qa/evidence/S12/pytest-final.json",
+        "qa/evidence/S12/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S12",
+      "requirement_id": "REQ-S12",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S12-07",
+      "test_node_ids": [
+        "tests/test_diagnostic_evaluation.py::test_at_s12_07_domain_objective_never_waived[unseen_site]",
+        "tests/test_diagnostic_evaluation.py::test_at_s12_07_domain_objective_never_waived[unseen_phase]",
+        "tests/test_diagnostic_evaluation.py::test_at_s12_07_declared_family_fields_never_waived[True]",
+        "tests/test_diagnostic_evaluation.py::test_at_s12_07_declared_family_fields_never_waived[False]"
+      ],
+      "evidence": [
+        "qa/evidence/S12/pytest-final.json",
+        "qa/evidence/S12/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S12",
+      "requirement_id": "REQ-S12",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S12-08",
+      "test_node_ids": [
+        "tests/test_comparison.py::test_at_s12_08_private_load_and_public_refusal",
+        "tests/test_comparison_cli.py::test_at_s12_08_compare_rejects_invalid_sources_actionably[public]",
+        "tests/test_comparison_cli.py::test_at_s12_08_compare_rejects_invalid_sources_actionably[duplicate]",
+        "tests/test_comparison_cli.py::test_at_s12_08_compare_rejects_invalid_sources_actionably[malformed]",
+        "tests/test_comparison_cli.py::test_at_s12_08_compare_rejects_invalid_sources_actionably[single]",
+        "tests/test_comparison_cli.py::test_at_s12_08_compare_rejects_invalid_sources_actionably[pickle]"
+      ],
+      "evidence": [
+        "qa/evidence/S12/pytest-final.json",
+        "qa/evidence/S12/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S12",
+      "requirement_id": "REQ-S12",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S12-09",
+      "test_node_ids": [
+        "tests/test_comparison.py::test_at_s12_09_different_objectives_are_descriptive_not_causal",
+        "tests/test_comparison_cli.py::test_at_s12_09_report_retains_distribution_and_upstream_limits"
+      ],
+      "evidence": [
+        "qa/evidence/S12/pytest-final.json",
+        "qa/evidence/S12/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S12",
+      "requirement_id": "REQ-S12",
+      "execution_status": "PASSED",
+      "human_accepted": false
     }
   ]
 }

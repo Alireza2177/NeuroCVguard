@@ -120,7 +120,7 @@ def test_public_json_can_render_again_without_private_inputs():
 def test_comparison_has_version_manifest_without_invented_inventory(tmp_path):
     record = ComparisonResult.from_dict(fixture("comparison_schema_example"))
     paths = write_report(record, output_dir=tmp_path)
-    assert json.loads(paths["json"].read_text()) == record.to_dict()
+    assert json.loads(paths["json"].read_text(encoding="utf-8")) == record.to_dict()
     assert json.loads(paths["manifest"].read_text())["result_schema"] == "comparison-summary"
     assert "No cohort inventory supplied" in paths["html"].read_text(encoding="utf-8")
 

@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "--check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T16:47:49.623010+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "unformatted: File would be reformatted\n  --> tests\\test_cli_commands.py:66:87\n   |\n65 |     help_result = process([\"--help\"], tmp_path)\n   -     assert \"{init,validate,audit,split,evaluate,compare,report}\" in help_result.stdout\n   -     # S12 compare requires records; S13 demo is still unimplemented.\n66 +     assert \"{init,validate,audit,split,evaluate,compare,report}\" in help_result.stdout\n67 +     # S12 compare requires records; S13 demo is still unimplemented.\n68 |     for command in (\"compare\", \"demo\"):\n   |\n\n1 file would be reformatted, 245 files already formatted\n",
+  "stderr": ""
+}

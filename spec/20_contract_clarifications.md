@@ -61,3 +61,22 @@ reader and must not be assigned invented memberships or digests. Older readers
 with the original closed schema reject extended records; update those readers.
 This additive extension resolves the missing plan provenance required by §11.8.
 It changes no scientific rule and does not authenticate imported history.
+
+## 20.9 Comparison context (approved ADR-S12-001)
+
+Comparison designs may additionally contain the optional closed `context` object
+specified in the comparison-summary schema. The comparison runner populates it
+from the private records: execution status, participant metric unit, local
+cohort/feature equivalence aliases, fold/sample/feature counts, training-size
+range, classes/positive class, prescribed baseline family, recorded C values and
+whether tuning was recorded. Class support remains in the existing MetricSet.
+
+Aliases express equal recorded digests within this comparison only; they do not
+expose raw digests, authenticate identity, or establish causal comparability.
+Original configuration is required for unrecorded model settings. Public context
+uses the established class-label projection and never includes feature names or
+private identities. Whole-metric suppression still applies.
+
+Legacy records without context remain readable without invented context. Older
+closed-schema readers require updating for extended records. Standalone and
+embedded normative/packaged schemas must agree. No scientific rule is changed.

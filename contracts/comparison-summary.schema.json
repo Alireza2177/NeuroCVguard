@@ -302,6 +302,105 @@
                 "type": "null"
               }
             ]
+          },
+          "context": {
+            "type": "object",
+            "properties": {
+              "execution_status": {
+                "enum": [
+                  "completed",
+                  "incomplete",
+                  "blocked"
+                ]
+              },
+              "metric_unit": {
+                "const": "participant"
+              },
+              "cohort_reference": {
+                "type": "string",
+                "pattern": "^cohort-[0-9]+$"
+              },
+              "feature_reference": {
+                "type": "string",
+                "pattern": "^features-[0-9]+$"
+              },
+              "n_folds": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "n_completed_folds": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "n_participants": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "n_observations": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "n_features": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "training_participants_min": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "training_participants_max": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "class_order": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 2,
+                "uniqueItems": true
+              },
+              "positive_class": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "model": {
+                "const": "prescribed_logistic_baseline"
+              },
+              "recorded_C_values": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "uniqueItems": true
+              },
+              "tuning_recorded": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "execution_status",
+              "metric_unit",
+              "cohort_reference",
+              "feature_reference",
+              "n_folds",
+              "n_completed_folds",
+              "n_participants",
+              "n_observations",
+              "n_features",
+              "training_participants_min",
+              "training_participants_max",
+              "class_order",
+              "positive_class",
+              "model",
+              "recorded_C_values",
+              "tuning_recorded"
+            ],
+            "additionalProperties": false
           }
         },
         "required": [
