@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "build",
+    "--outdir",
+    "qa/evidence/S08/dist"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T08:59:06.581746+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "\nTraceback (most recent call last):\n  File \"<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\build\\__main__.py\", line 289, in _handle_build_error\n    yield\n  File \"<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\build\\__main__.py\", line 755, in main\n    built = run_build(args.srcdir, outdir)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\build\\__main__.py\", line 405, in build_package_via_sdist\n    sdist = _build(\n            ^^^^^^^\n  File \"<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\build\\__main__.py\", line 272, in _build\n    with _bootstrap_build_env(\n  File \"<USER_HOME>\\anaconda3\\Lib\\contextlib.py\", line 137, in __enter__\n    return next(self.gen)\n           ^^^^^^^^^^^^^^\n  File \"<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\build\\__main__.py\", line 233, in _bootstrap_build_env\n    install(builder.build_system_requires, _fresh=True)\n  File \"<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\build\\env.py\", line 234, in install\n    self._env_backend.install_dependencies(requirements, constraints, _fresh=_fresh)\n  File \"<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\build\\env.py\", line 436, in install_dependencies\n    run_subprocess(cmd, env=_pip_env())\n  File \"<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\build\\_ctx.py\", line 68, in run_subprocess\n    subprocess.run(cmd, capture_output=True, check=True, cwd=cwd, env=env)  # noqa: S603\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<USER_HOME>\\anaconda3\\Lib\\subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['<PROJECT_ROOT>\\\\.venv\\\\Scripts\\\\python.exe', '-m', 'pip', '--python', '<USER_HOME>\\\\AppData\\\\Local\\\\Temp\\\\build-env-ur1gtp8u\\\\Scripts\\\\python.exe', 'install', '--ignore-installed', '--use-pep517', '--no-warn-script-location', '--no-compile', '--no-input', '-r', '<TEMP>\\\\build-requirements-bgo0ufb6.txt']' returned non-zero exit status 1.\n\n",
+  "stderr": "* Creating isolated environment: venv+pip...\n* Installing packages in isolated environment:\n  - hatchling\n> <PROJECT_ROOT>\\.venv\\Scripts\\pyt\n  hon.exe -m pip --python <USER_HOME>\\AppData\\Local\\Temp\\build-env-\n  ur1gtp8u\\Scripts\\python.exe install --ignore-installed --use-pep517 --no-\n  warn-script-location --no-compile --no-input -r\n  <TEMP>\\build-requirements-bgo0ufb6.txt\n< ERROR: Could not find a version that satisfies the requirement hatchling\n  (from versions: none)\n< ERROR: No matching distribution found for hatchling\nERROR Command '['<PROJECT_ROOT>\\\\.venv\\\\Scripts\\\\python.exe', '-m', 'pip', '--python', '<USER_HOME>\\\\AppData\\\\Local\\\\Temp\\\\build-env-ur1gtp8u\\\\Scripts\\\\python.exe', 'install', '--ignore-installed', '--use-pep517', '--no-warn-script-location', '--no-compile', '--no-input', '-r', '<TEMP>\\\\build-requirements-bgo0ufb6.txt']' returned non-zero exit status 1.\n"
+}

@@ -1088,8 +1088,8 @@
     "expected": "Markers absent from HTML and public JSON.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-02",
@@ -1100,8 +1100,8 @@
     "expected": "Full path/username absent from default reports.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-03",
@@ -1112,8 +1112,8 @@
     "expected": "Default report uses local aliases without reverse map.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-04",
@@ -1124,8 +1124,8 @@
     "expected": "Suppressed cell, totals, percentages and derived statistic absent from exported section.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-05",
@@ -1136,8 +1136,8 @@
     "expected": "No suppressed values reappear in hidden markup/JSON.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-06",
@@ -1148,8 +1148,8 @@
     "expected": "Rendered as escaped text; no script execution.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-07",
@@ -1160,8 +1160,8 @@
     "expected": "Optional human spreadsheet export neutralizes formulas.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-08",
@@ -1172,8 +1172,8 @@
     "expected": "Complete layout and content without external assets.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-09",
@@ -1184,8 +1184,8 @@
     "expected": "Sensitive banner and clearly different output; never silently enabled.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-10",
@@ -1196,8 +1196,8 @@
     "expected": "Prior valid report remains intact; no unrelated deletion.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-11",
@@ -1208,8 +1208,8 @@
     "expected": "Clear refusal instead of clobbering.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-12",
@@ -1220,8 +1220,8 @@
     "expected": "Missing checks remain visibly incomplete, not all-green safe.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S08-13",
@@ -1232,8 +1232,8 @@
     "expected": "Rendering succeeds from precomputed record alone.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S09-01",

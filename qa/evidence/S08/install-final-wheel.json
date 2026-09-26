@@ -1,0 +1,22 @@
+{
+  "command": [
+    ".venv-install/Scripts/python.exe",
+    "-m",
+    "pip",
+    "install",
+    "--no-index",
+    "--no-deps",
+    "--force-reinstall",
+    "qa/evidence/S08/dist-final/neurocvguard-0.1.0-py3-none-any.whl"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T09:08:02.160128+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "Processing <PROJECT_ROOT>\\qa\\evidence\\s08\\dist-final\\neurocvguard-0.1.0-py3-none-any.whl\nInstalling collected packages: neurocvguard\n  Attempting uninstall: neurocvguard\n    Found existing installation: neurocvguard 0.1.0\n    Uninstalling neurocvguard-0.1.0:\n      Successfully uninstalled neurocvguard-0.1.0\nSuccessfully installed neurocvguard-0.1.0\n",
+  "stderr": ""
+}

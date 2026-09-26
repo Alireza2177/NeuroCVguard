@@ -12,6 +12,8 @@
 
 | 2026-09-25 | Codex, GPT-6 (system-reported family; exact build unavailable) | Read S07 sources; implemented strict declaration loading, scoped checks, cohort audit integration and planned fit validation; drafted tests/docs, ran local checks and performed implementation-agent review. | None recorded. The user authorized S07; no predecessor acceptance or human review is inferred. | Local S07 working changes from Git HEAD 2224dfd. |
 
+| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S08 shared privacy projection, offline reports, safe writes and optional findings CSV; drafted tests/docs, executed checks, inspected actual rendered synthetic reports and reviewed the diff. | None recorded. The user authorized S08 only; predecessor acceptance and human review are not inferred. | Local S08 working changes from Git HEAD 3769299. |
+
 No independent reviewer, human authorship approval, public release approval,
 or comprehensive scientific validation is claimed. Later changes to review
 status must reflect actual review of the specified files.

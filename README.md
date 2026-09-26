@@ -5,14 +5,15 @@ strict configuration and serialization; S03 adds in-memory cohort checks;
 S04 adds supplied split audits; S05 adds deterministic outer plan generation
 and sensitive assignment exports; S06 adds participant-level categorical
 association diagnostics with explicit support counts and descriptive warnings;
-S07 adds preprocessing declarations and fit-boundary validation.**
+S07 adds preprocessing declarations and fit-boundary validation;
+S08 adds privacy-projected JSON and offline HTML reports.**
 The CLI provides help and version output only. The local development version
 is `0.1.0`, matching the foundation's target release; it is not a published or
 completed release.
 
 S02 file ingestion and keyed feature joins remain unimplemented: the user selected
 S03 directly. S03 accepts already constructed, validated `Cohort` objects.
-Evaluation, report rendering, inner-fold generation and the synthetic demo remain
+Evaluation, inner-fold generation and the synthetic demo remain
 unimplemented. The intended research scope is defined in [START_HERE.md](START_HERE.md)
 and [spec/00_project_charter.md](spec/00_project_charter.md). This software does
 not provide clinical advice or certify scientific validity.
@@ -82,7 +83,7 @@ omitted until confirmed; proposed values are under `tool.neurocvguard.release`.
 No DOI, publication, CI result, or support commitment is claimed.
 
 [AI_ASSISTANCE.md](AI_ASSISTANCE.md) records the assistance actually provided.
-S07 stops at human review. No further stage begins without a subsequent instruction.
+S08 stops at human review. No further stage begins without a subsequent instruction.
 
 ## Configuration and record API
 
@@ -169,3 +170,16 @@ model shortcut use or scientific validity.
 `audit_cohort`, strict ledger loading, declared boundary checks and planned fit
 validation. Imported history never authenticates execution; no evaluator or
 observed fit logging is implemented yet.
+
+## Offline reports
+
+`neurocvguard.write_report(result, output_dir="local-report")` writes public
+JSON, self-contained HTML and a version manifest from an existing typed audit,
+evaluation or comparison record. Rendering runs no audit or statistic. Existing
+files are preserved unless `overwrite=True`; sensitive detail requires an explicit
+`sensitive_details=True` and a visible warning. No operational split or prediction
+files are added to the report bundle.
+
+See [the tested reporting guide](docs/reporting.md), [S08 handoff](state/handoffs/S08.md)
+and [synthetic rendered example](qa/evidence/S08/rendered/public/report.html).
+The command-line report workflow remains for S09.

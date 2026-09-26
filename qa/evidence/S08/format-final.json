@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "--check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T09:07:57.300992+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "unformatted: File would be reformatted\n  --> docs\\reporting.md:21:21\n   |\n20 |\n   - data = pd.DataFrame({\n   -     \"observation_id\": [\"synthetic-o1\", \"synthetic-o2\"],\n   -     \"subject_id\": [\"synthetic-p1\", \"synthetic-p2\"],\n   -     \"diagnosis\": [\"class A\", \"class B\"],\n   - })\n21 + data = pd.DataFrame(\n22 +     {\n23 +         \"observation_id\": [\"synthetic-o1\", \"synthetic-o2\"],\n24 +         \"subject_id\": [\"synthetic-p1\", \"synthetic-p2\"],\n25 +         \"diagnosis\": [\"class A\", \"class B\"],\n26 +     }\n27 + )\n28 | config = AuditConfig(columns=ColumnMap(session=None, site=None, phase=None))\n   |\n\n1 file would be reformatted, 173 files already formatted\n",
+  "stderr": ""
+}

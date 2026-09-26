@@ -7,7 +7,13 @@ from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from neurocvguard.config import AuditConfig
-    from neurocvguard.models import AuditReport, Cohort, SplitPlan
+    from neurocvguard.models import (
+        AuditReport,
+        Cohort,
+        ComparisonResult,
+        EvaluationResult,
+        SplitPlan,
+    )
 
 __version__ = "0.1.0"
 
@@ -137,3 +143,22 @@ def audit_splits(cohort: Cohort, plan: SplitPlan, *, config: AuditConfig) -> Aud
     from neurocvguard.audit import audit_splits as audit
 
     return audit(cohort, plan, config=config)
+
+
+def write_report(
+    result: AuditReport | EvaluationResult | ComparisonResult,
+    *,
+    output_dir: str | Path,
+    sensitive_details: bool = False,
+    overwrite: bool = False,
+) -> dict[str, Path]:
+    """Write local projected JSON/HTML; see neurocvguard.reporting.write_report.
+
+    Safe defaults omit private evidence and refuse overwriting. Sensitive output
+    requires an explicit argument; no operational evaluation or split file is written.
+    """
+    from neurocvguard.reporting import write_report as write
+
+    return write(
+        result, output_dir=output_dir, sensitive_details=sensitive_details, overwrite=overwrite
+    )

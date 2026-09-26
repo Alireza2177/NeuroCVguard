@@ -1,10 +1,11 @@
-"""Minimal contract-level projections; rendering and rule-specific tables are later stages."""
+"""Shared conservative privacy projection for records and offline reports."""
 
 import re
 from collections.abc import Mapping
 from typing import cast
 
 from neurocvguard import __version__
+from neurocvguard._report_tables import association_display
 from neurocvguard.errors import InputValidationError
 from neurocvguard.models import (
     AuditReport,
@@ -111,8 +112,8 @@ def project_check(check: CheckResult) -> JSONObject:
             if check.status == CheckStatus.PASS
             else definition.trigger_message
         )
-        # S08 supplies richer table projection. Until then, omit the entire linked
-        # numeric section, including denominators/V, so small cells cannot be reconstructed.
+        # Individual checks remain conservative; whole reports may add a validated
+        # display table after applying their explicit small-cell threshold.
         safe_evidence = {"details_omitted": True}
         if check.rule_id == "NCG-ASSOC-003" and check.status == CheckStatus.NOT_ASSESSABLE:
             statistic = check.evidence.get("statistic")
@@ -161,7 +162,9 @@ def project_check(check: CheckResult) -> JSONObject:
     }
 
 
-def _checks(checks: tuple[CheckResult, ...], sensitive: bool) -> list[JSONValue]:
+def _checks(
+    checks: tuple[CheckResult, ...], sensitive: bool, threshold: int = 5
+) -> list[JSONValue]:
     def key(check: CheckResult) -> tuple[int, str, str, str, str]:
         group = check.rule_id.split("-")[1]
         return (
@@ -192,6 +195,26 @@ def _checks(checks: tuple[CheckResult, ...], sensitive: bool) -> list[JSONValue]
             ("inner_fold_id", "Inner fold"),
         )
     }
+    domain_values: dict[str, set[str]] = {"Site": set(), "Phase": set(), "Category": set()}
+    for check in ordered:
+        if check.rule_id.startswith("NCG-ASSOC-"):
+            raw = check.evidence.get("display_table", check.evidence)
+            if isinstance(raw, Mapping):
+                levels = raw.get("row_levels", ())
+                label = (
+                    "Site"
+                    if check.scope.get("field") == "site"
+                    else ("Phase" if check.scope.get("field") == "phase" else "Category")
+                )
+                if isinstance(levels, (tuple, list)):
+                    domain_values[label].update(level for level in levels if isinstance(level, str))
+    domain_aliases = {
+        label: {
+            value: f"{label} {i + 1:0{max(3, len(str(len(values))))}d}"
+            for i, value in enumerate(sorted(values))
+        }
+        for label, values in domain_values.items()
+    }
     output: list[JSONValue] = []
     for index, check in enumerate(ordered):
         item = check._as_dict() if sensitive else project_check(check)
@@ -204,8 +227,39 @@ def _checks(checks: tuple[CheckResult, ...], sensitive: bool) -> list[JSONValue]
             for role in ("role", "field", "component"):
                 if check.scope.get(role) in _ROLES:
                     scope[role] = check.scope[role]
+            if str(check.scope.get("field", "")).startswith("categorical_covariates:"):
+                scope["field"] = "categorical_covariates"
             item["scope"] = scope
+            display = association_display(check, threshold, domain_aliases)
+            if display is not None:
+                cast(JSONObject, item["evidence"])["display_table"] = display
         output.append(item)
+    if not sensitive:
+        # Suppressed tables must not leave gaps or alter aliases on public rerender.
+        tables = [
+            cast(JSONObject, cast(JSONObject, item)["evidence"])["display_table"]
+            for item in output
+            if "display_table" in cast(JSONObject, cast(JSONObject, item)["evidence"])
+        ]
+        for label in domain_values:
+            visible = sorted(
+                {
+                    str(value)
+                    for table in tables
+                    for value in cast(list[JSONValue], cast(JSONObject, table)["row_levels"])
+                    if str(value).startswith(label + " ")
+                }
+            )
+            compact = {
+                value: f"{label} {i + 1:0{max(3, len(str(len(visible))))}d}"
+                for i, value in enumerate(visible)
+            }
+            for table in tables:
+                item_table = cast(JSONObject, table)
+                item_table["row_levels"] = [
+                    compact.get(str(value), value)
+                    for value in cast(list[JSONValue], item_table["row_levels"])
+                ]
     return output
 
 
@@ -215,11 +269,21 @@ def _small(metrics: MetricSet | None, threshold: int) -> bool:
     )
 
 
+def _public_class_label(label: str, index: int) -> str:
+    # Keep ordinary semantic class names; paths, email-like text and controls
+    # are unsuitable public labels even if supplied in a target-label field.
+    if any(char in label for char in ("/", "\\", "@")) or any(ord(char) < 32 for char in label):
+        return f"Target {index + 1:03d}"
+    return label
+
+
 def _metrics(metrics: MetricSet | None, sensitive: bool) -> JSONValue:
     if metrics is None:
         return None
     data = metrics.to_dict()
     if not sensitive:
+        for index, row in enumerate(cast(list[JSONObject], data["per_class"])):
+            row["class_label"] = _public_class_label(str(row["class_label"]), index)
         # Open reason strings can contain research-row text. Keep a stable generic
         # reason in the public view; operational metrics retain the exact reason.
         for name in ("accuracy", "balanced_accuracy", "macro_f1", "roc_auc"):
@@ -246,6 +310,11 @@ def _evaluation_summary(
         or data.get("metrics_hidden_reason") == "privacy_small_cells"
         or any(fold.get("metrics_hidden_reason") == "privacy_small_cells" for fold in folds)
     )
+    if not sensitive:
+        data["class_order"] = [
+            _public_class_label(str(label), index)
+            for index, label in enumerate(cast(list[JSONValue], data["class_order"]))
+        ]
     data["pooled_metrics"] = None if hide else _metrics(pooled, sensitive)
     data["metrics_hidden_reason"] = "privacy_small_cells" if hide else None
     aliases = {
@@ -302,7 +371,7 @@ def project_evaluation(result: EvaluationResult, sensitive: bool, threshold: int
             "supplied_roles": [],
             "missing_roles": [],
         },
-        "checks": _checks(result.preflight_checks, sensitive),
+        "checks": _checks(result.preflight_checks, sensitive, threshold),
         "limitations": _json_value(
             list(result.limitations) + [_SENSITIVE] if sensitive else list(_LIMITATIONS)
         ),
@@ -363,7 +432,7 @@ def project_comparison(result: ComparisonResult, sensitive: bool, threshold: int
 def project_report(report: AuditReport, sensitive: bool, threshold: int) -> JSONObject:
     _options(sensitive, threshold)
     data = report._as_dict()
-    data["checks"] = _checks(report.checks, sensitive)
+    data["checks"] = _checks(report.checks, sensitive, threshold)
     provenance = cast(JSONObject, data["provenance"])
     provenance["sensitive_details"] = sensitive
     if sensitive:

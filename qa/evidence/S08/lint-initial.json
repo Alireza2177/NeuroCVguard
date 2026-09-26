@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T08:42:53.094907+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "E501 Line too long (121 > 100)\n  --> src\\neurocvguard\\_report_writes.py:39:101\n   |\n37 |         ):\n38 |             raise InputValidationError(\n39 |                 \"Report output exists or is not a regular file. Choose a new directory or explicitly set overwrite=True.\"\n   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^\n40 |             )\n41 |         staging = Path(tempfile.mkdtemp(prefix=\".neurocvguard-report-\", dir=destination))\n   |\n\nE501 Line too long (132 > 100)\n  --> src\\neurocvguard\\_report_writes.py:80:101\n   |\n78 |             if keep_recovery:\n79 |                 raise InputValidationError(\n80 |                     \"Report write and rollback failed; recovery copies remain in the output directory under .neurocvguard-report-*.\"\n   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n81 |                 ) from None\n82 |             raise\n   |\n\nE501 Line too long (146 > 100)\n  --> src\\neurocvguard\\_report_writes.py:85:101\n   |\n83 | \u2026\n84 | \u2026\n85 | \u2026output conflicts or an active report lock; prior files were not intentionally discarded.\"\n   |                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n86 | \u2026\n87 | \u2026\n   |\n\nE501 Line too long (105 > 100)\n   --> src\\neurocvguard\\rules.py:381:101\n    |\n379 |         \"Operational split/private evaluation records contain sensitive identities.\",\n380 |         \"This report does not export operational split or private evaluation records.\",\n381 |         \"Keep operational records separate from public reports and review authorization before sharing.\",\n    |                                                                                                     ^^^^^\n382 |         stage=\"S08\",\n383 |     ),\n    |\n\nFound 4 errors.\n",
+  "stderr": ""
+}
