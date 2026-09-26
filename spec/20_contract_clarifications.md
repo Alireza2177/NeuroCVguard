@@ -46,3 +46,18 @@ A public evaluation summary may include fold_metrics and metrics_hidden_reason. 
 Apply the same rule to public comparison metrics and derived deltas. Acquisition tables follow chapter 13. Counts of observations/participants and class names remain summary information, so the software still does not promise formal anonymization. A user can explicitly request a sensitive local detailed report. Synthetic demos may explicitly enable details because their generator creates fictitious data; they must label that choice and never infer synthetic status from an arbitrary input filename.
 
 Public report schema summary fields are projections, not substitutes for private operational evaluation records. Per-fold public metrics are included when available and not suppressed. A hidden metric and a mathematically undefined metric have different reason strings and must be explained differently.
+
+## 20.8 Private evaluated-plan retention (approved ADR-S10-001)
+
+The private evaluation schema additionally permits paired optional `plan_digest`
+and `actual_plan` fields. `actual_plan` follows the complete split-plan contract;
+`plan_digest` is SHA-256 of its canonical operational JSON. The controlled runner
+always emits both, including for incomplete runs. Its fold references, objective,
+cohort digest and recorded fit memberships must agree with the retained plan.
+Neither field is included in the public report projection.
+
+Existing schema 1.0 records without both fields remain readable by the updated
+reader and must not be assigned invented memberships or digests. Older readers
+with the original closed schema reject extended records; update those readers.
+This additive extension resolves the missing plan provenance required by §11.8.
+It changes no scientific rule and does not authenticate imported history.

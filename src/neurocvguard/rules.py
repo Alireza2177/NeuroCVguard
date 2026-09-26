@@ -1,4 +1,4 @@
-"""Fixed S03-S08 rule metadata, not a dynamic registry or user-code mechanism."""
+"""Fixed implemented rule metadata, not a dynamic registry or user-code mechanism."""
 
 from dataclasses import dataclass
 
@@ -385,6 +385,56 @@ REPORT_RULES = (
 )
 
 
+EVALUATION_RULES = (
+    RuleDefinition(
+        "NCG-PROV-004",
+        "Observed internal fit scope violation",
+        Severity.ERROR,
+        EvidenceKind.OBSERVED,
+        "Controlled runner defect; block successful evaluation and investigate.",
+        "An internal fitting boundary violation prevented successful evaluation.",
+        "The controlled fit used the permitted training boundary.",
+        "Stop using this run and investigate the runner's fit isolation.",
+        stage="S10",
+    ),
+    RuleDefinition(
+        "NCG-EVAL-001",
+        "Fit failed or did not converge",
+        Severity.ERROR,
+        EvidenceKind.OBSERVED,
+        "Incomplete run, no complete pooled score.",
+        "A controlled fold failed or did not converge; no complete pooled score is available.",
+        "The requested controlled fitting completed.",
+        "Review feature scale, numeric inputs and iteration limits explicitly; "
+        "do not omit failed folds.",
+        stage="S10",
+    ),
+    RuleDefinition(
+        "NCG-EVAL-002",
+        "Metric undefined",
+        Severity.WARNING,
+        EvidenceKind.OBSERVED,
+        "Null value plus specific reason; never substitute zero/NaN.",
+        "A metric is undefined for this scored set; retain its null value and reason.",
+        "The metric is defined for the supplied coverage.",
+        "Inspect class support and the explicit positive class; do not substitute zero for null.",
+        stage="S10",
+    ),
+    RuleDefinition(
+        "NCG-EVAL-004",
+        "Training feature entirely missing",
+        Severity.WARNING,
+        EvidenceKind.OBSERVED,
+        "Document no training information and prescribed fold-local imputer handling.",
+        "A feature has no training information in this fold; "
+        "the imputer retains it with zero fill.",
+        "Every feature has at least one observed training value.",
+        "Review missingness upstream; never estimate a fill value from held-out observations.",
+        stage="S10",
+    ),
+)
+
+
 def get_rule(rule_id: str) -> RuleDefinition:
     """Return fixed rule metadata.
 
@@ -415,6 +465,7 @@ def get_rule(rule_id: str) -> RuleDefinition:
         *ASSOCIATION_RULES,
         *PROVENANCE_RULES,
         *REPORT_RULES,
+        *EVALUATION_RULES,
     ):
         if rule.id == rule_id:
             return rule

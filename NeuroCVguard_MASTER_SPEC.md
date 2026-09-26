@@ -1335,6 +1335,21 @@ Apply the same rule to public comparison metrics and derived deltas. Acquisition
 
 Public report schema summary fields are projections, not substitutes for private operational evaluation records. Per-fold public metrics are included when available and not suppressed. A hidden metric and a mathematically undefined metric have different reason strings and must be explained differently.
 
+## 20.8 Private evaluated-plan retention (approved ADR-S10-001)
+
+The private evaluation schema additionally permits paired optional `plan_digest`
+and `actual_plan` fields. `actual_plan` follows the complete split-plan contract;
+`plan_digest` is SHA-256 of its canonical operational JSON. The controlled runner
+always emits both, including for incomplete runs. Its fold references, objective,
+cohort digest and recorded fit memberships must agree with the retained plan.
+Neither field is included in the public report projection.
+
+Existing schema 1.0 records without both fields remain readable by the updated
+reader and must not be assigned invented memberships or digests. Older readers
+with the original closed schema reject extended records; update those readers.
+This additive extension resolves the missing plan provenance required by §11.8.
+It changes no scientific rule and does not authenticate imported history.
+
 
 ---
 
@@ -3418,7 +3433,7 @@ Draft an ADR with benefits, risks, compatibility, resource cost, evidence needs 
 
 
 
-## File: `templates/ADR.md`
+## File: `templates\ADR.md`
 
 # ADR-NNNN — decision title
 
@@ -3448,7 +3463,7 @@ List new/changed acceptance cases, independent oracle and required regression ch
 Record actual approval, not a presumed answer. Update the normative sources and regenerate reading copies only after approval.
 
 
-## File: `templates/AI_ASSISTANCE_RECORD.md`
+## File: `templates\AI_ASSISTANCE_RECORD.md`
 
 # AI assistance record template
 
@@ -3462,7 +3477,7 @@ Examples of scope: architecture suggestions, implementation drafting, test scaff
 Public wording is finalized by the maintainer and must match the target venue's current rules. AI tools are not human coauthors. Do not fabricate reviewers, exhaustive verification, development history or adoption.
 
 
-## File: `templates/HANDOFF.md`
+## File: `templates\HANDOFF.md`
 
 # Stage handoff — fill with actual evidence
 
@@ -3496,7 +3511,7 @@ List approved ADRs, unresolved questions and any known defects. State whether sc
 Specify the next bounded stage/package and required human decisions. Public publication is not implied.
 
 
-## File: `templates/MAINTAINER_REVIEW.md`
+## File: `templates\MAINTAINER_REVIEW.md`
 
 # Maintainer understanding and usability review
 
@@ -3511,7 +3526,7 @@ Before public release, the human maintainer should demonstrate the following wit
 Record who performed this review, concrete findings and fixes. For a separate user trial, record an actual newcomer completing install/demo/mapping without coaching. Agent-only review must remain labeled agent-only.
 
 
-## File: `templates/RELEASE_CHECKLIST.md`
+## File: `templates\RELEASE_CHECKLIST.md`
 
 # v0.1.0 release checklist — no box is pre-approved
 
@@ -3549,7 +3564,7 @@ These are standalone local schemas. Semantic invariants remain mandatory in addi
 
 
 
-## File: `contracts/audit-report.schema.json`
+## File: `contracts\audit-report.schema.json`
 
 ```json
 {
@@ -4792,7 +4807,7 @@ These are standalone local schemas. Semantic invariants remain mandatory in addi
 ```
 
 
-## File: `contracts/comparison-summary.schema.json`
+## File: `contracts\comparison-summary.schema.json`
 
 ```json
 {
@@ -5173,7 +5188,7 @@ These are standalone local schemas. Semantic invariants remain mandatory in addi
 ```
 
 
-## File: `contracts/config.schema.json`
+## File: `contracts\config.schema.json`
 
 ```json
 {
@@ -5474,7 +5489,7 @@ These are standalone local schemas. Semantic invariants remain mandatory in addi
 ```
 
 
-## File: `contracts/evaluation-result.schema.json`
+## File: `contracts\evaluation-result.schema.json`
 
 ```json
 {
@@ -6371,6 +6386,163 @@ These are standalone local schemas. Semantic invariants remain mandatory in addi
         "upstream_preprocessing_verified"
       ],
       "additionalProperties": false
+    },
+    "plan_digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "actual_plan": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.0"
+        },
+        "plan_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]+$"
+        },
+        "origin": {
+          "enum": [
+            "imported",
+            "generated"
+          ]
+        },
+        "cohort_digest": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "objective": {
+          "enum": [
+            "unseen_participant",
+            "unseen_site",
+            "unseen_phase",
+            "audit_only"
+          ]
+        },
+        "scheme": {
+          "type": "string",
+          "minLength": 1
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "folds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "repeat_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "fold_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "train_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "test_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1,
+                "uniqueItems": true
+              },
+              "inner_folds": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "inner_fold_id": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "train_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
+                    },
+                    "validation_ids": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 1,
+                      "uniqueItems": true
+                    }
+                  },
+                  "required": [
+                    "inner_fold_id",
+                    "train_ids",
+                    "validation_ids"
+                  ],
+                  "additionalProperties": false
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "repeat_id",
+              "fold_id",
+              "train_ids",
+              "test_ids"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "schema_version",
+        "plan_id",
+        "origin",
+        "cohort_digest",
+        "objective",
+        "scheme",
+        "seed",
+        "folds"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "origin": {
+                "const": "generated"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "cohort_digest": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          }
+        }
+      ]
     }
   },
   "required": [
@@ -6397,12 +6569,20 @@ These are standalone local schemas. Semantic invariants remain mandatory in addi
     "limitations",
     "provenance"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "dependentRequired": {
+    "plan_digest": [
+      "actual_plan"
+    ],
+    "actual_plan": [
+      "plan_digest"
+    ]
+  }
 }
 ```
 
 
-## File: `contracts/preprocessing-ledger.schema.json`
+## File: `contracts\preprocessing-ledger.schema.json`
 
 ```json
 {
@@ -6510,7 +6690,7 @@ These are standalone local schemas. Semantic invariants remain mandatory in addi
 ```
 
 
-## File: `contracts/split-plan.schema.json`
+## File: `contracts\split-plan.schema.json`
 
 ```json
 {
@@ -6687,7 +6867,7 @@ The clean cohort has 18 participants, two visits each, two classes and three sit
 These files can be committed as synthetic tests. Never replace them with restricted ADNI, AIBL or identifiable clinical records.
 
 
-## File: `fixtures/assignments_clean.tsv`
+## File: `fixtures\assignments_clean.tsv`
 
 ```text
 repeat_id	fold_id	role	observation_id
@@ -6802,7 +6982,7 @@ repeat_id	fold_id	role	observation_id
 ```
 
 
-## File: `fixtures/cohort_changing_target.tsv`
+## File: `fixtures\cohort_changing_target.tsv`
 
 ```text
 observation_id	subject_id	diagnosis	session_id	site
@@ -6845,7 +7025,7 @@ obs-018-2	sub-018	AD	ses-02	site-3
 ```
 
 
-## File: `fixtures/cohort_clean.tsv`
+## File: `fixtures\cohort_clean.tsv`
 
 ```text
 observation_id	subject_id	diagnosis	session_id	site
@@ -6888,7 +7068,7 @@ obs-018-2	sub-018	AD	ses-02	site-3
 ```
 
 
-## File: `fixtures/cohort_cross_site.tsv`
+## File: `fixtures\cohort_cross_site.tsv`
 
 ```text
 observation_id	subject_id	diagnosis	session_id	site
@@ -6931,7 +7111,7 @@ obs-018-2	sub-018	AD	ses-02	site-3
 ```
 
 
-## File: `fixtures/comparison_schema_example.json`
+## File: `fixtures\comparison_schema_example.json`
 
 ```json
 {
@@ -6965,7 +7145,7 @@ obs-018-2	sub-018	AD	ses-02	site-3
 ```
 
 
-## File: `fixtures/config.json`
+## File: `fixtures\config.json`
 
 ```json
 {
@@ -7022,7 +7202,7 @@ obs-018-2	sub-018	AD	ses-02	site-3
 ```
 
 
-## File: `fixtures/config_invalid_unknown_key.json`
+## File: `fixtures\config_invalid_unknown_key.json`
 
 ```json
 {
@@ -7080,7 +7260,7 @@ obs-018-2	sub-018	AD	ses-02	site-3
 ```
 
 
-## File: `fixtures/evaluation_schema_example.json`
+## File: `fixtures\evaluation_schema_example.json`
 
 ```json
 {
@@ -7122,7 +7302,7 @@ obs-018-2	sub-018	AD	ses-02	site-3
 ```
 
 
-## File: `fixtures/features_shuffled.tsv`
+## File: `fixtures\features_shuffled.tsv`
 
 ```text
 observation_id	feature_1	feature_2
@@ -7165,7 +7345,7 @@ obs-001-1	0.21	0.11
 ```
 
 
-## File: `fixtures/known_answers.json`
+## File: `fixtures\known_answers.json`
 
 ```json
 {
@@ -7229,7 +7409,7 @@ obs-001-1	0.21	0.11
 ```
 
 
-## File: `fixtures/ledger_declared_global.json`
+## File: `fixtures\ledger_declared_global.json`
 
 ```json
 {
@@ -7253,7 +7433,7 @@ obs-001-1	0.21	0.11
 ```
 
 
-## File: `fixtures/manifest.json`
+## File: `fixtures\manifest.json`
 
 ```json
 [
@@ -7306,7 +7486,7 @@ obs-001-1	0.21	0.11
 ```
 
 
-## File: `fixtures/report_schema_example.json`
+## File: `fixtures\report_schema_example.json`
 
 ```json
 {
@@ -7357,7 +7537,7 @@ obs-001-1	0.21	0.11
 ```
 
 
-## File: `fixtures/splits_clean.json`
+## File: `fixtures\splits_clean.json`
 
 ```json
 {
@@ -7509,7 +7689,7 @@ obs-001-1	0.21	0.11
 ```
 
 
-## File: `fixtures/splits_participant_overlap.json`
+## File: `fixtures\splits_participant_overlap.json`
 
 ```json
 {
@@ -7616,7 +7796,7 @@ obs-001-1	0.21	0.11
 ```
 
 
-## File: `fixtures/splits_unknown_id.json`
+## File: `fixtures\splits_unknown_id.json`
 
 ```json
 {

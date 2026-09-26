@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "tests/test_evaluation_preflight.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T10:55:16.456750+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 2,
+  "stdout": "\n=================================== ERRORS ====================================\n_____________ ERROR collecting tests/test_evaluation_preflight.py _____________\ntests\\test_evaluation_preflight.py:10: in <module>\n    from neurocvguard._evaluation_inputs import fixed_pipeline, participant_weights, preflight\nsrc\\neurocvguard\\_evaluation_inputs.py:23: in <module>\n    class EvaluationInputs:\nsrc\\neurocvguard\\_evaluation_inputs.py:30: in EvaluationInputs\n    targets: pd.Series[str]\n             ^^^^^^^^^^^^^^\nE   TypeError: type 'Series' is not subscriptable\n=========================== short test summary info ===========================\nERROR tests/test_evaluation_preflight.py - TypeError: type 'Series' is not su...\n!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n1 error in 2.62s\n",
+  "stderr": ""
+}

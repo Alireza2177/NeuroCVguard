@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T11:14:16.861994+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "E501 Line too long (154 > 100)\n  --> qa\\evidence\\S10\\check_contract.py:43:101\n   |\n41 | \u2026\n42 | \u2026\n43 | \u2026iginal additionalProperties conflict reproduced; embedded plan exact; packaged schema equal.\"\n   |                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n44 | \u2026\n   |\n\nFound 1 error.\n",
+  "stderr": ""
+}

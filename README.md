@@ -7,7 +7,9 @@ and sensitive assignment exports; S06 adds participant-level categorical
 association diagnostics with explicit support counts and descriptive warnings;
 S07 adds preprocessing declarations and fit-boundary validation;
 S08 adds privacy-projected JSON and offline HTML reports;
-S09 exposes init, validate, audit, split and report commands.**
+S09 exposes init, validate, audit, split and report commands;
+S10 adds fixed-C participant classification through evaluate;
+S11 adds nested participant-aware C selection.**
 See [the CLI guide](docs/cli.md) for a complete local workflow. The local development version
 is `0.1.0`, matching the foundation's target release; it is not a published or
 completed release.
@@ -15,8 +17,8 @@ completed release.
 S02 now provides strict local CSV/TSV loading and keyed feature joins through
 `load_cohort`; see [the input guide](docs/input_tables.md). It was completed as the
 explicitly authorized prerequisite for S09 after initially being skipped.
-Evaluation, inner-fold generation and the synthetic demo remain
-unimplemented. The intended research scope is defined in [START_HERE.md](START_HERE.md)
+Diagnostic overlap evaluation, comparison computation and the
+synthetic demo remain unimplemented. The intended research scope is defined in [START_HERE.md](START_HERE.md)
 and [spec/00_project_charter.md](spec/00_project_charter.md). This software does
 not provide clinical advice or certify scientific validity.
 
@@ -85,7 +87,8 @@ omitted until confirmed; proposed values are under `tool.neurocvguard.release`.
 No DOI, publication, CI result, or support commitment is claimed.
 
 [AI_ASSISTANCE.md](AI_ASSISTANCE.md) records the assistance actually provided.
-S02 and S09 are ready for human review. S10 remains unstarted; further work needs
+S11 verification and review status are recorded in [its handoff](state/handoffs/S11.md).
+S12 remains unstarted; further work needs
 a subsequent instruction.
 
 ## Configuration and record API
@@ -155,7 +158,8 @@ StratifiedGroupKFold or strict site/phase LeaveOneGroupOut, then runs the indepe
 S04 audit. It refuses infeasible designs without changing rows, labels, seeds or
 fold counts. `plan.generation_report` retains warnings, support and versions;
 `plan.write(output_dir)` explicitly writes sensitive plan/assignment artifacts,
-with no overwrite by default. Nested tuning remains unimplemented.
+with no overwrite by default. Nested tuning is available through evaluation;
+the standalone split command produces outer plans.
 
 See the [executed API example](docs/split_generation.md),
 [S05 handoff](state/handoffs/S05.md) and [verification evidence](qa/evidence/S05/).
@@ -171,8 +175,8 @@ model shortcut use or scientific validity.
 
 [The S07 guide](docs/preprocessing_provenance.md) provides a tested example of
 `audit_cohort`, strict ledger loading, declared boundary checks and planned fit
-validation. Imported history never authenticates execution; no evaluator or
-observed fit logging is implemented yet.
+validation. Imported history never authenticates execution. S10 now records
+observed controlled fits while retaining the unknown upstream limitation.
 
 ## Offline reports
 
@@ -186,3 +190,12 @@ files are added to the report bundle.
 See [the tested reporting guide](docs/reporting.md), [S08 handoff](state/handoffs/S08.md)
 and [synthetic rendered example](qa/evidence/S08/rendered/public/report.html).
 The [CLI guide](docs/cli.md) covers report rendering and configured privacy settings.
+
+## Fixed-C evaluation
+
+`neurocvguard.evaluate_baseline(cohort, plan, config=config)` uses fresh sklearn
+imputer/scaler/logistic pipelines, training-only fits and participant probability
+aggregation. Any failed fold prevents a complete pooled score. The `evaluate`
+command writes a marked sensitive private record and separate projected reports.
+See [the evaluation guide](docs/evaluation.md) for exact metric/null semantics,
+copyable commands and the approved private-schema migration.

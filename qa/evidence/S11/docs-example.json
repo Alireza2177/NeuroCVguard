@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-c",
+    "import re; from pathlib import Path; source=Path(\"docs/evaluation.md\").read_text(encoding=\"utf-8\"); blocks=re.findall(r\"```python\\n(.*?)```\",source,re.S); scope={}; [exec(compile(code,\"docs/evaluation.md\",\"exec\"),scope) for code in blocks]; print(\"Both documented Python examples passed; nested result completed.\")"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T13:45:04.697096+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "Both documented Python examples passed; nested result completed.\n",
+  "stderr": ""
+}

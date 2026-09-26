@@ -187,6 +187,18 @@ def _write_projected_report(
     sensitive_details: bool,
     overwrite: bool,
 ) -> dict[str, Path]:
+    contents = _report_contents(data, comparison=comparison, sensitive_details=sensitive_details)
+    paths = write_bundle(output_dir, contents, overwrite=overwrite)
+    return {
+        "json": paths["report.json"],
+        "html": paths["report.html"],
+        "manifest": paths["report.manifest.json"],
+    }
+
+
+def _report_contents(
+    data: JSONObject, *, comparison: bool, sensitive_details: bool
+) -> dict[str, str]:
     html = _render(data, sensitive_details)
     manifest = {
         "schema_version": "1.0",
@@ -196,13 +208,50 @@ def _write_projected_report(
         "artifacts": ["report.json", "report.html"],
         "operational_records_included": False,
     }
-    contents = {
+    return {
         "report.json": canonical_json(data) + "\n",
         "report.html": html,
         "report.manifest.json": canonical_json(manifest) + "\n",
     }
+
+
+def write_evaluation(
+    result: EvaluationResult,
+    *,
+    config: AuditConfig,
+    output_dir: str | Path,
+    sensitive_details: bool = False,
+    overwrite: bool = False,
+) -> dict[str, Path]:
+    """Explicitly write a sensitive private result alongside separately projected reports.
+
+    All named artifacts share one overwrite/rollback boundary. No fitted model,
+    executable code or individual prediction table is serialized. The manifest
+    describes the public report pair; the separate sensitivity notice identifies
+    the private operational file.
+    """
+    if not isinstance(result, EvaluationResult) or type(sensitive_details) is not bool:
+        raise InputValidationError("Supply an EvaluationResult and explicit sensitivity boolean.")
+    sensitive = sensitive_details or config.report.sensitive_details
+    data = result.to_dict(
+        sensitive_details=sensitive, small_cell_threshold=config.report.small_cell_threshold
+    )
+    contents = _report_contents(data, comparison=False, sensitive_details=sensitive)
+    contents["evaluation.private.json"] = canonical_json(result.to_operational_dict()) + "\n"
+    contents["README.SENSITIVE.txt"] = (
+        "SENSITIVE LOCAL RESEARCH RECORD\n"
+        "evaluation.private.json contains observation memberships, fit IDs, digests "
+        "and complete metrics.\n"
+        "It is not a public-sharing artifact. Protect this file and review "
+        "authorization before sharing.\n"
+        "report.json and report.html are separately projected; "
+        "explicit sensitive details may expose more.\n"
+        "No fitted model or participant prediction table is included.\n"
+    )
     paths = write_bundle(output_dir, contents, overwrite=overwrite)
     return {
+        "private": paths["evaluation.private.json"],
+        "notice": paths["README.SENSITIVE.txt"],
         "json": paths["report.json"],
         "html": paths["report.html"],
         "manifest": paths["report.manifest.json"],

@@ -1,0 +1,29 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "src/neurocvguard/_inner_plans.py",
+    "src/neurocvguard/_tuning.py",
+    "src/neurocvguard/_evaluation_inputs.py",
+    "src/neurocvguard/_evaluation_fits.py",
+    "src/neurocvguard/evaluation.py",
+    "tests/test_inner_plans.py",
+    "tests/test_nested_candidates.py",
+    "tests/test_nested_runner.py",
+    "tests/test_nested_cli.py",
+    "tests/test_evaluation_preflight.py",
+    "qa/evidence/S11"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T13:41:05.325709+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "10 files reformatted, 5 files left unchanged\n",
+  "stderr": ""
+}

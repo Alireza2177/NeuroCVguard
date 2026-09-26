@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv-install/Scripts/python.exe",
+    "-m",
+    "pip",
+    "list",
+    "--format=json"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T13:43:24.629074+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "[{\"name\": \"attrs\", \"version\": \"26.1.0\"}, {\"name\": \"cloudpickle\", \"version\": \"3.1.2\"}, {\"name\": \"hatchling\", \"version\": \"1.32.4\"}, {\"name\": \"Jinja2\", \"version\": \"3.1.6\"}, {\"name\": \"joblib\", \"version\": \"1.6.0\"}, {\"name\": \"jsonschema\", \"version\": \"4.26.0\"}, {\"name\": \"jsonschema-specifications\", \"version\": \"2025.9.1\"}, {\"name\": \"MarkupSafe\", \"version\": \"3.0.3\"}, {\"name\": \"narwhals\", \"version\": \"2.26.0\"}, {\"name\": \"neurocvguard\", \"version\": \"0.1.0\"}, {\"name\": \"numpy\", \"version\": \"2.5.3\"}, {\"name\": \"packaging\", \"version\": \"26.3\"}, {\"name\": \"pandas\", \"version\": \"3.0.5\"}, {\"name\": \"pathspec\", \"version\": \"1.1.1\"}, {\"name\": \"pip\", \"version\": \"24.0\"}, {\"name\": \"pluggy\", \"version\": \"1.6.0\"}, {\"name\": \"python-dateutil\", \"version\": \"2.9.0.post0\"}, {\"name\": \"referencing\", \"version\": \"0.37.0\"}, {\"name\": \"rpds-py\", \"version\": \"2026.6.3\"}, {\"name\": \"scikit-learn\", \"version\": \"1.9.1\"}, {\"name\": \"scipy\", \"version\": \"1.18.1\"}, {\"name\": \"six\", \"version\": \"1.17.0\"}, {\"name\": \"threadpoolctl\", \"version\": \"3.6.0\"}, {\"name\": \"tomlkit\", \"version\": \"0.15.1\"}, {\"name\": \"trove-classifiers\", \"version\": \"2026.9.21.13\"}, {\"name\": \"typing_extensions\", \"version\": \"4.16.0\"}, {\"name\": \"tzdata\", \"version\": \"2026.4\"}]\n",
+  "stderr": ""
+}

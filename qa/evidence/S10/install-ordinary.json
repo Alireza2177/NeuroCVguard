@@ -1,0 +1,19 @@
+{
+  "command": [
+    ".venv-install/Scripts/python.exe",
+    "-m",
+    "pip",
+    "install",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T11:17:03.317589+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "Processing <PROJECT_ROOT>\n  Installing build dependencies: started\n  Installing build dependencies: finished with status 'error'\n",
+  "stderr": "  error: subprocess-exited-with-error\n  \n  \u00d7 pip subprocess to install build dependencies did not run successfully.\n  \u2502 exit code: 1\n  \u2570\u2500> [2 lines of output]\n      ERROR: Could not find a version that satisfies the requirement hatchling (from versions: none)\n      ERROR: No matching distribution found for hatchling\n      [end of output]\n  \n  note: This error originates from a subprocess, and is likely not a problem with pip.\nerror: subprocess-exited-with-error\n\n\u00d7 pip subprocess to install build dependencies did not run successfully.\n\u2502 exit code: 1\n\u2570\u2500> See above for output.\n\nnote: This error originates from a subprocess, and is likely not a problem with pip.\n"
+}

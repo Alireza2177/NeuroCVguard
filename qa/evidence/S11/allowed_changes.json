@@ -1,0 +1,18 @@
+[
+  "AI_ASSISTANCE.md",
+  "README.md",
+  "docs/cli.md",
+  "docs/evaluation.md",
+  "src/neurocvguard/__init__.py",
+  "src/neurocvguard/_evaluation_inputs.py",
+  "src/neurocvguard/_evaluation_fits.py",
+  "src/neurocvguard/_projection.py",
+  "src/neurocvguard/evaluation.py",
+  "src/neurocvguard/cli.py",
+  "src/neurocvguard/splitting.py",
+  "tests/test_evaluation_preflight.py",
+  "state/PROJECT_STATUS.json",
+  "qa/acceptance_cases.json",
+  "qa/requirements.json",
+  "qa/case_to_test_map.json"
+]

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "qa/evidence/S10/close_stage.py",
+    "verify"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T11:26:32.364817+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "{\n  \"retained\": 595,\n  \"unchanged\": 576,\n  \"changed\": [\n    \"AI_ASSISTANCE.md\",\n    \"NeuroCVguard_MASTER_SPEC.md\",\n    \"NeuroCVguard_READABLE.html\",\n    \"README.md\",\n    \"contracts/evaluation-result.schema.json\",\n    \"docs/cli.md\",\n    \"qa/acceptance_cases.json\",\n    \"qa/case_to_test_map.json\",\n    \"qa/requirements.json\",\n    \"spec/20_contract_clarifications.md\",\n    \"src/neurocvguard/__init__.py\",\n    \"src/neurocvguard/_projection.py\",\n    \"src/neurocvguard/cli.py\",\n    \"src/neurocvguard/models.py\",\n    \"src/neurocvguard/reporting.py\",\n    \"src/neurocvguard/rules.py\",\n    \"src/neurocvguard/schemas/evaluation-result.schema.json\",\n    \"state/PROJECT_STATUS.json\",\n    \"tests/test_cli_commands.py\"\n  ],\n  \"other_stage_status_and_normative_definitions_preserved\": true\n}\n",
+  "stderr": ""
+}

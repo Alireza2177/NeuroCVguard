@@ -1,0 +1,22 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "tests/test_inner_plans.py",
+    "tests/test_evaluation_preflight.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T13:31:42.407714+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "...F.................                                                    [100%]\n================================== FAILURES ===================================\n_________ test_at_s11_07_infeasible_inner_count_fails_without_fitting _________\n\nmonkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000024677B18E50>\n\n    def test_at_s11_07_infeasible_inner_count_fails_without_fitting(monkeypatch):\n        cohort, plan, config = tuning_inputs()\n>       config = replace(config, evaluation=replace(config.evaluation, inner_splits=50))\n                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntests\\test_inner_plans.py:61: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\..\\anaconda3\\Lib\\dataclasses.py:1501: in replace\n    return obj.__class__(**changes)\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n<string>:11: in __init__\n    ???\nsrc\\neurocvguard\\_records.py:54: in __post_init__\n    data = self._validated(_json_value(self, allow_records=True))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ncls = <class 'neurocvguard.config.EvaluationConfig'>\nvalue = {'feature_columns': ['feature_1', 'feature_2'], 'tune': True, 'C': 1.0, 'C_grid': [0.1, 1.0, 10.0], ...}\n\n    @classmethod\n    def _validated(cls, value: object) -> JSONObject:\n        try:\n            return validate_document(cls._schema_name, value, path=cls._schema_path)\n        except InputValidationError as error:\n>           raise cls._error_type(str(error)) from None\nE           neurocvguard.errors.ConfigurationError: Invalid inner_splits: contract constraint maximum; correct this field.\n\nsrc\\neurocvguard\\_records.py:70: ConfigurationError\n=========================== short test summary info ===========================\nFAILED tests/test_inner_plans.py::test_at_s11_07_infeasible_inner_count_fails_without_fitting\n1 failed, 20 passed in 45.63s\n",
+  "stderr": ""
+}

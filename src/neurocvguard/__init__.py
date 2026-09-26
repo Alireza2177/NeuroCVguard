@@ -20,6 +20,13 @@ if TYPE_CHECKING:
 __version__ = "0.1.0"
 
 
+def evaluate_baseline(cohort: Cohort, plan: SplitPlan, *, config: AuditConfig) -> EvaluationResult:
+    """Run classification with optional nested C selection; see evaluation.evaluate_baseline."""
+    from neurocvguard.evaluation import evaluate_baseline as evaluate
+
+    return evaluate(cohort, plan, config=config)
+
+
 def load_config(path: str | Path) -> AuditConfig:
     """Read strict local JSON settings; see neurocvguard.config.load_config."""
     from neurocvguard.config import load_config as load

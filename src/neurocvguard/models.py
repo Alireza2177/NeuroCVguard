@@ -420,6 +420,7 @@ class EvaluationResult(Record):
 
     _schema_name: ClassVar[str] = "evaluation-result"
     _error_type = EvaluationError
+    _omit_none: ClassVar[tuple[str, ...]] = ("plan_digest", "actual_plan")
     format: str
     schema_version: str
     tool_version: str
@@ -442,8 +443,42 @@ class EvaluationResult(Record):
     preflight_checks: tuple[CheckResult, ...]
     limitations: tuple[str, ...]
     provenance: Mapping[str, FrozenJSONValue]
+    plan_digest: str | None = None
+    actual_plan: SplitPlan | None = None
 
     def _validate_semantics(self) -> None:
+        if (self.plan_digest is None) != (self.actual_plan is None):
+            raise EvaluationError("plan_digest and actual_plan must be provided together.")
+        if self.actual_plan is not None:
+            plan = self.actual_plan
+            if self.plan_digest != json_digest(plan.to_operational_dict()):
+                raise EvaluationError("plan_digest does not match actual_plan.")
+            if plan.cohort_digest != self.cohort_digest or plan.objective != self.objective:
+                raise EvaluationError("Retained plan must match the cohort digest and objective.")
+            memberships = {(fold.repeat_id, fold.fold_id): fold for fold in plan.folds}
+            if set(memberships) != {(fold.repeat_id, fold.fold_id) for fold in self.folds}:
+                raise EvaluationError("Evaluation folds must match the retained plan.")
+            for event in self.fit_events:
+                outer = memberships.get((event.repeat_id, event.fold_id))
+                if outer is None:
+                    raise EvaluationError("Fit event references an unknown retained fold.")
+                allowed = outer.train_ids
+                if event.inner_fold_id is not None:
+                    inner = next(
+                        (
+                            fold
+                            for fold in outer.inner_folds or ()
+                            if fold.inner_fold_id == event.inner_fold_id
+                        ),
+                        None,
+                    )
+                    if inner is None:
+                        raise EvaluationError(
+                            "Fit event references an unknown retained inner fold."
+                        )
+                    allowed = inner.train_ids
+                if not set(event.fit_ids) <= set(allowed):
+                    raise EvaluationError("Fit event escapes its retained training boundary.")
         if self.positive_class is not None and self.positive_class not in self.class_order:
             raise EvaluationError("positive_class must belong to class_order.")
         pairs = [(fold.repeat_id, fold.fold_id) for fold in self.folds]

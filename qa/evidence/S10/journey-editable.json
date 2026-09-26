@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-I",
+    "qa/evidence/S10/run_evaluation.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T11:13:38.261261+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<PROJECT_ROOT>\\qa\\evidence\\S10\\run_evaluation.py\", line 55, in <module>\n    run([\"report\", \"--input\", \"module/report.json\", \"--out\", \"render\"])\n  File \"<PROJECT_ROOT>\\qa\\evidence\\S10\\run_evaluation.py\", line 38, in run\n    assert result.returncode == expected, transcript[\"commands\"][-1]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: {'entry': 'module', 'args': ['report', '--input', 'module/report.json', '--out', 'render'], 'exit_code': 2, 'stdout': '', 'stderr': 'INFO: Reading compatible report JSON; no audit or statistics will run.\\nERROR: Input or output validation failed. Check compatible schema 1.0, local formats, string keys, selected columns, resource limits and existing outputs; use a new destination or explicit --overwrite. Report accepts exported report JSON, not private evaluation records.\\n'}\n"
+}

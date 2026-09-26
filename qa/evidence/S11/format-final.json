@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "--check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T13:43:28.044332+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "unformatted: File would be reformatted\n  --> docs\\evaluation.md:75:18\n   |\n74 |\n   - config = replace(config, evaluation=replace(\n   -     config.evaluation, tune=True, C_grid=(0.1, 1.0, 10.0), inner_splits=3\n   - ))\n75 + config = replace(\n76 +     config,\n77 +     evaluation=replace(config.evaluation, tune=True, C_grid=(0.1, 1.0, 10.0), inner_splits=3),\n78 + )\n79 | result = evaluate_baseline(cohort, plan, config=config)\n   |\n\nunformatted: File would be reformatted\n  --> src\\neurocvguard\\__init__.py:24:97\n   |\n23 | def evaluate_baseline(cohort: Cohort, plan: SplitPlan, *, config: AuditConfig) -> EvaluationResult:\n   -     \"\"\"Run classification with optional nested C selection; see evaluation.evaluate_baseline.\"\"\"\n24 +     \"\"\"Run classification with optional nested C selection; see evaluation.evaluate_baseline.\"\"\"\n25 |     from neurocvguard.evaluation import evaluate_baseline as evaluate\n   |\n\nunformatted: File would be reformatted\n  --> src\\neurocvguard\\_projection.py:49:28\n   |\n48 | _SENSITIVE = \"Sensitive research output: do not publish without review.\"\n   - _EVALUATION_LIMITATIONS = (\n   -     \"When tuning is enabled, inner selection uses pooled participant balanced accuracy and \"\n   -     \"protects participants/components; it does not claim held-out-site or held-out-phase \"\n   -     \"inner evaluation. Scores within 1e-12 of the maximum tie; smallest C wins.\",\n49 + _EVALUATION_LIMITATIONS = (\n50 +     \"When tuning is enabled, inner selection uses pooled participant balanced accuracy and \"\n51 +     \"protects participants/components; it does not claim held-out-site or held-out-phase \"\n52 +     \"inner evaluation. Scores within 1e-12 of the maximum tie; smallest C wins.\",\n53 |     \"Research baseline only; no clinical validity or inferential confidence interval.\",\n   |\n\nunformatted: File would be reformatted\n  --> src\\neurocvguard\\cli.py:64:92\n   |\n63 |         \"evaluate\": (\n   -             \"Run participant classification with train-only fitting and optional nested C \"\n   -             \"selection. Writes a sensitive private result and separate research reports.\"\n64 +             \"Run participant classification with train-only fitting and optional nested C \"\n65 +             \"selection. Writes a sensitive private result and separate research reports.\"\n66 |         ),\n   |\n\nunformatted: File would be reformatted\n   --> src\\neurocvguard\\splitting.py:424:83\n    |\n423 |         raise UnsupportedDesignError(\n    -             \"make_splits generates outer folds only. Request outer planning with \"\n    -             \"evaluation.tune=false; evaluate_baseline can derive inner folds with tune=true.\"\n424 +             \"make_splits generates outer folds only. Request outer planning with \"\n425 +             \"evaluation.tune=false; evaluate_baseline can derive inner folds with tune=true.\"\n426 |         )\n    |\n\n5 files would be reformatted, 225 files already formatted\n",
+  "stderr": ""
+}

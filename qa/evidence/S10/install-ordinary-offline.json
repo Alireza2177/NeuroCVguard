@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv-install/Scripts/python.exe",
+    "-m",
+    "pip",
+    "install",
+    "--no-build-isolation",
+    "--no-deps",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T11:23:30.621596+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "Processing <PROJECT_ROOT>\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: neurocvguard\n  Building wheel for neurocvguard (pyproject.toml): started\n  Building wheel for neurocvguard (pyproject.toml): finished with status 'done'\n  Created wheel for neurocvguard: filename=neurocvguard-0.1.0-py3-none-any.whl size=112340 sha256=c984b8f99a899af10ab80aff211f6dd324480c54ee7ae3d75d8941e9ef7c158f\n  Stored in directory: <USER_HOME>\\AppData\\Local\\Temp\\pip-ephem-wheel-cache-sq62cbp6\\wheels\\96\\a5\\f5\\ad488d0d7c59dc1601afaee8876bf77257a541ad9f7d9b9e27\nSuccessfully built neurocvguard\nInstalling collected packages: neurocvguard\n  Attempting uninstall: neurocvguard\n    Found existing installation: neurocvguard 0.1.0\n    Uninstalling neurocvguard-0.1.0:\n      Successfully uninstalled neurocvguard-0.1.0\nSuccessfully installed neurocvguard-0.1.0\n",
+  "stderr": ""
+}
