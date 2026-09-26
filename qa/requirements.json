@@ -262,7 +262,7 @@
       "AT-S13-06",
       "AT-S13-07"
     ],
-    "status": "NOT_IMPLEMENTED"
+    "status": "IMPLEMENTED"
   },
   {
     "id": "REQ-S14",

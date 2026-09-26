@@ -2373,6 +2373,126 @@
       "requirement_id": "REQ-S12",
       "execution_status": "PASSED",
       "human_accepted": false
+    },
+    {
+      "case_id": "AT-S13-01",
+      "test_node_ids": [
+        "tests/test_synthetic.py::test_at_s13_01_deterministic_shape_and_identity[clean]",
+        "tests/test_synthetic.py::test_at_s13_01_deterministic_shape_and_identity[repeated]",
+        "tests/test_synthetic.py::test_at_s13_01_deterministic_shape_and_identity[site_shift]"
+      ],
+      "evidence": [
+        "qa/evidence/S13/pytest-final.json",
+        "qa/evidence/S13/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S13",
+      "requirement_id": "REQ-S13",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S13-02",
+      "test_node_ids": [
+        "tests/test_demo.py::test_at_s13_02_complete_demo_preserves_rng",
+        "tests/test_synthetic.py::test_at_s13_02_rng_isolation"
+      ],
+      "evidence": [
+        "qa/evidence/S13/pytest-final.json",
+        "qa/evidence/S13/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S13",
+      "requirement_id": "REQ-S13",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S13-03",
+      "test_node_ids": [
+        "tests/test_synthetic.py::test_at_s13_03_strength_changes_only_additive_mechanism[signal_strength]",
+        "tests/test_synthetic.py::test_at_s13_03_strength_changes_only_additive_mechanism[participant_effect]",
+        "tests/test_synthetic.py::test_at_s13_03_strength_changes_only_additive_mechanism[site_effect]",
+        "tests/test_synthetic.py::test_at_s13_03_association_changes_sites_without_relabeling_or_noise"
+      ],
+      "evidence": [
+        "qa/evidence/S13/pytest-final.json",
+        "qa/evidence/S13/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S13",
+      "requirement_id": "REQ-S13",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S13-04",
+      "test_node_ids": [
+        "tests/test_demo.py::test_at_s13_04_offline_full_workflow_and_provenance[clean]",
+        "tests/test_demo.py::test_at_s13_04_offline_full_workflow_and_provenance[repeated]",
+        "tests/test_demo.py::test_at_s13_04_offline_full_workflow_and_provenance[site_shift]"
+      ],
+      "evidence": [
+        "qa/evidence/S13/pytest-final.json",
+        "qa/evidence/S13/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S13",
+      "requirement_id": "REQ-S13",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S13-05",
+      "test_node_ids": [
+        "tests/test_examples.py::test_at_s13_05_every_script_complete_with_no_hidden_inputs[01_cohort_audit]",
+        "tests/test_examples.py::test_at_s13_05_every_script_complete_with_no_hidden_inputs[02_repeated_observations]",
+        "tests/test_examples.py::test_at_s13_05_every_script_complete_with_no_hidden_inputs[03_site_held_out]",
+        "tests/test_examples.py::test_at_s13_05_every_script_complete_with_no_hidden_inputs[04_preprocessing_provenance]",
+        "tests/test_examples.py::test_at_s13_05_every_script_complete_with_no_hidden_inputs[05_explicit_feature_join]"
+      ],
+      "evidence": [
+        "qa/evidence/S13/pytest-final.json",
+        "qa/evidence/S13/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S13",
+      "requirement_id": "REQ-S13",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S13-06",
+      "test_node_ids": [
+        "tests/test_demo.py::test_at_s13_06_public_reports_label_synthetic_without_enabling_details[clean]",
+        "tests/test_demo.py::test_at_s13_06_public_reports_label_synthetic_without_enabling_details[repeated]",
+        "tests/test_demo.py::test_at_s13_06_public_reports_label_synthetic_without_enabling_details[site_shift]",
+        "tests/test_synthetic.py::test_at_s13_06_synthetic_labeling_and_no_alias_inputs"
+      ],
+      "evidence": [
+        "qa/evidence/S13/pytest-final.json",
+        "qa/evidence/S13/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S13",
+      "requirement_id": "REQ-S13",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S13-07",
+      "test_node_ids": [
+        "tests/test_demo.py::test_at_s13_07_displayed_values_are_actual_projected_results"
+      ],
+      "evidence": [
+        "qa/evidence/S13/pytest-final.json",
+        "qa/evidence/S13/pytest-final.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S13",
+      "requirement_id": "REQ-S13",
+      "execution_status": "PASSED",
+      "human_accepted": false
     }
   ]
 }

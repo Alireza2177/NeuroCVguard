@@ -1,0 +1,1 @@
+{"events":[{"data_dependent":true,"event_id":"synthetic-declared-global-pca","fit_ids":null,"fit_scope":"all_cohort","fold_id":null,"inner_fold_id":null,"note":"Fictitious declaration; no PCA actually fitted.","repeat_id":null,"transform":"PCA","uses_target":false}],"schema_version":"1.0","source":"user_declaration"}

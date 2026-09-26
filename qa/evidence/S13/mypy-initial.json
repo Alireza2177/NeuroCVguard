@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "mypy",
+    "src/neurocvguard"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T20:05:10.221042+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "src\\neurocvguard\\synthetic.py:111: error: Argument 2 to \"replace\" of \"SyntheticParameters\" has incompatible type \"**dict[str, int | float]\"; expected \"int\"  [arg-type]\nsrc\\neurocvguard\\demo.py:146: error: Argument \"ledger\" to \"audit_workflow\" has incompatible type \"dict[str, JSONValue]\"; expected \"dict[str, object] | None\"  [arg-type]\nsrc\\neurocvguard\\demo.py:146: note: \"dict\" is invariant -- see https://mypy.readthedocs.io/en/stable/common_issues.html#variance\nsrc\\neurocvguard\\demo.py:146: note: Consider using \"Mapping\" instead, which is covariant in the value type\nsrc\\neurocvguard\\cli.py:397: error: Incompatible types in assignment (expression has type \"AuditReport\", variable has type \"DemoRun\")  [assignment]\nsrc\\neurocvguard\\cli.py:402: error: Argument 1 to \"write_configured_report\" has incompatible type \"DemoRun\"; expected \"AuditReport | EvaluationResult | ComparisonResult\"  [arg-type]\nsrc\\neurocvguard\\cli.py:410: error: \"DemoRun\" has no attribute \"checks\"  [attr-defined]\nsrc\\neurocvguard\\cli.py:414: error: \"str\" has no attribute \"value\"  [attr-defined]\nsrc\\neurocvguard\\cli.py:425: error: \"DemoRun\" has no attribute \"checks\"  [attr-defined]\nFound 7 errors in 3 files (checked 38 source files)\n",
+  "stderr": ""
+}

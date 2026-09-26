@@ -41,9 +41,13 @@ def _parser() -> argparse.ArgumentParser:
         help="Show sanitized stack locations on internal failures (place before command).",
     )
     commands = parser.add_subparsers(
-        dest="command", metavar="{init,validate,audit,split,evaluate,compare,report}"
+        dest="command", metavar="{init,validate,audit,split,evaluate,compare,report,demo}"
     )
     descriptions = {
+        "demo": (
+            "Run a fully synthetic offline workflow; no patient data or downloads. "
+            "Default clean is participant-disjoint; repeated opts into an invalid diagnostic."
+        ),
         "init": "Write an editable strict JSON starter. No columns are inferred.",
         "validate": (
             "Validate local inputs and inspect scoped findings; "
@@ -70,6 +74,7 @@ def _parser() -> argparse.ArgumentParser:
         ),
     }
     examples = {
+        "demo": "demo --out local_outputs/demo --scenario clean",
         "init": "init --out config.json",
         "validate": "validate --cohort cohort.tsv --config config.json",
         "audit": "audit --cohort cohort.tsv --config config.json --out local_outputs/audit",
@@ -138,6 +143,13 @@ def _parser() -> argparse.ArgumentParser:
                 metavar="NAME=PATH",
                 help="Repeat for distinct design names and private operational JSON records.",
             )
+        if name == "demo":
+            command.add_argument(
+                "--scenario",
+                choices=("clean", "repeated", "site_shift"),
+                default="clean",
+                help="Documented fixed-seed scenario; no performance-based seed search.",
+            )
         command.add_argument(
             "--out",
             required=name != "validate",
@@ -146,7 +158,7 @@ def _parser() -> argparse.ArgumentParser:
         command.add_argument(
             "--overwrite", action="store_true", help="Explicitly replace named outputs only."
         )
-        if name in {"validate", "audit", "report", "evaluate", "compare"}:
+        if name in {"validate", "audit", "report", "evaluate", "compare", "demo"}:
             command.add_argument(
                 "--sensitive-details",
                 action="store_true",
@@ -242,6 +254,32 @@ def _run(args: argparse.Namespace, log: logging.Logger) -> int:
         )
         _paths({"config": paths[destination.name]})
         return 0
+    if args.command == "demo":
+        from neurocvguard.demo import run_demo
+        from neurocvguard.synthetic import SYNTHETIC_NOTICE
+
+        log.warning(SYNTHETIC_NOTICE)
+        log.warning("Operational plans, evaluations and demo.private.json are separately private.")
+        if args.scenario == "repeated":
+            log.warning(
+                "Diagnostic only; valid_for_objective=false. Do not report as evidence "
+                "for unseen-participant generalization."
+            )
+        if args.sensitive_details:
+            log.warning("Sensitive details explicitly requested for generated fictitious data.")
+        demo_result = run_demo(
+            output_dir=args.out,
+            scenario=args.scenario,
+            overwrite=args.overwrite,
+            sensitive_details=args.sensitive_details,
+            command=args.invocation,
+        )
+        print(
+            f"demo: synthetic=true; scenario={args.scenario}; "
+            f"execution={demo_result.execution_status}"
+        )
+        print("Open report.html in the requested output directory; provenance: demo.private.json.")
+        return 0 if demo_result.execution_status == "completed" else 4
     if args.command == "report":
         log.info("Reading compatible report JSON; no audit or statistics will run.")
         rendered_record = _report_input(args.input)
@@ -414,6 +452,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     """
     parser = _parser()
     args = parser.parse_args(argv)
+    args.invocation = tuple(sys.orig_argv) if argv is None else ("neurocvguard", *argv)
     if args.command is None:
         parser.print_help()
         print("Choose a subcommand; use --help for supported workflows.", file=sys.stderr)

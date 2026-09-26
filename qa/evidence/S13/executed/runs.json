@@ -1,0 +1,286 @@
+[
+  {
+    "name": "01_cohort_audit",
+    "exit_code": 0,
+    "actual_metrics": {
+      "participant.evaluation.private.json": {
+        "objective": "unseen_participant",
+        "diagnostic_only": false,
+        "execution_status": "completed",
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0
+      }
+    },
+    "parameters": {
+      "n_classes": 2,
+      "n_features": 8,
+      "n_participants": 60,
+      "n_sites": 3,
+      "observations_per_participant": 2,
+      "participant_effect": 0.5,
+      "seed": 2026,
+      "signal_strength": 1.0,
+      "site_effect": 0.0,
+      "site_target_association": 0.0
+    },
+    "versions": {
+      "neurocvguard": "0.1.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "python": "3.11.7",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1"
+    }
+  },
+  {
+    "name": "02_repeated_observations",
+    "exit_code": 0,
+    "actual_metrics": {
+      "observation-diagnostic.evaluation.private.json": {
+        "objective": "unseen_participant",
+        "diagnostic_only": true,
+        "execution_status": "completed",
+        "accuracy": 0.85,
+        "balanced_accuracy": 0.8500000000000001
+      },
+      "participant.evaluation.private.json": {
+        "objective": "unseen_participant",
+        "diagnostic_only": false,
+        "execution_status": "completed",
+        "accuracy": 0.8833333333333333,
+        "balanced_accuracy": 0.8833333333333333
+      }
+    },
+    "parameters": {
+      "n_classes": 2,
+      "n_features": 8,
+      "n_participants": 60,
+      "n_sites": 3,
+      "observations_per_participant": 2,
+      "participant_effect": 3.0,
+      "seed": 2026,
+      "signal_strength": 1.0,
+      "site_effect": 0.0,
+      "site_target_association": 0.0
+    },
+    "versions": {
+      "neurocvguard": "0.1.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "python": "3.11.7",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1"
+    }
+  },
+  {
+    "name": "03_site_held_out",
+    "exit_code": 0,
+    "actual_metrics": {
+      "participant.evaluation.private.json": {
+        "objective": "unseen_participant",
+        "diagnostic_only": false,
+        "execution_status": "completed",
+        "accuracy": 0.9833333333333333,
+        "balanced_accuracy": 0.9833333333333334
+      },
+      "site-held-out.evaluation.private.json": {
+        "objective": "unseen_site",
+        "diagnostic_only": false,
+        "execution_status": "completed",
+        "accuracy": 0.3,
+        "balanced_accuracy": 0.30000000000000004
+      }
+    },
+    "parameters": {
+      "n_classes": 2,
+      "n_features": 8,
+      "n_participants": 60,
+      "n_sites": 3,
+      "observations_per_participant": 2,
+      "participant_effect": 0.5,
+      "seed": 2026,
+      "signal_strength": 1.0,
+      "site_effect": 2.0,
+      "site_target_association": 1.0
+    },
+    "versions": {
+      "neurocvguard": "0.1.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "python": "3.11.7",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1"
+    }
+  },
+  {
+    "name": "04_preprocessing_provenance",
+    "exit_code": 0,
+    "actual_metrics": {},
+    "parameters": {
+      "n_classes": 2,
+      "n_features": 8,
+      "n_participants": 60,
+      "n_sites": 3,
+      "observations_per_participant": 2,
+      "participant_effect": 0.5,
+      "seed": 2026,
+      "signal_strength": 1.0,
+      "site_effect": 0.0,
+      "site_target_association": 0.0
+    },
+    "versions": {
+      "neurocvguard": "0.1.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "python": "3.11.7",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1"
+    }
+  },
+  {
+    "name": "05_explicit_feature_join",
+    "exit_code": 0,
+    "actual_metrics": {
+      "participant.evaluation.private.json": {
+        "objective": "unseen_participant",
+        "diagnostic_only": false,
+        "execution_status": "completed",
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0
+      }
+    },
+    "parameters": {
+      "n_classes": 2,
+      "n_features": 8,
+      "n_participants": 60,
+      "n_sites": 3,
+      "observations_per_participant": 2,
+      "participant_effect": 0.5,
+      "seed": 2026,
+      "signal_strength": 1.0,
+      "site_effect": 0.0,
+      "site_target_association": 0.0
+    },
+    "versions": {
+      "neurocvguard": "0.1.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "python": "3.11.7",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1"
+    }
+  },
+  {
+    "name": "demo-clean",
+    "exit_code": 0,
+    "actual_metrics": {
+      "participant.evaluation.private.json": {
+        "objective": "unseen_participant",
+        "diagnostic_only": false,
+        "execution_status": "completed",
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0
+      }
+    },
+    "parameters": {
+      "n_classes": 2,
+      "n_features": 8,
+      "n_participants": 60,
+      "n_sites": 3,
+      "observations_per_participant": 2,
+      "participant_effect": 0.5,
+      "seed": 2026,
+      "signal_strength": 1.0,
+      "site_effect": 0.0,
+      "site_target_association": 0.0
+    },
+    "versions": {
+      "neurocvguard": "0.1.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "python": "3.11.7",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1"
+    }
+  },
+  {
+    "name": "demo-repeated",
+    "exit_code": 0,
+    "actual_metrics": {
+      "observation-diagnostic.evaluation.private.json": {
+        "objective": "unseen_participant",
+        "diagnostic_only": true,
+        "execution_status": "completed",
+        "accuracy": 0.85,
+        "balanced_accuracy": 0.8500000000000001
+      },
+      "participant.evaluation.private.json": {
+        "objective": "unseen_participant",
+        "diagnostic_only": false,
+        "execution_status": "completed",
+        "accuracy": 0.8833333333333333,
+        "balanced_accuracy": 0.8833333333333333
+      }
+    },
+    "parameters": {
+      "n_classes": 2,
+      "n_features": 8,
+      "n_participants": 60,
+      "n_sites": 3,
+      "observations_per_participant": 2,
+      "participant_effect": 3.0,
+      "seed": 2026,
+      "signal_strength": 1.0,
+      "site_effect": 0.0,
+      "site_target_association": 0.0
+    },
+    "versions": {
+      "neurocvguard": "0.1.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "python": "3.11.7",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1"
+    }
+  },
+  {
+    "name": "demo-site_shift",
+    "exit_code": 0,
+    "actual_metrics": {
+      "participant.evaluation.private.json": {
+        "objective": "unseen_participant",
+        "diagnostic_only": false,
+        "execution_status": "completed",
+        "accuracy": 0.9833333333333333,
+        "balanced_accuracy": 0.9833333333333334
+      },
+      "site-held-out.evaluation.private.json": {
+        "objective": "unseen_site",
+        "diagnostic_only": false,
+        "execution_status": "completed",
+        "accuracy": 0.7,
+        "balanced_accuracy": 0.7
+      }
+    },
+    "parameters": {
+      "n_classes": 2,
+      "n_features": 8,
+      "n_participants": 60,
+      "n_sites": 3,
+      "observations_per_participant": 2,
+      "participant_effect": 0.5,
+      "seed": 2026,
+      "signal_strength": 1.0,
+      "site_effect": 2.0,
+      "site_target_association": 0.8
+    },
+    "versions": {
+      "neurocvguard": "0.1.0",
+      "numpy": "2.4.6",
+      "pandas": "3.0.5",
+      "python": "3.11.7",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.17.1"
+    }
+  }
+]

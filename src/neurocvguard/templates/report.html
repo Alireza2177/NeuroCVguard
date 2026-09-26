@@ -14,6 +14,9 @@
 <header>
 <p class="eyebrow">NeuroCVguard · Local research report</p>
 <h1>Scope, findings and assessment coverage</h1>
+{% if synthetic_notice in report.get('limitations', []) %}
+<div class="notice"><strong>Fully synthetic demonstration — no patient data</strong><p>Fictitious tabular mechanisms, not biologically realistic brain models or clinical results. This label does not authenticate imported provenance or enable sensitive details.</p></div>
+{% endif %}
 <p>Research support only. Technical completion does not establish scientific validity.</p>
 {% if (evaluation and evaluation.diagnostic_only) or (comparison and (comparison.designs | selectattr('diagnostic_only') | list)) %}
 <div class="notice"><strong>Diagnostic only · valid_for_objective=false</strong>

@@ -1,0 +1,1132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'none'; base-uri 'none'; form-action 'none'">
+<title>NeuroCVguard — research report</title>
+<style>:root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #182c3c; background: #f3f5f6; }
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.6; }
+header, main, footer { max-width: 1120px; margin: auto; padding: 24px 32px; }
+header { border-top: 7px solid #25566c; background: #fff; }
+.eyebrow { color: #52616c; text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; }
+h1 { margin: 8px 0; font-size: 2.15rem; line-height: 1.2; }
+h2 { font-size: 1.45rem; border-bottom: 1px solid #cfdae0; padding-bottom: 8px; }
+h3 { font-size: 1rem; margin: 0 0 8px; }
+a { color: #164f75; text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid #955900; outline-offset: 4px; }
+.skip { position: absolute; left: -10000px; }
+.skip:focus { position: static; padding: 12px; }
+nav ul { display: flex; flex-wrap: wrap; gap: 8px 24px; padding-left: 20px; }
+section { margin-bottom: 30px; scroll-margin-top: 16px; }
+.notice { background: #fff3d9; border-left: 5px solid #916000; padding: 16px 20px; margin: 16px 0; }
+.sensitive { background: #fbe5e5; border-color: #962c2c; }
+.card { background: #fff; padding: 18px 20px; border: 1px solid #d5dfe4; border-radius: 6px; margin: 12px 0; overflow-wrap: anywhere; }
+.labels { display: flex; flex-wrap: wrap; gap: 8px; font-size: .85rem; margin: 8px 0; }
+.label { border: 1px solid #c8d4db; border-radius: 3px; padding: 1px 8px; background: #edf2f5; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; background: #fff; font-size: .92rem; }
+caption { text-align: left; font-weight: 600; margin: 10px 0; }
+th, td { text-align: left; vertical-align: top; padding: 10px 12px; border: 1px solid #d5dfe4; }
+th { background: #eaf0f3; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .82rem; background: #f6f8f9; padding: 12px; }
+.muted { color: #4f626e; }
+footer { border-top: 1px solid #c8d4db; font-size: .85rem; }
+@media (max-width: 650px) { header, main, footer { padding: 18px; } h1 { font-size: 1.7rem; } th, td { padding: 7px; } }
+@media print { :root { background: #fff; } header, main, footer { max-width: none; padding: 10px 0; } nav, .skip { display: none; } h2, h3 { break-after: avoid; } .card, tr { break-inside: avoid; } .table-wrap { overflow: visible; } a { color: inherit; } }</style>
+</head>
+<body>
+
+
+<a class="skip" href="#main">Skip to report</a>
+<header>
+<p class="eyebrow">NeuroCVguard · Local research report</p>
+<h1>Scope, findings and assessment coverage</h1>
+
+<div class="notice"><strong>Fully synthetic demonstration — no patient data</strong><p>Fictitious tabular mechanisms, not biologically realistic brain models or clinical results. This label does not authenticate imported provenance or enable sensitive details.</p></div>
+
+<p>Research support only. Technical completion does not establish scientific validity.</p>
+
+<div class="notice sensitive"><strong>Sensitive research output: do not publish without review.</strong><p>Explicit detailed export. Identifiers, labels and local evidence may be included.</p></div>
+
+<nav aria-label="Report contents"><ul>
+
+<li><a href="#scope">Scope</a></li>
+<li><a href="#coverage">Coverage</a></li>
+<li><a href="#findings">Findings</a></li>
+<li><a href="#cohort">Cohort</a></li>
+<li><a href="#partitions">Partitions</a></li>
+<li><a href="#associations">Associations</a></li>
+<li><a href="#results">Results</a></li>
+<li><a href="#provenance">Provenance</a></li>
+<li><a href="#limitations">Limitations</a></li>
+<li><a href="#actions">Next actions</a></li>
+<li><a href="#references">References</a></li>
+</ul></nav>
+</header>
+
+<main id="main">
+<section id="scope"><h2>1. Scope and objective</h2>
+<p><strong>Objective:</strong> unseen participant · <strong>Result:</strong> evaluation · <strong>Execution:</strong> partial</p>
+<p>Version 0.1.0 · Schema 1.0. No audit, model fit or statistic is recomputed during rendering.</p></section>
+<section id="coverage"><h2>2. Execution and coverage</h2>
+<div class="notice"><strong>Incomplete assessment coverage</strong><p>Unassessable checks or missing assessment context remain. No overall validity verdict is provided.</p></div>
+<table><caption>Coverage of supplied checks</caption><thead><tr><th scope="col">Pass</th><th scope="col">Fail</th><th scope="col">Not assessable</th><th scope="col">Not applicable</th></tr></thead><tbody><tr><td>29</td><td>0</td><td>3</td><td>3</td></tr></tbody></table>
+
+
+<article class="card">
+<h3>NCG-COHORT-003</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">info</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: phase</p>
+<p>Input coverage for this cohort check is incomplete; inspect the field coverage.</p><p><strong>Next action:</strong> Preserve cross-domain identities; assess the requested held-out-domain plan separately.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;varying_participants&#34;: 0,
+  &#34;coverage_complete&#34;: false
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-005</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: phase</p>
+<p>A metadata-dependent check has incomplete coverage; absent values were not inferred.</p><p><strong>Next action:</strong> Supply the explicitly mapped metadata or retain incomplete assessment coverage.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;column&#34;: null,
+  &#34;available&#34;: false,
+  &#34;missing_observations&#34;: 120,
+  &#34;invalid_observations&#34;: 0
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-PROV-001</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">component: upstream_preprocessing</p>
+<p>Upstream preprocessing remains unassessable; declarations do not verify execution.</p><p><strong>Next action:</strong> Document the source, overlap and fitting scope of upstream transformations. A controlled Pipeline cannot repair earlier global fitting.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;reason&#34;: &#34;upstream_execution_unverified&#34;,
+  &#34;ledger_supplied&#34;: false,
+  &#34;upstream_preprocessing_verified&#34;: false
+}</pre>
+
+</article>
+
+</section>
+<section id="findings"><h2>3. Actionable findings</h2>
+<p>No triggered findings in the supplied record. Review incomplete coverage before drawing conclusions.</p></section>
+<section id="cohort"><h2>4. Cohort and missingness</h2>
+<p>120 observations · 60 participants</p>
+<p><strong>Supplied roles:</strong> observation_id, session, site, subject_id, target</p><p><strong>Missing/incomplete roles:</strong> phase</p>
+
+<article class="card">
+<h3>NCG-COHORT-001</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">field: subject_id</p>
+<p>This cohort has repeated participant observations; evaluate separation in the actual splits.</p><p><strong>Next action:</strong> Evaluate participant separation in the actual supplied splits.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;repeated_participants&#34;: 60,
+  &#34;n_observations&#34;: 120,
+  &#34;n_participants&#34;: 60,
+  &#34;input_summary&#34;: {
+    &#34;n_observations&#34;: 120,
+    &#34;n_participants&#34;: 60,
+    &#34;supplied_roles&#34;: [
+      &#34;observation_id&#34;,
+      &#34;session&#34;,
+      &#34;site&#34;,
+      &#34;subject_id&#34;,
+      &#34;target&#34;
+    ],
+    &#34;missing_roles&#34;: [
+      &#34;phase&#34;
+    ]
+  }
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-002</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">field: target</p>
+<p>Targets are constant within participants in the supplied cohort.</p><p><strong>Next action:</strong> For the constant-target baseline, explicitly curate a supported cohort upstream; do not automatically relabel visits.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;varying_participants&#34;: 0,
+  &#34;constant_target_eligible&#34;: true
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-003</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">info</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: phase</p>
+<p>Input coverage for this cohort check is incomplete; inspect the field coverage.</p><p><strong>Next action:</strong> Preserve cross-domain identities; assess the requested held-out-domain plan separately.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;varying_participants&#34;: 0,
+  &#34;coverage_complete&#34;: false
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-003</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">field: site</p>
+<p>No within-participant variation was observed for this supplied domain field.</p><p><strong>Next action:</strong> Preserve cross-domain identities; assess the requested held-out-domain plan separately.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;varying_participants&#34;: 0,
+  &#34;coverage_complete&#34;: true
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-004</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: heuristic</span></div>
+<p class="muted">field: features</p>
+<p>No exact cross-participant equality was found among the assessed feature vectors. This does not prove that acquisitions are distinct.</p><p><strong>Next action:</strong> Investigate equality without merging identities or dropping rows; add a protected relationship only after independent verification.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;cross_participant_groups&#34;: 0,
+  &#34;assessed_observations&#34;: 120,
+  &#34;skipped_all_missing&#34;: 0,
+  &#34;skip_reason&#34;: null,
+  &#34;reason&#34;: null
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-COHORT-005</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">field: phase</p>
+<p>A metadata-dependent check has incomplete coverage; absent values were not inferred.</p><p><strong>Next action:</strong> Supply the explicitly mapped metadata or retain incomplete assessment coverage.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;column&#34;: null,
+  &#34;available&#34;: false,
+  &#34;missing_observations&#34;: 120,
+  &#34;invalid_observations&#34;: 0
+}</pre>
+
+</article>
+</section>
+<section id="partitions"><h2>5. Partition checks</h2>
+
+<article class="card">
+<h3>NCG-SPLIT-001</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-000 · field: observation_id</p>
+<p>No observation train/test overlap detected.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;overlap_count&#34;: 0,
+  &#34;observation_ids&#34;: []
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-001</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-001 · field: observation_id</p>
+<p>No observation train/test overlap detected.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;overlap_count&#34;: 0,
+  &#34;observation_ids&#34;: []
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-001</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-002 · field: observation_id</p>
+<p>No observation train/test overlap detected.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;overlap_count&#34;: 0,
+  &#34;observation_ids&#34;: []
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-002</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-000 · field: subject_id</p>
+<p>No participant overlap detected in this supplied split.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;overlap_count&#34;: 0,
+  &#34;participant_ids&#34;: [],
+  &#34;train_participants&#34;: 40,
+  &#34;test_participants&#34;: 20,
+  &#34;session_overlap_count&#34;: 0,
+  &#34;missing_session_observations&#34;: 0
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-002</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-001 · field: subject_id</p>
+<p>No participant overlap detected in this supplied split.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;overlap_count&#34;: 0,
+  &#34;participant_ids&#34;: [],
+  &#34;train_participants&#34;: 40,
+  &#34;test_participants&#34;: 20,
+  &#34;session_overlap_count&#34;: 0,
+  &#34;missing_session_observations&#34;: 0
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-002</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-002 · field: subject_id</p>
+<p>No participant overlap detected in this supplied split.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;overlap_count&#34;: 0,
+  &#34;participant_ids&#34;: [],
+  &#34;train_participants&#34;: 40,
+  &#34;test_participants&#34;: 20,
+  &#34;session_overlap_count&#34;: 0,
+  &#34;missing_session_observations&#34;: 0
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-003</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-000 · field: component</p>
+<p>No protected component overlap detected.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;overlap_count&#34;: 0,
+  &#34;component_ids&#34;: [],
+  &#34;relationship_coverage_complete&#34;: true
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-003</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-001 · field: component</p>
+<p>No protected component overlap detected.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;overlap_count&#34;: 0,
+  &#34;component_ids&#34;: [],
+  &#34;relationship_coverage_complete&#34;: true
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-003</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-002 · field: component</p>
+<p>No protected component overlap detected.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;overlap_count&#34;: 0,
+  &#34;component_ids&#34;: [],
+  &#34;relationship_coverage_complete&#34;: true
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-004</h3>
+<div class="labels"><span class="label">not applicable</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-000 · field: domain</p>
+<p>Domain separation is not required by this objective; shared sites are not leakage.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;required&#34;: false,
+  &#34;observed_shared_domain_counts&#34;: {
+    &#34;site&#34;: 3,
+    &#34;phase&#34;: 0
+  }
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-004</h3>
+<div class="labels"><span class="label">not applicable</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-001 · field: domain</p>
+<p>Domain separation is not required by this objective; shared sites are not leakage.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;required&#34;: false,
+  &#34;observed_shared_domain_counts&#34;: {
+    &#34;site&#34;: 3,
+    &#34;phase&#34;: 0
+  }
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-004</h3>
+<div class="labels"><span class="label">not applicable</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-002 · field: domain</p>
+<p>Domain separation is not required by this objective; shared sites are not leakage.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;required&#34;: false,
+  &#34;observed_shared_domain_counts&#34;: {
+    &#34;site&#34;: 3,
+    &#34;phase&#34;: 0
+  }
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-005</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-000 · field: train_classes</p>
+<p>All global classes are represented in this partition.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;class_order&#34;: [
+    &#34;class-0&#34;,
+    &#34;class-1&#34;
+  ],
+  &#34;participant_support&#34;: [
+    [
+      &#34;class-0&#34;,
+      20
+    ],
+    [
+      &#34;class-1&#34;,
+      20
+    ]
+  ],
+  &#34;missing_classes&#34;: [],
+  &#34;constant_target_eligible&#34;: true,
+  &#34;class_complete_metrics_available&#34;: true
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-005</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-001 · field: train_classes</p>
+<p>All global classes are represented in this partition.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;class_order&#34;: [
+    &#34;class-0&#34;,
+    &#34;class-1&#34;
+  ],
+  &#34;participant_support&#34;: [
+    [
+      &#34;class-0&#34;,
+      20
+    ],
+    [
+      &#34;class-1&#34;,
+      20
+    ]
+  ],
+  &#34;missing_classes&#34;: [],
+  &#34;constant_target_eligible&#34;: true,
+  &#34;class_complete_metrics_available&#34;: true
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-005</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-002 · field: train_classes</p>
+<p>All global classes are represented in this partition.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;class_order&#34;: [
+    &#34;class-0&#34;,
+    &#34;class-1&#34;
+  ],
+  &#34;participant_support&#34;: [
+    [
+      &#34;class-0&#34;,
+      20
+    ],
+    [
+      &#34;class-1&#34;,
+      20
+    ]
+  ],
+  &#34;missing_classes&#34;: [],
+  &#34;constant_target_eligible&#34;: true,
+  &#34;class_complete_metrics_available&#34;: true
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-006</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-000 · field: test_classes</p>
+<p>All global classes are represented in this partition.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;class_order&#34;: [
+    &#34;class-0&#34;,
+    &#34;class-1&#34;
+  ],
+  &#34;participant_support&#34;: [
+    [
+      &#34;class-0&#34;,
+      10
+    ],
+    [
+      &#34;class-1&#34;,
+      10
+    ]
+  ],
+  &#34;missing_classes&#34;: [],
+  &#34;constant_target_eligible&#34;: true,
+  &#34;class_complete_metrics_available&#34;: true
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-006</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-001 · field: test_classes</p>
+<p>All global classes are represented in this partition.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;class_order&#34;: [
+    &#34;class-0&#34;,
+    &#34;class-1&#34;
+  ],
+  &#34;participant_support&#34;: [
+    [
+      &#34;class-0&#34;,
+      10
+    ],
+    [
+      &#34;class-1&#34;,
+      10
+    ]
+  ],
+  &#34;missing_classes&#34;: [],
+  &#34;constant_target_eligible&#34;: true,
+  &#34;class_complete_metrics_available&#34;: true
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-006</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-002 · field: test_classes</p>
+<p>All global classes are represented in this partition.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;class_order&#34;: [
+    &#34;class-0&#34;,
+    &#34;class-1&#34;
+  ],
+  &#34;participant_support&#34;: [
+    [
+      &#34;class-0&#34;,
+      10
+    ],
+    [
+      &#34;class-1&#34;,
+      10
+    ]
+  ],
+  &#34;missing_classes&#34;: [],
+  &#34;constant_target_eligible&#34;: true,
+  &#34;class_complete_metrics_available&#34;: true
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-007</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-000 · field: membership</p>
+<p>All observation memberships refer to explicit cohort keys.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;unknown_count&#34;: 0,
+  &#34;unknown_ids&#34;: []
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-007</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-001 · field: membership</p>
+<p>All observation memberships refer to explicit cohort keys.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;unknown_count&#34;: 0,
+  &#34;unknown_ids&#34;: []
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-007</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-002 · field: membership</p>
+<p>All observation memberships refer to explicit cohort keys.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;unknown_count&#34;: 0,
+  &#34;unknown_ids&#34;: []
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-008</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-000 · field: coverage</p>
+<p>Outer train and test must jointly cover the complete supplied cohort.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;missing_count&#34;: 0,
+  &#34;extra_count&#34;: 0,
+  &#34;missing_ids&#34;: [],
+  &#34;extra_ids&#34;: []
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-008</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-001 · field: coverage</p>
+<p>Outer train and test must jointly cover the complete supplied cohort.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;missing_count&#34;: 0,
+  &#34;extra_count&#34;: 0,
+  &#34;missing_ids&#34;: [],
+  &#34;extra_ids&#34;: []
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-008</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · fold id: fold-002 · field: coverage</p>
+<p>Outer train and test must jointly cover the complete supplied cohort.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;missing_count&#34;: 0,
+  &#34;extra_count&#34;: 0,
+  &#34;missing_ids&#34;: [],
+  &#34;extra_ids&#34;: []
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-011</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">repeat id: 0 · field: complete_cv</p>
+<p>Test membership must cover each cohort observation exactly once within this repeat.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;complete_cv&#34;: true,
+  &#34;n_outer_folds&#34;: 3,
+  &#34;missing_count&#34;: 0,
+  &#34;extra_count&#34;: 0,
+  &#34;nonunique_count&#34;: 0
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-SPLIT-011</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">field: split_summary</p>
+<p>Complete-CV eligibility is separate from objective validity; diagnostics waive no audit check.</p><p><strong>Next action:</strong> Review the supplied assignments and explicit objective; correct the source plan without dropping, relabeling or automatically repairing rows.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;complete_cv&#34;: true,
+  &#34;valid_for_objective&#34;: true,
+  &#34;evaluation_permitted&#34;: true,
+  &#34;n_repeats&#34;: 1,
+  &#34;n_outer_folds&#34;: 3,
+  &#34;diagnostic_requested&#34;: false,
+  &#34;class_order&#34;: [
+    &#34;class-0&#34;,
+    &#34;class-1&#34;
+  ]
+}</pre>
+
+</article>
+</section>
+<section id="associations"><h2>6. Acquisition and target associations</h2>
+
+<article class="card">
+<h3>NCG-ASSOC-001</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">field: site</p>
+<p>The descriptive association is below the configured review threshold; this is not a validity verdict.</p><p><strong>Next action:</strong> Review acquisition/target distributions under the stated objective. For a claim about new sites or phases, consider the corresponding held-out-domain design; do not infer causal bias or model shortcut use.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;counting_unit&#34;: &#34;participant&#34;,
+  &#34;field_column&#34;: &#34;site&#34;,
+  &#34;target_column&#34;: &#34;target&#34;,
+  &#34;objective&#34;: &#34;unseen_participant&#34;,
+  &#34;n_original&#34;: 60,
+  &#34;n_complete&#34;: 60,
+  &#34;n_excluded&#34;: 0,
+  &#34;n_in_table&#34;: 60,
+  &#34;missing_field_participants&#34;: 0,
+  &#34;missing_target_participants&#34;: 0,
+  &#34;invalid_field_participants&#34;: 0,
+  &#34;invalid_target_participants&#34;: 0,
+  &#34;unstable_field_participants&#34;: 0,
+  &#34;unstable_target_participants&#34;: 0,
+  &#34;observed_field_levels&#34;: 3,
+  &#34;observed_target_levels&#34;: 2,
+  &#34;row_levels&#34;: [
+    &#34;SYN-site-000&#34;,
+    &#34;SYN-site-001&#34;,
+    &#34;SYN-site-002&#34;
+  ],
+  &#34;target_levels&#34;: [
+    &#34;class-0&#34;,
+    &#34;class-1&#34;
+  ],
+  &#34;table&#34;: [
+    [
+      13,
+      7
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      8,
+      15
+    ]
+  ],
+  &#34;expected_counts&#34;: [
+    [
+      10.0,
+      10.0
+    ],
+    [
+      8.5,
+      8.5
+    ],
+    [
+      11.5,
+      11.5
+    ]
+  ],
+  &#34;statistic&#34;: {
+    &#34;value&#34;: 0.25785197019544825,
+    &#34;reason&#34;: null,
+    &#34;n&#34;: 60
+  },
+  &#34;estimator&#34;: &#34;Cramer&#39;s V; uncorrected Pearson chi-square; correction=False&#34;,
+  &#34;review_threshold&#34;: 0.3,
+  &#34;min_cell_count&#34;: 5,
+  &#34;sparse_observed_cells&#34;: 0,
+  &#34;sparse_expected_cells&#34;: 0,
+  &#34;interpretation&#34;: &#34;Descriptive participant counts, not independent-sample inference. Association is not proof of causal confounding or model shortcut use.&#34;
+}</pre>
+
+</article>
+
+<article class="card">
+<h3>NCG-ASSOC-002</h3>
+<div class="labels"><span class="label">pass</span><span class="label">info</span><span class="label">Evidence: observed</span></div>
+<p class="muted">field: site</p>
+<p>No observed or expected cells are below the configured sparse-count threshold.</p><p><strong>Next action:</strong> Review sample coverage and sparse cells before interpreting the descriptive estimate; do not infer significance or merge categories automatically.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;counting_unit&#34;: &#34;participant&#34;,
+  &#34;field_column&#34;: &#34;site&#34;,
+  &#34;target_column&#34;: &#34;target&#34;,
+  &#34;objective&#34;: &#34;unseen_participant&#34;,
+  &#34;n_original&#34;: 60,
+  &#34;n_complete&#34;: 60,
+  &#34;n_excluded&#34;: 0,
+  &#34;n_in_table&#34;: 60,
+  &#34;missing_field_participants&#34;: 0,
+  &#34;missing_target_participants&#34;: 0,
+  &#34;invalid_field_participants&#34;: 0,
+  &#34;invalid_target_participants&#34;: 0,
+  &#34;unstable_field_participants&#34;: 0,
+  &#34;unstable_target_participants&#34;: 0,
+  &#34;observed_field_levels&#34;: 3,
+  &#34;observed_target_levels&#34;: 2,
+  &#34;row_levels&#34;: [
+    &#34;SYN-site-000&#34;,
+    &#34;SYN-site-001&#34;,
+    &#34;SYN-site-002&#34;
+  ],
+  &#34;target_levels&#34;: [
+    &#34;class-0&#34;,
+    &#34;class-1&#34;
+  ],
+  &#34;table&#34;: [
+    [
+      13,
+      7
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      8,
+      15
+    ]
+  ],
+  &#34;expected_counts&#34;: [
+    [
+      10.0,
+      10.0
+    ],
+    [
+      8.5,
+      8.5
+    ],
+    [
+      11.5,
+      11.5
+    ]
+  ],
+  &#34;statistic&#34;: {
+    &#34;value&#34;: 0.25785197019544825,
+    &#34;reason&#34;: null,
+    &#34;n&#34;: 60
+  },
+  &#34;estimator&#34;: &#34;Cramer&#39;s V; uncorrected Pearson chi-square; correction=False&#34;,
+  &#34;review_threshold&#34;: 0.3,
+  &#34;min_cell_count&#34;: 5,
+  &#34;sparse_observed_cells&#34;: 0,
+  &#34;sparse_expected_cells&#34;: 0,
+  &#34;interpretation&#34;: &#34;Descriptive participant counts, not independent-sample inference. Association is not proof of causal confounding or model shortcut use.&#34;
+}</pre>
+
+</article>
+</section>
+<section id="results"><h2>7. Evaluation and comparison</h2>
+<p>Participant-level precomputed evaluation. Null metrics and reasons are retained; failed folds are not removed.</p><pre>{
+  &#34;diagnostic_only&#34;: false,
+  &#34;metric_unit&#34;: &#34;participant&#34;,
+  &#34;class_order&#34;: [
+    &#34;class-0&#34;,
+    &#34;class-1&#34;
+  ],
+  &#34;n_participants&#34;: 60,
+  &#34;execution_status&#34;: &#34;completed&#34;,
+  &#34;pooled_metrics&#34;: {
+    &#34;accuracy&#34;: {
+      &#34;value&#34;: 0.8833333333333333,
+      &#34;reason&#34;: null,
+      &#34;n&#34;: 60
+    },
+    &#34;balanced_accuracy&#34;: {
+      &#34;value&#34;: 0.8833333333333333,
+      &#34;reason&#34;: null,
+      &#34;n&#34;: 60
+    },
+    &#34;macro_f1&#34;: {
+      &#34;value&#34;: 0.883300916921367,
+      &#34;reason&#34;: null,
+      &#34;n&#34;: 60
+    },
+    &#34;roc_auc&#34;: {
+      &#34;value&#34;: 0.9088888888888889,
+      &#34;reason&#34;: null,
+      &#34;n&#34;: 60
+    },
+    &#34;n_participants&#34;: 60,
+    &#34;per_class&#34;: [
+      {
+        &#34;class_label&#34;: &#34;class-0&#34;,
+        &#34;support&#34;: 30,
+        &#34;recall&#34;: 0.9
+      },
+      {
+        &#34;class_label&#34;: &#34;class-1&#34;,
+        &#34;support&#34;: 30,
+        &#34;recall&#34;: 0.8666666666666667
+      }
+    ],
+    &#34;confusion_matrix&#34;: [
+      [
+        27,
+        3
+      ],
+      [
+        4,
+        26
+      ]
+    ]
+  },
+  &#34;fold_metrics&#34;: [
+    {
+      &#34;repeat_id&#34;: &#34;0&#34;,
+      &#34;fold_id&#34;: &#34;fold-000&#34;,
+      &#34;status&#34;: &#34;completed&#34;,
+      &#34;metrics&#34;: {
+        &#34;accuracy&#34;: {
+          &#34;value&#34;: 0.9,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;balanced_accuracy&#34;: {
+          &#34;value&#34;: 0.9,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;macro_f1&#34;: {
+          &#34;value&#34;: 0.898989898989899,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;roc_auc&#34;: {
+          &#34;value&#34;: 0.9400000000000001,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;n_participants&#34;: 20,
+        &#34;per_class&#34;: [
+          {
+            &#34;class_label&#34;: &#34;class-0&#34;,
+            &#34;support&#34;: 10,
+            &#34;recall&#34;: 0.8
+          },
+          {
+            &#34;class_label&#34;: &#34;class-1&#34;,
+            &#34;support&#34;: 10,
+            &#34;recall&#34;: 1.0
+          }
+        ],
+        &#34;confusion_matrix&#34;: [
+          [
+            8,
+            2
+          ],
+          [
+            0,
+            10
+          ]
+        ]
+      },
+      &#34;metrics_hidden_reason&#34;: null
+    },
+    {
+      &#34;repeat_id&#34;: &#34;0&#34;,
+      &#34;fold_id&#34;: &#34;fold-001&#34;,
+      &#34;status&#34;: &#34;completed&#34;,
+      &#34;metrics&#34;: {
+        &#34;accuracy&#34;: {
+          &#34;value&#34;: 0.95,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;balanced_accuracy&#34;: {
+          &#34;value&#34;: 0.95,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;macro_f1&#34;: {
+          &#34;value&#34;: 0.949874686716792,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;roc_auc&#34;: {
+          &#34;value&#34;: 0.91,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;n_participants&#34;: 20,
+        &#34;per_class&#34;: [
+          {
+            &#34;class_label&#34;: &#34;class-0&#34;,
+            &#34;support&#34;: 10,
+            &#34;recall&#34;: 1.0
+          },
+          {
+            &#34;class_label&#34;: &#34;class-1&#34;,
+            &#34;support&#34;: 10,
+            &#34;recall&#34;: 0.9
+          }
+        ],
+        &#34;confusion_matrix&#34;: [
+          [
+            10,
+            0
+          ],
+          [
+            1,
+            9
+          ]
+        ]
+      },
+      &#34;metrics_hidden_reason&#34;: null
+    },
+    {
+      &#34;repeat_id&#34;: &#34;0&#34;,
+      &#34;fold_id&#34;: &#34;fold-002&#34;,
+      &#34;status&#34;: &#34;completed&#34;,
+      &#34;metrics&#34;: {
+        &#34;accuracy&#34;: {
+          &#34;value&#34;: 0.8,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;balanced_accuracy&#34;: {
+          &#34;value&#34;: 0.8,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;macro_f1&#34;: {
+          &#34;value&#34;: 0.797979797979798,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;roc_auc&#34;: {
+          &#34;value&#34;: 0.9099999999999999,
+          &#34;reason&#34;: null,
+          &#34;n&#34;: 20
+        },
+        &#34;n_participants&#34;: 20,
+        &#34;per_class&#34;: [
+          {
+            &#34;class_label&#34;: &#34;class-0&#34;,
+            &#34;support&#34;: 10,
+            &#34;recall&#34;: 0.9
+          },
+          {
+            &#34;class_label&#34;: &#34;class-1&#34;,
+            &#34;support&#34;: 10,
+            &#34;recall&#34;: 0.7
+          }
+        ],
+        &#34;confusion_matrix&#34;: [
+          [
+            9,
+            1
+          ],
+          [
+            3,
+            7
+          ]
+        ]
+      },
+      &#34;metrics_hidden_reason&#34;: null
+    }
+  ],
+  &#34;metrics_hidden_reason&#34;: null
+}</pre>
+</section>
+<section id="provenance"><h2>8. Provenance</h2><p><strong>Upstream preprocessing was not verified.</strong> A Pipeline cannot repair earlier global fitting.</p>
+<pre>{
+  &#34;foundation_version&#34;: &#34;1.0.0&#34;,
+  &#34;versions&#34;: {
+    &#34;neurocvguard&#34;: &#34;0.1.0&#34;
+  },
+  &#34;sensitive_details&#34;: true,
+  &#34;upstream_preprocessing_verified&#34;: false
+}</pre>
+
+<article class="card">
+<h3>NCG-PROV-001</h3>
+<div class="labels"><span class="label">not assessable</span><span class="label">warning</span><span class="label">Evidence: unassessable</span></div>
+<p class="muted">component: upstream_preprocessing</p>
+<p>Upstream preprocessing remains unassessable; declarations do not verify execution.</p><p><strong>Next action:</strong> Document the source, overlap and fitting scope of upstream transformations. A controlled Pipeline cannot repair earlier global fitting.</p>
+
+
+<pre aria-label="Sensitive evidence">{
+  &#34;reason&#34;: &#34;upstream_execution_unverified&#34;,
+  &#34;ledger_supplied&#34;: false,
+  &#34;upstream_preprocessing_verified&#34;: false
+}</pre>
+
+</article>
+</section>
+<section id="limitations"><h2>9. Limitations</h2><ul><li>No clinical advice, certification or universal leakage-free verdict.</li><li>Privacy projection is not formal anonymization; aggregates may still be sensitive.</li>
+<li>Imported preprocessing is declared, not authenticated execution history.</li><li>Upstream preprocessing remains unverified; a Pipeline cannot repair earlier global fitting.</li><li>Fold-specific declared fit IDs require a matching split plan for comparison.</li><li>This cohort audit cannot establish participant/domain separation without a supplied plan.</li><li>Input identity namespaces must be harmonized upstream; aliases cannot be resolved automatically.</li><li>This audit checks supplied memberships, not how an external experiment ran.</li><li>Unknown upstream preprocessing is unassessable; no global leakage-free verdict is issued.</li><li>Input identity namespaces must be harmonized upstream; site prefixes do not establish distinct participant identities.</li><li>Only one complete repeat with at least two outer folds is within ordinary baseline scope.</li><li>Missing test classes leave class-complete metrics undefined; no scores were computed.</li><li>Diagnostic requests do not waive audit violations or approve unseen-participant generalization.</li><li>Research baseline only; no clinical validity or inferential confidence interval.</li><li>Classifier loss weights balance participants within each fit; imputation and scaling use training-observation statistics.</li><li>Undefined metrics retain null values; failed folds prevent a pooled complete-CV score.</li><li>Sensitive research output: do not publish without review.</li><li>Fully synthetic demonstration; no patient data. These are fictitious tabular mechanisms, not biologically realistic brain models or clinical results.</li></ul></section>
+<section id="actions"><h2>10. Recommended next actions</h2><ul><li>Review unassessable checks and supply missing context.</li><li>Freeze the evaluation plan and document later amendments.</li><li>Keep identity-bearing split plans and private evaluation records separate from shareable reports.</li>
+<li>NCG-COHORT-003: Preserve cross-domain identities; assess the requested held-out-domain plan separately.</li><li>NCG-COHORT-005: Supply the explicitly mapped metadata or retain incomplete assessment coverage.</li><li>NCG-PROV-001: Document the source, overlap and fitting scope of upstream transformations. A controlled Pipeline cannot repair earlier global fitting.</li></ul></section>
+<section id="references"><h2>11. Rule and source references</h2>
+<p>Normative source: NeuroCVguard Foundation 1.0.0, scientific contract, report privacy and cross-contract clarifications. Association method: SciPy contingency.association (R08); adjacent inferential work: mlconfound (R09). No inferential equivalence is claimed.</p>
+<table><caption>Rules represented in this report</caption><thead><tr><th scope="col">Rule</th><th scope="col">Meaning</th></tr></thead><tbody><tr><th scope="row">NCG-ASSOC-001 · Association review threshold crossed</th><td>Descriptive review signal, not proof of causal confounding or shortcut use.</td></tr><tr><th scope="row">NCG-ASSOC-002 · Sparse contingency table</th><td>Small observed/expected counts make interpretation unstable; no p-value.</td></tr><tr><th scope="row">NCG-COHORT-001 · Repeated observations</th><td>Inventory notice; repeated people are not by themselves a split violation.</td></tr><tr><th scope="row">NCG-COHORT-002 · Within-participant target variation</th><td>Valid longitudinal possibility; baseline/stratified planning unsupported without explicit curation.</td></tr><tr><th scope="row">NCG-COHORT-003 · Within-participant domain variation</th><td>Describe crossing sites/phases; strict domain planning must assess feasibility.</td></tr><tr><th scope="row">NCG-COHORT-004 · Exact feature equality across IDs</th><td>Observed equal vectors suggest review, not verified duplicate identity.</td></tr><tr><th scope="row">NCG-COHORT-005 · Missing optional metadata</th><td>Requested checks without required metadata are not_assessable.</td></tr><tr><th scope="row">NCG-PROV-001 · Upstream fitting history unknown</th><td>No automatic certification from a supplied feature matrix.</td></tr><tr><th scope="row">NCG-REPORT-001 · Sensitive operational output</th><td>Identity-bearing split/private evaluation artifact; not a public report.</td></tr><tr><th scope="row">NCG-SPLIT-001 · Observation train/test overlap</th><td>Never waived, including diagnostic evaluation.</td></tr><tr><th scope="row">NCG-SPLIT-002 · Participant train/test overlap</th><td>Violation for supported unseen-person objectives; warning under audit_only.</td></tr><tr><th scope="row">NCG-SPLIT-003 · Protected-component overlap</th><td>Crossing a declared dependence component invalidates the stated independent-unit design.</td></tr><tr><th scope="row">NCG-SPLIT-004 · Requested held-out domain overlaps</th><td>Only a separation violation for the corresponding unseen_site/unseen_phase objective.</td></tr><tr><th scope="row">NCG-SPLIT-005 · Training class missing</th><td>Cannot fit the requested full-class baseline for that fold.</td></tr><tr><th scope="row">NCG-SPLIT-006 · Test class missing</th><td>Class-complete metrics undefined for this fold; retain other meaningful results.</td></tr><tr><th scope="row">NCG-SPLIT-007 · Unknown or duplicate membership</th><td>Structural membership diagnostic; reject invalid identity mapping.</td></tr><tr><th scope="row">NCG-SPLIT-008 · Per-fold cohort coverage broken</th><td>No silent exclusions or automatic row intersection.</td></tr><tr><th scope="row">NCG-SPLIT-011 · Complete-CV coverage unavailable</th><td>A valid one-off holdout is auditable but outside complete-CV evaluation.</td></tr></tbody></table></section>
+</main>
+<footer>NeuroCVguard 0.1.0 · Offline research report · Sensitive details explicitly enabled</footer>
+</body></html>
