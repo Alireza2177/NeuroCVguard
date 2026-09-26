@@ -1,0 +1,28 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "format",
+    "src/neurocvguard/cli.py",
+    "src/neurocvguard/__main__.py",
+    "src/neurocvguard/__init__.py",
+    "src/neurocvguard/workflows.py",
+    "src/neurocvguard/reporting.py",
+    "tests/test_bootstrap.py",
+    "tests/test_cli_commands.py",
+    "tests/test_cli_policy.py",
+    "tests/test_cli_journey.py",
+    "qa/evidence/S09"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T10:22:17.161930+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "8 files reformatted, 4 files left unchanged\n",
+  "stderr": ""
+}

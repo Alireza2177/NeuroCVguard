@@ -1,0 +1,6 @@
+[
+  "README.md", "AI_ASSISTANCE.md", "docs/cohort_checks.md",
+  "src/neurocvguard/__init__.py", "src/neurocvguard/io.py", "src/neurocvguard/audit.py",
+  "state/PROJECT_STATUS.json", "qa/acceptance_cases.json", "qa/requirements.json",
+  "qa/case_to_test_map.json"
+]

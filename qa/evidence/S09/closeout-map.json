@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "qa/evidence/S09/close_stage.py",
+    "finish"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T10:28:07.173833+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "S09: mapped acceptance cases from 449 passing tests; human review pending.\n",
+  "stderr": ""
+}

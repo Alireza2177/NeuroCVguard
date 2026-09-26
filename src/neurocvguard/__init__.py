@@ -6,6 +6,8 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
+    import pandas as pd
+
     from neurocvguard.config import AuditConfig
     from neurocvguard.models import (
         AuditReport,
@@ -16,6 +18,25 @@ if TYPE_CHECKING:
     )
 
 __version__ = "0.1.0"
+
+
+def load_config(path: str | Path) -> AuditConfig:
+    """Read strict local JSON settings; see neurocvguard.config.load_config."""
+    from neurocvguard.config import load_config as load
+
+    return load(path)
+
+
+def load_cohort(
+    metadata: str | Path | pd.DataFrame,
+    *,
+    config: AuditConfig,
+    features: str | Path | pd.DataFrame | None = None,
+) -> Cohort:
+    """Load strict local tables; see neurocvguard.io.load_cohort for the input contract."""
+    from neurocvguard.io import load_cohort as load
+
+    return load(metadata, config=config, features=features)
 
 
 def audit_cohort(

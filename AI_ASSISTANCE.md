@@ -14,6 +14,10 @@
 
 | 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S08 shared privacy projection, offline reports, safe writes and optional findings CSV; drafted tests/docs, executed checks, inspected actual rendered synthetic reports and reviewed the diff. | None recorded. The user authorized S08 only; predecessor acceptance and human review are not inferred. | Local S08 working changes from Git HEAD 3769299. |
 
+| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented the explicitly authorized S02 prerequisite: strict table input, keyed feature alignment, limits and digests; added tests/docs and ran local regression checks. | None recorded; the user authorized S02 followed by S09, without granting human acceptance. | Local S02 changes from f4adbe1. |
+
+| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S09 command handlers, shared orchestration, exit/output policy and configured report projection; drafted tests and docs, ran local command journeys and regression checks, and reviewed the implementation diff. | None recorded. The user authorized S02 then S09; acceptance remains pending and S10 is not authorized. | Local S09 changes from f4adbe1, following the local S02 prerequisite. |
+
 No independent reviewer, human authorship approval, public release approval,
 or comprehensive scientific validation is claimed. Later changes to review
 status must reflect actual review of the specified files.

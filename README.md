@@ -6,13 +6,15 @@ S04 adds supplied split audits; S05 adds deterministic outer plan generation
 and sensitive assignment exports; S06 adds participant-level categorical
 association diagnostics with explicit support counts and descriptive warnings;
 S07 adds preprocessing declarations and fit-boundary validation;
-S08 adds privacy-projected JSON and offline HTML reports.**
-The CLI provides help and version output only. The local development version
+S08 adds privacy-projected JSON and offline HTML reports;
+S09 exposes init, validate, audit, split and report commands.**
+See [the CLI guide](docs/cli.md) for a complete local workflow. The local development version
 is `0.1.0`, matching the foundation's target release; it is not a published or
 completed release.
 
-S02 file ingestion and keyed feature joins remain unimplemented: the user selected
-S03 directly. S03 accepts already constructed, validated `Cohort` objects.
+S02 now provides strict local CSV/TSV loading and keyed feature joins through
+`load_cohort`; see [the input guide](docs/input_tables.md). It was completed as the
+explicitly authorized prerequisite for S09 after initially being skipped.
 Evaluation, inner-fold generation and the synthetic demo remain
 unimplemented. The intended research scope is defined in [START_HERE.md](START_HERE.md)
 and [spec/00_project_charter.md](spec/00_project_charter.md). This software does
@@ -83,7 +85,8 @@ omitted until confirmed; proposed values are under `tool.neurocvguard.release`.
 No DOI, publication, CI result, or support commitment is claimed.
 
 [AI_ASSISTANCE.md](AI_ASSISTANCE.md) records the assistance actually provided.
-S08 stops at human review. No further stage begins without a subsequent instruction.
+S02 and S09 are ready for human review. S10 remains unstarted; further work needs
+a subsequent instruction.
 
 ## Configuration and record API
 
@@ -123,8 +126,8 @@ relationships and changing targets expose explicit prerequisite guards; this
 does not implement or approve a split/evaluation design.
 
 See the [S03 handoff](state/handoffs/S03.md) and [evidence](qa/evidence/S03/) for
-the actual verification results. S00/S01 acceptance remains pending and S02 is
-still NOT_STARTED.
+the actual verification results. Human acceptance remains pending. S02 input
+verification is recorded separately in [its handoff](state/handoffs/S02.md).
 
 ## Supplied split audit API
 
@@ -141,9 +144,9 @@ See the [S04 reference](docs/split_audits.md) for a complete synthetic example,
 strict import behavior and separate objective/complete-CV eligibility flags.
 Unknown upstream preprocessing remains unassessable. A bound plan or clean split
 check does not certify an experiment or compute a score. S04 includes the mapped
-metadata digest necessary for binding; S02 cohort/feature ingestion remains absent.
+metadata digest necessary for binding; S02 now supplies cohort/feature ingestion.
 Verification is recorded in the [S04 handoff](state/handoffs/S04.md) and
-[S04 evidence](qa/evidence/S04/). S05 remains NOT_STARTED.
+[S04 evidence](qa/evidence/S04/). S05 generation is described below.
 
 ## S05 outer plan generation
 
@@ -152,7 +155,7 @@ StratifiedGroupKFold or strict site/phase LeaveOneGroupOut, then runs the indepe
 S04 audit. It refuses infeasible designs without changing rows, labels, seeds or
 fold counts. `plan.generation_report` retains warnings, support and versions;
 `plan.write(output_dir)` explicitly writes sensitive plan/assignment artifacts,
-with no overwrite by default. S02 ingestion and nested tuning remain unimplemented.
+with no overwrite by default. Nested tuning remains unimplemented.
 
 See the [executed API example](docs/split_generation.md),
 [S05 handoff](state/handoffs/S05.md) and [verification evidence](qa/evidence/S05/).
@@ -182,4 +185,4 @@ files are added to the report bundle.
 
 See [the tested reporting guide](docs/reporting.md), [S08 handoff](state/handoffs/S08.md)
 and [synthetic rendered example](qa/evidence/S08/rendered/public/report.html).
-The command-line report workflow remains for S09.
+The [CLI guide](docs/cli.md) covers report rendering and configured privacy settings.

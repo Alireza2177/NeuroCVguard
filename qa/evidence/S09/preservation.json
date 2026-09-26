@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python",
+    "qa/evidence/S09/close_stage.py",
+    "verify"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T10:28:09.893804+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "{\n  \"retained\": 556,\n  \"unchanged\": 546,\n  \"changed\": [\n    \"AI_ASSISTANCE.md\",\n    \"README.md\",\n    \"qa/acceptance_cases.json\",\n    \"qa/case_to_test_map.json\",\n    \"qa/requirements.json\",\n    \"src/neurocvguard/__init__.py\",\n    \"src/neurocvguard/__main__.py\",\n    \"src/neurocvguard/reporting.py\",\n    \"state/PROJECT_STATUS.json\",\n    \"tests/test_bootstrap.py\"\n  ],\n  \"other_stage_status_and_normative_definitions_preserved\": true\n}\n",
+  "stderr": ""
+}

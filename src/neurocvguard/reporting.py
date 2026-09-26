@@ -12,6 +12,7 @@ from jinja2 import Environment, PackageLoader, StrictUndefined, TemplateError, s
 
 from neurocvguard import __version__
 from neurocvguard._report_writes import write_bundle
+from neurocvguard.config import AuditConfig
 from neurocvguard.errors import InputValidationError
 from neurocvguard.models import AuditReport, ComparisonResult, EvaluationResult
 from neurocvguard.rules import get_rule
@@ -140,12 +141,56 @@ def write_report(
     ``paths = write_report(report, output_dir="local-report")``
     """
     data = _project(result, sensitive_details)
+    return _write_projected_report(
+        data,
+        comparison=isinstance(result, ComparisonResult),
+        output_dir=output_dir,
+        sensitive_details=sensitive_details,
+        overwrite=overwrite,
+    )
+
+
+def write_configured_report(
+    result: ReportRecord,
+    *,
+    config: AuditConfig,
+    output_dir: str | Path,
+    sensitive_details: bool = False,
+    overwrite: bool = False,
+) -> dict[str, Path]:
+    """Write once using the configured small-cell threshold and explicit sensitivity.
+
+    This orchestration helper retains the public writer's default projection while
+    allowing config-driven workflows to honor their declared privacy settings.
+    """
+    if type(sensitive_details) is not bool or not isinstance(config, AuditConfig):
+        raise InputValidationError("Supply a validated config and explicit sensitivity boolean.")
+    sensitive = sensitive_details or config.report.sensitive_details
+    data = result.to_dict(
+        sensitive_details=sensitive,
+        small_cell_threshold=config.report.small_cell_threshold,
+    )
+    return _write_projected_report(
+        data,
+        comparison=isinstance(result, ComparisonResult),
+        output_dir=output_dir,
+        sensitive_details=sensitive,
+        overwrite=overwrite,
+    )
+
+
+def _write_projected_report(
+    data: JSONObject,
+    *,
+    comparison: bool,
+    output_dir: str | Path,
+    sensitive_details: bool,
+    overwrite: bool,
+) -> dict[str, Path]:
     html = _render(data, sensitive_details)
     manifest = {
         "schema_version": "1.0",
-        "result_schema": "comparison-summary"
-        if isinstance(result, ComparisonResult)
-        else "audit-report",
+        "result_schema": "comparison-summary" if comparison else "audit-report",
         "tool_version": __version__,
         "sensitive_details": sensitive_details,
         "artifacts": ["report.json", "report.html"],

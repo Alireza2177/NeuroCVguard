@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "tests/test_cli_journey.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T10:21:52.199916+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "F.                                                                       [100%]\n================================== FAILURES ===================================\n___________________ test_at_s09_09_complete_journey_and_api ___________________\n\ntmp_path = WindowsPath('<USER_HOME>/AppData/Local/Temp/pytest-of-Alireza217/pytest-43/test_at_s09_09_complete_journe0')\n\n    def test_at_s09_09_complete_journey_and_api(tmp_path):\n        work = tmp_path / \"local journey \u00fc\"\n        work.mkdir()\n        for filename in (\"config.json\", \"cohort_clean.tsv\", \"features_shuffled.tsv\", \"ledger_declared_global.json\"):\n            shutil.copyfile(FIXTURES / filename, work / filename)\n        shared = [\"--cohort\", \"cohort_clean.tsv\", \"--config\", \"config.json\"]\n        feature = [\"--features\", \"features_shuffled.tsv\"]\n        assert process([\"init\", \"--out\", \"starter.json\"], work).returncode == 0\n        assert process([\"validate\", *shared, *feature], work).returncode == 0\n        assert process([\"audit\", *shared, *feature, \"--out\", \"cohort-audit\"], work).returncode == 0\n        assert process([\"split\", *shared, \"--out\", \"splits\"], work).returncode == 0\n        args = [\"audit\", *shared, *feature, \"--splits\", \"splits/plan.json\", \"--ledger\", \"ledger_declared_global.json\", \"--out\"]\n        module = process([*args, \"module\"], work)\n        console = process([*args, \"console\"], work, \"console\")\n        assert (module.returncode, module.stdout, module.stderr) == (console.returncode, console.stdout, console.stderr)\n>       assert module.returncode == 3  # Declared global fitting remains a finding.\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       AssertionError: assert 0 == 3\nE        +  where 0 = CompletedProcess(args=['<PROJECT_ROOT>\\\\.venv\\\\Scripts\\\\python.exe', '... configuration and explicitly keyed local inputs.\\nINFO: Computing scoped cohort, partition and declaration checks.\\n').returncode\n\ntests\\test_cli_journey.py:29: AssertionError\n=========================== short test summary info ===========================\nFAILED tests/test_cli_journey.py::test_at_s09_09_complete_journey_and_api - A...\n1 failed, 1 passed in 20.72s\n",
+  "stderr": ""
+}

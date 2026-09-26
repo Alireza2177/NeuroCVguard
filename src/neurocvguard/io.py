@@ -1,7 +1,4 @@
-"""Strict split-plan import and binding for validated in-memory cohorts.
-
-Cohort/feature file ingestion and keyed joins (S02) are not implemented here.
-"""
+"""Strict local cohort and split-plan input with explicit identity binding."""
 
 import csv
 import io
@@ -10,6 +7,10 @@ import tempfile
 from dataclasses import replace
 from pathlib import Path
 
+import pandas as pd
+
+from neurocvguard._features import align_features, numeric_value
+from neurocvguard._tables import read_metadata
 from neurocvguard.config import AuditConfig
 from neurocvguard.errors import ConfigurationError, InputValidationError, SplitValidationError
 from neurocvguard.identity import _missing, _valid_label, _validated_metadata
@@ -21,6 +22,80 @@ from neurocvguard.serialization import (
     json_digest,
     strict_json_loads,
 )
+
+
+def load_cohort(
+    metadata: str | Path | pd.DataFrame,
+    *,
+    config: AuditConfig,
+    features: str | Path | pd.DataFrame | None = None,
+) -> Cohort:
+    """Read a local cohort while preserving exact string identities.
+
+    Parameters
+    ----------
+    metadata : str, Path or pandas.DataFrame
+        UTF-8 CSV/TSV or scalar metadata with explicit string observation/participant keys.
+    config : AuditConfig
+        Explicit role mapping and resource limits; no column inference.
+    features : str, Path, pandas.DataFrame or None, optional
+        Optional selected numeric features with exactly the metadata observation keys.
+
+    Returns
+    -------
+    Cohort
+        Detached metadata and keyed features in supplied observation order, with no dropped rows.
+
+    Raises
+    ------
+    InputValidationError
+        Invalid local format, identity, role type or resource limit.
+
+    Examples
+    --------
+    ``cohort = load_cohort("cohort.tsv", config=config)``
+    """
+    data = read_metadata(metadata, config)
+    order = tuple(data[config.columns.observation_id])
+    aligned = None if features is None else align_features(features, config, order)
+    return Cohort(data, aligned, config.columns, order)
+
+
+def feature_digest(cohort: Cohort) -> str:
+    """Hash explicit selected feature names and values in observation-key order.
+
+    Parameters
+    ----------
+    cohort : Cohort
+        Loaded metadata and aligned, explicitly selected numeric features.
+
+    Returns
+    -------
+    str
+        SHA-256 integrity digest, not anonymization or authenticated provenance.
+
+    Raises
+    ------
+    InputValidationError
+        Features are absent or invalid. No preprocessing or imputation is performed.
+
+    Examples
+    --------
+    ``digest = feature_digest(cohort)`` for sensitive local reproducibility.
+    """
+    data = cohort.features
+    if data is None:
+        raise InputValidationError("Feature digest requires explicitly selected aligned features.")
+    key = cohort.columns.observation_id
+    names = [name for name in data.columns if name != key]
+    records: list[JSONValue] = []
+    for row in data.sort_values(key)[[key, *names]].itertuples(index=False, name=None):
+        values: list[JSONValue] = []
+        for value in row[1:]:
+            number = numeric_value(value)
+            values.append(None if pd.isna(number) else number)
+        records.append({"observation_id": row[0], "values": values})
+    return json_digest({"feature_columns": names, "records": records})
 
 
 def cohort_digest(cohort: Cohort) -> str:
@@ -49,7 +124,7 @@ def cohort_digest(cohort: Cohort) -> str:
     -----
     Missing mapped fields/cells become explicit nulls. The mapping itself preserves
     which roles were requested. Unicode and identity text are not normalized.
-    This minimal binding dependency does not implement S02 table ingestion.
+    load_cohort provides table ingestion separately from integrity binding.
     """
     data = _validated_metadata(cohort)
     mapping = cohort.columns.to_dict()

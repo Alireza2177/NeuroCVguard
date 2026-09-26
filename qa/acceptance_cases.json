@@ -200,8 +200,8 @@
     "expected": "Two distinct participants/observation keys are preserved.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-02",
@@ -212,8 +212,8 @@
     "expected": "InputValidationError before dataframe auto-renaming.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-03",
@@ -224,8 +224,8 @@
     "expected": "Correct header recognition and exact legitimate IDs.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-04",
@@ -236,8 +236,8 @@
     "expected": "Reject with sanitized repair message; do not trim silently.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-05",
@@ -248,8 +248,8 @@
     "expected": "Fatal validation error; no assigned synthetic identity.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-06",
@@ -260,8 +260,8 @@
     "expected": "NA stays a string; n/a is recognized missing.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-07",
@@ -272,8 +272,8 @@
     "expected": "Input rejected; no drop_duplicates fallback.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-08",
@@ -284,8 +284,8 @@
     "expected": "Features align exactly by observation ID.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-09",
@@ -296,8 +296,8 @@
     "expected": "Join fails with missing count, not silent row intersection.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-10",
@@ -308,8 +308,8 @@
     "expected": "Join fails explicitly.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-11",
@@ -320,8 +320,8 @@
     "expected": "Configuration/input validation refuses it.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-12",
@@ -332,8 +332,8 @@
     "expected": "Input fails; recognized missing numeric cells remain missing.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-13",
@@ -344,8 +344,8 @@
     "expected": "Refuse lossy implicit conversion and explain string requirement.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-14",
@@ -356,8 +356,8 @@
     "expected": "Original metadata/features remain unchanged.",
     "method": "property",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-15",
@@ -368,8 +368,8 @@
     "expected": "Reject unsupported local format without network/deserialization.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-16",
@@ -380,8 +380,8 @@
     "expected": "Refuse before constructing avoidable dense arrays.",
     "method": "unit",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-17",
@@ -392,8 +392,8 @@
     "expected": "Reorder retains digest; mapped change changes digest.",
     "method": "property",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S02-18",
@@ -404,8 +404,8 @@
     "expected": "No shell quoting or hard-coded slash assumption.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S03-01",
@@ -1244,8 +1244,8 @@
     "expected": "Equivalent help, version, findings and exit semantics.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S09-02",
@@ -1256,8 +1256,8 @@
     "expected": "Valid documented JSON without pretending to detect user columns.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S09-03",
@@ -1268,8 +1268,8 @@
     "expected": "Report written, then exit 3.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S09-04",
@@ -1280,8 +1280,8 @@
     "expected": "Exit 2 with sanitized actionable message.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S09-05",
@@ -1292,8 +1292,8 @@
     "expected": "Same findings, exit 0 after successful audit; not a changed verdict.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S09-06",
@@ -1304,8 +1304,8 @@
     "expected": "Progress on stderr; final paths/summary on stdout.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S09-07",
@@ -1316,8 +1316,8 @@
     "expected": "CLI warns that operational files contain IDs.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S09-08",
@@ -1328,8 +1328,8 @@
     "expected": "No unsupported feature falsely advertised as working.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S09-09",
@@ -1340,8 +1340,8 @@
     "expected": "Same projected check values excluding transient provenance.",
     "method": "integration",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S10-01",
