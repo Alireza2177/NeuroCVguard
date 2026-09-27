@@ -52,7 +52,8 @@ jobs:
         if: ${{ matrix.os == 'ubuntu-latest' && matrix.python == '3.12' }}
         run: python -m ruff format --check .
       - name: Types
-        if: ${{ matrix.os == 'ubuntu-latest' && matrix.python == '3.12' }}
+        # Check the configured 3.11 syntax target with 3.11-compatible dependency stubs.
+        if: ${{ matrix.os == 'ubuntu-latest' && matrix.python == '3.11' && !matrix.floor }}
         run: python -m mypy src/neurocvguard
       - name: Strict documentation
         if: ${{ matrix.os == 'ubuntu-latest' && matrix.python == '3.12' }}
