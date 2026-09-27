@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "qa/evidence/S15/run_shard.py",
+    "3"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T22:00:49.859447+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "{\"command\": [\"<ENV_PYTHON>\", \"-m\", \"pytest\", \"-q\", \"--strict-markers\", \"--strict-config\", \"--cov=neurocvguard\", \"--cov-branch\", \"--cov-report=\", \"--junitxml=qa/evidence/S15/verified-3.xml\", \"tests/test_generation.py\", \"tests/test_evaluation_runner.py\", \"tests/test_nested_cli.py\", \"tests/test_examples.py\", \"tests/test_cli_journey.py\", \"tests/test_domain_generation.py\", \"tests/test_nested_candidates.py\", \"tests/test_contracts.py\", \"tests/test_fit_boundaries.py\", \"tests/test_cohort_checks.py\", \"tests/test_evaluation_metrics.py\", \"tests/test_input_tables.py\"], \"COVERAGE_FILE\": \".coverage-s15/3/data\"}\n........................................................................ [ 45%]\n........................................................................ [ 91%]\n..............                                                           [100%]\n158 passed in 449.94s (0:07:29)\n",
+  "stderr": ""
+}

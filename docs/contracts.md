@@ -1,11 +1,10 @@
-# S01 configuration and record reference
+# Configuration and record contracts
 
-S01 validates and serializes records. It does not ingest cohort files, audit a
-split, generate assignments, fit an estimator, render HTML, or compute metrics.
-The six version 1.0 schemas under `contracts/` remain normative and are copied
-byte-for-byte to installed `neurocvguard/schemas/`. The CLI still exposes only
-help and version. Import classes from `neurocvguard.config` or
-`neurocvguard.models`; the root import deliberately stays small.
+Records validate and serialize inputs for the implemented audit, split,
+evaluation and comparison APIs. Schemas under `contracts/` remain normative and
+are packaged for offline validation. See the complete [API](api.rst) and
+[configuration key reference](configuration.md). Import classes from
+`neurocvguard.config` or `neurocvguard.models`; the root import stays small.
 
 ## Configuration
 
@@ -98,12 +97,12 @@ Class order, feature order, candidate order and fold order are preserved.
 Split observation memberships are canonically sorted as required by spec/05;
 the source lists are not mutated. Duplicate memberships/identifiers are not
 silently repaired. Structurally valid unknown-ID/participant-overlap fixtures
-remain loadable because their actual cohort audits belong to later stages.
+remain structurally loadable; audit_splits checks their actual cohort memberships.
 
 For a generated plan, `plan_id` equals SHA-256 of the canonical plan dictionary
 with `plan_id` removed, after membership sorting. This defines an integrity
 representation, not a split-generation algorithm. Cohort/feature digest
-construction and binding to actual tables remain S02/later work. Digests do not
+construction and binding to actual tables are implemented in the input loader. Digests do not
 anonymize identities or authenticate source data.
 
 ## Public versus operational output
@@ -118,8 +117,8 @@ anonymize identities or authenticate source data.
   representations. They have no default public report serializer.
 - `AuditReport.to_dict()` and `CheckResult.to_dict()` exclude open evidence and
   free-form input text by default. S01 uses fixed status/rule wording and safe
-  structural scope aliases. Rich rule-specific evidence/table projections are
-  deferred to S08; omitted details remain in the local record.
+  structural scope aliases. Reporting implements rule-specific evidence/table
+  projections; omitted details remain in the local record.
 - `ComparisonResult.to_dict()` aliases design names and omits free-form reasons
   and interpretation text. Supplied raw labels/text are available only through
   an explicit `sensitive_details=True` call. Differences remain descriptive.

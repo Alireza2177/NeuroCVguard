@@ -310,13 +310,30 @@ def _public_class_label(label: str, index: int) -> str:
     return label
 
 
+def _class_labels(labels: tuple[str, ...]) -> dict[str, str]:
+    """Keep safe semantics and allocate aliases outside every retained label."""
+    retained = {label for i, label in enumerate(labels) if _public_class_label(label, i) == label}
+    result: dict[str, str] = {}
+    for index, label in enumerate(labels):
+        alias = _public_class_label(label, index)
+        if alias != label:
+            number = index + 1
+            while alias in retained or alias in result.values():
+                number += 1
+                alias = f"Target {number:03d}"
+        result[label] = alias
+    return result
+
+
 def _metrics(metrics: MetricSet | None, sensitive: bool) -> JSONValue:
     if metrics is None:
         return None
     data = metrics.to_dict()
     if not sensitive:
-        for index, row in enumerate(cast(list[JSONObject], data["per_class"])):
-            row["class_label"] = _public_class_label(str(row["class_label"]), index)
+        rows = cast(list[JSONObject], data["per_class"])
+        labels = _class_labels(tuple(str(row["class_label"]) for row in rows))
+        for row in rows:
+            row["class_label"] = labels[str(row["class_label"])]
         # Open reason strings can contain research-row text. Keep a stable generic
         # reason in the public view; operational metrics retain the exact reason.
         for name in ("accuracy", "balanced_accuracy", "macro_f1", "roc_auc"):
@@ -344,10 +361,11 @@ def _evaluation_summary(
         or any(fold.get("metrics_hidden_reason") == "privacy_small_cells" for fold in folds)
     )
     if not sensitive:
-        data["class_order"] = [
-            _public_class_label(str(label), index)
-            for index, label in enumerate(cast(list[JSONValue], data["class_order"]))
-        ]
+        data["class_order"] = list(
+            _class_labels(
+                tuple(str(label) for label in cast(list[JSONValue], data["class_order"]))
+            ).values()
+        )
     data["pooled_metrics"] = None if hide else _metrics(pooled, sensitive)
     data["metrics_hidden_reason"] = "privacy_small_cells" if hide else None
     aliases = {
@@ -457,10 +475,7 @@ def project_comparison(result: ComparisonResult, sensitive: bool, threshold: int
     for design, projected in zip(result.designs, designs, strict=True):
         if design.context is not None:
             context = design.context._as_dict()
-            labels = {
-                label: _public_class_label(label, i)
-                for i, label in enumerate(design.context.class_order)
-            }
+            labels = _class_labels(design.context.class_order)
             context["class_order"] = list(labels.values())
             context["positive_class"] = (
                 labels.get(design.context.positive_class)

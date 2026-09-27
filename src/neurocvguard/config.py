@@ -5,6 +5,7 @@ from enum import StrEnum
 from pathlib import Path
 from typing import ClassVar
 
+from neurocvguard._paths import is_remote_path
 from neurocvguard._records import Record
 from neurocvguard.errors import ConfigurationError
 from neurocvguard.serialization import JSONObject
@@ -229,7 +230,7 @@ def load_config(path: str | Path, *, max_input_mb: int = 128) -> AuditConfig:
     if type(max_input_mb) is not int or max_input_mb <= 0:
         raise ConfigurationError("max_input_mb must be a positive integer.")
     source = Path(path)
-    if "://" in str(path) or source.suffix.lower() != ".json":
+    if is_remote_path(path) or source.suffix.lower() != ".json":
         raise ConfigurationError("Use a local .json configuration file; URLs are unsupported.")
     try:
         if not source.is_file() or source.stat().st_size > max_input_mb * 1024 * 1024:

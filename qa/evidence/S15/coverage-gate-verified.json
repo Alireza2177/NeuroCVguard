@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "qa/evidence/S15/check_coverage.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T22:08:58.767095+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "{\n  \"package_line_percent\": 96.33082706766918,\n  \"package_branch_percent\": 90.0728597449909,\n  \"core_line_percent\": {\n    \"identity.py\": 98.01980198019803,\n    \"checks/cohort.py\": 98.33333333333333,\n    \"checks/partitions.py\": 99.32432432432432,\n    \"splitting.py\": 100.0,\n    \"_inner_plans.py\": 100.0,\n    \"fit_boundaries.py\": 95.34883720930233,\n    \"metrics.py\": 95.0,\n    \"_evaluation_inputs.py\": 96.0,\n    \"_evaluation_fits.py\": 97.59036144578313,\n    \"_tuning.py\": 96.49122807017544,\n    \"evaluation.py\": 97.5609756097561\n  },\n  \"required\": {\n    \"line\": 90,\n    \"branch\": 85,\n    \"core_line\": 95\n  },\n  \"exclusions_added\": [],\n  \"passed\": true\n}\n",
+  "stderr": ""
+}

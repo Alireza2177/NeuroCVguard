@@ -54,7 +54,7 @@ such as max_iter require the original configuration and are never inferred.
 Class support comes from pooled metrics when available.
 
 The approved optional `context` schema extension is documented in
-[ADR-S12-001](../state/decisions/ADR-S12-001-comparison-context.md). Updated readers
+{download}`ADR-S12-001 <../state/decisions/ADR-S12-001-comparison-context.md>`. Updated readers
 accept old records without context and leave it absent. Older closed-schema
 readers must be updated before reading extended records. Both standalone and
 embedded comparison schemas carry the same extension.

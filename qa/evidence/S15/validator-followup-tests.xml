@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="8" time="2.839" timestamp="2026-09-27T01:43:36.313652+03:30" hostname="Alireza217"><testcase classname="tests.test_foundation_validator" name="test_artifacts_pass_without_claiming_application_acceptance" time="0.321" /><testcase classname="tests.test_foundation_validator" name="test_default_foundation_gate_still_rejects_implemented_repository" time="0.529" /><testcase classname="tests.test_foundation_validator" name="test_both_modes_reject_corrupted_known_answer_fixture[foundation]" time="0.269"><failure message="KeyError: 'NOT-IN-COHORT'">validator = &lt;module 'foundation_validator_probe' from 'C:\\Users\\Alireza217\\Desktop\\NeuroCVguard_Foundation_v1.0.0\\tools\\validate_foundation.py'&gt;
+tmp_path = WindowsPath('C:/Users/Alireza217/AppData/Local/Temp/pytest-of-Alireza217/pytest-81/test_both_modes_reject_corrupt0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000018C5BAD4510&gt;
+mode = 'foundation'
+
+    @pytest.mark.parametrize("mode", ["foundation", "artifacts"])
+    def test_both_modes_reject_corrupted_known_answer_fixture(validator, tmp_path, monkeypatch, mode):
+        read = validator.read_json
+    
+        def damaged(path):
+            value = copy.deepcopy(read(path))
+            if path == "fixtures/splits_clean.json":
+                value["folds"][0]["test_ids"] = ["NOT-IN-COHORT"]
+            return value
+    
+        monkeypatch.setattr(validator, "read_json", damaged)
+&gt;       code, report = run_report(validator, tmp_path, mode)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_foundation_validator.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_foundation_validator.py:26: in run_report
+    code = validator.main(["--mode", mode, "--output", str(output)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tools\validate_foundation.py:88: in main
+    overlap={subject_of[o] for o in tr}&amp;{subject_of[o] for o in te}
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+.0 = &lt;set_iterator object at 0x0000018C5BA62000&gt;
+
+&gt;   overlap={subject_of[o] for o in tr}&amp;{subject_of[o] for o in te}
+                                         ^^^^^^^^^^^^^
+E   KeyError: 'NOT-IN-COHORT'
+
+tools\validate_foundation.py:88: KeyError</failure></testcase><testcase classname="tests.test_foundation_validator" name="test_both_modes_reject_corrupted_known_answer_fixture[artifacts]" time="0.262"><failure message="KeyError: 'NOT-IN-COHORT'">validator = &lt;module 'foundation_validator_probe' from 'C:\\Users\\Alireza217\\Desktop\\NeuroCVguard_Foundation_v1.0.0\\tools\\validate_foundation.py'&gt;
+tmp_path = WindowsPath('C:/Users/Alireza217/AppData/Local/Temp/pytest-of-Alireza217/pytest-81/test_both_modes_reject_corrupt1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x0000018C5BAC7ED0&gt;
+mode = 'artifacts'
+
+    @pytest.mark.parametrize("mode", ["foundation", "artifacts"])
+    def test_both_modes_reject_corrupted_known_answer_fixture(validator, tmp_path, monkeypatch, mode):
+        read = validator.read_json
+    
+        def damaged(path):
+            value = copy.deepcopy(read(path))
+            if path == "fixtures/splits_clean.json":
+                value["folds"][0]["test_ids"] = ["NOT-IN-COHORT"]
+            return value
+    
+        monkeypatch.setattr(validator, "read_json", damaged)
+&gt;       code, report = run_report(validator, tmp_path, mode)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_foundation_validator.py:70: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_foundation_validator.py:26: in run_report
+    code = validator.main(["--mode", mode, "--output", str(output)])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tools\validate_foundation.py:88: in main
+    overlap={subject_of[o] for o in tr}&amp;{subject_of[o] for o in te}
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+.0 = &lt;set_iterator object at 0x0000018C5BB92000&gt;
+
+&gt;   overlap={subject_of[o] for o in tr}&amp;{subject_of[o] for o in te}
+                                         ^^^^^^^^^^^^^
+E   KeyError: 'NOT-IN-COHORT'
+
+tools\validate_foundation.py:88: KeyError</failure></testcase><testcase classname="tests.test_foundation_validator" name="test_windows_schema_keys_use_manifest_spelling" time="0.295" /><testcase classname="tests.test_foundation_validator" name="test_existing_evidence_is_never_overwritten" time="0.013" /><testcase classname="tests.test_foundation_validator" name="test_no_output_means_no_record_write" time="0.280" /><testcase classname="tests.test_foundation_validator" name="test_repeated_calls_do_not_accumulate_checks" time="0.602" /></testsuite></testsuites>

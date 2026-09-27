@@ -6,6 +6,7 @@ from pathlib import Path
 
 import pandas as pd
 
+from neurocvguard._paths import is_remote_path
 from neurocvguard.config import AuditConfig
 from neurocvguard.errors import InputValidationError
 from neurocvguard.identity import _missing, _valid_label
@@ -50,11 +51,7 @@ def read_table(
     if not isinstance(source, (str, Path)):
         raise InputValidationError("Supply a local CSV/TSV path or pandas DataFrame.")
     path = Path(source)
-    if (
-        "://" in str(source)
-        or str(source).startswith(("\\\\", "//"))
-        or path.suffix.lower() not in {".csv", ".tsv"}
-    ):
+    if is_remote_path(source) or path.suffix.lower() not in {".csv", ".tsv"}:
         raise InputValidationError(
             "Use a local uncompressed .csv or .tsv table; "
             "remote and binary sources are unsupported."

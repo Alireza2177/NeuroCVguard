@@ -1,0 +1,22 @@
+{
+  "scope": "Supplement to historical S14/S15 evidence; no full-suite rerun claimed.",
+  "additional_tests_passed": 9,
+  "test_node_ids": [
+    "tests/test_foundation_validator.py::test_artifacts_pass_without_claiming_application_acceptance",
+    "tests/test_foundation_validator.py::test_both_modes_reject_corrupted_known_answer_fixture[artifacts]",
+    "tests/test_foundation_validator.py::test_both_modes_reject_corrupted_known_answer_fixture[foundation]",
+    "tests/test_foundation_validator.py::test_default_foundation_gate_still_rejects_implemented_repository",
+    "tests/test_foundation_validator.py::test_existing_evidence_is_never_overwritten",
+    "tests/test_foundation_validator.py::test_no_output_means_no_record_write",
+    "tests/test_foundation_validator.py::test_original_snapshot_conditions_still_pass",
+    "tests/test_foundation_validator.py::test_repeated_calls_do_not_accumulate_checks",
+    "tests/test_foundation_validator.py::test_windows_schema_keys_use_manifest_spelling"
+  ],
+  "prior_full_suite_tests": 703,
+  "runtime_package_changed_in_followup": false,
+  "historical_foundation_record_sha256": "aeb8d97f25fb799e3de3b7bfb460c2997158ca22a02cc91604bf80295af1b00b",
+  "historical_record_preserved": true,
+  "human_acceptance": "pending",
+  "S16_S17": "NOT_STARTED",
+  "decision": "state/decisions/ADR-S15-002-foundation-validation-scope.md"
+}

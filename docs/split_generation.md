@@ -2,8 +2,8 @@
 
 `make_splits(cohort, *, config) -> SplitPlan` now generates supplied-cohort outer
 plans with standard sklearn splitters and audits the result before returning.
-It writes nothing and fits no estimator. S02 ingestion is still unimplemented;
-pass a constructed, validated `Cohort`. The CLI still offers help/version only.
+It writes nothing and fits no estimator. Pass a validated `Cohort` from
+`load_cohort`; the CLI `split` command also writes operational artifacts.
 
 ## Executed example
 

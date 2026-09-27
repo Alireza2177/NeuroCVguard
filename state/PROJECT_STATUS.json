@@ -2,7 +2,7 @@
   "foundation_version": "1.0.0",
   "target_release": "0.1.0",
   "software_status": "IN_PROGRESS",
-  "current_stage": "S13",
+  "current_stage": "S15",
   "public_release_authorized": false,
   "stages": [
     {
@@ -91,15 +91,15 @@
     },
     {
       "id": "S14",
-      "status": "NOT_STARTED",
+      "status": "READY_FOR_REVIEW",
       "human_accepted": false,
-      "evidence_path": null
+      "evidence_path": "qa/evidence/S14/"
     },
     {
       "id": "S15",
-      "status": "NOT_STARTED",
+      "status": "READY_FOR_REVIEW",
       "human_accepted": false,
-      "evidence_path": null
+      "evidence_path": "qa/evidence/S15/"
     },
     {
       "id": "S16",

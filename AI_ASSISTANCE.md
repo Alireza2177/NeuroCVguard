@@ -26,6 +26,36 @@
 
 | 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S13 local RNG generators, offline demo, five packaged tutorials, fixed synthetic labeling, tests and documentation; executed real synthetic workflows and recorded their outputs. Browser screenshot capture was rejected by the browser security policy; no screenshot or visual review is claimed. | User requested S13 and explicitly approved the screenshot-only exception in ADR-S13-001. No human scientific review or stage acceptance is recorded. | Local S13 changes from e8eef64. |
 
-No independent reviewer, human authorship approval, public release approval,
-or comprehensive scientific validation is claimed. Later changes to review
+Through S13, no independent reviewer, human authorship approval, public release
+approval, or comprehensive scientific validation was claimed. Later changes to review
 status must reflect actual review of the specified files.
+# S14–S15 assistance record — 2026-09-26 UTC / 2026-09-27 local
+
+The user requested both stages sequentially. Codex drafted/updated documentation,
+contributor materials, executable documentation checks, hardening properties,
+mutation/resource/security evidence and the fixes described in the S15 review.
+Tools used included local Python/PowerShell, pytest/Hypothesis/Coverage.py,
+Ruff/mypy, Sphinx/MyST and the web tool for four external documentation links
+after shell linkcheck was blocked by the sandbox proxy. No public push/upload,
+release, real participant data or telemetry was involved.
+
+The user explicitly authorized a separate AI reviewer. That fresh-context agent
+read source/contracts, reproduced UNC-path and privacy-alias defects, reviewed
+their fixes and reproduced the dependency first-import RNG limitation. It was
+AI review, not human scientific review. Exact findings and boundaries are in
+qa/evidence/S15/review.md. Tests/measurements are reported from actual command
+records, including failures; no exhaustive correctness claim is made.
+
+The maintainer walkthrough was asked; the user queried its purpose. Explanations
+were provided and the human walkthrough/external-user trial remain pending.
+The user approved the narrow first-import exception in ADR-S15-001. This is not
+stage acceptance or approval of a later phase. Copyright/license/contact and
+release metadata remain unconfirmed; no author, tester or review is fabricated.
+
+S15 follow-up (2026-09-26 UTC): on the user's request for the most defensible
+approach, Codex repaired the standalone foundation validator's Windows keys,
+added explicit artifact-only scope while retaining default snapshot assertions,
+protected historical outputs and added focused regression tests. An unknown-ID
+fixture crash found by those tests was corrected. Contributor guidance, strict
+docs and lint/format checks were updated. No new independent or human review is
+claimed; the prior scientific package, RNG exception and stage boundary remain.

@@ -33,12 +33,18 @@ include = ["src/neurocvguard", "examples", "pyproject.toml", "README.md", "LICEN
 testpaths = ["tests"]
 addopts = "--strict-markers --strict-config"
 
+[tool.coverage.run]
+branch = true
+source = ["neurocvguard"]
+# CLI/tutorial tests launch real Python processes. Measure those paths as well.
+patch = ["subprocess"]
+
 [tool.ruff]
 target-version = "py311"
 line-length = 100
-# Preserve the supplied standalone foundation tools; they predate S00 and
-# are specification utilities, not application code. New stage helpers are checked.
-extend-exclude = ["tools/build_master.py", "tools/validate_foundation.py", ".venv-install"]
+# The unchanged master builder predates S00. The repaired foundation validator
+# and all new stage helpers now receive the ordinary project lint/format checks.
+extend-exclude = ["tools/build_master.py", ".venv-install"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]

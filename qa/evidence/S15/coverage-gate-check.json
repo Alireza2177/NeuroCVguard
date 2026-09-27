@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "qa/evidence/S15/check_coverage.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T21:59:02.117817+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<PROJECT_ROOT>\\qa\\evidence\\S15\\check_coverage.py\", line 60, in <module>\n    main()\n  File \"<PROJECT_ROOT>\\qa\\evidence\\S15\\check_coverage.py\", line 27, in main\n    measurement.combine(\n  File \"<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\coverage\\control.py\", line 916, in combine\n    combine_parallel_data(\n  File \"<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\coverage\\data.py\", line 167, in combine_parallel_data\n    files_to_combine = combinable_files(data.base_filename(), data_paths)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\coverage\\data.py\", line 87, in combinable_files\n    raise NoDataError(f\"Couldn't combine from non-existent path '{p}'\")\ncoverage.exceptions.NoDataError: Couldn't combine from non-existent path '<PROJECT_ROOT>\\.coverage.s15-0'\n"
+}

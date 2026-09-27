@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-c",
+    "import hashlib,json; from pathlib import Path; b=json.loads(Path(\"qa/evidence/S14/baseline.json\").read_text()); names=[\"tools/validate_foundation.py\",\"fixtures/manifest.json\"]; assert all(hashlib.sha256(Path(p).read_bytes()).hexdigest()==b[\"files\"][p] for p in names); native={str(p) for p in Path(\"contracts\").glob(\"*.schema.json\")}; key=json.loads(Path(\"fixtures/manifest.json\").read_text())[0][\"schema\"]; assert key not in native and key.replace(\"/\",chr(92)) in native; print(\"Validator and fixture manifest match entry revision; native Windows keys disagree with manifest forward-slash keys. Validator also explicitly requires all application stages NOT_STARTED, so it is a frozen-foundation check, not an implemented-stage gate.\")"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T22:10:22.663648+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "Validator and fixture manifest match entry revision; native Windows keys disagree with manifest forward-slash keys. Validator also explicitly requires all application stages NOT_STARTED, so it is a frozen-foundation check, not an implemented-stage gate.\n",
+  "stderr": ""
+}

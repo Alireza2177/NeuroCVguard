@@ -1,0 +1,47 @@
+# Installation and troubleshooting
+
+Use an authorized local source checkout. No public package name or repository URL
+has been verified. Python 3.11 or newer is required by package metadata; the
+3.11/3.12/3.13 cross-platform matrix and minimum dependency versions remain release
+checks. Local evidence covers Windows Python 3.11 and an ordinary 3.12 install.
+
+Create a new environment (do not replace an unrelated one):
+
+```text
+python -m venv .venv
+```
+
+On Windows, use `.venv/Scripts/python.exe`; on Linux/macOS use
+`.venv/bin/python`. The examples below call that interpreter `python` after you
+activate the environment or substitute its full path. From the source directory:
+
+```text
+python -m pip install -e ".[dev,docs]"
+python -m neurocvguard --version
+python -m neurocvguard --help
+```
+
+For an ordinary local installation use `python -m pip install .`. Initial
+dependency installation needs an approved package registry or a prepared local
+wheel cache. Runtime commands use local files only: no account, API key or GPU.
+The development extra installs pytest, Hypothesis, coverage, Ruff, mypy and build
+tools. The docs extra installs Sphinx/MyST. Do not install unrestricted user code
+or deserialize models to use this package.
+
+| Symptom | Repair |
+|---|---|
+| Import fails or console command is missing | Use the same environment's Python for installation and `python -m neurocvguard`. |
+| Path contains spaces or Unicode | Quote each shell path; UTF-8 CSV/TSV and explicit `Path` objects are supported. |
+| Unknown config key / duplicate JSON key | Compare with the configuration reference; use strict JSON, not comments or YAML. |
+| Role missing or numeric ID | Map the actual column and preserve string identities upstream; do not guess or trim IDs. |
+| Feature keys differ | Reconcile the explicit observation manifest; no row-order join or silent intersection. |
+| Output exists | Choose a fresh directory or explicitly opt into `--overwrite` for named artifacts. |
+| Resource limit exceeded | Review dimensions and memory first; raise only the relevant explicit guardrail. |
+| Infeasible site split | Inspect crossing participants/protected components; document any upstream curation separately. |
+| Fit failure / code 4 | Inspect retained incomplete records and convergence settings; do not average successful folds only. |
+
+Linux/macOS instructions use conventional Python paths but do not represent an
+executed platform test. See the stage handoffs for measured local evidence.
+
+See [limitations](limitations.md) for the approved first-import Python RNG effect
+in the exercised scikit-learn/Rich versions. It does not change seeded plans.

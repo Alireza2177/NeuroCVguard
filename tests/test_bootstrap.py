@@ -1,6 +1,7 @@
 """S00 installed-package acceptance checks using fresh Python processes."""
 
 import json
+import os
 import subprocess
 import sys
 import sysconfig
@@ -45,11 +46,19 @@ import neurocvguard
 assert neurocvguard.__version__ == "0.1.0"
 """
     # -B prevents interpreter bytecode caching; the package itself must stay inert.
+    # This probe forbids *all* writes, including Coverage.py's atexit database
+    # write. Disable only child instrumentation here; keep every audit/assertion.
+    # Other entry-point subprocess tests measure root-import coverage normally.
     result = subprocess.run(
         [sys.executable, "-I", "-B", "-c", probe],
         cwd=tmp_path,
         capture_output=True,
         text=True,
+        env={
+            key: value
+            for key, value in os.environ.items()
+            if key not in {"COVERAGE_PROCESS_CONFIG", "COVERAGE_PROCESS_START"}
+        },
     )
     assert result.returncode == 0, result.stderr
     assert result.stdout == result.stderr == ""

@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "qa/evidence/S15/finalize.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T22:09:08.738101+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "{\n  \"baseline_files\": 971,\n  \"unchanged\": 943,\n  \"allowed_existing_changes\": [\n    \".gitignore\",\n    \"AI_ASSISTANCE.md\",\n    \"README.md\",\n    \"docs/association_diagnostics.md\",\n    \"docs/cohort_checks.md\",\n    \"docs/comparison.md\",\n    \"docs/contracts.md\",\n    \"docs/evaluation.md\",\n    \"docs/preprocessing_provenance.md\",\n    \"docs/reporting.md\",\n    \"docs/split_audits.md\",\n    \"docs/split_generation.md\",\n    \"docs/synthetic_examples.md\",\n    \"pyproject.toml\",\n    \"qa/acceptance_cases.json\",\n    \"qa/case_to_test_map.json\",\n    \"qa/requirements.json\",\n    \"src/neurocvguard/_projection.py\",\n    \"src/neurocvguard/_report_writes.py\",\n    \"src/neurocvguard/_tables.py\",\n    \"src/neurocvguard/cli.py\",\n    \"src/neurocvguard/comparison.py\",\n    \"src/neurocvguard/config.py\",\n    \"src/neurocvguard/demo.py\",\n    \"src/neurocvguard/io.py\",\n    \"src/neurocvguard/provenance.py\",\n    \"state/PROJECT_STATUS.json\",\n    \"tests/test_bootstrap.py\"\n  ],\n  \"baseline_tests_retained\": 644,\n  \"final_tests\": 703,\n  \"new_tests_since_baseline\": 59,\n  \"refreshed_historical_mappings\": [\n    \"AT-S00-02\",\n    \"AT-S00-04\"\n  ],\n  \"stages\": \"S14/S15 READY_FOR_REVIEW\",\n  \"human_acceptance\": \"pending\",\n  \"S16_S17\": \"NOT_STARTED\"\n}\n",
+  "stderr": ""
+}

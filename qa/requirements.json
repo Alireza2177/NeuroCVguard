@@ -278,7 +278,7 @@
       "AT-S14-07",
       "AT-S14-08"
     ],
-    "status": "NOT_IMPLEMENTED"
+    "status": "IMPLEMENTED"
   },
   {
     "id": "REQ-S15",
@@ -295,7 +295,7 @@
       "AT-S15-08",
       "AT-S15-09"
     ],
-    "status": "NOT_IMPLEMENTED"
+    "status": "IMPLEMENTED"
   },
   {
     "id": "REQ-S16",

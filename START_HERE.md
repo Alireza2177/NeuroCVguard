@@ -67,6 +67,15 @@ python tools/validate_foundation.py
 
 The check must report its scope explicitly. Passing it means the **foundation artifacts are consistent under those checks**. It does not mean NeuroCVguard has been coded, its tests have passed, or it is ready to publish.
 
+The default command above validates the original, unimplemented foundation and
+therefore rejects a repository whose application stages have progressed. During
+implementation, use `python tools/validate_foundation.py --mode artifacts` for
+the shared document/schema/fixture checks. This mode explicitly lists the three
+snapshot-only checks outside its scope; it does not assess application tests,
+human acceptance or release readiness. Both modes print results without writing
+a record by default. Add `--output PATH` to save a new JSON record; existing paths
+are refused so historical evidence is preserved.
+
 ## Release checkpoint
 
 S00–S16 prepare and validate locally. S17 is the explicit public-release gate. Repository pushes, package publishing, public visibility changes and DOI registration require actual owner authorization. The foundation contains no credentials and assumes no repository/package name has been reserved.
