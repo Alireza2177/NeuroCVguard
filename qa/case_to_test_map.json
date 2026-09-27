@@ -3104,6 +3104,116 @@
         "state/release/S16_CHECKLIST.md"
       ],
       "scope_note": "Local S16 criterion passed; human/public gates remain pending. AT-S16-04 records unavailable platforms as NOT RUN."
+    },
+    {
+      "case_id": "AT-S17-01",
+      "stage": "S17",
+      "requirement_id": "REQ-S17",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "test_node_ids": [
+        "tests/test_release_preflight.py::test_missing_real_owner_and_approval_stays_blocked",
+        "tests/test_release_preflight.py::test_artifact_tamper_or_absence_retained[changed]",
+        "tests/test_release_preflight.py::test_artifact_tamper_or_absence_retained[missing]",
+        "tests/test_release_preflight.py::test_new_source_or_owner_metadata_requires_new_candidate[src/neurocvguard/__init__.py]",
+        "tests/test_release_preflight.py::test_new_source_or_owner_metadata_requires_new_candidate[LICENSE]",
+        "tests/test_release_preflight.py::test_target_version_must_match_reviewed_artifact",
+        "tests/test_release_preflight.py::test_local_flags_never_grant_publication"
+      ],
+      "evidence": [
+        "qa/evidence/S17/review.md",
+        "qa/evidence/S17/preflight.json",
+        "qa/evidence/S17/namespaces.json",
+        "state/release/S17_PUBLICATION_PLAN.md",
+        "state/handoffs/S17.md"
+      ],
+      "verification_type": "automated_guard_and_implementing_ai_review",
+      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
+    },
+    {
+      "case_id": "AT-S17-02",
+      "stage": "S17",
+      "requirement_id": "REQ-S17",
+      "execution_status": "NOT_RUN",
+      "human_accepted": false,
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S17/review.md",
+        "qa/evidence/S17/preflight.json",
+        "qa/evidence/S17/namespaces.json",
+        "state/release/S17_PUBLICATION_PLAN.md",
+        "state/handoffs/S17.md"
+      ],
+      "verification_type": "blocked_public_release",
+      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
+    },
+    {
+      "case_id": "AT-S17-03",
+      "stage": "S17",
+      "requirement_id": "REQ-S17",
+      "execution_status": "NOT_RUN",
+      "human_accepted": false,
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S17/review.md",
+        "qa/evidence/S17/preflight.json",
+        "qa/evidence/S17/namespaces.json",
+        "state/release/S17_PUBLICATION_PLAN.md",
+        "state/handoffs/S17.md"
+      ],
+      "verification_type": "blocked_public_release",
+      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
+    },
+    {
+      "case_id": "AT-S17-04",
+      "stage": "S17",
+      "requirement_id": "REQ-S17",
+      "execution_status": "NOT_RUN",
+      "human_accepted": false,
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S17/review.md",
+        "qa/evidence/S17/preflight.json",
+        "qa/evidence/S17/namespaces.json",
+        "state/release/S17_PUBLICATION_PLAN.md",
+        "state/handoffs/S17.md"
+      ],
+      "verification_type": "blocked_public_release",
+      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
+    },
+    {
+      "case_id": "AT-S17-05",
+      "stage": "S17",
+      "requirement_id": "REQ-S17",
+      "execution_status": "NOT_RUN",
+      "human_accepted": false,
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S17/review.md",
+        "qa/evidence/S17/preflight.json",
+        "qa/evidence/S17/namespaces.json",
+        "state/release/S17_PUBLICATION_PLAN.md",
+        "state/handoffs/S17.md"
+      ],
+      "verification_type": "blocked_public_release",
+      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
+    },
+    {
+      "case_id": "AT-S17-06",
+      "stage": "S17",
+      "requirement_id": "REQ-S17",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S17/review.md",
+        "qa/evidence/S17/preflight.json",
+        "qa/evidence/S17/namespaces.json",
+        "state/release/S17_PUBLICATION_PLAN.md",
+        "state/handoffs/S17.md"
+      ],
+      "verification_type": "automated_guard_and_implementing_ai_review",
+      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
     }
   ]
 }

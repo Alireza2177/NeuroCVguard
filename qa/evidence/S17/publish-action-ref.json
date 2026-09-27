@@ -1,0 +1,9 @@
+{
+  "url": "https://api.github.com/repos/pypa/gh-action-pypi-publish/git/ref/tags/v1.13.0",
+  "object": {
+    "sha": "106e0b0b7c337fa67ed433972f777c6357f78598",
+    "type": "tag",
+    "url": "https://api.github.com/repos/pypa/gh-action-pypi-publish/git/tags/106e0b0b7c337fa67ed433972f777c6357f78598"
+  },
+  "checked_at_utc": "2026-09-27T05:47:47.866106+00:00"
+}

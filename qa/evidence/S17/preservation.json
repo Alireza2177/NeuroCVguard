@@ -1,0 +1,16 @@
+{
+  "entry_revision": "eb0559d90b94ef2dda2f847bb0fe72c69112e173",
+  "tracked_paths_preserved": 1201,
+  "changed_tracked_files": [
+    "AI_ASSISTANCE.md",
+    "docs/release.md",
+    "qa/acceptance_cases.json",
+    "qa/case_to_test_map.json",
+    "state/PROJECT_STATUS.json"
+  ],
+  "runtime_contracts_examples_prior_evidence_unchanged": true,
+  "prior_stages_and_cases_unchanged": true,
+  "public_release_authorized": false,
+  "stage": "BLOCKED",
+  "new_checkpoint_cases_passed": 7
+}

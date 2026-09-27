@@ -1,0 +1,69 @@
+name: Candidate checks
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {os: ubuntu-latest, python: '3.11', floor: false}
+          - {os: ubuntu-latest, python: '3.12', floor: false}
+          - {os: ubuntu-latest, python: '3.13', floor: false}
+          - {os: windows-latest, python: '3.12', floor: false}
+          - {os: macos-latest, python: '3.12', floor: false}
+          - {os: ubuntu-latest, python: '3.11', floor: true}
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONIOENCODING: utf-8
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install development dependencies
+        if: ${{ !matrix.floor }}
+        run: python -m pip install -e ".[dev,docs]"
+      - name: Install tested direct-dependency floor
+        if: ${{ matrix.floor }}
+        run: python -m pip install -c requirements/minimum-py311.txt -e ".[dev,docs]"
+      - name: Record Python version
+        run: python --version
+      - name: Record dependencies
+        run: python -m pip list --format=json
+      - name: Check dependency consistency
+        run: python -m pip check
+      - name: Full source suite
+        run: python -m pytest -q --strict-markers --strict-config
+      - name: Lint
+        if: ${{ matrix.os == 'ubuntu-latest' && matrix.python == '3.12' }}
+        run: python -m ruff check .
+      - name: Formatting
+        if: ${{ matrix.os == 'ubuntu-latest' && matrix.python == '3.12' }}
+        run: python -m ruff format --check .
+      - name: Types
+        if: ${{ matrix.os == 'ubuntu-latest' && matrix.python == '3.12' }}
+        run: python -m mypy src/neurocvguard
+      - name: Strict documentation
+        if: ${{ matrix.os == 'ubuntu-latest' && matrix.python == '3.12' }}
+        run: python -m sphinx -W --keep-going -b html docs docs/_build/html
+      - name: Build candidate
+        run: python -m build --outdir dist/ci
+      - name: Check exact archive contents
+        run: python tools/audit_distributions.py --dist dist/ci --output dist/ci-content.json
+      - name: Verify clean external wheel
+        if: ${{ !matrix.floor }}
+        run: python tools/ci_wheel_check.py --dist dist/ci --out "${{ runner.temp }}/neurocvguard-wheel"
+      - name: Verify clean external wheel with dependency floor
+        if: ${{ matrix.floor }}
+        run: python tools/ci_wheel_check.py --dist dist/ci --out "${{ runner.temp }}/neurocvguard-wheel" --constraints requirements/minimum-py311.txt

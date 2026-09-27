@@ -1,0 +1,36 @@
+{
+  "scope": "Current S17 staged-path working files; location-only pattern scan, not exhaustive privacy proof",
+  "files_scanned": 70,
+  "hits": [
+    {
+      "file": "AI_ASSISTANCE.md",
+      "line": 81,
+      "kind": "email_like"
+    },
+    {
+      "file": "SECURITY.md",
+      "line": 15,
+      "kind": "email_like"
+    },
+    {
+      "file": "pyproject.toml",
+      "line": 12,
+      "kind": "email_like"
+    },
+    {
+      "file": "pyproject.toml",
+      "line": 80,
+      "kind": "email_like"
+    },
+    {
+      "file": "state/release/S17_OWNER_DECISIONS.md",
+      "line": 6,
+      "kind": "email_like"
+    },
+    {
+      "file": "tests/test_documentation.py",
+      "line": 106,
+      "kind": "email_like"
+    }
+  ]
+}

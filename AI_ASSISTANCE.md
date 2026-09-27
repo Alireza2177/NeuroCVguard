@@ -68,3 +68,21 @@ verification-harness setup mistakes and added nine archive-oracle tests. Runtime
 scientific source is unchanged. These are agent-run local checks, not hosted CI,
 external-user feedback or human acceptance. No public push/tag/upload/DOI action
 was performed. S17 remains unstarted.
+
+S17 preparation (2026-09-27): at the user's request, Codex read the release
+requirements, checked the retained artifact/source identity, queried public
+namespace metadata, drafted release/maintenance materials and added a read-only
+checkpoint with regression tests. Namespace reads returned 404; ownership and
+availability were not inferred. Actual owner/license/security details and human
+review remain pending. No public push, tag, upload, visibility change, issue or
+DOI operation was performed, and no release completion is claimed.
+
+S17 continuation (2026-09-27): the owner supplied and approved Alireza Emad's
+name, copyright attribution, Alireza221177@gmail.com security contact and adoption
+of BSD-3-Clause; the package and license were updated accordingly. The owner
+signed into GitHub/PyPI and configured 2FA directly. With explicit permission,
+Codex added the narrowly scoped pending PyPI Trusted Publisher and created the
+GitHub pypi environment. Codex prepared manual CI/publishing workflows, reviewed
+official action pins/manifests, tested release-file integrity checks and rebuilt
+the owner-metadata candidate. Hosted tests, final publication and human scientific
+acceptance are recorded separately as they actually occur.

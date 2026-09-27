@@ -120,6 +120,10 @@ def main():
     record = {
         "version": version,
         "artifacts": artifacts,
+        "candidate_metadata_hashes": {
+            name: digest((args.root / name).read_bytes())
+            for name in ("pyproject.toml", "README.md", "LICENSE", ".gitignore")
+        },
         "source_payload_hashes": {n: digest(b) for n, b in sorted(expected.items())},
         "scope": "Exact archive allowlist and byte equality; no application or license approval.",
     }

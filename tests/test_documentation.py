@@ -8,6 +8,7 @@ import shlex
 import shutil
 import subprocess
 import sys
+import tomllib
 from pathlib import Path
 
 import pytest
@@ -97,8 +98,12 @@ def test_at_s14_04_documented_subcommands_help(command):
 
 def test_at_s14_06_08_metadata_and_human_review_remain_honest():
     assert not (ROOT / "CITATION.cff").exists()
-    assert "NOT FINALIZED" in (ROOT / "LICENSE").read_text()
-    assert "Public release is blocked" in (ROOT / "SECURITY.md").read_text()
+    metadata = tomllib.loads((ROOT / "pyproject.toml").read_text())
+    assert metadata["project"]["authors"] == [{"name": "Alireza Emad"}]
+    assert metadata["project"]["license"] == "BSD-3-Clause"
+    assert "Copyright (c) 2026, Alireza Emad" in (ROOT / "LICENSE").read_text()
+    assert "NOT FINALIZED" not in (ROOT / "LICENSE").read_text()
+    assert "Alireza221177@gmail.com" in (ROOT / "SECURITY.md").read_text()
     ownership = (ROOT / "docs/ownership.md").read_text()
     assert "Human walkthrough: pending" in ownership
     assert "External-user trial: not performed" in ownership

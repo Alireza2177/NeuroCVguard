@@ -1,0 +1,30 @@
+[
+  {
+    "name": "repository",
+    "url": "https://api.github.com/repos/Alireza2177/NeuroCVguard",
+    "checked_at_utc": "2026-09-27T05:28:14.810264+00:00",
+    "http_status": 404,
+    "interpretation": "No public resource returned; not proof of name availability or account ownership."
+  },
+  {
+    "name": "releases",
+    "url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/releases?per_page=100",
+    "checked_at_utc": "2026-09-27T05:28:15.360168+00:00",
+    "http_status": 404,
+    "interpretation": "No public resource returned; not proof of name availability or account ownership."
+  },
+  {
+    "name": "tags",
+    "url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/tags?per_page=100",
+    "checked_at_utc": "2026-09-27T05:28:15.826088+00:00",
+    "http_status": 404,
+    "interpretation": "No public resource returned; not proof of name availability or account ownership."
+  },
+  {
+    "name": "pypi",
+    "url": "https://pypi.org/pypi/neurocvguard/json",
+    "checked_at_utc": "2026-09-27T05:28:16.259903+00:00",
+    "http_status": 404,
+    "interpretation": "No public resource returned; not proof of name availability or account ownership."
+  }
+]

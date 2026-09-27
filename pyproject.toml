@@ -8,7 +8,14 @@ dynamic = ["version"]
 description = "Research-only cohort audits and independently checked split plans for neuroimaging ML"
 readme = "README.md"
 requires-python = ">=3.11"
+authors = [{name = "Alireza Emad"}]
+maintainers = [{name = "Alireza Emad", email = "Alireza221177@gmail.com"}]
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
 dependencies = ["numpy>=1.26.4", "pandas>=2.2.3", "scipy>=1.13.1", "scikit-learn>=1.5.2", "Jinja2>=3.1.6", "jsonschema>=4.23.0"]
+
+[project.urls]
+Source = "https://github.com/Alireza2177/NeuroCVguard"
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-cov", "hypothesis", "ruff", "mypy", "build", "twine", "pandas-stubs", "types-jsonschema"]
@@ -67,10 +74,12 @@ ignore_missing_imports = true
 
 [tool.neurocvguard.release]
 proposed-license = "BSD-3-Clause"
-license-status = "PENDING_MAINTAINER_CONFIRMATION"
-copyright-owner = "PENDING_MAINTAINER_CONFIRMATION"
-maintainer = "PENDING_MAINTAINER_CONFIRMATION"
-security-contact = "PENDING_MAINTAINER_CONFIRMATION"
-repository-url = "PENDING_OWNER_VERIFICATION"
-package-namespace = "PENDING_OWNER_VERIFICATION"
-public-release-authorized = false
+license-status = "OWNER_CONFIRMED"
+copyright-owner = "Alireza Emad"
+maintainer = "Alireza Emad"
+security-contact = "Alireza221177@gmail.com"
+repository-url = "https://github.com/Alireza2177/NeuroCVguard"
+# Selected project name; registry/publisher verification is release evidence.
+package-namespace = "neurocvguard"
+# Publication authorization is recorded in state/PROJECT_STATUS.json, outside
+# immutable distribution metadata, and must name the reviewed artifacts.

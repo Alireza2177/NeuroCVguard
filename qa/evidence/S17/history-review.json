@@ -1,0 +1,109 @@
+{
+  "scope": "All locally reachable Git blobs, location-only pattern review; not exhaustive privacy proof. No remote mutation.",
+  "blob_count": 1272,
+  "hits": [
+    {
+      "object": "504911e751e264a42e615f2a426cdcc7a7917da4",
+      "path": "qa/evidence/S08/pytest-final.json",
+      "kind": "user_path"
+    },
+    {
+      "object": "de8c4e6f1d1ef1a3d4439606ab2c79f28e4a7664",
+      "path": "qa/evidence/S08/pytest-final.xml",
+      "kind": "user_path"
+    },
+    {
+      "object": "94bdee193e4e021bdc4d902bcd07ac6fab6fdf71",
+      "path": "qa/evidence/S15/adversarial-corrected.xml",
+      "kind": "user_path"
+    },
+    {
+      "object": "a70d1757bd57641011b18055739c8e2bb1085aba",
+      "path": "qa/evidence/S15/adversarial.xml",
+      "kind": "user_path"
+    },
+    {
+      "object": "f6b6780fa0146d1c9c85015df45551e35a381f98",
+      "path": "qa/evidence/S15/final-1.xml",
+      "kind": "user_path"
+    },
+    {
+      "object": "3ce42c88685aa9870dcabfc93cfc39b5bc2944a0",
+      "path": "qa/evidence/S15/hardening-and-affected.xml",
+      "kind": "user_path"
+    },
+    {
+      "object": "af3dc655ef00a6d93ebbe8b27c1b827836b65062",
+      "path": "qa/evidence/S15/validator-followup-tests.xml",
+      "kind": "user_path"
+    },
+    {
+      "object": "52ffb7bbe4fe759f47cbc67fbf45b4a9a2fd9b3d",
+      "path": "qa/evidence/S16/commands.md",
+      "kind": "user_path"
+    },
+    {
+      "object": "9055d6be286fafed9ec320199c4a5876340e42ce",
+      "path": "qa/evidence/S16/linux-final-install.json",
+      "kind": "user_path"
+    },
+    {
+      "object": "c1b90bcdfe6dc4811a4664661c35066973fcd07c",
+      "path": "qa/evidence/S16/linux-matrix.json",
+      "kind": "user_path"
+    },
+    {
+      "object": "82b3e9ff21f3f11866cb9064664a918ecc56f38a",
+      "path": "qa/evidence/S16/linux-packaging-matrix.json",
+      "kind": "user_path"
+    },
+    {
+      "object": "4552e3989590928ecad47092276b751a17de9113",
+      "path": "qa/evidence/S16/linux-python-install.json",
+      "kind": "user_path"
+    },
+    {
+      "object": "e784064a3a17302a0432c033f475c777c684055d",
+      "path": "qa/evidence/S16/linux-python-persistent.json",
+      "kind": "user_path"
+    },
+    {
+      "object": "e729a64f8f6af79727ffe7a95cd8bfadb6568a7c",
+      "path": "qa/evidence/S16/minimum-tests.xml",
+      "kind": "user_path"
+    },
+    {
+      "object": "2e9ab03d7f4b07d746089d56989625dd5b3b514f",
+      "path": "qa/evidence/S16/prepare-linux-persistent.json",
+      "kind": "user_path"
+    },
+    {
+      "object": "66ee1d6ec461936d32232c30000777093e9c6505",
+      "path": "qa/evidence/S16/prepare-linux.json",
+      "kind": "user_path"
+    },
+    {
+      "object": "0baf5938459fcdfd941783f6cc7e197d7c1dfbb9",
+      "path": "qa/evidence/S16/privacy_scan.py",
+      "kind": "user_path"
+    },
+    {
+      "object": "bf9221b68a105defc9b0aa344b6cdbbda7f6acda",
+      "path": "qa/evidence/S16/windows-wheel-core.xml",
+      "kind": "user_path"
+    },
+    {
+      "object": "392b21d43828d212caa5caf5d7548d673f4015a7",
+      "path": "tests/test_cli_policy.py",
+      "kind": "user_path"
+    },
+    {
+      "object": "a176d6063d559710c80859a61f85cc1b732e1ff1",
+      "path": "tests/test_report_projection.py",
+      "kind": "user_path"
+    }
+  ],
+  "large_blobs": [],
+  "credential_shape_hits": 0,
+  "user_path_hits": 20
+}

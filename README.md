@@ -31,7 +31,8 @@ unknown preprocessing asks for evidence rather than a passing verdict.
 
 **Private plans/evaluations are separate from projected reports.** Default
 projection is not guaranteed anonymity; inspect artifacts before sharing.
-The current local version is 0.1.0, not a published release or namespace claim.
+Version: 0.1.0. See the [release procedure and evidence](docs/release.md) for
+publication status and the actual verified installation/platform results.
 
 ## Documentation and development
 
@@ -49,15 +50,16 @@ Build the full local site with
 `docs/_build/html/index.html`. Run
 `python -m pytest -q --strict-markers --strict-config` for the test suite.
 Actual stage evidence and unrun checks are recorded under `state/handoffs/`.
-Windows local environments have been exercised; other platforms and dependency
-minimums remain release checks. No remote CI pass is claimed.
+Local Windows and Linux WSL2 checks and the Python 3.11 direct-dependency floor
+have been exercised; see [installation evidence](docs/installation.md).
+macOS and hosted CI remain unverified until their recorded runs pass.
 
 ## License, support and citation
 
-BSD-3-Clause is proposed; [LICENSE](LICENSE) is not a finalized grant. Copyright,
-maintainer identity, private security contact and public namespaces require owner
-confirmation. Use the existing private owner channel for local support and share
-only synthetic reproductions. No response-time commitment is claimed.
+Copyright 2026 Alireza Emad. Released under the [BSD-3-Clause license](LICENSE).
+Maintainer: Alireza Emad. For private security reports, use the approved contact in
+[SECURITY.md](SECURITY.md); share only synthetic reproductions. No response-time
+or long-term support commitment is claimed.
 Citation metadata will be added only after verified authorship and release details;
 no DOI or citation badge exists. [AI assistance](AI_ASSISTANCE.md) is recorded
 honestly. Human walkthrough, external-user testing and acceptance remain pending.

@@ -1,0 +1,22 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "tools/release_preflight.py",
+    "--dist",
+    "dist/s16",
+    "--output",
+    "qa/evidence/S17/preflight.json"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T05:30:36.659836+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_code": 3,
+  "stdout": "{\n  \"scope\": \"Local consistency only; cannot authenticate a human or grant permission.\",\n  \"status\": \"BLOCKED\",\n  \"publication_performed\": false,\n  \"version\": \"0.1.0\",\n  \"blockers\": [\n    \"Owner confirmation missing: license-status\",\n    \"Owner confirmation missing: copyright-owner\",\n    \"Owner confirmation missing: maintainer\",\n    \"Owner confirmation missing: security-contact\",\n    \"Owner confirmation missing: repository-url\",\n    \"Owner confirmation missing: package-namespace\",\n    \"LICENSE is a proposal, not a finalized grant\",\n    \"Project public-release authorization is absent\",\n    \"Package public-release authorization is absent\",\n    \"Human stage acceptance pending: S00, S01, S02, S03, S04, S05, S06, S07, S08, S09, S10, S11, S12, S13, S14, S15, S16\"\n  ],\n  \"source_drift\": [],\n  \"artifacts\": [\n    {\n      \"file\": \"neurocvguard-0.1.0-py3-none-any.whl\",\n      \"sha256\": \"2997e8d1ef5dd09d8a66aead05e165960a08b040b7949436fa02c8945db45386\",\n      \"matches_S16\": true\n    },\n    {\n      \"file\": \"neurocvguard-0.1.0.tar.gz\",\n      \"sha256\": \"6325ca9863b2a59294c837acdbdcbe780352cf441cb97cd07e284c44d4c15deb\",\n      \"matches_S16\": true\n    }\n  ],\n  \"still_requires\": [\n    \"Owner-verified namespaces and visibility\",\n    \"Exact final commit and artifact approval\",\n    \"Human scientific/usability review\",\n    \"Authorization for each external action\",\n    \"Public artifact/download/install verification after approved publication\"\n  ],\n  \"checked_revision\": \"eb0559d90b94ef2dda2f847bb0fe72c69112e173\"\n}\n",
+  "stderr": ""
+}

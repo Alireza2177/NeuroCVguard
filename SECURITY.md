@@ -11,9 +11,13 @@ and suppress small cells but are not guaranteed anonymous. Explicit sensitive
 reports retain more information. Keep files in authorized local storage; review
 every attachment before sharing. Debug output is not permission to disclose data.
 
-**Public release is blocked until the maintainer supplies and approves a real
-private security contact.** No email address, reporting URL or response-time
-promise is invented here. Until then, contact the owner through your existing
-private project channel. Do not publish a vulnerability containing patient data
-or upload sensitive examples to a public issue. A minimal synthetic reproduction
-and affected local version are sufficient for an initial report.
+Report security concerns privately to maintainer Alireza Emad at
+[Alireza221177@gmail.com](mailto:Alireza221177@gmail.com). Include the affected
+version and a minimal synthetic reproduction. Do not include patient data,
+credentials or sensitive research files, and do not post an unreviewed
+vulnerability or sensitive example in a public issue.
+
+The maintainer approved this contact during S17. No response-time or long-term
+support commitment is promised. For a confirmed scientific-result defect, retain
+the affected version and original outputs; a correction will be documented rather
+than silently changing published artifacts.

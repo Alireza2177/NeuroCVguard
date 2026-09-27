@@ -1,0 +1,13 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "qa/evidence/S17/run_check.py",
+    "namespaces",
+    ".venv/Scripts/python.exe",
+    "qa/evidence/S17/check_namespaces.py"
+  ],
+  "exit_code": 1,
+  "observed_error": "FileExistsError: recorder refused to overwrite namespaces.json created by the probe",
+  "original_data_preserved": "qa/evidence/S17/namespaces.json",
+  "scope": "Reconstructed error record from actual tool output; no complete subprocess output captured; HTTP observations are retained separately."
+}
