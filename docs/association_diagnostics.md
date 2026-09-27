@@ -5,7 +5,7 @@ config=config)`. It returns immutable `CheckResult` records for mapped site,
 phase and explicitly declared categorical covariates, each paired with target.
 It consumes an already constructed `Cohort`; S02 file ingestion remains absent.
 It does not fit models, change cohorts or splits, or write files. Ledger checks,
-combined audit orchestration and report rendering belong to later stages.
+combined audit orchestration and report rendering use these same diagnostics.
 
 ## Executable synthetic example
 
@@ -93,8 +93,8 @@ See [the reporting guide](reporting.md) for the S08 display boundary.
 
 The foundation acknowledges mlconfound's adjacent inferential work; these
 descriptive diagnostics do not implement or claim equivalent tests. See
-[the normative association specification](../spec/09_association_diagnostics.md)
-and its [R08/R09 source register](../spec/21_sources.md).
+{download}`the normative association specification <../spec/09_association_diagnostics.md>`
+and its {download}`R08/R09 source register <../spec/21_sources.md>`.
 
 S06 is local research software awaiting human review. The exact commands,
-environments and results are in [the S06 handoff](../state/handoffs/S06.md).
+environments and results are in {download}`the S06 handoff <../state/handoffs/S06.md>`.

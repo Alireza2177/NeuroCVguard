@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "qa/evidence/S15/run_shard.py",
+    "0"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T21:47:09.610209+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "{\"command\": [\"<ENV_PYTHON>\", \"-m\", \"pytest\", \"-q\", \"--strict-markers\", \"--strict-config\", \"--cov=neurocvguard\", \"--cov-branch\", \"--cov-report=\", \"--junitxml=qa/evidence/S15/final-0.xml\", \"tests/test_demo.py\", \"tests/test_diagnostic_evaluation.py\", \"tests/test_documentation.py\", \"tests/test_evaluation_preflight.py\", \"tests/test_split_audit.py\", \"tests/test_config.py\", \"tests/test_contract_edges.py\", \"tests/test_association_statistics.py\", \"tests/test_ledger.py\", \"tests/test_association_pairs.py\", \"tests/test_input_guards.py\", \"tests/test_synthetic.py\"], \"COVERAGE_FILE\": \".coverage.s15-0\"}\n........................................................................ [ 35%]\n........................................................................ [ 70%]\n...........................................................              [100%]\n203 passed in 492.38s (0:08:12)\n",
+  "stderr": ""
+}

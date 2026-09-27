@@ -185,7 +185,7 @@ an unexpected exception may prevent any result from being produced.
 
 ## Private schema migration
 
-[Approved ADR-S10-001](../state/decisions/ADR-S10-001-evaluation-plan.md) adds paired
+{download}`Approved ADR-S10-001 <../state/decisions/ADR-S10-001-evaluation-plan.md>` adds paired
 optional `plan_digest` and `actual_plan` fields to the private schema. The runner always
 populates them. The digest covers canonical operational plan JSON; validation
 checks digest, objective, cohort, fold references and fit boundaries. Public

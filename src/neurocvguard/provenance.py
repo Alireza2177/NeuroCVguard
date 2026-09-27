@@ -2,6 +2,7 @@
 
 from pathlib import Path
 
+from neurocvguard._paths import is_remote_path
 from neurocvguard.config import AuditConfig
 from neurocvguard.errors import ConfigurationError, InputValidationError
 from neurocvguard.identity import _valid_label, _validated_metadata
@@ -110,11 +111,7 @@ def load_preprocessing_ledger(
         ledger = PreprocessingLedger.from_dict(source)
     else:
         path = Path(source)
-        if (
-            "://" in str(source)
-            or str(source).startswith(("\\\\", "//"))
-            or path.suffix.lower() != ".json"
-        ):
+        if is_remote_path(source) or path.suffix.lower() != ".json":
             raise InputValidationError("Use a local uncompressed .json preprocessing ledger.")
         limit = config.limits.max_input_mb * 1024 * 1024
         try:

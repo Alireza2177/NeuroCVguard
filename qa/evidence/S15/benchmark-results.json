@@ -1,0 +1,182 @@
+{
+  "hardware": {
+    "processor": "Intel64 Family 6 Model 158 Stepping 13, GenuineIntel",
+    "logical_cpus": 16,
+    "architecture": "AMD64",
+    "os": "Windows-10-10.0.26200-SP0"
+  },
+  "versions": {
+    "neurocvguard": "0.1.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1"
+  },
+  "python": "3.11.7",
+  "seed": 2026,
+  "measurements": [
+    {
+      "rows": 10000,
+      "participants": 5000,
+      "features": 0,
+      "protected_components": 2500,
+      "workload": "inventory-10k",
+      "elapsed_seconds": 0.3558742000022903,
+      "process_peak_working_set_bytes": 89767936,
+      "repeat": 0,
+      "exit_code": 0,
+      "command": [
+        "<ENV_PYTHON>",
+        "qa/evidence/S15/benchmark.py",
+        "inventory-10k"
+      ]
+    },
+    {
+      "rows": 10000,
+      "participants": 5000,
+      "features": 0,
+      "protected_components": 2500,
+      "workload": "inventory-10k",
+      "elapsed_seconds": 0.353476700023748,
+      "process_peak_working_set_bytes": 90083328,
+      "repeat": 1,
+      "exit_code": 0,
+      "command": [
+        "<ENV_PYTHON>",
+        "qa/evidence/S15/benchmark.py",
+        "inventory-10k"
+      ]
+    },
+    {
+      "rows": 100000,
+      "participants": 50000,
+      "features": 0,
+      "protected_components": 25000,
+      "workload": "inventory-100k",
+      "elapsed_seconds": 4.192619900102727,
+      "process_peak_working_set_bytes": 232415232,
+      "repeat": 0,
+      "exit_code": 0,
+      "command": [
+        "<ENV_PYTHON>",
+        "qa/evidence/S15/benchmark.py",
+        "inventory-100k"
+      ]
+    },
+    {
+      "rows": 100000,
+      "participants": 50000,
+      "features": 0,
+      "protected_components": 25000,
+      "workload": "inventory-100k",
+      "elapsed_seconds": 4.698520199977793,
+      "process_peak_working_set_bytes": 233152512,
+      "repeat": 1,
+      "exit_code": 0,
+      "command": [
+        "<ENV_PYTHON>",
+        "qa/evidence/S15/benchmark.py",
+        "inventory-100k"
+      ]
+    },
+    {
+      "rows": 10000,
+      "participants": 5000,
+      "features": 0,
+      "protected_components": 2500,
+      "workload": "audit-10k",
+      "elapsed_seconds": 2.2197606000117958,
+      "process_peak_working_set_bytes": 156590080,
+      "repeat": 0,
+      "exit_code": 0,
+      "command": [
+        "<ENV_PYTHON>",
+        "qa/evidence/S15/benchmark.py",
+        "audit-10k"
+      ]
+    },
+    {
+      "rows": 10000,
+      "participants": 5000,
+      "features": 0,
+      "protected_components": 2500,
+      "workload": "audit-10k",
+      "elapsed_seconds": 2.171254099928774,
+      "process_peak_working_set_bytes": 156819456,
+      "repeat": 1,
+      "exit_code": 0,
+      "command": [
+        "<ENV_PYTHON>",
+        "qa/evidence/S15/benchmark.py",
+        "audit-10k"
+      ]
+    },
+    {
+      "rows": 10000,
+      "participants": 5000,
+      "features": 0,
+      "protected_components": 2500,
+      "workload": "split-10k",
+      "elapsed_seconds": 5.693404100020416,
+      "process_peak_working_set_bytes": 183140352,
+      "repeat": 0,
+      "exit_code": 0,
+      "command": [
+        "<ENV_PYTHON>",
+        "qa/evidence/S15/benchmark.py",
+        "split-10k"
+      ]
+    },
+    {
+      "rows": 10000,
+      "participants": 5000,
+      "features": 0,
+      "protected_components": 2500,
+      "workload": "split-10k",
+      "elapsed_seconds": 5.409488299977966,
+      "process_peak_working_set_bytes": 184041472,
+      "repeat": 1,
+      "exit_code": 0,
+      "command": [
+        "<ENV_PYTHON>",
+        "qa/evidence/S15/benchmark.py",
+        "split-10k"
+      ]
+    },
+    {
+      "execution_status": "completed",
+      "rows": 240,
+      "participants": 120,
+      "features": 12,
+      "folds": 3,
+      "workload": "baseline",
+      "elapsed_seconds": 1.8371987000573426,
+      "process_peak_working_set_bytes": 163098624,
+      "repeat": 0,
+      "exit_code": 0,
+      "command": [
+        "<ENV_PYTHON>",
+        "qa/evidence/S15/benchmark.py",
+        "baseline"
+      ]
+    },
+    {
+      "execution_status": "completed",
+      "rows": 240,
+      "participants": 120,
+      "features": 12,
+      "folds": 3,
+      "workload": "baseline",
+      "elapsed_seconds": 1.894369100104086,
+      "process_peak_working_set_bytes": 163188736,
+      "repeat": 1,
+      "exit_code": 0,
+      "command": [
+        "<ENV_PYTHON>",
+        "qa/evidence/S15/benchmark.py",
+        "baseline"
+      ]
+    }
+  ],
+  "measurement_scope": "Operation elapsed time excludes input construction/loading; OS process peak working set includes interpreter, imports and input construction. Two separate child processes per workload; no universal timing target."
+}

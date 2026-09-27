@@ -20,6 +20,7 @@ from neurocvguard import (
     load_split_plan,
     make_splits,
 )
+from neurocvguard._paths import is_remote_path
 from neurocvguard._report_writes import write_bundle
 from neurocvguard.config import (
     AuditConfig,
@@ -227,11 +228,7 @@ def _run_synthetic(
     if type(sensitive_details) is not bool or type(overwrite) is not bool:
         raise InputValidationError("Demo sensitivity and overwrite must be explicit booleans.")
     destination = Path(output_dir)
-    if (
-        "://" in str(output_dir)
-        or str(output_dir).startswith(("\\\\", "//"))
-        or destination.is_symlink()
-    ):
+    if is_remote_path(output_dir) or destination.is_symlink():
         raise InputValidationError("Choose a local regular demo output directory.")
     if not overwrite and (destination / "demo.private.json").exists():
         raise InputValidationError(

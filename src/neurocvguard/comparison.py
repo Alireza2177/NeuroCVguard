@@ -3,6 +3,7 @@
 from itertools import combinations
 from pathlib import Path
 
+from neurocvguard._paths import is_remote_path
 from neurocvguard.errors import InputValidationError
 from neurocvguard.identity import _valid_label
 from neurocvguard.models import (
@@ -49,11 +50,7 @@ def load_evaluation(source: str | Path, *, max_input_mb: int = 128) -> Evaluatio
     path = Path(source)
     if type(max_input_mb) is not int or max_input_mb <= 0:
         raise InputValidationError("max_input_mb must be a positive integer.")
-    if (
-        "://" in str(source)
-        or str(source).startswith(("\\\\", "//"))
-        or path.suffix.lower() != ".json"
-    ):
+    if is_remote_path(source) or path.suffix.lower() != ".json":
         raise InputValidationError("Use a local evaluation.private.json operational record.")
     limit = max_input_mb * 1024 * 1024
     try:

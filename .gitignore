@@ -14,6 +14,7 @@ __pycache__/
 .hypothesis/
 .coverage
 .coverage.*
+.coverage-s15/
 htmlcov/
 docs/_build/
 

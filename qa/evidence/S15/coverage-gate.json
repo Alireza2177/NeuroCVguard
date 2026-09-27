@@ -1,0 +1,24 @@
+{
+  "package_line_percent": 96.33082706766918,
+  "package_branch_percent": 90.0728597449909,
+  "core_line_percent": {
+    "identity.py": 98.01980198019803,
+    "checks/cohort.py": 98.33333333333333,
+    "checks/partitions.py": 99.32432432432432,
+    "splitting.py": 100.0,
+    "_inner_plans.py": 100.0,
+    "fit_boundaries.py": 95.34883720930233,
+    "metrics.py": 95.0,
+    "_evaluation_inputs.py": 96.0,
+    "_evaluation_fits.py": 97.59036144578313,
+    "_tuning.py": 96.49122807017544,
+    "evaluation.py": 97.5609756097561
+  },
+  "required": {
+    "line": 90,
+    "branch": 85,
+    "core_line": 95
+  },
+  "exclusions_added": [],
+  "passed": true
+}

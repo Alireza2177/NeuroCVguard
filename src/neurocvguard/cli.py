@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING, NoReturn
 
 from neurocvguard import __version__
+from neurocvguard._paths import is_remote_path
 from neurocvguard.errors import ConfigurationError, NeuroCVguardError, UnsupportedDesignError
 
 if TYPE_CHECKING:
@@ -172,11 +173,7 @@ def _read_json(path: str | Path, *, max_input_mb: int = 128) -> "JSONObject":
     from neurocvguard.serialization import strict_json_loads
 
     source = Path(path)
-    if (
-        "://" in str(path)
-        or str(path).startswith(("\\\\", "//"))
-        or source.suffix.lower() != ".json"
-    ):
+    if is_remote_path(path) or source.suffix.lower() != ".json":
         raise InputValidationError("Use a local UTF-8 JSON input.")
     limit = max_input_mb * 1024 * 1024
     try:

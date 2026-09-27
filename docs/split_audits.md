@@ -108,7 +108,7 @@ cells and absent mapped columns are explicit nulls. Mapped identities, target,
 session, site, phase, independence and covariates are included. Feature values
 and unrelated columns are excluded. Mapping/list order stays explicit; object
 keys are sorted, output is compact UTF-8 and Unicode is not normalized. This is
-the representation future S02 integration must reuse; no second digest format
+the representation the cohort loader also uses; no second digest format
 or cohort/feature reader was introduced.
 
 A null-digest imported plan gets a new bound copy only after identity validation.
@@ -145,7 +145,7 @@ fold and field scope, independent of input fold order. Unknown keys block only
 the dependent checks; other folds and literal observation/coverage diagnostics
 remain present. Under audit_only, participant/component overlaps are warnings,
 but the absence of a supported objective can never produce a true validity flag.
-The diagnostic option does not weaken any S04 audit invariant; any future narrow
+The diagnostic option does not weaken any S04 audit invariant; the separate narrow
 diagnostic evaluator exception must keep the original invalid-for-objective audit.
 
 Training sets can overlap across ordinary folds. Only within-partition boundaries
@@ -165,7 +165,7 @@ NCG-SPLIT-011 check with `scope.field == "split_summary"` stores:
 |---|---|
 | `valid_for_objective` | False for audit_only or any failed/unassessable required separation, training, nesting, structural or requested complete-CV coverage prerequisite. A test-class warning alone does not invalidate a split. |
 | `complete_cv` | Exactly one repeat, at least two outer folds and every observation in test exactly once. This can be true even when identity separation is invalid. |
-| `evaluation_permitted` | Valid-for-objective, complete-CV and constant-target prerequisites passed at this stage. This is ordinary split-level eligibility, not authorization or implemented model evaluation. |
+| `evaluation_permitted` | Valid-for-objective, complete-CV and constant-target prerequisites passed at this stage. This is ordinary split-level eligibility, not authorization or a model fit. |
 | `n_repeats`, `n_outer_folds` | Supplied repeat/fold counts. |
 | `diagnostic_requested` | The explicit config flag; it does not waive findings. |
 | `class_order` | Sorted global observed class labels; private summary evidence retains it. |
@@ -179,8 +179,8 @@ is a warning/failure and cannot use the one-fold exception.
 
 The fixed NCG-PROV-001 unknown-upstream check remains present and unassessable.
 Consequently this split-only report has technical execution status `partial`,
-even if all split prerequisites pass. This does not implement S07 ledger checks
-or claim that a Pipeline can repair earlier fitting.
+even if all split prerequisites pass. Ledger checks are available separately
+through audit_cohort; a Pipeline cannot repair earlier fitting.
 
 `report.to_dict()` conservatively omits membership IDs, component hashes, raw
 domain labels, free text and class-support tables. It aliases repeat/fold scopes
@@ -189,5 +189,5 @@ identity can be substituted into those fields through a string or bool-as-count.
 Sensitive in-memory evidence retains exact memberships/supports; use
 `report.to_dict(sensitive_details=True)` explicitly for local detailed JSON.
 Plan serialization remains the separate sensitive operational representation.
-No files are written by these APIs. Rich table projection/rendering remains S08;
+No files are written by these APIs. Reporting supplies rich table projection/rendering;
 the current public report does not promise formal anonymization.

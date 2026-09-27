@@ -5,6 +5,7 @@ import shutil
 import tempfile
 from pathlib import Path
 
+from neurocvguard._paths import is_remote_path
 from neurocvguard.errors import InputValidationError
 
 
@@ -14,7 +15,7 @@ def write_bundle(
     if type(overwrite) is not bool:
         raise InputValidationError("overwrite must be an explicit boolean.")
     destination = Path(output_dir)
-    if "://" in str(output_dir) or str(output_dir).startswith(("\\\\", "//")):
+    if is_remote_path(output_dir):
         raise InputValidationError("Choose a local report directory.")
     if destination.is_symlink() or any(Path(name).name != name for name in contents):
         raise InputValidationError("Report destinations must use local regular files.")

@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="41" skipped="0" tests="49" time="42.424" timestamp="2026-09-27T01:02:39.694533+03:30" hostname="Alireza217"><properties><property name="hypothesis-statistics-tests/test_hardening.py::test_at_s15_02_grouped_plan_properties" value="dGVzdHMvdGVzdF9oYXJkZW5pbmcucHk6OnRlc3RfYXRfczE1XzAyX2dyb3VwZWRfcGxhbl9wcm9wZXJ0aWVzOgoKICAtIGR1cmluZyBnZW5lcmF0ZSBwaGFzZSAoMjcuNDIgc2Vjb25kcyk6CiAgICAtIFR5cGljYWwgcnVudGltZXM6IH4gMTAzNi0xMTc2IG1zLCBvZiB3aGljaCA8IDFtcyBpbiBkYXRhIGdlbmVyYXRpb24KICAgIC0gMjUgcGFzc2luZywgMCBmYWlsaW5nLCBhbmQgMCBpbnZhbGlkIHRlc3QgY2FzZXMKCiAgLSBTdG9wcGVkIGJlY2F1c2Ugc2V0dGluZ3MubWF4X2V4YW1wbGVzPTI1" /><property name="hypothesis-statistics-tests/test_hardening.py::test_at_s15_02_keyed_values_and_digests" value="dGVzdHMvdGVzdF9oYXJkZW5pbmcucHk6OnRlc3RfYXRfczE1XzAyX2tleWVkX3ZhbHVlc19hbmRfZGlnZXN0czoKCiAgLSBkdXJpbmcgZ2VuZXJhdGUgcGhhc2UgKDAuODcgc2Vjb25kcyk6CiAgICAtIFR5cGljYWwgcnVudGltZXM6IH4gMjctMzMgbXMsIG9mIHdoaWNoIH4gMC0xIG1zIGluIGRhdGEgZ2VuZXJhdGlvbgogICAgLSAzMCBwYXNzaW5nLCAwIGZhaWxpbmcsIGFuZCAwIGludmFsaWQgdGVzdCBjYXNlcwoKICAtIFN0b3BwZWQgYmVjYXVzZSBzZXR0aW5ncy5tYXhfZXhhbXBsZXM9MzA=" /><property name="hypothesis-statistics-tests/test_hardening.py::test_at_s15_02_id_renaming_preserves_transitive_memberships" value="dGVzdHMvdGVzdF9oYXJkZW5pbmcucHk6OnRlc3RfYXRfczE1XzAyX2lkX3JlbmFtaW5nX3ByZXNlcnZlc190cmFuc2l0aXZlX21lbWJlcnNoaXBzOgoKICAtIGR1cmluZyBnZW5lcmF0ZSBwaGFzZSAoMC42OSBzZWNvbmRzKToKICAgIC0gVHlwaWNhbCBydW50aW1lczogfiAwLTI0IG1zLCBvZiB3aGljaCB+IDAtMSBtcyBpbiBkYXRhIGdlbmVyYXRpb24KICAgIC0gMzAgcGFzc2luZywgMCBmYWlsaW5nLCBhbmQgNCBpbnZhbGlkIHRlc3QgY2FzZXMKCiAgLSBTdG9wcGVkIGJlY2F1c2Ugc2V0dGluZ3MubWF4X2V4YW1wbGVzPTMw" /></properties><testcase classname="tests.test_hardening" name="test_at_s15_04_config_rejects_remote_filesystem_before_probe[\\\\network-host\\share\\config.json]" time="0.001" /><testcase classname="tests.test_hardening" name="test_at_s15_04_config_rejects_remote_filesystem_before_probe[//network-host/share/config.json]" time="0.001" /><testcase classname="tests.test_hardening" name="test_at_s15_02_grouped_plan_properties" time="27.425" /><testcase classname="tests.test_hardening" name="test_at_s15_02_keyed_values_and_digests" time="0.877" /><testcase classname="tests.test_hardening" name="test_at_s15_02_id_renaming_preserves_transitive_memberships" time="0.691" /><testcase classname="tests.test_hardening" name="test_at_s15_04_all_cli_workflows_without_network" time="10.115" /><testcase classname="tests.test_hardening" name="test_at_s15_06_large_feature_guard_before_numeric_allocation" time="0.035" /><testcase classname="tests.test_hardening" name="test_at_s15_07_instructions_are_inert_data" time="0.234" /><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[config-\\\\]" time="0.003"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\\\', boundary = 'config'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E30E249290&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[config-//]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '//', boundary = 'config'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E30E912290&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[config-\\/]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\/', boundary = 'config'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330944C50&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[config-/\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '/\\', boundary = 'config'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E3307699D0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[table-\\\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\\\', boundary = 'table'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330C12D50&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[table-//]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '//', boundary = 'table'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E33074CC10&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[table-\\/]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\/', boundary = 'table'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330710C50&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[table-/\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '/\\', boundary = 'table'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E33074E610&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[plan-\\\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\\\', boundary = 'plan'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E33095B4D0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[plan-//]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '//', boundary = 'plan'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E3308227D0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[plan-\\/]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\/', boundary = 'plan'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330769290&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[plan-/\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '/\\', boundary = 'plan'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E33073D010&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[ledger-\\\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\\\', boundary = 'ledger'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E3307A1290&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[ledger-//]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '//', boundary = 'ledger'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E30E8D4D90&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[ledger-\\/]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\/', boundary = 'ledger'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330C0CF10&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[ledger-/\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '/\\', boundary = 'ledger'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330844A90&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[evaluation-\\\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\\\', boundary = 'evaluation'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E30F208510&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[evaluation-//]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '//', boundary = 'evaluation'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330803690&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[evaluation-\\/]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\/', boundary = 'evaluation'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E33098E610&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[evaluation-/\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '/\\', boundary = 'evaluation'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E33073D1D0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[cli_json-\\\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\\\', boundary = 'cli_json'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E33083CC10&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[cli_json-//]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '//', boundary = 'cli_json'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E30C1783D0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[cli_json-\\/]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\/', boundary = 'cli_json'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330724250&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[cli_json-/\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '/\\', boundary = 'cli_json'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330B2DD50&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[demo-\\\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\\\', boundary = 'demo'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E3309C8E10&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[demo-//]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '//', boundary = 'demo'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E33083C6D0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[demo-\\/]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\/', boundary = 'demo'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E3309DBD50&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[demo-/\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '/\\', boundary = 'demo'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E3309D47D0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[report-\\\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\\\', boundary = 'report'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E30E31BA50&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[report-//]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '//', boundary = 'report'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330640E10&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[report-\\/]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\/', boundary = 'report'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330823D10&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[report-/\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '/\\', boundary = 'report'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E33075C4D0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[split-\\\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\\\', boundary = 'split'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E3306DA0D0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[split-//]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '//', boundary = 'split'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330991BD0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[split-\\/]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\/', boundary = 'split'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E3307A8390&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[split-/\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '/\\', boundary = 'split'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330976B10&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[rejected-\\\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\\\', boundary = 'rejected'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330650BD0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[rejected-//]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '//', boundary = 'rejected'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E33064A0D0&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[rejected-\\/]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '\\/', boundary = 'rejected'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E30E330690&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_remote_spellings_refused_before_any_filesystem_probe[rejected-/\\]" time="0.001"><failure message="ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)">prefix = '/\\', boundary = 'rejected'
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x000001E330988150&gt;
+
+    @pytest.mark.parametrize("prefix", ["\\\\", "//", "\\/", "/\\"])
+    @pytest.mark.parametrize(
+        "boundary",
+        [
+            "config",
+            "table",
+            "plan",
+            "ledger",
+            "evaluation",
+            "cli_json",
+            "demo",
+            "report",
+            "split",
+            "rejected",
+        ],
+    )
+    def test_remote_spellings_refused_before_any_filesystem_probe(prefix, boundary, monkeypatch):
+        from test_contracts import fixture
+    
+        from neurocvguard import load_config
+        from neurocvguard._report_writes import write_bundle
+        from neurocvguard.cli import _read_json
+&gt;       from neurocvguard.comparison import load_evaluation_result
+E       ImportError: cannot import name 'load_evaluation_result' from 'neurocvguard.comparison' (C:\Users\Alireza217\Desktop\NeuroCVguard_Foundation_v1.0.0\src\neurocvguard\comparison.py)
+
+tests\test_hardening.py:264: ImportError</failure></testcase><testcase classname="tests.test_hardening" name="test_collision_free_public_class_labels_across_evaluation_and_comparison" time="0.001"><failure message="TypeError: 'NoneType' object is not subscriptable">def test_collision_free_public_class_labels_across_evaluation_and_comparison():
+        from test_contracts import fixture
+    
+        from neurocvguard import compare_designs
+        from neurocvguard.models import AuditReport, EvaluationResult
+    
+        raw = fixture("evaluation_schema_example")
+        labels = ["@private", "Target 001"]
+        raw["class_order"], raw["positive_class"] = labels, labels[1]
+        for metric in [raw["pooled_metrics"], *(f["metrics"] for f in raw["folds"])]:
+&gt;           for row, label in zip(metric["per_class"], labels, strict=True):
+                                  ^^^^^^^^^^^^^^^^^^^
+E           TypeError: 'NoneType' object is not subscriptable
+
+tests\test_hardening.py:307: TypeError</failure></testcase></testsuite></testsuites>

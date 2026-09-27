@@ -107,8 +107,8 @@ unassessable, without erasing other inventory results. Missing or malformed
 relationship values add no union operations. `coverage` has a
 `RelationshipCoverage` record for each column; any incomplete record makes
 `complete=False`. `require_complete()` raises `SplitValidationError`, preventing
-strict use of these partial components by future planning/evaluation callers.
-The guard must be called by those future stages; those callers do not exist yet.
+strict use of these partial components by planning/evaluation callers.
+The planner and evaluator call this guard before strict use.
 
 Component members are sorted without normalization. Component IDs are
 `component-` plus SHA-256 of canonical JSON for that membership tuple. Both
@@ -160,6 +160,6 @@ misrepresented as an observed identity violation. Explicit
 `check.to_dict(sensitive_details=True)` retains detailed local evidence.
 
 No statistic is calculated from privacy-suppressed values. Rich evidence tables,
-small-cell display treatment and report rendering remain S08. A public check
+small-cell display treatment and report rendering are implemented in reporting. A public check
 list is not a complete research report, upstream-provenance assessment, anonymity
 guarantee or global leakage-free verdict.

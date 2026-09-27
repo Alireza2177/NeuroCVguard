@@ -1,5 +1,5 @@
 {
-  "note": "S00, S01, S03, S04 and S05 entries refer to actual tests and AI review evidence. Human acceptance remains separate. S02 and S06 onward remain unimplemented and unrun.",
+  "note": "Current test IDs and actual evidence are mapped per case. Historical S00 parameter IDs are retained separately. Human acceptance remains separate; S14 walkthrough pending; S15 first-import exception explicitly approved.",
   "mappings": [
     {
       "case_id": "AT-S00-01",
@@ -22,6 +22,33 @@
         "tests/test_bootstrap.py::test_installed_version_matches_metadata",
         "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-module]",
         "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments1-0-Local research audits and offline reports-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments1-0-Local research audits and offline reports-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments2-2-Choose a subcommand-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments2-2-Choose a subcommand-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments3-2-Invalid invocation-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments3-2-Invalid invocation-console]",
+        "tests/test_bootstrap.py::test_editable_install_points_to_source"
+      ],
+      "evidence": [
+        "qa/evidence/S00/reinstall-editable-final.json",
+        "qa/evidence/S00/reinstall-ordinary-final.json",
+        "qa/evidence/S00/ordinary-smoke.json",
+        "qa/evidence/S00/pytest-final.xml",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml"
+      ],
+      "verification_type": "automated",
+      "stage": "S00",
+      "requirement_id": "REQ-S00",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "historical_test_node_ids": [
+        "tests/test_bootstrap.py::test_installed_version_matches_metadata",
+        "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-console]",
         "tests/test_bootstrap.py::test_entry_points[arguments1-0-Only help and version are available-module]",
         "tests/test_bootstrap.py::test_entry_points[arguments1-0-Only help and version are available-console]",
         "tests/test_bootstrap.py::test_entry_points[arguments2-0-Only help and version are available-module]",
@@ -29,18 +56,7 @@
         "tests/test_bootstrap.py::test_entry_points[arguments3-2-unrecognized arguments: audit-module]",
         "tests/test_bootstrap.py::test_entry_points[arguments3-2-unrecognized arguments: audit-console]",
         "tests/test_bootstrap.py::test_editable_install_points_to_source"
-      ],
-      "evidence": [
-        "qa/evidence/S00/reinstall-editable-final.json",
-        "qa/evidence/S00/reinstall-ordinary-final.json",
-        "qa/evidence/S00/ordinary-smoke.json",
-        "qa/evidence/S00/pytest-final.xml"
-      ],
-      "verification_type": "automated",
-      "stage": "S00",
-      "requirement_id": "REQ-S00",
-      "execution_status": "PASSED",
-      "human_accepted": false
+      ]
     },
     {
       "case_id": "AT-S00-03",
@@ -61,23 +77,37 @@
       "test_node_ids": [
         "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-module]",
         "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments1-0-Local research audits and offline reports-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments1-0-Local research audits and offline reports-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments2-2-Choose a subcommand-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments2-2-Choose a subcommand-console]",
+        "tests/test_bootstrap.py::test_entry_points[arguments3-2-Invalid invocation-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments3-2-Invalid invocation-console]"
+      ],
+      "evidence": [
+        "qa/evidence/S00/metadata-dev.json",
+        "qa/evidence/S00/metadata-ordinary.json",
+        "qa/evidence/S00/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml"
+      ],
+      "verification_type": "automated_metadata_check_and_AI_review",
+      "stage": "S00",
+      "requirement_id": "REQ-S00",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "historical_test_node_ids": [
+        "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-module]",
+        "tests/test_bootstrap.py::test_entry_points[arguments0-0-neurocvguard 0.1.0-console]",
         "tests/test_bootstrap.py::test_entry_points[arguments1-0-Only help and version are available-module]",
         "tests/test_bootstrap.py::test_entry_points[arguments1-0-Only help and version are available-console]",
         "tests/test_bootstrap.py::test_entry_points[arguments2-0-Only help and version are available-module]",
         "tests/test_bootstrap.py::test_entry_points[arguments2-0-Only help and version are available-console]",
         "tests/test_bootstrap.py::test_entry_points[arguments3-2-unrecognized arguments: audit-module]",
         "tests/test_bootstrap.py::test_entry_points[arguments3-2-unrecognized arguments: audit-console]"
-      ],
-      "evidence": [
-        "qa/evidence/S00/metadata-dev.json",
-        "qa/evidence/S00/metadata-ordinary.json",
-        "qa/evidence/S00/review.md"
-      ],
-      "verification_type": "automated_metadata_check_and_AI_review",
-      "stage": "S00",
-      "requirement_id": "REQ-S00",
-      "execution_status": "PASSED",
-      "human_accepted": false
+      ]
     },
     {
       "case_id": "AT-S00-05",
@@ -2491,6 +2521,422 @@
       "verification_type": "automated",
       "stage": "S13",
       "requirement_id": "REQ-S13",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S14-01",
+      "test_node_ids": [
+        "tests/test_documentation.py::test_at_s14_01_local_markdown_links_exist"
+      ],
+      "evidence": [
+        "qa/evidence/S14/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S14",
+      "requirement_id": "REQ-S14",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S14-02",
+      "test_node_ids": [
+        "tests/test_documentation.py::test_at_s14_02_every_public_export_documented"
+      ],
+      "evidence": [
+        "qa/evidence/S14/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S14",
+      "requirement_id": "REQ-S14",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S14-03",
+      "test_node_ids": [
+        "tests/test_documentation.py::test_at_s14_03_configuration_reference_matches_contract"
+      ],
+      "evidence": [
+        "qa/evidence/S14/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S14",
+      "requirement_id": "REQ-S14",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S14-04",
+      "test_node_ids": [
+        "tests/test_documentation.py::test_at_s14_04_all_python_guide_blocks[association_diagnostics]",
+        "tests/test_documentation.py::test_at_s14_04_all_python_guide_blocks[cohort_checks]",
+        "tests/test_documentation.py::test_at_s14_04_all_python_guide_blocks[comparison]",
+        "tests/test_documentation.py::test_at_s14_04_all_python_guide_blocks[evaluation]",
+        "tests/test_documentation.py::test_at_s14_04_all_python_guide_blocks[input_tables]",
+        "tests/test_documentation.py::test_at_s14_04_all_python_guide_blocks[preprocessing_provenance]",
+        "tests/test_documentation.py::test_at_s14_04_all_python_guide_blocks[reporting]",
+        "tests/test_documentation.py::test_at_s14_04_all_python_guide_blocks[split_audits]",
+        "tests/test_documentation.py::test_at_s14_04_all_python_guide_blocks[split_generation]",
+        "tests/test_documentation.py::test_at_s14_04_all_python_guide_blocks[synthetic_examples]",
+        "tests/test_documentation.py::test_at_s14_04_documented_subcommands_help[audit]",
+        "tests/test_documentation.py::test_at_s14_04_documented_subcommands_help[compare]",
+        "tests/test_documentation.py::test_at_s14_04_documented_subcommands_help[demo]",
+        "tests/test_documentation.py::test_at_s14_04_documented_subcommands_help[evaluate]",
+        "tests/test_documentation.py::test_at_s14_04_documented_subcommands_help[init]",
+        "tests/test_documentation.py::test_at_s14_04_documented_subcommands_help[report]",
+        "tests/test_documentation.py::test_at_s14_04_documented_subcommands_help[split]",
+        "tests/test_documentation.py::test_at_s14_04_documented_subcommands_help[validate]",
+        "tests/test_documentation.py::test_at_s14_04_quickstart_commands_verbatim"
+      ],
+      "evidence": [
+        "qa/evidence/S14/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S14",
+      "requirement_id": "REQ-S14",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S14-05",
+      "test_node_ids": [
+        "tests/test_documentation.py::test_rule_catalog_and_limitations_discoverable"
+      ],
+      "evidence": [
+        "qa/evidence/S14/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S14",
+      "requirement_id": "REQ-S14",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S14-06",
+      "test_node_ids": [
+        "tests/test_documentation.py::test_at_s14_06_08_metadata_and_human_review_remain_honest"
+      ],
+      "evidence": [
+        "qa/evidence/S14/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S14",
+      "requirement_id": "REQ-S14",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S14-07",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S14/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S14",
+      "requirement_id": "REQ-S14",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S14-08",
+      "test_node_ids": [],
+      "evidence": [
+        "docs/ownership.md",
+        "state/handoffs/S14.md"
+      ],
+      "verification_type": "human_pending",
+      "stage": "S14",
+      "requirement_id": "REQ-S14",
+      "execution_status": "NOT_RUN",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S15-01",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S15/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml",
+        "qa/evidence/S15/coverage-gate.json",
+        "qa/evidence/S15/mutation-results.json",
+        "qa/evidence/S15/benchmark-results.json",
+        "state/decisions/ADR-S15-001-cold-dependency-rng.md"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S15",
+      "requirement_id": "REQ-S15",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S15-02",
+      "test_node_ids": [
+        "tests/test_association_checks.py::test_at_s06_07_sparse_warning_without_inference",
+        "tests/test_association_checks.py::test_at_s06_09_inclusive_noncausal_review_warning",
+        "tests/test_association_pairs.py::test_at_s06_05_within_person_covariate_changes",
+        "tests/test_association_pairs.py::test_at_s06_06_missing_pairs",
+        "tests/test_association_statistics.py::test_at_s06_01_zero_association",
+        "tests/test_association_statistics.py::test_at_s06_02_perfect_association",
+        "tests/test_association_statistics.py::test_at_s06_03_constant_variable[table0]",
+        "tests/test_association_statistics.py::test_at_s06_03_constant_variable[table1]",
+        "tests/test_association_statistics.py::test_at_s06_04_repeat_invariance",
+        "tests/test_association_statistics.py::test_at_s06_08_high_cardinality",
+        "tests/test_association_statistics.py::test_at_s06_10_category_name_invariance",
+        "tests/test_hardening.py::test_at_s15_02_grouped_plan_properties",
+        "tests/test_hardening.py::test_at_s15_02_id_renaming_preserves_transitive_memberships",
+        "tests/test_hardening.py::test_at_s15_02_keyed_values_and_digests",
+        "tests/test_identity.py::test_components_match_independent_graph_oracle"
+      ],
+      "evidence": [
+        "qa/evidence/S15/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml",
+        "qa/evidence/S15/coverage-gate.json",
+        "qa/evidence/S15/mutation-results.json",
+        "qa/evidence/S15/benchmark-results.json",
+        "state/decisions/ADR-S15-001-cold-dependency-rng.md"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S15",
+      "requirement_id": "REQ-S15",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S15-03",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S15/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml",
+        "qa/evidence/S15/coverage-gate.json",
+        "qa/evidence/S15/mutation-results.json",
+        "qa/evidence/S15/benchmark-results.json",
+        "state/decisions/ADR-S15-001-cold-dependency-rng.md"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S15",
+      "requirement_id": "REQ-S15",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S15-04",
+      "test_node_ids": [
+        "tests/test_hardening.py::test_at_s15_04_all_cli_workflows_without_network",
+        "tests/test_hardening.py::test_at_s15_04_config_rejects_remote_filesystem_before_probe[//network-host/share/config.json]",
+        "tests/test_hardening.py::test_at_s15_04_config_rejects_remote_filesystem_before_probe[\\\\\\\\network-host\\\\share\\\\config.json]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[cli_json-//]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[cli_json-/\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[cli_json-\\\\/]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[cli_json-\\\\\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[config-//]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[config-/\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[config-\\\\/]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[config-\\\\\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[demo-//]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[demo-/\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[demo-\\\\/]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[demo-\\\\\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[evaluation-//]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[evaluation-/\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[evaluation-\\\\/]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[evaluation-\\\\\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[ledger-//]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[ledger-/\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[ledger-\\\\/]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[ledger-\\\\\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[plan-//]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[plan-/\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[plan-\\\\/]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[plan-\\\\\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[rejected-//]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[rejected-/\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[rejected-\\\\/]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[rejected-\\\\\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[report-//]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[report-/\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[report-\\\\/]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[report-\\\\\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[split-//]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[split-/\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[split-\\\\/]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[split-\\\\\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[table-//]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[table-/\\\\]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[table-\\\\/]",
+        "tests/test_hardening.py::test_remote_spellings_refused_before_any_filesystem_probe[table-\\\\\\\\]"
+      ],
+      "evidence": [
+        "qa/evidence/S15/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml",
+        "qa/evidence/S15/coverage-gate.json",
+        "qa/evidence/S15/mutation-results.json",
+        "qa/evidence/S15/benchmark-results.json",
+        "state/decisions/ADR-S15-001-cold-dependency-rng.md"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S15",
+      "requirement_id": "REQ-S15",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S15-05",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S15/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml",
+        "qa/evidence/S15/coverage-gate.json",
+        "qa/evidence/S15/mutation-results.json",
+        "qa/evidence/S15/benchmark-results.json",
+        "state/decisions/ADR-S15-001-cold-dependency-rng.md"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S15",
+      "requirement_id": "REQ-S15",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S15-06",
+      "test_node_ids": [
+        "tests/test_hardening.py::test_at_s15_06_large_feature_guard_before_numeric_allocation",
+        "tests/test_input_guards.py::test_at_s02_16_allocation_guard[dense]",
+        "tests/test_input_guards.py::test_at_s02_16_allocation_guard[features]",
+        "tests/test_input_guards.py::test_at_s02_16_allocation_guard[rows]"
+      ],
+      "evidence": [
+        "qa/evidence/S15/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml",
+        "qa/evidence/S15/coverage-gate.json",
+        "qa/evidence/S15/mutation-results.json",
+        "qa/evidence/S15/benchmark-results.json",
+        "state/decisions/ADR-S15-001-cold-dependency-rng.md"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S15",
+      "requirement_id": "REQ-S15",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S15-07",
+      "test_node_ids": [
+        "tests/test_hardening.py::test_at_s15_07_instructions_are_inert_data"
+      ],
+      "evidence": [
+        "qa/evidence/S15/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml",
+        "qa/evidence/S15/coverage-gate.json",
+        "qa/evidence/S15/mutation-results.json",
+        "qa/evidence/S15/benchmark-results.json",
+        "state/decisions/ADR-S15-001-cold-dependency-rng.md"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S15",
+      "requirement_id": "REQ-S15",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S15-08",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S15/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml",
+        "qa/evidence/S15/coverage-gate.json",
+        "qa/evidence/S15/mutation-results.json",
+        "qa/evidence/S15/benchmark-results.json",
+        "state/decisions/ADR-S15-001-cold-dependency-rng.md"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S15",
+      "requirement_id": "REQ-S15",
+      "execution_status": "PASSED",
+      "human_accepted": false
+    },
+    {
+      "case_id": "AT-S15-09",
+      "test_node_ids": [
+        "tests/test_foundation_validator.py::test_artifacts_pass_without_claiming_application_acceptance",
+        "tests/test_foundation_validator.py::test_both_modes_reject_corrupted_known_answer_fixture[artifacts]",
+        "tests/test_foundation_validator.py::test_both_modes_reject_corrupted_known_answer_fixture[foundation]",
+        "tests/test_foundation_validator.py::test_default_foundation_gate_still_rejects_implemented_repository",
+        "tests/test_foundation_validator.py::test_existing_evidence_is_never_overwritten",
+        "tests/test_foundation_validator.py::test_no_output_means_no_record_write",
+        "tests/test_foundation_validator.py::test_original_snapshot_conditions_still_pass",
+        "tests/test_foundation_validator.py::test_repeated_calls_do_not_accumulate_checks",
+        "tests/test_foundation_validator.py::test_windows_schema_keys_use_manifest_spelling"
+      ],
+      "evidence": [
+        "qa/evidence/S15/review.md",
+        "qa/evidence/S15/verified-0.xml",
+        "qa/evidence/S15/verified-1.xml",
+        "qa/evidence/S15/verified-2.xml",
+        "qa/evidence/S15/verified-3.xml",
+        "qa/evidence/S15/coverage-gate.json",
+        "qa/evidence/S15/mutation-results.json",
+        "qa/evidence/S15/benchmark-results.json",
+        "state/decisions/ADR-S15-001-cold-dependency-rng.md",
+        "qa/evidence/S15/validator-followup-tests-final.xml",
+        "qa/evidence/S15/artifacts-consistency.json",
+        "qa/evidence/S15/foundation-snapshot-check.json",
+        "state/decisions/ADR-S15-002-foundation-validation-scope.md"
+      ],
+      "verification_type": "automated_and_ai_review",
+      "stage": "S15",
+      "requirement_id": "REQ-S15",
       "execution_status": "PASSED",
       "human_accepted": false
     }

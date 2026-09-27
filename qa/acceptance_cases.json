@@ -1844,8 +1844,8 @@
     "expected": "No broken references or ignored build failures.",
     "method": "documentation",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S14-02",
@@ -1856,8 +1856,8 @@
     "expected": "All public functions/types/exceptions documented.",
     "method": "documentation",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S14-03",
@@ -1868,8 +1868,8 @@
     "expected": "Every key/default/type/limit described correctly.",
     "method": "documentation",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S14-04",
@@ -1880,8 +1880,8 @@
     "expected": "Commands and option placement match implementation.",
     "method": "documentation",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S14-05",
@@ -1892,8 +1892,8 @@
     "expected": "Unknown upstream provenance and scope limitations clear near usage.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S14-06",
@@ -1904,8 +1904,8 @@
     "expected": "No invented DOI/contact/contributor/version support.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S14-07",
@@ -1916,8 +1916,8 @@
     "expected": "No hidden/fabricated authorship or exhaustive review claims.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S14-08",
@@ -1928,7 +1928,7 @@
     "expected": "Record actual human understanding/review or leave gate pending.",
     "method": "human",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
+    "implementation_status": "IMPLEMENTED",
     "execution_status": "NOT_RUN"
   },
   {
@@ -1940,8 +1940,8 @@
     "expected": "Targeted tests fail; restored code passes.",
     "method": "mutation",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S15-02",
@@ -1952,8 +1952,8 @@
     "expected": "Specified invariants hold without flaky score assumptions.",
     "method": "property",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S15-03",
@@ -1964,8 +1964,8 @@
     "expected": "Project/core thresholds met without unjustified exclusions.",
     "method": "quality",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S15-04",
@@ -1976,8 +1976,8 @@
     "expected": "No outbound calls.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S15-05",
@@ -1988,8 +1988,8 @@
     "expected": "Measured cost documented and no accidental quadratic critical path.",
     "method": "benchmark",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S15-06",
@@ -2000,8 +2000,8 @@
     "expected": "Clear early refusal instead of uncontrolled allocation.",
     "method": "benchmark",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S15-07",
@@ -2012,8 +2012,8 @@
     "expected": "Handled as inert data; never executed or followed.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S15-08",
@@ -2024,8 +2024,8 @@
     "expected": "Actual findings and reviewer type recorded, not self-certified human review.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S15-09",
@@ -2036,8 +2036,8 @@
     "expected": "Every exception justified; no concealed failing requirement.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S16-01",

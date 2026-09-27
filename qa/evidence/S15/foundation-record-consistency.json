@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "tools/validate_foundation.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-26T22:09:49.326185+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<PROJECT_ROOT>\\tools\\validate_foundation.py\", line 112, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"<PROJECT_ROOT>\\tools\\validate_foundation.py\", line 34, in main\n    errors=list(Draft202012Validator(schemas[item['schema']]).iter_errors(read_json(item['path'])))\n                                     ~~~~~~~^^^^^^^^^^^^^^^^\nKeyError: 'contracts/config.schema.json'\n"
+}

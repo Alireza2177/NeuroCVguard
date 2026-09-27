@@ -97,4 +97,4 @@ requires inspection before manual removal. Restrictive permissions are requested
 where supported; Windows ACL inheritance still applies.
 
 S08 is READY_FOR_REVIEW after its recorded checks, with human acceptance pending.
-See [the handoff](../state/handoffs/S08.md) for exact evidence and unrun checks.
+See {download}`the handoff <../state/handoffs/S08.md>` for exact evidence and unrun checks.

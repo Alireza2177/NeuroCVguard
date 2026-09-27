@@ -1,0 +1,56 @@
+{
+  "0": [
+    "tests/test_demo.py",
+    "tests/test_diagnostic_evaluation.py",
+    "tests/test_documentation.py",
+    "tests/test_evaluation_preflight.py",
+    "tests/test_split_audit.py",
+    "tests/test_config.py",
+    "tests/test_contract_edges.py",
+    "tests/test_association_statistics.py",
+    "tests/test_ledger.py",
+    "tests/test_association_pairs.py",
+    "tests/test_input_guards.py",
+    "tests/test_synthetic.py"
+  ],
+  "1": [
+    "tests/test_inner_plans.py",
+    "tests/test_hardening.py",
+    "tests/test_comparison_cli.py",
+    "tests/test_evaluation_fits.py",
+    "tests/test_partitions.py",
+    "tests/test_report_security.py",
+    "tests/test_report_projection.py",
+    "tests/test_preprocessing.py",
+    "tests/test_association_checks.py",
+    "tests/test_bootstrap.py",
+    "tests/test_feature_inputs.py"
+  ],
+  "2": [
+    "tests/test_nested_runner.py",
+    "tests/test_evaluation_cli.py",
+    "tests/test_comparison.py",
+    "tests/test_plan_exports.py",
+    "tests/test_cli_policy.py",
+    "tests/test_split_edges.py",
+    "tests/test_cli_commands.py",
+    "tests/test_report_rendering.py",
+    "tests/test_split_io.py",
+    "tests/test_identity.py",
+    "tests/test_cohort_inventory.py"
+  ],
+  "3": [
+    "tests/test_generation.py",
+    "tests/test_evaluation_runner.py",
+    "tests/test_nested_cli.py",
+    "tests/test_examples.py",
+    "tests/test_cli_journey.py",
+    "tests/test_domain_generation.py",
+    "tests/test_nested_candidates.py",
+    "tests/test_contracts.py",
+    "tests/test_fit_boundaries.py",
+    "tests/test_cohort_checks.py",
+    "tests/test_evaluation_metrics.py",
+    "tests/test_input_tables.py"
+  ]
+}

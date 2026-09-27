@@ -2,7 +2,7 @@
 
 `audit_cohort(cohort, *, config, ledger=None)` now combines cohort checks,
 categorical association and preprocessing declarations in an `AuditReport`.
-It uses constructed `Cohort` objects because S02 ingestion remains unimplemented.
+It accepts validated `Cohort` objects returned by `load_cohort`.
 It does not execute transforms or fit a model. Its coverage stays partial:
 upstream execution cannot be authenticated from a feature matrix or plain JSON.
 
@@ -115,7 +115,7 @@ learning. Auditing never reconstructs notebook history or executes user code.
 
 `audit_splits` retains its split-only signature and the same unknown-upstream
 limitation. Use `check_preprocessing(..., plan=plan)` for fold-specific ledger
-comparison; CLI combination and HTML rendering are later stages.
+comparison; the CLI combines these checks and renders HTML.
 
 ## Planned versus recorded fitting
 
@@ -128,7 +128,7 @@ schemas or creating an observed event.
 and model/fold context, but no execution status. `validate_fit_ids` rejects
 empty, duplicate or outside-training IDs; a strict subset is permitted.
 `validate_fit_event` checks a supplied completed/failed record against that
-boundary. Validation is not proof a call happened. The future evaluator must
+boundary. Validation is not proof a call happened. The controlled evaluator must
 capture actual fit calls and outcomes, use fresh pipelines, and fail on an
 internal boundary violation. No callback, estimator runner or logging mechanism
 is implemented here.
@@ -143,4 +143,4 @@ presented as observed execution. Explicit sensitive report serialization retains
 the diagnostic evidence and its sensitivity notice. No report files are written
 by S07 and no public release is authorized.
 
-See [the S07 handoff](../state/handoffs/S07.md) for exact checks and limitations.
+See {download}`the S07 handoff <../state/handoffs/S07.md>` for exact checks and limitations.

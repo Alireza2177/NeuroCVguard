@@ -10,6 +10,7 @@ from pathlib import Path
 import pandas as pd
 
 from neurocvguard._features import align_features, numeric_value
+from neurocvguard._paths import is_remote_path
 from neurocvguard._tables import read_metadata
 from neurocvguard.config import AuditConfig
 from neurocvguard.errors import ConfigurationError, InputValidationError, SplitValidationError
@@ -186,11 +187,7 @@ def _all_members(plan: SplitPlan) -> set[str]:
 
 def _read_plan_file(path: Path, config: AuditConfig) -> str:
     limit = config.limits.max_input_mb * 1024 * 1024
-    if (
-        "://" in str(path)
-        or str(path).startswith("\\\\")
-        or path.suffix.lower() not in {".json", ".tsv"}
-    ):
+    if is_remote_path(path) or path.suffix.lower() not in {".json", ".tsv"}:
         raise InputValidationError("Use a local uncompressed .json or outer-only .tsv split plan.")
     try:
         if not path.is_file() or path.stat().st_size > limit:
@@ -323,7 +320,7 @@ def _write_sensitive_files(
     if type(overwrite) is not bool:
         raise InputValidationError("overwrite must be an explicit boolean.")
     destination = Path(output_dir)
-    if "://" in str(output_dir) or str(destination).startswith("\\\\"):
+    if is_remote_path(output_dir):
         raise InputValidationError("Choose a local directory for sensitive split artifacts.")
     paths = {name: destination / name for name in contents}
     try:
@@ -394,6 +391,8 @@ def write_split_plan(
     --------
     ``plan.write("local-splits")`` delegates to this writer. All outputs are sensitive.
     """
+    if is_remote_path(output_dir):
+        raise InputValidationError("Choose a local directory for split artifacts.")
     if any(
         (Path(output_dir) / name).exists()
         for name in ("rejected-plan.private.json", "REJECTED.SENSITIVE.txt")
@@ -480,6 +479,8 @@ def write_rejected_plan(
     """
     if report.execution_status != ReportStatus.BLOCKED:
         raise InputValidationError("Rejected-plan export requires a blocked planning report.")
+    if is_remote_path(output_dir):
+        raise InputValidationError("Choose a local directory for split artifacts.")
     if any(
         (Path(output_dir) / name).exists()
         for name in ("plan.json", "assignments.tsv", "generation.private.json")
