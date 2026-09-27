@@ -150,9 +150,8 @@ for each scenario and use the current manifest's artifact inventory.
 five examples and three scenarios. These values are outputs, not independently
 generated test oracles or claims about real neuroimaging data. The retained private
 manifest argv has machine-specific path prefixes redacted; scientific artifacts
-and their recorded checksums are unchanged. No screenshot has been fabricated:
-{download}`the attempted capture was blocked <../qa/evidence/S13/screenshot-blocked.md>` by
-the browser tool's local-URL policy. The user explicitly approved the S13
-{download}`screenshot-only exception <../state/decisions/ADR-S13-001-screenshot-exception.md>`.
-HTML/JSON consistency tests do not substitute for visual presentation evidence;
-no successful screenshot or visual browser review is claimed.
+and their recorded checksums are unchanged. Screenshot capture was blocked by
+the browser's local-URL policy; the reports have numerical and HTML/JSON
+consistency checks, but the planned visual review remains incomplete. See
+{download}`the capture record <../qa/evidence/S13/screenshot-blocked.md>` and
+{download}`the documented exception <../state/decisions/ADR-S13-001-screenshot-exception.md>`.

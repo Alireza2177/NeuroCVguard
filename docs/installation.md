@@ -1,7 +1,7 @@
 # Installation and troubleshooting
 
 Install [NeuroCVguard 0.1.0 from PyPI](https://pypi.org/project/neurocvguard/0.1.0/)
-with Python 3.11 or newer. The S17 hosted matrix passed source tests and clean-wheel
+with Python 3.11 or newer. The release CI matrix passed source tests and clean-wheel
 checks on Linux Python 3.11/3.12/3.13, Windows/macOS 3.12 and the Python 3.11
 direct-dependency floor. Earlier local Windows/WSL2 evidence is retained separately;
 see [release evidence](release.md). These checks are not scientific certification.
@@ -24,7 +24,7 @@ python -m neurocvguard --help
 
 For a source checkout, use `python -m pip install .`, or install development/docs
 tools with `python -m pip install -e ".[dev,docs]"`. Initial
-dependency installation needs an approved package registry or a prepared local
+dependency installation needs a trusted package registry or a prepared local
 wheel cache. Runtime commands use local files only: no account, API key or GPU.
 The development extra installs pytest, Hypothesis, coverage, Ruff, mypy and build
 tools. The docs extra installs Sphinx/MyST. Do not install unrestricted user code
@@ -46,9 +46,9 @@ The tested direct-dependency floor is NumPy 1.26.4, pandas 2.2.3, SciPy 1.13.1,
 scikit-learn 1.5.2, Jinja2 3.1.6 and jsonschema 4.23.0. These are conservative
 tested lower bounds, not claims about the earliest usable versions. Exact floor
 pins for Python 3.11 are in `requirements/minimum-py311.txt`; transitive versions
-and commands are in the S16 records. Newer Python interpreters may need newer
+and commands are in the release records. Newer Python interpreters may need newer
 dependency versions. The hosted macOS result applies to the exercised runner and
 Python/dependency combination; it is not a guarantee for every macOS system.
 
-See [limitations](limitations.md) for the approved first-import Python RNG effect
+See [limitations](limitations.md) for the first-import Python RNG effect
 in the exercised scikit-learn/Rich versions. It does not change seeded plans.

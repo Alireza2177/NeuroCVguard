@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Reproducible software defect using synthetic data
+about: Report a software bug with a small synthetic example
 ---
 
 Describe the concrete problem and expected behavior. Include the version,

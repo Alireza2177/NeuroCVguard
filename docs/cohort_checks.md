@@ -1,10 +1,9 @@
-# S03 cohort checks
+# Cohort checks
 
-S03 provides pure in-memory checks on an explicitly constructed `Cohort`. It was
-originally implemented before S02 using synthetic in-memory records. The completed
-[S02 loader](input_tables.md) now supplies strict local inputs; split audits,
-planning and reporting are provided by later implemented stages. Human acceptance
-remains separate, and no evaluator is claimed here.
+Cohort checks inspect an explicitly constructed `Cohort` in memory. Use
+[load_cohort](input_tables.md) to read and align local input tables. These checks
+describe identities, relationships and feature equality; split auditing and model
+evaluation are covered in their own guides.
 
 ## Complete synthetic example
 
@@ -57,7 +56,7 @@ this example supplies already aligned synthetic tables and performs no join.
 | `inventory_checks(inventory)` | Stable `CheckResult` records for repeats, target/domain variation and incomplete metadata. |
 | `build_components(cohort)` in `neurocvguard.identity` | `ProtectedComponents`: deterministic participant components, relationship coverage and strict-use guard. |
 | `exact_feature_equality(cohort, feature_columns, enabled=True)` | `FeatureEquality`: exact cross-participant groups and assessed/skipped coverage. |
-| `check_cohort(cohort, feature_columns=(), check_features=True)` | `CohortAudit`: inventory, components, equality and sorted S03 checks. It does not create an overall AuditReport or assess partitions. |
+| `check_cohort(cohort, feature_columns=(), check_features=True)` | `CohortAudit`: inventory, components, equality and sorted cohort checks. It does not create an overall AuditReport or assess partitions. |
 | `get_rule(rule_id)` in `neurocvguard.rules` | One immutable implemented catalog entry; unknown IDs raise `KeyError`. `COHORT_RULES` follows catalog order. |
 
 `CohortInventory.observations_per_participant` contains sorted `(ID, count)`
@@ -128,7 +127,7 @@ either signed zero. A deterministic SHA-256 bucket is followed by a full-tuple
 dictionary lookup that confirms exact equality. Primary hash collisions cannot
 create matches. There is no all-pairs scan; storage is proportional to the
 selected vectors and observation memberships. Hashing does not remove the need
-for S02 input resource guards or bound total process memory.
+for input resource limits or bound total process memory.
 
 All-missing vectors are skipped, never treated as matching acquisitions. The
 result records `skipped_all_missing` and each finding records `skip_reason`.
@@ -155,7 +154,7 @@ Raw inventories, component maps and equality memberships are sensitive in-memory
 records. Frozen tuple-based outputs and caller-owned table copies prevent input
 mutation; there is no raw public JSON serializer for these records. Use existing
 `CheckResult.to_dict()` for conservative public messages with open evidence and
-identifiers omitted. S03 supplies fixed public wording so equality cannot be
+identifiers omitted. The checks use fixed public wording so equality cannot be
 misrepresented as an observed identity violation. Explicit
 `check.to_dict(sensitive_details=True)` retains detailed local evidence.
 

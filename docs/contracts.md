@@ -116,7 +116,7 @@ anonymize identities or authenticate source data.
   `PreprocessingLedger.to_operational_dict()` are explicitly sensitive local
   representations. They have no default public report serializer.
 - `AuditReport.to_dict()` and `CheckResult.to_dict()` exclude open evidence and
-  free-form input text by default. S01 uses fixed status/rule wording and safe
+  free-form input text by default. Serialization uses fixed status/rule wording and safe
   structural scope aliases. Reporting implements rule-specific evidence/table
   projections; omitted details remain in the local record.
 - `ComparisonResult.to_dict()` aliases design names and omits free-form reasons
@@ -151,6 +151,7 @@ Full schema field definitions remain in the six packaged contracts; callers can
 use `load_schema(name)` or `validate_document(name, mapping)` offline.
 
 Run `python -m pytest -q --strict-markers --strict-config` from the editable
-developer environment. S01 cases are linked to actual test IDs and command logs
-in `qa/case_to_test_map.json` and `qa/evidence/S01/`. The standalone foundation
-validator still checks the original foundation state and is not application QA.
+developer environment. Contract cases are linked to test IDs and command logs
+in `qa/case_to_test_map.json` and `qa/evidence/S01/`. Use the foundation validator's
+`--mode artifacts` option for document/schema/fixture consistency; it does not
+run application tests.

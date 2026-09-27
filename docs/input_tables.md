@@ -1,6 +1,6 @@
 # Strict local cohort and feature input
 
-S02 supplies `neurocvguard.load_cohort(metadata, *, config, features=None)`.
+Use `neurocvguard.load_cohort(metadata, *, config, features=None)` to read local tables.
 Inputs are local uncompressed CSV/TSV files or scalar pandas DataFrames. File
 delimiters follow their extensions; UTF-8 with or without BOM is accepted.
 No URLs, Excel, archives, pickle/joblib, downloads or format guessing are supported.

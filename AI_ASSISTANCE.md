@@ -1,110 +1,23 @@
-# AI assistance record
+# Development assistance and review
 
-| Date | Tool/model | Assistance | Human review actually performed | Revision |
-|---|---|---|---|---|
-| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read the S00 foundation sources; drafted the minimal package, tests, configuration, README, and proposed license record; executed local installation/checks; recorded evidence and performed an AI scope/privacy review. | None recorded. The user authorized S00 implementation; acceptance remains pending. | Local S00 working files; no Git repository or commit. |
-| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read S01 sources and S00 evidence; implemented typed records, configuration, offline schemas and serialization; drafted contract/privacy tests and documentation; ran local verification and performed an implementing-agent review. | None recorded. The user explicitly instructed proceeding to S01 and stopping afterward; no human acceptance is inferred for either stage. | Local S01 working files; no Git repository or commit. |
-| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read S03 sources and existing S01 records; implemented in-memory inventory, protected components, exact-feature equality, fixed rule wording, tests and docs; ran local checks and implementation-AI review. | None recorded. The user explicitly selected S03 only; S02 remains unimplemented and prior acceptance is not inferred. | Local S03 working files; no Git repository or commit. |
-| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read S04 sources; implemented strict plan import/binding, outer/inner invariant audits and scoped public flags; drafted tests/docs; executed local QA and implementation-AI review. | None recorded. The user selected S04 only; previous acceptance remains pending and S02 remains unimplemented. | Local S04 files; no Git repository or commit. |
-| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read S05 sources; implemented standard participant/domain split generation, independent post-audit, sensitive exports and separate diagnostics; drafted tests/docs and performed implementation-AI review. | None recorded. The user selected S05 only; prior acceptance remains pending and S02 ingestion is unimplemented. | Local S05 files; no Git repository or commit. |
+NeuroCVguard was developed with substantial assistance from OpenAI Codex in
+September 2026. Codex helped draft and revise code, tests and documentation,
+run verification, investigate defects, and prepare the release. Session records
+identify the model family as GPT-6; an exact build identifier was not available.
 
-| 2026-09-13 | Codex, GPT-6 (system-reported model family; exact build unavailable) | Read S06 sources; implemented participant-level association views, SciPy statistics, warnings and conservative privacy projection; drafted tests/docs and performed implementation-AI review. | None recorded. The user selected S06 only; prior acceptance remains pending and S02 ingestion is unimplemented. | Local S06 files; no Git repository or commit. |
+A separate Codex review examined scientific and security boundaries during
+hardening and reproduced defects and their fixes. This was an AI review.
+Automated tests and AI review are not independent scientific validation.
 
-| 2026-09-25 | Codex, GPT-6 (system-reported family; exact build unavailable) | Read S07 sources; implemented strict declaration loading, scoped checks, cohort audit integration and planned fit validation; drafted tests/docs, ran local checks and performed implementation-agent review. | None recorded. The user authorized S07; no predecessor acceptance or human review is inferred. | Local S07 working changes from Git HEAD 2224dfd. |
+Alireza Emad supplied the maintainer and licensing details, made the recorded
+design decisions and authorized publication of version 0.1.0. The maintainer
+walkthrough and independent-user trial were deferred and remain outstanding.
+Their status is described in [the review plan](docs/ownership.md).
 
-| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S08 shared privacy projection, offline reports, safe writes and optional findings CSV; drafted tests/docs, executed checks, inspected actual rendered synthetic reports and reviewed the diff. | None recorded. The user authorized S08 only; predecessor acceptance and human review are not inferred. | Local S08 working changes from Git HEAD 3769299. |
+The [detailed development log](state/assistance-history.md) preserves the original
+stage-by-stage entries, including decisions, failed attempts and review status at
+the time. Test and release evidence is retained under `qa/evidence/` and
+`state/handoffs/`.
 
-| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented the explicitly authorized S02 prerequisite: strict table input, keyed feature alignment, limits and digests; added tests/docs and ran local regression checks. | None recorded; the user authorized S02 followed by S09, without granting human acceptance. | Local S02 changes from f4adbe1. |
-
-| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S09 command handlers, shared orchestration, exit/output policy and configured report projection; drafted tests and docs, ran local command journeys and regression checks, and reviewed the implementation diff. | None recorded. The user authorized S02 then S09; acceptance remains pending and S10 is not authorized. | Local S09 changes from f4adbe1, following the local S02 prerequisite. |
-
-| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S10 fixed-C evaluation, observed fit boundaries, participant metrics, private/public exports and evaluate CLI; added independent fit/metric tests, docs and actual local verification. Identified a schema conflict and implemented only the extension explicitly approved in ADR-S10-001. | The user approved the optional private plan-provenance schema extension. No scientific code review or stage acceptance is recorded; S11 remains unstarted. | Local S10 changes from f2d995d. |
-
-| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S11 inner-plan derivation, explicit nested C selection and fresh outer refitting; added adversarial isolation and scoring tests, documentation and recorded local verification. | User requested S11. No human scientific review or stage acceptance is recorded. S12 remains unstarted. | Local S11 changes on top of uncommitted S10 work from f2d995d. |
-
-| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S12 private-record comparisons, narrow diagnostic eligibility and raw observation pooling, CLI/report context and privacy handling; added adversarial tests, docs and recorded local checks. Performed implementing-agent scientific/privacy review. | User requested S12 and explicitly approved the optional comparison context extension in ADR-S12-001. No human code/scientific review or stage acceptance is recorded. | Local S12 changes from 6acfed4. |
-
-| 2026-09-26 | Codex, GPT-6 (system-reported family; exact build unavailable) | Implemented S13 local RNG generators, offline demo, five packaged tutorials, fixed synthetic labeling, tests and documentation; executed real synthetic workflows and recorded their outputs. Browser screenshot capture was rejected by the browser security policy; no screenshot or visual review is claimed. | User requested S13 and explicitly approved the screenshot-only exception in ADR-S13-001. No human scientific review or stage acceptance is recorded. | Local S13 changes from e8eef64. |
-
-Through S13, no independent reviewer, human authorship approval, public release
-approval, or comprehensive scientific validation was claimed. Later changes to review
-status must reflect actual review of the specified files.
-# S14–S15 assistance record — 2026-09-26 UTC / 2026-09-27 local
-
-The user requested both stages sequentially. Codex drafted/updated documentation,
-contributor materials, executable documentation checks, hardening properties,
-mutation/resource/security evidence and the fixes described in the S15 review.
-Tools used included local Python/PowerShell, pytest/Hypothesis/Coverage.py,
-Ruff/mypy, Sphinx/MyST and the web tool for four external documentation links
-after shell linkcheck was blocked by the sandbox proxy. No public push/upload,
-release, real participant data or telemetry was involved.
-
-The user explicitly authorized a separate AI reviewer. That fresh-context agent
-read source/contracts, reproduced UNC-path and privacy-alias defects, reviewed
-their fixes and reproduced the dependency first-import RNG limitation. It was
-AI review, not human scientific review. Exact findings and boundaries are in
-qa/evidence/S15/review.md. Tests/measurements are reported from actual command
-records, including failures; no exhaustive correctness claim is made.
-
-The maintainer walkthrough was asked; the user queried its purpose. Explanations
-were provided and the human walkthrough/external-user trial remain pending.
-The user approved the narrow first-import exception in ADR-S15-001. This is not
-stage acceptance or approval of a later phase. Copyright/license/contact and
-release metadata remain unconfirmed; no author, tester or review is fabricated.
-
-S15 follow-up (2026-09-26 UTC): on the user's request for the most defensible
-approach, Codex repaired the standalone foundation validator's Windows keys,
-added explicit artifact-only scope while retaining default snapshot assertions,
-protected historical outputs and added focused regression tests. An unknown-ID
-fixture crash found by those tests was corrected. Contributor guidance, strict
-docs and lint/format checks were updated. No new independent or human review is
-claimed; the prior scientific package, RNG exception and stage boundary remain.
-
-S16 (2026-09-27): at the user's request, Codex inspected/build-tested distributions,
-created isolated local Windows and WSL2 environments, downloaded setup tools and
-dependencies, executed source/installed-wheel checks, and assembled hashes,
-privacy review and release-readiness records. It corrected archive inclusion and
-verification-harness setup mistakes and added nine archive-oracle tests. Runtime
-scientific source is unchanged. These are agent-run local checks, not hosted CI,
-external-user feedback or human acceptance. No public push/tag/upload/DOI action
-was performed. S17 remains unstarted.
-
-S17 preparation (2026-09-27): at the user's request, Codex read the release
-requirements, checked the retained artifact/source identity, queried public
-namespace metadata, drafted release/maintenance materials and added a read-only
-checkpoint with regression tests. Namespace reads returned 404; ownership and
-availability were not inferred. Actual owner/license/security details and human
-review remain pending. No public push, tag, upload, visibility change, issue or
-DOI operation was performed, and no release completion is claimed.
-
-S17 continuation (2026-09-27): the owner supplied and approved Alireza Emad's
-name, copyright attribution, Alireza221177@gmail.com security contact and adoption
-of BSD-3-Clause; the package and license were updated accordingly. The owner
-signed into GitHub/PyPI and configured 2FA directly. With explicit permission,
-Codex added the narrowly scoped pending PyPI Trusted Publisher and created the
-GitHub pypi environment. Codex prepared manual CI/publishing workflows, reviewed
-official action pins/manifests, tested release-file integrity checks and rebuilt
-the owner-metadata candidate. Hosted tests, final publication and human scientific
-acceptance are recorded separately as they actually occur.
-
-On 2026-09-27 the owner explicitly approved candidate 06c14b6, its exact two
-package hashes, public GitHub history/repository, CI and conditional GitHub/PyPI
-publication. They accepted S00–S16 technical outputs and deferred the maintainer
-walkthrough and independent-user exercise. Neither exercise is claimed performed.
-The implementing AI pushed the approved candidate, made the repository public,
-configured main-only required owner review with no administrator bypass and ran
-hosted CI. A CI environment-only typing correction preserves the Python 3.11
-mypy target and exact approved package bytes. Failed and corrected-run evidence
-is retained. Public-install verification and S17 completion are still pending.
-
-S17 publication (2026-09-27): all six corrected hosted CI jobs passed. Codex
-created the approved GitHub tag/release and uploaded exactly the reviewed files.
-The first PyPI workflow stopped before upload on metadata-tool incompatibility;
-a pinned action upgrade fixed it without changing package bytes. The owner
-explicitly approved the corrected deployment in conversation; Codex submitted
-that decision through GitHub's review dialog, with that distinction disclosed.
-PyPI publication succeeded. Public GitHub/PyPI downloads and simple-index
-resolution match the approved wheel/sdist; a fresh external public-wheel install
-passed with 53 matching runtime payloads and an offline synthetic demo. Citation
-metadata uses actual author/version/date/URLs. The human walkthrough and external
-trial remain unfinished; S17 human acceptance is not inferred from release approval.
+On 2026-09-27, Codex edited the public documentation and release description for
+clarity, corrected stale prerelease wording and checked the resulting docs.

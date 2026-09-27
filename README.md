@@ -1,69 +1,80 @@
 # NeuroCVguard
 
-Research-only Python software for checking whether supplied cohort identities,
-partitions and evaluation procedures match an intended generalization claim.
-It reads local CSV/TSV/JSON, checks participant/transitive dependence and requested
-domain separation, describes acquisition–target association, generates checked
-splits and runs a controlled participant-level logistic baseline with optional
-nested C selection. Offline HTML/JSON reports retain incomplete coverage and
-limitations. No account, GPU or runtime internet connection is needed.
+NeuroCVguard helps researchers check training and test splits in neuroimaging
+machine learning studies. It audits participant overlap and declared relationships,
+checks site separation against the study objective, and reports what can and
+cannot be assessed from the supplied data.
 
-It does not process MRI images, provide clinical advice, authenticate upstream
-preprocessing, prove causal confounding or certify a study as leakage-free.
-Repeated visits alone are not leakage; inspect actual membership and objective.
-Unknown upstream preprocessing remains unassessable even with a correct Pipeline.
+The package works with local CSV, TSV and JSON files. It can generate grouped
+splits, run a participant-level logistic regression baseline with optional nested
+regularization selection, and produce offline HTML and JSON reports. No account,
+GPU or internet connection is needed after installation.
+
+NeuroCVguard is research software. It does not process MRI images or certify a
+study as leakage-free. Repeated visits alone are not leakage: the relevant question
+is whether related observations cross the training and test boundary. Unknown
+upstream preprocessing remains unassessable, even when later steps use a Pipeline.
 
 ## Install and try
 
-Create a dedicated Python 3.11+ environment.
-Use `.venv/Scripts/python.exe` on Windows or `.venv/bin/python` on Linux/macOS
-after `python -m venv .venv`. With that interpreter selected:
+Use Python 3.11 or newer in a virtual environment:
+
+```text
+python -m venv .venv
+```
+
+Activate the environment, or use `.venv/Scripts/python.exe` on Windows and
+`.venv/bin/python` on Linux/macOS in place of `python` below:
 
 ```text
 python -m pip install neurocvguard==0.1.0
 python -m neurocvguard demo --out local_outputs/demo
 ```
 
-Open `local_outputs/demo/report.html`. Inputs are fully synthetic, not patient
-data. Choose a new output path or explicitly use `--overwrite`. Read warnings
-beside coverage: association suggests reviewing acquisition imbalance, while
-unknown preprocessing asks for evidence rather than a passing verdict.
+Open `local_outputs/demo/report.html` to explore a fully synthetic example.
+Choose a new output directory for each run, or use `--overwrite` to replace a
+previous run's files.
 
-**Private plans/evaluations are separate from projected reports.** Default
-projection is not guaranteed anonymity; inspect artifacts before sharing.
-Version: [0.1.0 on PyPI](https://pypi.org/project/neurocvguard/0.1.0/).
-See the [release procedure and evidence](docs/release.md) for
-publication status and the actual verified installation/platform results.
+Read findings alongside their coverage and limitations. For example, a
+scanner–target association is a reason to inspect acquisition imbalance; it does
+not prove that a model uses a shortcut. Missing preprocessing history requires
+further evidence, rather than a passing result.
 
-## Documentation and development
+Split plans and private evaluation records contain observation identifiers.
+Reports omit selected identifiers and suppress small cells, but may still disclose
+sensitive information. Review all files before sharing them.
 
-- [Installation and troubleshooting](docs/installation.md)
-- [Executable quickstart](docs/quickstart.md) and [synthetic tutorials](docs/synthetic_examples.md)
-- [Inputs](docs/input_tables.md), [configuration](docs/configuration.md),
+## Documentation
+
+- [Installation](docs/installation.md) and [quickstart](docs/quickstart.md)
+- [Synthetic examples](docs/synthetic_examples.md)
+- [Input tables](docs/input_tables.md), [configuration](docs/configuration.md),
   [CLI](docs/cli.md) and [Python API](docs/api.rst)
-- [Objectives/warning actions](docs/objectives.md), [evaluation](docs/evaluation.md),
+- [Evaluation objectives](docs/objectives.md), [model evaluation](docs/evaluation.md),
   [report privacy](docs/reporting.md) and [limitations](docs/limitations.md)
-- [Contributing/testing](CONTRIBUTING.md), [changelog](CHANGELOG.md),
-  [security](SECURITY.md) and [release procedure](docs/release.md)
+- [Contributing](CONTRIBUTING.md), [changelog](CHANGELOG.md) and
+  [release verification](docs/release.md)
 
-For development, install `python -m pip install -e ".[dev,docs]"` from a source
-checkout. Build the full local site with
-`python -m sphinx -W --keep-going -b html docs docs/_build/html` and open
-`docs/_build/html/index.html`. Run
-`python -m pytest -q --strict-markers --strict-config` for the test suite.
-Actual stage evidence and unrun checks are recorded under `state/handoffs/`.
-Local Windows and Linux WSL2 checks and the Python 3.11 direct-dependency floor
-have been exercised; see [installation evidence](docs/installation.md).
-The [hosted six-job matrix](https://github.com/Alireza2177/NeuroCVguard/actions/runs/36299543058)
-passed Linux 3.11/3.12/3.13, Windows/macOS 3.12 and the dependency floor.
+To build the documentation from a source checkout:
 
-## License, support and citation
+```text
+python -m pip install -e ".[dev,docs]"
+python -m sphinx -W --keep-going -b html docs docs/_build/html
+```
 
-Copyright 2026 Alireza Emad. Released under the [BSD-3-Clause license](LICENSE).
-Maintainer: Alireza Emad. For private security reports, use the approved contact in
-[SECURITY.md](SECURITY.md); share only synthetic reproductions. No response-time
-or long-term support commitment is claimed.
-Use [CITATION.cff](CITATION.cff) for version-specific citation metadata; no DOI
-is registered. [AI assistance](AI_ASSISTANCE.md) is recorded honestly. The owner
-accepted the technical outputs; the human walkthrough and independent-user
-exercise remain explicitly deferred and unfinished.
+Open `docs/_build/html/index.html`. Development and test commands are in
+[CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License, citation and support
+
+Maintained by Alireza Emad. Copyright 2026 Alireza Emad.
+Licensed under [BSD-3-Clause](LICENSE).
+
+Use [CITATION.cff](CITATION.cff) to cite version 0.1.0. The release is available on
+[PyPI](https://pypi.org/project/neurocvguard/0.1.0/) and
+[GitHub](https://github.com/Alireza2177/NeuroCVguard/releases/tag/v0.1.0).
+
+Report bugs through [GitHub Issues](https://github.com/Alireza2177/NeuroCVguard/issues)
+using a small synthetic example. Send security concerns through the private
+contact in [SECURITY.md](SECURITY.md). See the [development record](AI_ASSISTANCE.md)
+for assistance and review details.

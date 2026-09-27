@@ -9,7 +9,6 @@ Maintainers should explain decisions, apply rules consistently and allow a
 participant to respond. Possible actions include requesting edits, pausing a
 discussion or restricting participation, proportionate to the conduct.
 
-The responsible maintainer and private reporting route remain unconfirmed.
-Public community operation is pending those assignments; no enforcement contact
-or established community history is claimed. Use the existing private owner
-channel for local concerns and never post sensitive allegations publicly.
+Alireza Emad maintains this project. Raise routine concerns with the maintainer;
+keep personal information and sensitive allegations out of public discussions.
+A dedicated private conduct-reporting channel has not yet been established.

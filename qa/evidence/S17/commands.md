@@ -323,3 +323,53 @@ Recorded start: 2026-09-27T06:48:04.696572+00:00. Exit: 0.
 ```json
 [".venv/Scripts/python.exe", "tools/validate_foundation.py", "--mode", "artifacts"]
 ```
+
+# Post-release documentation checks
+
+## editorial-artifacts.json
+
+Recorded start: 2026-09-27T07:15:21.800656+00:00. Exit: 0.
+
+```json
+[".venv/Scripts/python.exe", "tools/validate_foundation.py", "--mode", "artifacts"]
+```
+
+## editorial-diff.json
+
+Recorded start: 2026-09-27T07:17:33.261643+00:00. Exit: 0.
+
+```json
+["git", "diff", "--check"]
+```
+
+## editorial-doc-tests.json
+
+Recorded start: 2026-09-27T07:15:18.520440+00:00. Exit: 0.
+
+```json
+[".venv/Scripts/python.exe", "-m", "pytest", "-q", "--strict-markers", "--strict-config", "tests/test_documentation.py"]
+```
+
+## editorial-docs-corrected.json
+
+Recorded start: 2026-09-27T07:15:51.196002+00:00. Exit: 0.
+
+```json
+[".venv/Scripts/python.exe", "-m", "sphinx", "-W", "--keep-going", "-b", "html", "docs", "docs/_build/html"]
+```
+
+## editorial-docs-final.json
+
+Recorded start: 2026-09-27T07:17:31.698330+00:00. Exit: 0.
+
+```json
+[".venv/Scripts/python.exe", "-m", "sphinx", "-W", "--keep-going", "-b", "html", "docs", "docs/_build/html"]
+```
+
+## editorial-docs.json
+
+Recorded start: 2026-09-27T07:15:20.036575+00:00. Exit: 1.
+
+```json
+[".venv/Scripts/python.exe", "-m", "sphinx", "-W", "--keep-going", "-b", "html", "docs", "docs/_build/html"]
+```

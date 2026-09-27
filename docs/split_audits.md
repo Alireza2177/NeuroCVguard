@@ -1,15 +1,15 @@
-# S04 supplied split import and audit
+# Importing and auditing split plans
 
-S04 implements `load_split_plan(source, *, cohort, config) -> SplitPlan` and
+Use `load_split_plan(source, *, cohort, config) -> SplitPlan` and
 `audit_splits(cohort, plan, *, config) -> AuditReport`. Both are available from
 `neurocvguard` through lazy imports, preserving the small side-effect-free root
 import. Implementations live in `io.py` and `audit.py`; literal partition checks
 live in `checks/partitions.py`.
 
-S02 remains NOT_STARTED. These APIs consume already constructed, validated S01
-`Cohort` objects and reuse S03 participant/component logic. They do not load cohort
-or feature files, join tables, generate assignments, fit estimators, calculate
-scores, render HTML or write output files. The CLI still has help/version only.
+These APIs accept a validated `Cohort` from [load_cohort](input_tables.md) and
+check participant and dependence-component membership. Use
+[split generation](split_generation.md) to create assignments and the
+[CLI](cli.md) to save audit reports.
 
 ## Executed synthetic example
 
@@ -78,7 +78,7 @@ TSV assignment rows are bounded by `limits.max_rows`; folds repeat observations,
 so assignment row count differs from cohort row count. Raise limits explicitly
 when needed; no seed search, truncation or fallback occurs.
 
-JSON uses the unchanged packaged split schema and S01 duplicate-key/finite-JSON
+JSON uses the unchanged packaged split schema and duplicate-key/finite-JSON
 validation. Schema version, unknown keys, empty partitions, duplicate memberships
 and duplicate fold keys fail. Observation IDs are strings, never row positions.
 Padding/control characters or missing tokens in assignment identities are rejected
@@ -102,7 +102,7 @@ objective is explicitly taken from config. JSON retains its supplied fold order,
 origin, seed and optional-field presence under the existing record contract.
 
 `cohort_digest(cohort)` in `neurocvguard.io` provides the minimal metadata binding
-needed by S04. It hashes canonical JSON with keys `columns` (the full role map)
+used to bind the plan to its cohort. It hashes canonical JSON with keys `columns` (the full role map)
 and `records` (unique mapped columns, records sorted by observation ID). Missing
 cells and absent mapped columns are explicit nulls. Mapped identities, target,
 session, site, phase, independence and covariates are included. Feature values
@@ -121,7 +121,7 @@ still be auditable. Use `audit_splits` after import.
 ## Audit checks and evidence
 
 The audit verifies global objective/mapping/digest compatibility before inspecting
-folds. A structurally valid S01 plan with unknown IDs may be passed directly to
+folds. A structurally valid plan with unknown IDs may be passed directly to
 the auditor to obtain scoped diagnostics. Import is stricter and rejects those
 unknown IDs. Duplicate/empty structural memberships fail at record construction,
 before any set conversion; no duplicate is silently collapsed.
@@ -145,7 +145,7 @@ fold and field scope, independent of input fold order. Unknown keys block only
 the dependent checks; other folds and literal observation/coverage diagnostics
 remain present. Under audit_only, participant/component overlaps are warnings,
 but the absence of a supported objective can never produce a true validity flag.
-The diagnostic option does not weaken any S04 audit invariant; the separate narrow
+The diagnostic option does not weaken any split-audit invariant; the separate narrow
 diagnostic evaluator exception must keep the original invalid-for-objective audit.
 
 Training sets can overlap across ordinary folds. Only within-partition boundaries

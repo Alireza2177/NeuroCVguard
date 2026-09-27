@@ -1,7 +1,8 @@
 # Offline report API
 
-S08 renders already computed records. It does not load cohort files, run model
-evaluation, or implement the S09 command-line report workflow.
+The report API renders computed records as offline HTML and JSON. It does not
+load cohort files or fit models. Use the [CLI](cli.md) to audit input files or
+render a saved report from the command line.
 
 This synthetic example runs in a temporary directory and is exercised by tests
 and the ordinary installed-package check:
@@ -96,5 +97,5 @@ This is not a multi-file power-loss transaction. A stale lock after process deat
 requires inspection before manual removal. Restrictive permissions are requested
 where supported; Windows ACL inheritance still applies.
 
-S08 is READY_FOR_REVIEW after its recorded checks, with human acceptance pending.
-See {download}`the handoff <../state/handoffs/S08.md>` for exact evidence and unrun checks.
+See {download}`the reporting test record <../state/handoffs/S08.md>` for
+implementation checks and their results.

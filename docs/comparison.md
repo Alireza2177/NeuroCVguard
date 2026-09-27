@@ -1,4 +1,4 @@
-# Descriptive design comparison (S12)
+# Descriptive design comparison
 
 Compare previously evaluated designs without refitting models or choosing a
 scientific winner. Freeze designs before evaluating them; comparisons do not
@@ -53,7 +53,7 @@ Recorded C values and whether candidate scores exist are shown; unrecorded setti
 such as max_iter require the original configuration and are never inferred.
 Class support comes from pooled metrics when available.
 
-The approved optional `context` schema extension is documented in
+The optional `context` schema extension is documented in
 {download}`ADR-S12-001 <../state/decisions/ADR-S12-001-comparison-context.md>`. Updated readers
 accept old records without context and leave it absent. Older closed-schema
 readers must be updated before reading extended records. Both standalone and

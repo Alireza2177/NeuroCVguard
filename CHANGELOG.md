@@ -1,43 +1,45 @@
 # Changelog
 
+## Unreleased
+
+- Revised documentation for clarity and corrected outdated prerelease statements.
+
 ## 0.1.0 — 2026-09-27
 
-Implemented local strict configuration/CSV/TSV input, keyed joins, identity and
-transitive-dependence checks, split auditing/generation, descriptive acquisition
-association, declared preprocessing audits, privacy-projected offline reports,
-participant-level logistic evaluation, nested C selection, descriptive comparisons
-and deterministic synthetic tutorials. Added complete local documentation and
-contributor/review materials during S14. S15 hardening evidence is recorded in
-its handoff as it is executed.
+Initial research release, available on GitHub and PyPI under BSD-3-Clause.
 
-Private evaluation records may include paired actual_plan/plan_digest fields;
-comparison designs may include typed context. Existing records remain readable
-without invented values. Older closed-schema readers need updating for these
-extensions; see the evaluation and comparison migration notes.
+### Features
 
-Published on GitHub and PyPI with owner-approved author/contact metadata and
-BSD-3-Clause licensing. Citation metadata uses the actual release date and
-repository URL; no DOI or platform/scientific certification is claimed. The owner
-accepted the technical outputs and explicitly deferred the maintainer walkthrough
-and independent-user exercise; those exercises remain unfinished.
+- Strict local CSV, TSV and JSON input with explicit observation-key joins.
+- Participant and transitive dependence checks, plus objective-specific site
+  and phase separation checks.
+- Auditing and generation of grouped cross-validation splits.
+- Descriptive acquisition–target association and preprocessing provenance checks.
+- Participant-level logistic regression evaluation with optional nested
+  regularization selection.
+- Descriptive comparison of supported evaluation designs.
+- Offline HTML/JSON reports, privacy controls and five synthetic tutorials.
 
-S15 fixes: remote/UNC spellings (including mixed Windows separators) are refused
-before filesystem probes across input/output boundaries. Public target aliases
-reserve existing semantic labels, avoiding collisions that could previously abort
-report export after analysis. Numerical metrics and private records are unchanged.
-Added adversarial/property tests and measured mutation/security/resource evidence.
-The first dependency import's Python RNG effect remains an explicitly approved
-limitation under ADR-S15-001; no scientific invariant was silently relaxed.
+### Compatibility and limits
 
-S16: built and checked local wheel/sdist distributions, verified clean offline
-installs, and exercised Linux 3.11/3.12/3.13 and Windows runtime tests. Anchored
-sdist include patterns to exclude an unintended nested fixture README. Declared
-direct dependency lower bounds only after exercising that exact floor. Runtime
-scientific code is unchanged. The release dossier keeps unavailable platforms
-and human/publication gates explicit.
+Private evaluation records can include paired `plan_digest` and `actual_plan`
+fields. Comparison records can include typed design context. Current readers
+accept older records without inventing missing values; older closed-schema
+readers need updating. See the evaluation and comparison guides for details.
 
-S17: all 733 local tests and the six-job hosted matrix passed. Public GitHub/PyPI
-downloads match the two approved package hashes. CI typing and publishing-action
-compatibility failures were corrected and retained in the evidence. The exact
-reviewed files were uploaded without rebuilding. Post-release README/citation and
-evidence updates do not replace the published archives or move the release tag.
+Remote and UNC paths are rejected before filesystem access, and target-label
+aliases avoid collisions in reports. Source archives exclude internal fixtures
+that are not package resources. Direct dependency lower bounds were tested.
+
+The first import of scikit-learn/Rich can consume Python's global random state
+in the tested environment. Seeded splits and NumPy state are unaffected; see
+[limitations](docs/limitations.md). The maintainer walkthrough and independent-user
+trial were deferred for this release and remain outstanding.
+
+### Verification
+
+The release passed 733 local tests and a six-job CI matrix covering Linux,
+Windows, macOS and the direct dependency floor. Public GitHub/PyPI files match
+the recorded checksums, and a fresh installation of the public wheel passed.
+Earlier CI and publishing-tool failures, their fixes and the full command logs
+are retained in the [release record](state/handoffs/S17.md).

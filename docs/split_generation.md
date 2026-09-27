@@ -1,6 +1,6 @@
-# S05 deterministic outer split generation
+# Deterministic outer split generation
 
-`make_splits(cohort, *, config) -> SplitPlan` now generates supplied-cohort outer
+`make_splits(cohort, *, config) -> SplitPlan` generates outer
 plans with standard sklearn splitters and audits the result before returning.
 It writes nothing and fits no estimator. Pass a validated `Cohort` from
 `load_cohort`; the CLI `split` command also writes operational artifacts.
@@ -41,7 +41,7 @@ assert paths["generation_report"].name == "generation.private.json"
 ```
 
 A clean split audit does not verify upstream preprocessing or establish clinical
-validity. `evaluation_permitted` in the S04 summary remains split-level eligibility,
+validity. `evaluation_permitted` in the audit summary remains split-level eligibility,
 not a claim that features exist or an evaluator ran. Technical report completion
 remains `partial` because upstream history is unassessable.
 
@@ -54,7 +54,7 @@ constant target and one protected-component label. It calls
 expands participant membership to all observation IDs. Visit multiplicity cannot
 weight the stratification objective. Mixed-class families retain each person's
 target; no single family label is guessed. Components include participant identity
-and transitive relationships from S03.
+and transitive relationships declared in the cohort.
 
 At least two classes, complete constant participant targets and at least n_splits
 independent components are required. Missing declared relationships block strict
@@ -62,7 +62,7 @@ planning. The report records each class's number of supporting components. Fewer
 than n_splits supporting components rules out class-complete test folds; fewer
 than two is a strong warning. Sufficient component counts are only a necessary
 condition, not proof that every desired balance is achievable. Actual training
-and test support is recorded by the independent S04 audit. Stratification is
+and test support is recorded by the independent split audit. Stratification is
 approximate under indivisible groups. A missing training class rejects the whole
 requested plan; missing test classes can remain as warnings with undefined
 class-complete metrics. No scores are computed.
@@ -76,16 +76,16 @@ exactly once; domain count determines fold count. The seed is still recorded,
 although this splitter uses no randomness.
 
 Generated repeat_id is `0`; fold IDs are `fold-000`, `fold-001`, etc. Observation
-membership arrays are sorted. Role-mapped metadata uses the S04 canonical cohort
+membership arrays are sorted. Role-mapped metadata uses the canonical cohort
 digest. plan_id is SHA-256 of canonical plan contents excluding plan_id itself.
 Fixed supported dependency versions, input and seed give reproducible artifacts;
 NumPy's global RNG state is untouched. No seed search, splitter fallback, class
 merging, row dropping or automatic fold-count reduction is performed.
 
-S05 generates outer folds only. `evaluation.tune=true` is explicitly refused:
-inner generation belongs to S11. Existing supplied nested plans can still be
-imported, audited and exported through S04/S05. `audit_only` and `imported` are
-not generation schemes. Invalid seed ranges are rejected by the existing strict
+`make_splits` generates outer folds only and refuses `evaluation.tune=true`.
+Inner plans are created by the [nested evaluator](evaluation.md) within each
+outer training set. Existing nested plans can also be imported, audited and
+exported. `audit_only` and `imported` are not generation schemes. Invalid seed ranges are rejected by the existing strict
 configuration schema, without normalization.
 
 ## Diagnostics and model boundaries
@@ -95,7 +95,7 @@ An independently detected failure rejects the result; the generator's own counts
 are insufficient to approve it. Actual test-class warnings are retained.
 
 `plan.generation_report` is an immutable AuditReport captured in memory, including
-NCG-PLAN-001/002/003 diagnostics where relevant, complete S04 scoped checks and
+NCG-PLAN-001/002/003 diagnostics where relevant, complete split checks and
 NumPy/sklearn/software versions. Requested settings and the successful plan ID
 are recorded as private evidence. Its `.to_dict()` uses the existing conservative
 public projection; `.to_dict(sensitive_details=True)` retains local diagnostics.

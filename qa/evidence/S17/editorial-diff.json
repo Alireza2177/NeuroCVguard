@@ -1,0 +1,19 @@
+{
+  "command": [
+    "git",
+    "diff",
+    "--check"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T07:17:33.261643+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "warning: in the working copy of '.github/PULL_REQUEST_TEMPLATE.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'AI_ASSISTANCE.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CHANGELOG.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CODE_OF_CONDUCT.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'CONTRIBUTING.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'README_FOUNDATION.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'SECURITY.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'START_HERE.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/association_diagnostics.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/cli.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/cohort_checks.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/comparison.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/contracts.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/evaluation.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/index.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/input_tables.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/installation.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/limitations.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/ownership.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/preprocessing_provenance.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/references.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/release.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/reporting.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/split_audits.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/split_generation.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/synthetic_examples.md', LF will be replaced by CRLF the next time Git touches it\n"
+}

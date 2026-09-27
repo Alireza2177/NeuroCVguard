@@ -17,6 +17,6 @@ Dependencies retain their own licenses; no third-party implementation is vendore
 - [Sphinx documentation](https://www.sphinx-doc.org/en/master/usage/quickstart.html)
   describes the documentation tooling.
 
-Publication and AI-disclosure policies must be checked for the intended venue at
-submission time. No eligibility or acceptance is promised. No CITATION.cff or DOI
-is supplied without verified author and release metadata.
+To cite NeuroCVguard, use {download}`CITATION.cff <../CITATION.cff>`. No DOI has
+been registered. If you use the package in a publication, check the venue's current
+software citation and AI-assistance disclosure requirements.

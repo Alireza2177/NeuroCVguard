@@ -1,6 +1,6 @@
-# Preprocessing declarations and fit boundaries (S07)
+# Preprocessing declarations and fit boundaries
 
-`audit_cohort(cohort, *, config, ledger=None)` now combines cohort checks,
+`audit_cohort(cohort, *, config, ledger=None)` combines cohort checks,
 categorical association and preprocessing declarations in an `AuditReport`.
 It accepts validated `Cohort` objects returned by `load_cohort`.
 It does not execute transforms or fit a model. Its coverage stays partial:
@@ -121,8 +121,8 @@ comparison; the CLI combines these checks and renders HTML.
 
 The existing schema-backed `models.FitEvent` records actual fit IDs, fold, outer
 or inner role, baseline parameter C and completed/failed status. Parsing this
-record cannot authenticate its origin. S07 reuses that contract without changing
-schemas or creating an observed event.
+record cannot authenticate its origin. Checking a supplied record does not
+establish that the recorded operation actually took place.
 
 `prepare_fit_boundary` produces an immutable `FitBoundary` with permitted IDs
 and model/fold context, but no execution status. `validate_fit_ids` rejects
@@ -141,6 +141,6 @@ check/report projections replace user text with fixed qualified wording, omit
 event names/memberships and alias fold references. A declared violation is never
 presented as observed execution. Explicit sensitive report serialization retains
 the diagnostic evidence and its sensitivity notice. No report files are written
-by S07 and no public release is authorized.
+by these in-memory checks.
 
-See {download}`the S07 handoff <../state/handoffs/S07.md>` for exact checks and limitations.
+See {download}`the preprocessing test record <../state/handoffs/S07.md>` for exact checks and limitations.

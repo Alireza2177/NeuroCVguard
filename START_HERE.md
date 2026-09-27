@@ -1,5 +1,9 @@
 # Start here — NeuroCVguard foundation
 
+> Historical foundation document. For the current package, installation and
+> documentation, see [README.md](README.md). The text below describes the original
+> project scaffold.
+
 This is the **Step 0 implementation foundation**, not the finished software. It tells Codex what to build, which scientific claims are allowed, how to prove behavior, and where human release decisions are required.
 
 ## The first action

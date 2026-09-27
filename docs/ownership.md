@@ -1,10 +1,8 @@
 # Maintainer walkthrough and external-user exercise
 
-**Human walkthrough: pending. External-user trial: not performed.** An agent-run
-workflow is not external feedback or proof of maintainer understanding. The user
-was asked the five questions during S14 and queried why they were needed; no
-answers, human acceptance or completed review are inferred. These are prepared
-review materials, not a prerequisite to drafting the documentation.
+**Human walkthrough: pending. External-user trial: not performed.**
+Both exercises were deferred for version 0.1.0. This page outlines the remaining
+review work; the release tests are documented separately in [release verification](release.md).
 
 | Question | Explanation to discuss |
 |---|---|
@@ -14,14 +12,12 @@ review materials, not a prerequisite to drafting the documentation.
 | When must AUC be null? | Binary positive class unspecified, missing required true classes or other explicit undefined conditions. A failed run has no complete pooled metrics. Privacy suppression is a separate reason. |
 | Why is a projected report not guaranteed anonymous? | Summary counts and combinations can disclose information even when IDs and small cells are removed; operational files retain identities. |
 
-Before release, an independent technically competent tester should install a
+For the independent-user trial, a technically competent tester should install a
 reviewed clean wheel outside the source tree, run the default synthetic demo,
 locate its limitations/private artifacts, remap a fictitious observation/participant
 column pair, and complete validate/audit/split without verbal coaching. Record the
 actual tester, environment, commands, time/friction and findings with their consent.
-Do not invent a tester or convert these instructions into a passed trial.
+Keep the results alongside the release records so later changes can address the findings.
 
-The owner accepted the S00–S16 technical outputs for the first research-only
-release on 2026-09-27 and explicitly approved deferring both exercises above.
-Neither exercise is claimed completed; technical-stage acceptance is not
-independent human scientific validation. These remain maintenance follow-ups.
+The maintainer accepted the technical release outputs on 2026-09-27. Independent
+scientific review and the exercises above remain separate from that release decision.

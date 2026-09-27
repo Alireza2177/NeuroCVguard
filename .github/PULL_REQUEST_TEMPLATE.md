@@ -6,5 +6,5 @@ Describe the concrete problem and resulting behavior.
 - [ ] Documentation/config/API references match the change.
 - [ ] Privacy and output-overwrite behavior checked with synthetic data.
 - [ ] Dependency/license changes reviewed; no private data or credentials.
-- [ ] AI assistance and reviewer provenance recorded accurately.
-- [ ] No human acceptance, publication or CI pass inferred from local work.
+- [ ] Substantial AI assistance and completed reviews documented.
+- [ ] Release changes, if any, have maintainer sign-off.

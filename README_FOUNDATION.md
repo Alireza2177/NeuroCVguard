@@ -1,5 +1,9 @@
 # NeuroCVguard — Step 0 foundation
 
+> Historical foundation document. For the current package, installation and
+> documentation, see [README.md](README.md). The text below describes the original
+> project scaffold.
+
 Start with `START_HERE.md`. The ZIP is the complete Codex handoff, not an installed package.
 
 This edition contains 22 technical chapters, 18 implementation stages, 54 bounded work packages, 184 mandatory acceptance cases, 33 stable rule definitions and 6 standalone JSON schemas. Application acceptance cases are planned and unrun. The synthetic fixtures and standalone foundation validator support specification QA only.

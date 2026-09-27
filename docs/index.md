@@ -2,7 +2,7 @@
 
 Research-only local checks of participant identity, declared dependence,
 evaluation partitions and preprocessing boundaries for tabular neuroimaging ML.
-The local development version is 0.1.0; no public release is claimed.
+Version 0.1.0 is available on [PyPI](https://pypi.org/project/neurocvguard/0.1.0/).
 
 Start with the offline synthetic walkthrough. A clean check means only that no
 violation was detected in the supplied information. Unknown upstream preprocessing

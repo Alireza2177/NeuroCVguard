@@ -17,7 +17,7 @@ version and a minimal synthetic reproduction. Do not include patient data,
 credentials or sensitive research files, and do not post an unreviewed
 vulnerability or sensitive example in a public issue.
 
-The maintainer approved this contact during S17. No response-time or long-term
-support commitment is promised. For a confirmed scientific-result defect, retain
+Response times depend on maintainer availability. For a confirmed defect that
+affects scientific results, retain
 the affected version and original outputs; a correction will be documented rather
 than silently changing published artifacts.

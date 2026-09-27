@@ -1,9 +1,9 @@
 # Participant-level acquisition/target association
 
-S06 provides `neurocvguard.checks.associations.check_associations(cohort,
-config=config)`. It returns immutable `CheckResult` records for mapped site,
+`neurocvguard.checks.associations.check_associations(cohort,
+config=config)` returns immutable `CheckResult` records for mapped site,
 phase and explicitly declared categorical covariates, each paired with target.
-It consumes an already constructed `Cohort`; S02 file ingestion remains absent.
+It accepts a `Cohort` created by [load_cohort](input_tables.md) or constructed in memory.
 It does not fit models, change cohorts or splits, or write files. Ledger checks,
 combined audit orchestration and report rendering use these same diagnostics.
 
@@ -85,16 +85,16 @@ causal confounding, leakage, model bias or model shortcut use.
 Internal evidence and `to_dict(sensitive_details=True)` retain exact category
 labels, source columns, tables, expected counts, denominators and V. Treat them
 as sensitive local records. Individual check serialization conservatively omits
-the entire linked numeric evidence, even for non-sparse tables. S08 whole-report
+the entire linked numeric evidence, even for non-sparse tables. Whole-report
 projection can display validated tables with local aliases when every cell meets
 the report threshold. A suppressed table omits its linked cells, totals and V;
 safe null reasons remain. Privacy projection never changes the internal statistic.
-See [the reporting guide](reporting.md) for the S08 display boundary.
+See [the reporting guide](reporting.md) for display and suppression rules.
 
-The foundation acknowledges mlconfound's adjacent inferential work; these
+mlconfound addresses related inferential questions; these
 descriptive diagnostics do not implement or claim equivalent tests. See
 {download}`the normative association specification <../spec/09_association_diagnostics.md>`
 and its {download}`R08/R09 source register <../spec/21_sources.md>`.
 
-S06 is local research software awaiting human review. The exact commands,
-environments and results are in {download}`the S06 handoff <../state/handoffs/S06.md>`.
+Implementation checks and results are retained in
+{download}`the association test record <../state/handoffs/S06.md>`.

@@ -1,4 +1,4 @@
-# Research baseline and nested C selection (S10–S12)
+# Research baseline and nested regularization selection
 
 `evaluate_baseline` runs one explicitly planned complete cross-validation repeat.
 It supports constant participant targets with two or more string classes. It
@@ -61,7 +61,7 @@ event. Prediction can fail after a completed fit; fold and fit statuses remain
 distinct. No fitted estimator is saved.
 
 With `tune=false`, the runner fits only the outer models at the configured fixed C.
-S12 permits only the explicitly gated outer participant-overlap diagnostic
+The evaluator permits only the explicitly enabled outer participant-overlap diagnostic
 described in [comparison](comparison.md). All original audit failures remain;
 these runs are invalid evidence for unseen-participant generalization.
 
@@ -185,7 +185,7 @@ an unexpected exception may prevent any result from being produced.
 
 ## Private schema migration
 
-{download}`Approved ADR-S10-001 <../state/decisions/ADR-S10-001-evaluation-plan.md>` adds paired
+{download}`ADR-S10-001 <../state/decisions/ADR-S10-001-evaluation-plan.md>` adds paired
 optional `plan_digest` and `actual_plan` fields to the private schema. The runner always
 populates them. The digest covers canonical operational plan JSON; validation
 checks digest, objective, cohort, fold references and fit boundaries. Public
@@ -194,5 +194,5 @@ reports omit both fields.
 Updated readers accept old schema 1.0 records without those fields and leave them
 absent. Older closed-schema readers reject extended records: update the reader.
 Never fabricate memberships when migrating an old record. This extension does
-not authorize diagnostic overlap evaluation or publication. S11 uses the existing
-fields to retain nested memberships under the separately requested tuning stage.
+not enable diagnostic overlap evaluation or make private records safe to publish.
+Nested tuning uses the same fields to retain inner-fold memberships.

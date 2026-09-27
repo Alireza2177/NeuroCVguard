@@ -23,16 +23,17 @@ and explicit sensitive reports require authorized local handling. Read
 [reporting](reporting.md) before sharing any artifact. Debug output is sanitized,
 but review it yourself before sharing.
 
-No public release, external usability trial, clinical validation, accepted human
-scientific review or cross-platform certification is implied by local tests.
-The S13 screenshot was not captured after a browser security rejection; the user
-approved a screenshot-only exception. Actual report files and numerical checks
-exist, but no visual review is claimed.
+Version 0.1.0 has been released, with installation and CI results documented in
+[release verification](release.md). It has not undergone an independent-user trial
+or independent human scientific validation. The planned report screenshot review
+was not completed because capture was blocked by the browser security policy.
+Saved reports and numerical consistency checks are available, but they do not
+replace a visual review.
 
 In the exercised scikit-learn 1.9.1 / Rich 15.0.0 environment, the first lazy
 dependency import consumes Python's global RNG for progress-bar style identifiers.
 NumPy state is unchanged, seeded plans are identical, and subsequent scientific
-calls preserve both RNG states. The user approved this narrowly documented
-first-import exception in ADR-S15-001; it is not a passing cold-call invariant.
+calls preserve both RNG states. This first-import behavior is documented in
+{download}`ADR-S15-001 <../state/decisions/ADR-S15-001-cold-dependency-rng.md>`.
 No process-global RNG restoration is attempted because it could overwrite other
 threads' draws. Algorithmic determinism and training-boundary tests remain enforced.

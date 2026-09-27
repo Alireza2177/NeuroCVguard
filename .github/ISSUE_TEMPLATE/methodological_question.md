@@ -1,6 +1,6 @@
 ---
 name: Methodological question
-about: Clarify a supplied design or interpretation boundary
+about: Ask about study design or interpretation of audit results
 ---
 
 State the research generalization objective, observation/participant units and

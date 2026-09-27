@@ -1,7 +1,7 @@
 # Local audit commands
 
-S09 provides `init`, `validate`, `audit`, `split` and `report`; S10 adds `evaluate`
-and S12 adds `compare`; S13 adds `demo`. These commands use the same APIs as Python
+The CLI provides `init`, `validate`, `audit`, `split`, `report`, `evaluate`,
+`compare` and `demo`. These commands use the same APIs as Python
 callers. All input is local and commands download nothing. `evaluate` and the
 synthetic `demo` perform controlled model fitting.
 
@@ -100,7 +100,7 @@ before any fit and writes sensitive `evaluation.private.json` plus projected
 reports. It accepts `--overwrite` and `--sensitive-details`. It does not accept
 `--fail-on`; incomplete fitting returns 4 regardless of findings severity.
 See [evaluation](evaluation.md) for training boundaries, weights, exact metrics,
-failure policy and schema migration. S11 supports `evaluation.tune=true` with the
+failure policy and schema migration. Nested tuning supports `evaluation.tune=true` with the
 explicit C grid and inner fold count. Supplied inner assignments are used or
 derived from outer training only; infeasible tuning has no fixed-C fallback.
 
