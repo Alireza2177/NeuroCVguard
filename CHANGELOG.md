@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.1.0 — Unreleased
+## 0.1.0 — 2026-09-27
 
 Implemented local strict configuration/CSV/TSV input, keyed joins, identity and
 transitive-dependence checks, split auditing/generation, descriptive acquisition
@@ -15,9 +15,11 @@ comparison designs may include typed context. Existing records remain readable
 without invented values. Older closed-schema readers need updating for these
 extensions; see the evaluation and comparison migration notes.
 
-No public release date, DOI, platform certification or independent human review
-is claimed. License adoption, copyright ownership, contact and namespaces remain
-pending owner confirmation. No citation metadata is supplied before verification.
+Published on GitHub and PyPI with owner-approved author/contact metadata and
+BSD-3-Clause licensing. Citation metadata uses the actual release date and
+repository URL; no DOI or platform/scientific certification is claimed. The owner
+accepted the technical outputs and explicitly deferred the maintainer walkthrough
+and independent-user exercise; those exercises remain unfinished.
 
 S15 fixes: remote/UNC spellings (including mixed Windows separators) are refused
 before filesystem probes across input/output boundaries. Public target aliases
@@ -33,3 +35,9 @@ sdist include patterns to exclude an unintended nested fixture README. Declared
 direct dependency lower bounds only after exercising that exact floor. Runtime
 scientific code is unchanged. The release dossier keeps unavailable platforms
 and human/publication gates explicit.
+
+S17: all 733 local tests and the six-job hosted matrix passed. Public GitHub/PyPI
+downloads match the two approved package hashes. CI typing and publishing-action
+compatibility failures were corrected and retained in the evidence. The exact
+reviewed files were uploaded without rebuilding. Post-release README/citation and
+evidence updates do not replace the published archives or move the release tag.

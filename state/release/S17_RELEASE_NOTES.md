@@ -1,8 +1,9 @@
-# NeuroCVguard 0.1.0 — release notes draft
+# NeuroCVguard 0.1.0 — 2026-09-27
 
-UNRELEASED. No release date, public installation, citation identifier or human
-review is claimed. Confirm metadata and replace this status only after the actual
-approved release. This draft is prepared locally for the owner to review.
+Published on GitHub at 06:27:02 UTC and PyPI at 06:36:55–57 UTC on 2026-09-27.
+Both public downloads match the exact owner-approved hashes in
+0.1.0-artifacts.json. Fresh public-wheel verification passed outside the source tree: all 53 runtime
+payloads match, and imports, version, console, assets and offline demo pass.
 
 NeuroCVguard checks whether supplied local cohort identities, split plans and
 controlled evaluation procedures match a stated generalization objective. It
@@ -39,15 +40,16 @@ Verification available before final metadata changes: S16 exercised Linux WSL2
 Python 3.11/3.12/3.13 (712 existing plus nine archive tests per interpreter across
 separate runs), Windows installed-wheel runtime tests and the Python 3.11 direct
 dependency floor, fresh Windows/Linux final-wheel checks and offline demos.
-Corrected setup failures are retained in the S16 dossier. macOS and hosted CI
-remain unverified. These are historical candidate checks, not a final public
-release verification. Exact final hashes and fresh public-install evidence must
-be supplied after the publication checkpoint.
+Corrected setup failures are retained in the S16 dossier. S17 additionally passed
+733 local tests and all six hosted jobs across Linux 3.11/3.12/3.13,
+Windows/macOS 3.12 and the dependency floor, including clean-wheel checks.
+The CI typing-environment and publishing-tool compatibility failures are retained
+alongside the successful corrected runs.
 
 Alireza Emad adopted BSD-3-Clause and supplied the security contact published in
-SECURITY.md. Repository publication, citation metadata, human stage acceptance
-and independent-user review remain pending. The final owner-metadata candidate
-passed strict archive checks and a clean Windows installation; its exact hashes
-are recorded in 0.1.0-artifacts.json. Hosted CI has not yet run.
+SECURITY.md. The owner accepted S00–S16 technical outputs and approved the exact
+release files and public development history. CITATION.cff uses verified facts.
+The maintainer walkthrough and independent-user trial remain explicitly deferred
+and unfinished; no independent human scientific validation is claimed.
 AI-assisted implementation and agent-run tests are disclosed in AI_ASSISTANCE.md.
 No external users, independent human reviews or research adoption are invented.

@@ -1,0 +1,13 @@
+cff-version: "1.2.0"
+message: "If you use NeuroCVguard, please cite this software."
+type: software
+title: NeuroCVguard
+authors:
+  - family-names: Emad
+    given-names: Alireza
+version: "0.1.0"
+date-released: "2026-09-27"
+repository-code: "https://github.com/Alireza2177/NeuroCVguard"
+url: "https://github.com/Alireza2177/NeuroCVguard/releases/tag/v0.1.0"
+license: BSD-3-Clause
+abstract: "Research-only local cohort audits, independently checked split plans, controlled participant classification and offline reports."

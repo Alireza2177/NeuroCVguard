@@ -1,15 +1,15 @@
 # S17 publication plan — reviewed local candidate
 
-Prepared 2026-09-27. S17 is IN_PROGRESS. Nothing has been pushed or published by
-S17. Owner identity, BSD-3-Clause adoption, security contact and intended public
-repository are confirmed in S17_OWNER_DECISIONS.md. Signed-in browser checks
-verified ownership of the currently private GitHub repository and PyPI account.
+Prepared 2026-09-27. Publication and public-install verification succeeded; final S17 review remains separate. Candidate 06c14b6 and approval records
+f694268 have been pushed to main; the repository is now public. Owner identity,
+BSD-3-Clause adoption, security contact and exact release scope are confirmed in
+S17_OWNER_DECISIONS.md. Signed-in checks verified GitHub and PyPI ownership.
 No human scientific walkthrough or independent-user exercise is claimed.
 
 ## Candidate and destinations
 
 Repository: https://github.com/Alireza2177/NeuroCVguard.
-Distribution/import/CLI: neurocvguard; version 0.1.0; proposed tag v0.1.0.
+Distribution/import/CLI: neurocvguard; version 0.1.0; published tag v0.1.0.
 Source base: eb0559d90b94ef2dda2f847bb0fe72c69112e173.
 Local candidate directory: dist/s17-candidate; exact metadata and content manifest:
 0.1.0-artifacts.json. Earlier builds remain historical checks, not publication files.
@@ -24,25 +24,23 @@ Windows Python 3.11.7 installation matches all 53 runtime payloads and completes
 the synthetic demo with networking and source-tree reads blocked. Evidence:
 qa/evidence/S17/candidate-wheel.json. Scientific runtime and schemas are unchanged.
 
-## Remaining release sequence
+## Release sequence and current status
 
-1. Present the local candidate commit and these hashes for the owner's decision,
-   including publication of existing development history. A bounded scan of 1,272
+1. Owner approved candidate 06c14b6, these hashes and publication of existing
+   development history. A bounded scan of 1,272
    reachable Git blobs found zero credential-shaped hits and 20 path-pattern hits
    in qa/tests. This scan is not an exhaustive privacy guarantee. History includes
    internal stage documentation and machine paths.
-2. Record explicit core-stage acceptance or a release-entry waiver. All existing
-   human acceptance flags remain false. Maintainer and independent-user exercises
-   stay unperformed unless actually completed; any allowed deferral must be
-   described as a limitation, not a completed exercise.
-3. Push the approved candidate and run the manual read-only six-job CI matrix:
+2. Owner explicitly accepted S00–S16 technical outputs for the initial research
+   release and deferred the two human exercises. Those exercises remain unfinished
+   and disclosed as a limitation, not completed human scientific validation.
+3. Approved candidate pushed. Initial run 36299183458 exposed a typing-environment
+   error; the corrected six-job run 36299543058 passed at deac163:
    Linux Python 3.11/3.12/3.13, Windows/macOS Python 3.12 and the Python 3.11 direct
-   dependency floor. Hosted results are currently NOT RUN. A failed required job
+   dependency floor. A failed required job
    blocks publication until fixed and rechecked.
-4. Make the repository public as requested and configure the already-approved
-   pypi environment with Alireza2177 as required reviewer. Reviewer controls are
-   currently unavailable on the private repository. Verify protection before
-   dispatching publication. PyPI already lists the approved pending publisher for
+4. Repository is public; pypi environment requires Alireza2177 review, disables
+   administrator bypass and permits only main. PyPI lists the approved pending publisher for
    Alireza2177/NeuroCVguard, publish.yml, environment pypi; this does not reserve
    the package name or upload anything.
 5. Publish the approved v0.1.0 tag/release and the exact two files above. The manual
@@ -61,13 +59,18 @@ qa/evidence/S17/candidate-wheel.json. Scientific runtime and schemas are unchang
 | Action | Consent recorded | Performed |
 |---|---|---|
 | Scoped PyPI pending publisher | Explicit user approval | Yes |
-| GitHub pypi environment with required reviewer | Explicit user approval | Environment created; reviewer protection pending |
-| Public repository visibility | User explicitly requested public repository | No |
-| Push candidate / run CI | Final candidate decision pending | No |
-| Public version tag / GitHub release | Final candidate decision pending | No |
-| PyPI upload of exact candidate bytes | Final candidate decision pending | No |
+| GitHub pypi environment with required reviewer | Explicit user approval | Yes; main-only, no admin bypass |
+| Public repository visibility | Explicit scoped release approval | Yes |
+| Push candidate / run CI | Explicit scoped release approval | Pushed; all six corrected jobs passed |
+| Public version tag / GitHub release | Approved after passing required checks | v0.1.0 at deac163, published 2026-09-27T06:27:02Z; public hashes verified |
+| PyPI upload of exact candidate bytes | Approved after passing required checks | Corrected run 36300511287 succeeded; public hashes and fresh installation verified |
 | Hosted docs / DOI / public issues | Not requested | No |
 
 The read-only preflight accepts --manifest state/release/0.1.0-artifacts.json
 and --dist dist/s17-candidate. Exit 0 only reports local checks; it never grants
 permission. No build, local Boolean or agent review constitutes human approval.
+
+Post-release README, citation and evidence updates do not rebuild the approved
+archives or move tag v0.1.0. That tag remains at deac163; the publishing-tool-only
+fix is 098c4f6. The first publishing attempt rejected metadata 2.5 before upload.
+The corrected, SHA-pinned v1.14.2 action succeeded with the identical package bytes.

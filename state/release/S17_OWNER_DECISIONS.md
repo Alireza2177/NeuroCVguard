@@ -50,3 +50,21 @@ now ACCEPTED by explicit owner decision. The maintainer walkthrough remains
 pending and the independent-user trial remains not performed. This acceptance
 is not represented as independent human scientific validation. S17 itself is
 still IN_PROGRESS pending actual publication and public-install verification.
+
+The user reported completing the required GitHub pypi deployment review for
+publication run 36300178736. This was the user's action, not an AI review. Actual
+upload success remains subject to workflow and public-registry verification.
+
+For corrected run 36300511287, the user explicitly answered “Approved the
+corrected deployment.” GitHub still displayed the unchecked pending gate.
+After telling the user what it would do, the agent submitted that explicit owner
+decision through the pypi checkbox and “Approve and deploy.” GitHub confirmed
+“The deployments have been approved” and showed the job queued. This records a
+human approval communicated in the conversation and an agent-executed UI
+submission; it is not independent human scientific review. Environment protection
+and administrator-bypass restrictions were not changed.
+
+Outcome: corrected run 36300511287 succeeded and PyPI published both exact
+approved files on 2026-09-27. Fresh installation of the publicly downloaded wheel
+and public-byte checks passed. Earlier pending statements describe their original
+checkpoint; S17 human acceptance remains separate from this publication approval.

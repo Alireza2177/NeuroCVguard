@@ -86,3 +86,25 @@ GitHub pypi environment. Codex prepared manual CI/publishing workflows, reviewed
 official action pins/manifests, tested release-file integrity checks and rebuilt
 the owner-metadata candidate. Hosted tests, final publication and human scientific
 acceptance are recorded separately as they actually occur.
+
+On 2026-09-27 the owner explicitly approved candidate 06c14b6, its exact two
+package hashes, public GitHub history/repository, CI and conditional GitHub/PyPI
+publication. They accepted S00–S16 technical outputs and deferred the maintainer
+walkthrough and independent-user exercise. Neither exercise is claimed performed.
+The implementing AI pushed the approved candidate, made the repository public,
+configured main-only required owner review with no administrator bypass and ran
+hosted CI. A CI environment-only typing correction preserves the Python 3.11
+mypy target and exact approved package bytes. Failed and corrected-run evidence
+is retained. Public-install verification and S17 completion are still pending.
+
+S17 publication (2026-09-27): all six corrected hosted CI jobs passed. Codex
+created the approved GitHub tag/release and uploaded exactly the reviewed files.
+The first PyPI workflow stopped before upload on metadata-tool incompatibility;
+a pinned action upgrade fixed it without changing package bytes. The owner
+explicitly approved the corrected deployment in conversation; Codex submitted
+that decision through GitHub's review dialog, with that distinction disclosed.
+PyPI publication succeeded. Public GitHub/PyPI downloads and simple-index
+resolution match the approved wheel/sdist; a fresh external public-wheel install
+passed with 53 matching runtime payloads and an offline synthetic demo. Citation
+metadata uses actual author/version/date/URLs. The human walkthrough and external
+trial remain unfinished; S17 human acceptance is not inferred from release approval.

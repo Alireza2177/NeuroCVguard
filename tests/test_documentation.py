@@ -97,7 +97,14 @@ def test_at_s14_04_documented_subcommands_help(command):
 
 
 def test_at_s14_06_08_metadata_and_human_review_remain_honest():
-    assert not (ROOT / "CITATION.cff").exists()
+    citation = (ROOT / "CITATION.cff").read_text()
+    release = json.loads((ROOT / "qa/evidence/S17/github-release.json").read_text())
+    assert release["draft"] is False
+    assert f'version: "{release["tag_name"].removeprefix("v")}"' in citation
+    assert f'date-released: "{release["published_at"][:10]}"' in citation
+    assert f'url: "{release["html_url"]}"' in citation
+    assert "family-names: Emad" in citation and "given-names: Alireza" in citation
+    assert "doi:" not in citation and "orcid:" not in citation
     metadata = tomllib.loads((ROOT / "pyproject.toml").read_text())
     assert metadata["project"]["authors"] == [{"name": "Alireza Emad"}]
     assert metadata["project"]["license"] == "BSD-3-Clause"

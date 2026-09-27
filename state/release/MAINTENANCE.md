@@ -6,14 +6,14 @@ owners assigned, deadlines promised or support commitments invented.
 | ID | Actual finding / basis | Next action and completion evidence |
 |---|---|---|
 | M01 | Owner/license/security metadata supplied in S17 | Resolved: owner-approved metadata applied; final candidate rebuilt and clean-install verified |
-| M02 | Initial unauthenticated namespace checks returned 404 | Authenticated GitHub ownership and PyPI account/pending publisher verified; final project registration still pending |
-| M03 | All human acceptance flags false; exercises pending | Record actual human scientific review, maintainer walkthrough and independent tester's synthetic mapping/demo exercise; do not relabel AI checks |
-| M04 | macOS and hosted CI unexecuted | Configure reviewed CI and run the documented matrix when authorized; record real logs and failures |
-| M05 | Retained history contains local paths/internal evidence | Review intended public history/surface; obtain explicit scope decision without automatic history rewriting |
+| M02 | Initial unauthenticated namespace checks returned 404 | Resolved: authenticated ownership and successful public GitHub/PyPI release verified |
+| M03 | S00–S16 technical outputs accepted by owner; two human exercises deferred | Record actual human scientific review, maintainer walkthrough and independent tester's synthetic mapping/demo exercise; do not relabel AI checks |
+| M04 | macOS and hosted CI were unexecuted at S16 | Resolved: all six S17 hosted jobs passed; initial typing-environment failure retained |
+| M05 | Retained history contains local paths/internal evidence | Resolved: owner explicitly approved existing history, internal evidence and machine paths; history preserved |
 | M06 | README platform paragraph predated S16 matrix | Resolved: updated with measured S16 scope and rebuilt final candidate; historical S16 archive preserved |
 | M07 | ADR-S15-001 first dependency import consumes Python global RNG | Recheck on dependency upgrades; keep seeded behavior regressions; remove exception only with a demonstrated fix |
 | M08 | Backward-compatible private plan/context additions still reject on old closed-schema readers | Keep migration notes and legacy-reader tests; do not silently redefine schemas/metric units in patch releases |
-| M09 | Public release not yet performed | Verify final artifact digests and fresh public installation, docs/citation links and actual timestamps after approved publishing |
+| M09 | Public release verification | Resolved: GitHub/PyPI bytes match approved hashes; fresh public-wheel installation and citation validation passed |
 
 For an incoming scientific defect, request a minimal synthetic reproduction and
 the affected version/configuration. Do not request patient files in public issues.
