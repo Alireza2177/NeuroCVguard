@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-09-27T06:46:35.239037+00:00",
+  "scope": "changed/untracked paths at S17 final documentation/evidence checkpoint",
+  "file_count": 43,
+  "patterns": [
+    "github_token",
+    "pypi_token",
+    "private_key"
+  ],
+  "hits": [],
+  "limitation": "Bounded token/private-key pattern check, not an exhaustive privacy guarantee. Existing internal records and historical paths are explicitly owner-approved."
+}

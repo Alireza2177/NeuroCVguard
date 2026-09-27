@@ -1,0 +1,1125 @@
+{
+  "total_count": 6,
+  "jobs": [
+    {
+      "id": 108563541640,
+      "run_id": 36299183458,
+      "workflow_name": "Candidate checks",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/runs/36299183458",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUZAVWs8AAAAZRuQuiA",
+      "head_sha": "f694268432e9aeacf8c6315b2f806596fa20b906",
+      "url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/jobs/108563541640",
+      "html_url": "https://github.com/Alireza2177/NeuroCVguard/actions/runs/36299183458/job/108563541640",
+      "status": "in_progress",
+      "conclusion": null,
+      "created_at": "2026-09-27T06:07:45Z",
+      "started_at": "2026-09-27T06:07:47Z",
+      "completed_at": null,
+      "name": "verify (windows-latest, 3.12, false)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-27T06:07:48Z",
+          "completed_at": "2026-09-27T06:07:49Z"
+        },
+        {
+          "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-27T06:07:49Z",
+          "completed_at": "2026-09-27T06:07:55Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-27T06:07:55Z",
+          "completed_at": "2026-09-27T06:07:55Z"
+        },
+        {
+          "name": "Install development dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-27T06:07:55Z",
+          "completed_at": "2026-09-27T06:09:09Z"
+        },
+        {
+          "name": "Install tested direct-dependency floor",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-09-27T06:09:09Z",
+          "completed_at": "2026-09-27T06:09:09Z"
+        },
+        {
+          "name": "Record Python version",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-09-27T06:09:09Z",
+          "completed_at": "2026-09-27T06:09:09Z"
+        },
+        {
+          "name": "Record dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-09-27T06:09:09Z",
+          "completed_at": "2026-09-27T06:09:10Z"
+        },
+        {
+          "name": "Check dependency consistency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-09-27T06:09:10Z",
+          "completed_at": "2026-09-27T06:09:11Z"
+        },
+        {
+          "name": "Full source suite",
+          "status": "in_progress",
+          "conclusion": null,
+          "number": 9,
+          "started_at": "2026-09-27T06:09:11Z",
+          "completed_at": null
+        },
+        {
+          "name": "Lint",
+          "status": "pending",
+          "conclusion": null,
+          "number": 10,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Formatting",
+          "status": "pending",
+          "conclusion": null,
+          "number": 11,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Types",
+          "status": "pending",
+          "conclusion": null,
+          "number": 12,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Strict documentation",
+          "status": "pending",
+          "conclusion": null,
+          "number": 13,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Build candidate",
+          "status": "pending",
+          "conclusion": null,
+          "number": 14,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Check exact archive contents",
+          "status": "pending",
+          "conclusion": null,
+          "number": 15,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Verify clean external wheel",
+          "status": "pending",
+          "conclusion": null,
+          "number": 16,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Verify clean external wheel with dependency floor",
+          "status": "pending",
+          "conclusion": null,
+          "number": 17,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "pending",
+          "conclusion": null,
+          "number": 33,
+          "started_at": null,
+          "completed_at": null
+        },
+        {
+          "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "pending",
+          "conclusion": null,
+          "number": 34,
+          "started_at": null,
+          "completed_at": null
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/check-runs/108563541640",
+      "labels": [
+        "windows-latest"
+      ],
+      "runner_id": 1000000004,
+      "runner_name": "GitHub Actions 1000000004",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 108563541670,
+      "run_id": 36299183458,
+      "workflow_name": "Candidate checks",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/runs/36299183458",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUZAVWs8AAAAZRuQupg",
+      "head_sha": "f694268432e9aeacf8c6315b2f806596fa20b906",
+      "url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/jobs/108563541670",
+      "html_url": "https://github.com/Alireza2177/NeuroCVguard/actions/runs/36299183458/job/108563541670",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-09-27T06:07:45Z",
+      "started_at": "2026-09-27T06:07:46Z",
+      "completed_at": "2026-09-27T06:13:27Z",
+      "name": "verify (ubuntu-latest, 3.11, false)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-27T06:07:47Z",
+          "completed_at": "2026-09-27T06:07:48Z"
+        },
+        {
+          "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-27T06:07:48Z",
+          "completed_at": "2026-09-27T06:07:48Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-27T06:07:48Z",
+          "completed_at": "2026-09-27T06:07:49Z"
+        },
+        {
+          "name": "Install development dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-27T06:07:49Z",
+          "completed_at": "2026-09-27T06:08:19Z"
+        },
+        {
+          "name": "Install tested direct-dependency floor",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-09-27T06:08:19Z",
+          "completed_at": "2026-09-27T06:08:19Z"
+        },
+        {
+          "name": "Record Python version",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-09-27T06:08:19Z",
+          "completed_at": "2026-09-27T06:08:19Z"
+        },
+        {
+          "name": "Record dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-09-27T06:08:19Z",
+          "completed_at": "2026-09-27T06:08:20Z"
+        },
+        {
+          "name": "Check dependency consistency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-09-27T06:08:20Z",
+          "completed_at": "2026-09-27T06:08:20Z"
+        },
+        {
+          "name": "Full source suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-09-27T06:08:20Z",
+          "completed_at": "2026-09-27T06:13:04Z"
+        },
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-09-27T06:13:04Z",
+          "completed_at": "2026-09-27T06:13:04Z"
+        },
+        {
+          "name": "Formatting",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-09-27T06:13:04Z",
+          "completed_at": "2026-09-27T06:13:04Z"
+        },
+        {
+          "name": "Types",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-09-27T06:13:04Z",
+          "completed_at": "2026-09-27T06:13:04Z"
+        },
+        {
+          "name": "Strict documentation",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-09-27T06:13:04Z",
+          "completed_at": "2026-09-27T06:13:04Z"
+        },
+        {
+          "name": "Build candidate",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-09-27T06:13:04Z",
+          "completed_at": "2026-09-27T06:13:06Z"
+        },
+        {
+          "name": "Check exact archive contents",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-09-27T06:13:06Z",
+          "completed_at": "2026-09-27T06:13:06Z"
+        },
+        {
+          "name": "Verify clean external wheel",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-09-27T06:13:06Z",
+          "completed_at": "2026-09-27T06:13:25Z"
+        },
+        {
+          "name": "Verify clean external wheel with dependency floor",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-09-27T06:13:25Z",
+          "completed_at": "2026-09-27T06:13:25Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33,
+          "started_at": "2026-09-27T06:13:25Z",
+          "completed_at": "2026-09-27T06:13:25Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34,
+          "started_at": "2026-09-27T06:13:25Z",
+          "completed_at": "2026-09-27T06:13:26Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35,
+          "started_at": "2026-09-27T06:13:26Z",
+          "completed_at": "2026-09-27T06:13:26Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/check-runs/108563541670",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000000,
+      "runner_name": "GitHub Actions 1000000000",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 108563541689,
+      "run_id": 36299183458,
+      "workflow_name": "Candidate checks",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/runs/36299183458",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUZAVWs8AAAAZRuQuuQ",
+      "head_sha": "f694268432e9aeacf8c6315b2f806596fa20b906",
+      "url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/jobs/108563541689",
+      "html_url": "https://github.com/Alireza2177/NeuroCVguard/actions/runs/36299183458/job/108563541689",
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-09-27T06:07:45Z",
+      "started_at": "2026-09-27T06:07:47Z",
+      "completed_at": "2026-09-27T06:13:17Z",
+      "name": "verify (ubuntu-latest, 3.12, false)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-27T06:07:48Z",
+          "completed_at": "2026-09-27T06:07:49Z"
+        },
+        {
+          "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-27T06:07:49Z",
+          "completed_at": "2026-09-27T06:07:52Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-27T06:07:52Z",
+          "completed_at": "2026-09-27T06:07:53Z"
+        },
+        {
+          "name": "Install development dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-27T06:07:53Z",
+          "completed_at": "2026-09-27T06:08:24Z"
+        },
+        {
+          "name": "Install tested direct-dependency floor",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-09-27T06:08:24Z",
+          "completed_at": "2026-09-27T06:08:24Z"
+        },
+        {
+          "name": "Record Python version",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-09-27T06:08:24Z",
+          "completed_at": "2026-09-27T06:08:25Z"
+        },
+        {
+          "name": "Record dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-09-27T06:08:25Z",
+          "completed_at": "2026-09-27T06:08:25Z"
+        },
+        {
+          "name": "Check dependency consistency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-09-27T06:08:25Z",
+          "completed_at": "2026-09-27T06:08:25Z"
+        },
+        {
+          "name": "Full source suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-09-27T06:08:25Z",
+          "completed_at": "2026-09-27T06:13:13Z"
+        },
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-09-27T06:13:13Z",
+          "completed_at": "2026-09-27T06:13:13Z"
+        },
+        {
+          "name": "Formatting",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-09-27T06:13:13Z",
+          "completed_at": "2026-09-27T06:13:13Z"
+        },
+        {
+          "name": "Types",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 12,
+          "started_at": "2026-09-27T06:13:13Z",
+          "completed_at": "2026-09-27T06:13:13Z"
+        },
+        {
+          "name": "Strict documentation",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-09-27T06:13:13Z",
+          "completed_at": "2026-09-27T06:13:13Z"
+        },
+        {
+          "name": "Build candidate",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 14,
+          "started_at": "2026-09-27T06:13:13Z",
+          "completed_at": "2026-09-27T06:13:13Z"
+        },
+        {
+          "name": "Check exact archive contents",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-09-27T06:13:13Z",
+          "completed_at": "2026-09-27T06:13:14Z"
+        },
+        {
+          "name": "Verify clean external wheel",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-09-27T06:13:14Z",
+          "completed_at": "2026-09-27T06:13:14Z"
+        },
+        {
+          "name": "Verify clean external wheel with dependency floor",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-09-27T06:13:14Z",
+          "completed_at": "2026-09-27T06:13:14Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 33,
+          "started_at": "2026-09-27T06:13:14Z",
+          "completed_at": "2026-09-27T06:13:14Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34,
+          "started_at": "2026-09-27T06:13:14Z",
+          "completed_at": "2026-09-27T06:13:14Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35,
+          "started_at": "2026-09-27T06:13:14Z",
+          "completed_at": "2026-09-27T06:13:14Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/check-runs/108563541689",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000001,
+      "runner_name": "GitHub Actions 1000000001",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 108563541694,
+      "run_id": 36299183458,
+      "workflow_name": "Candidate checks",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/runs/36299183458",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUZAVWs8AAAAZRuQuvg",
+      "head_sha": "f694268432e9aeacf8c6315b2f806596fa20b906",
+      "url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/jobs/108563541694",
+      "html_url": "https://github.com/Alireza2177/NeuroCVguard/actions/runs/36299183458/job/108563541694",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-09-27T06:07:45Z",
+      "started_at": "2026-09-27T06:08:37Z",
+      "completed_at": "2026-09-27T06:14:26Z",
+      "name": "verify (macos-latest, 3.12, false)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-27T06:08:38Z",
+          "completed_at": "2026-09-27T06:08:38Z"
+        },
+        {
+          "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-27T06:08:38Z",
+          "completed_at": "2026-09-27T06:08:40Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-27T06:08:40Z",
+          "completed_at": "2026-09-27T06:08:40Z"
+        },
+        {
+          "name": "Install development dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-27T06:08:40Z",
+          "completed_at": "2026-09-27T06:09:03Z"
+        },
+        {
+          "name": "Install tested direct-dependency floor",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-09-27T06:09:03Z",
+          "completed_at": "2026-09-27T06:09:03Z"
+        },
+        {
+          "name": "Record Python version",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-09-27T06:09:03Z",
+          "completed_at": "2026-09-27T06:09:03Z"
+        },
+        {
+          "name": "Record dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-09-27T06:09:03Z",
+          "completed_at": "2026-09-27T06:09:04Z"
+        },
+        {
+          "name": "Check dependency consistency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-09-27T06:09:04Z",
+          "completed_at": "2026-09-27T06:09:04Z"
+        },
+        {
+          "name": "Full source suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-09-27T06:09:04Z",
+          "completed_at": "2026-09-27T06:13:46Z"
+        },
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-09-27T06:13:46Z",
+          "completed_at": "2026-09-27T06:13:46Z"
+        },
+        {
+          "name": "Formatting",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-09-27T06:13:46Z",
+          "completed_at": "2026-09-27T06:13:46Z"
+        },
+        {
+          "name": "Types",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-09-27T06:13:46Z",
+          "completed_at": "2026-09-27T06:13:46Z"
+        },
+        {
+          "name": "Strict documentation",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-09-27T06:13:46Z",
+          "completed_at": "2026-09-27T06:13:46Z"
+        },
+        {
+          "name": "Build candidate",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-09-27T06:13:46Z",
+          "completed_at": "2026-09-27T06:13:50Z"
+        },
+        {
+          "name": "Check exact archive contents",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-09-27T06:13:50Z",
+          "completed_at": "2026-09-27T06:13:50Z"
+        },
+        {
+          "name": "Verify clean external wheel",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-09-27T06:13:50Z",
+          "completed_at": "2026-09-27T06:14:18Z"
+        },
+        {
+          "name": "Verify clean external wheel with dependency floor",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-09-27T06:14:18Z",
+          "completed_at": "2026-09-27T06:14:18Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33,
+          "started_at": "2026-09-27T06:14:18Z",
+          "completed_at": "2026-09-27T06:14:19Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34,
+          "started_at": "2026-09-27T06:14:19Z",
+          "completed_at": "2026-09-27T06:14:19Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35,
+          "started_at": "2026-09-27T06:14:19Z",
+          "completed_at": "2026-09-27T06:14:23Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/check-runs/108563541694",
+      "labels": [
+        "macos-latest"
+      ],
+      "runner_id": 1000000005,
+      "runner_name": "GitHub Actions 1000000005",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 108563541725,
+      "run_id": 36299183458,
+      "workflow_name": "Candidate checks",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/runs/36299183458",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUZAVWs8AAAAZRuQu3Q",
+      "head_sha": "f694268432e9aeacf8c6315b2f806596fa20b906",
+      "url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/jobs/108563541725",
+      "html_url": "https://github.com/Alireza2177/NeuroCVguard/actions/runs/36299183458/job/108563541725",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-09-27T06:07:45Z",
+      "started_at": "2026-09-27T06:07:47Z",
+      "completed_at": "2026-09-27T06:14:34Z",
+      "name": "verify (ubuntu-latest, 3.11, true)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-27T06:07:48Z",
+          "completed_at": "2026-09-27T06:07:49Z"
+        },
+        {
+          "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-27T06:07:49Z",
+          "completed_at": "2026-09-27T06:07:50Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-27T06:07:50Z",
+          "completed_at": "2026-09-27T06:07:50Z"
+        },
+        {
+          "name": "Install development dependencies",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 4,
+          "started_at": "2026-09-27T06:07:50Z",
+          "completed_at": "2026-09-27T06:07:50Z"
+        },
+        {
+          "name": "Install tested direct-dependency floor",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-09-27T06:07:50Z",
+          "completed_at": "2026-09-27T06:08:18Z"
+        },
+        {
+          "name": "Record Python version",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-09-27T06:08:18Z",
+          "completed_at": "2026-09-27T06:08:18Z"
+        },
+        {
+          "name": "Record dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-09-27T06:08:18Z",
+          "completed_at": "2026-09-27T06:08:19Z"
+        },
+        {
+          "name": "Check dependency consistency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-09-27T06:08:19Z",
+          "completed_at": "2026-09-27T06:08:19Z"
+        },
+        {
+          "name": "Full source suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-09-27T06:08:19Z",
+          "completed_at": "2026-09-27T06:14:06Z"
+        },
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-09-27T06:14:06Z",
+          "completed_at": "2026-09-27T06:14:06Z"
+        },
+        {
+          "name": "Formatting",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-09-27T06:14:06Z",
+          "completed_at": "2026-09-27T06:14:06Z"
+        },
+        {
+          "name": "Types",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-09-27T06:14:06Z",
+          "completed_at": "2026-09-27T06:14:06Z"
+        },
+        {
+          "name": "Strict documentation",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-09-27T06:14:06Z",
+          "completed_at": "2026-09-27T06:14:06Z"
+        },
+        {
+          "name": "Build candidate",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-09-27T06:14:06Z",
+          "completed_at": "2026-09-27T06:14:08Z"
+        },
+        {
+          "name": "Check exact archive contents",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-09-27T06:14:08Z",
+          "completed_at": "2026-09-27T06:14:08Z"
+        },
+        {
+          "name": "Verify clean external wheel",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 16,
+          "started_at": "2026-09-27T06:14:08Z",
+          "completed_at": "2026-09-27T06:14:08Z"
+        },
+        {
+          "name": "Verify clean external wheel with dependency floor",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-09-27T06:14:08Z",
+          "completed_at": "2026-09-27T06:14:31Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33,
+          "started_at": "2026-09-27T06:14:31Z",
+          "completed_at": "2026-09-27T06:14:31Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34,
+          "started_at": "2026-09-27T06:14:31Z",
+          "completed_at": "2026-09-27T06:14:32Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35,
+          "started_at": "2026-09-27T06:14:32Z",
+          "completed_at": "2026-09-27T06:14:32Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/check-runs/108563541725",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000002,
+      "runner_name": "GitHub Actions 1000000002",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    },
+    {
+      "id": 108563541740,
+      "run_id": 36299183458,
+      "workflow_name": "Candidate checks",
+      "head_branch": "main",
+      "run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/runs/36299183458",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOUZAVWs8AAAAZRuQu7A",
+      "head_sha": "f694268432e9aeacf8c6315b2f806596fa20b906",
+      "url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/actions/jobs/108563541740",
+      "html_url": "https://github.com/Alireza2177/NeuroCVguard/actions/runs/36299183458/job/108563541740",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-09-27T06:07:45Z",
+      "started_at": "2026-09-27T06:07:47Z",
+      "completed_at": "2026-09-27T06:14:05Z",
+      "name": "verify (ubuntu-latest, 3.13, false)",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-09-27T06:07:47Z",
+          "completed_at": "2026-09-27T06:07:48Z"
+        },
+        {
+          "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-09-27T06:07:48Z",
+          "completed_at": "2026-09-27T06:07:49Z"
+        },
+        {
+          "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-09-27T06:07:49Z",
+          "completed_at": "2026-09-27T06:07:49Z"
+        },
+        {
+          "name": "Install development dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-09-27T06:07:49Z",
+          "completed_at": "2026-09-27T06:08:19Z"
+        },
+        {
+          "name": "Install tested direct-dependency floor",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 5,
+          "started_at": "2026-09-27T06:08:19Z",
+          "completed_at": "2026-09-27T06:08:19Z"
+        },
+        {
+          "name": "Record Python version",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-09-27T06:08:19Z",
+          "completed_at": "2026-09-27T06:08:19Z"
+        },
+        {
+          "name": "Record dependencies",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-09-27T06:08:19Z",
+          "completed_at": "2026-09-27T06:08:19Z"
+        },
+        {
+          "name": "Check dependency consistency",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-09-27T06:08:19Z",
+          "completed_at": "2026-09-27T06:08:19Z"
+        },
+        {
+          "name": "Full source suite",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-09-27T06:08:19Z",
+          "completed_at": "2026-09-27T06:13:39Z"
+        },
+        {
+          "name": "Lint",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 10,
+          "started_at": "2026-09-27T06:13:39Z",
+          "completed_at": "2026-09-27T06:13:39Z"
+        },
+        {
+          "name": "Formatting",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11,
+          "started_at": "2026-09-27T06:13:39Z",
+          "completed_at": "2026-09-27T06:13:39Z"
+        },
+        {
+          "name": "Types",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 12,
+          "started_at": "2026-09-27T06:13:39Z",
+          "completed_at": "2026-09-27T06:13:39Z"
+        },
+        {
+          "name": "Strict documentation",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 13,
+          "started_at": "2026-09-27T06:13:39Z",
+          "completed_at": "2026-09-27T06:13:39Z"
+        },
+        {
+          "name": "Build candidate",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-09-27T06:13:39Z",
+          "completed_at": "2026-09-27T06:13:42Z"
+        },
+        {
+          "name": "Check exact archive contents",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-09-27T06:13:42Z",
+          "completed_at": "2026-09-27T06:13:42Z"
+        },
+        {
+          "name": "Verify clean external wheel",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-09-27T06:13:42Z",
+          "completed_at": "2026-09-27T06:14:03Z"
+        },
+        {
+          "name": "Verify clean external wheel with dependency floor",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 17,
+          "started_at": "2026-09-27T06:14:03Z",
+          "completed_at": "2026-09-27T06:14:03Z"
+        },
+        {
+          "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33,
+          "started_at": "2026-09-27T06:14:03Z",
+          "completed_at": "2026-09-27T06:14:03Z"
+        },
+        {
+          "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34,
+          "started_at": "2026-09-27T06:14:03Z",
+          "completed_at": "2026-09-27T06:14:03Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35,
+          "started_at": "2026-09-27T06:14:03Z",
+          "completed_at": "2026-09-27T06:14:03Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/Alireza2177/NeuroCVguard/check-runs/108563541740",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000003,
+      "runner_name": "GitHub Actions 1000000003",
+      "runner_group_id": 0,
+      "runner_group_name": "GitHub Actions"
+    }
+  ]
+}

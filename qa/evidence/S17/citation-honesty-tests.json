@@ -1,0 +1,25 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "tests/test_documentation.py",
+    "-k",
+    "local_markdown_links or metadata_and_human_review"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T06:29:29.526176+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_code": 0,
+  "stdout": "..                                                                       [100%]\n2 passed, 22 deselected in 0.31s\n",
+  "stderr": ""
+}

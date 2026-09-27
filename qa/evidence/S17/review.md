@@ -88,3 +88,18 @@ encode a Unicode character in the official action manifest. The JSON file had
 already been saved and was subsequently read successfully; no action upload or
 execution was attempted. One documentation patch was rejected before any edit
 because it specified two operations on one path; the corrected edit succeeded.
+
+## Final public-release review (2026-09-27)
+
+Earlier pending statements above are historical checkpoints. The actual owner
+approved exact bytes and public history, accepted S00–S16 outputs and deferred
+the two human exercises. Corrected hosted CI passed all six jobs. GitHub and
+PyPI publication succeeded, with public files matching the approved hashes.
+The public simple-index wheel also matches. Fresh public-wheel installation
+passes imports/version/console/assets/demo and verifies 53 installed payloads.
+CFF metadata validates against the official schema and uses actual release facts.
+No DOI or independent human validation is claimed. The publishing action's
+metadata compatibility fix changes tooling only; package bytes are unchanged.
+Post-release README/citation/evidence changes are not rebuilt into v0.1.0.
+Implementing-AI review only; owner approval and UI submission actors are recorded
+separately. Historical evidence and failures are preserved.

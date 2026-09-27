@@ -1,0 +1,123 @@
+{
+  "info": {
+    "author": "Alireza Emad",
+    "author_email": null,
+    "bugtrack_url": null,
+    "classifiers": [],
+    "description": "# NeuroCVguard\n\nResearch-only Python software for checking whether supplied cohort identities,\npartitions and evaluation procedures match an intended generalization claim.\nIt reads local CSV/TSV/JSON, checks participant/transitive dependence and requested\ndomain separation, describes acquisition\u2013target association, generates checked\nsplits and runs a controlled participant-level logistic baseline with optional\nnested C selection. Offline HTML/JSON reports retain incomplete coverage and\nlimitations. No account, GPU or runtime internet connection is needed.\n\nIt does not process MRI images, provide clinical advice, authenticate upstream\npreprocessing, prove causal confounding or certify a study as leakage-free.\nRepeated visits alone are not leakage; inspect actual membership and objective.\nUnknown upstream preprocessing remains unassessable even with a correct Pipeline.\n\n## Install and try\n\nFrom an authorized local source checkout, create a dedicated Python environment.\nUse `.venv/Scripts/python.exe` on Windows or `.venv/bin/python` on Linux/macOS\nafter `python -m venv .venv`. With that interpreter selected:\n\n```text\npython -m pip install -e \".[dev,docs]\"\npython -m neurocvguard demo --out local_outputs/demo\n```\n\nOpen `local_outputs/demo/report.html`. Inputs are fully synthetic, not patient\ndata. Choose a new output path or explicitly use `--overwrite`. Read warnings\nbeside coverage: association suggests reviewing acquisition imbalance, while\nunknown preprocessing asks for evidence rather than a passing verdict.\n\n**Private plans/evaluations are separate from projected reports.** Default\nprojection is not guaranteed anonymity; inspect artifacts before sharing.\nVersion: 0.1.0. See the [release procedure and evidence](docs/release.md) for\npublication status and the actual verified installation/platform results.\n\n## Documentation and development\n\n- [Installation and troubleshooting](docs/installation.md)\n- [Executable quickstart](docs/quickstart.md) and [synthetic tutorials](docs/synthetic_examples.md)\n- [Inputs](docs/input_tables.md), [configuration](docs/configuration.md),\n  [CLI](docs/cli.md) and [Python API](docs/api.rst)\n- [Objectives/warning actions](docs/objectives.md), [evaluation](docs/evaluation.md),\n  [report privacy](docs/reporting.md) and [limitations](docs/limitations.md)\n- [Contributing/testing](CONTRIBUTING.md), [changelog](CHANGELOG.md),\n  [security](SECURITY.md) and [release procedure](docs/release.md)\n\nBuild the full local site with\n`python -m sphinx -W --keep-going -b html docs docs/_build/html` and open\n`docs/_build/html/index.html`. Run\n`python -m pytest -q --strict-markers --strict-config` for the test suite.\nActual stage evidence and unrun checks are recorded under `state/handoffs/`.\nLocal Windows and Linux WSL2 checks and the Python 3.11 direct-dependency floor\nhave been exercised; see [installation evidence](docs/installation.md).\nmacOS and hosted CI remain unverified until their recorded runs pass.\n\n## License, support and citation\n\nCopyright 2026 Alireza Emad. Released under the [BSD-3-Clause license](LICENSE).\nMaintainer: Alireza Emad. For private security reports, use the approved contact in\n[SECURITY.md](SECURITY.md); share only synthetic reproductions. No response-time\nor long-term support commitment is claimed.\nCitation metadata will be added only after verified authorship and release details;\nno DOI or citation badge exists. [AI assistance](AI_ASSISTANCE.md) is recorded\nhonestly. Human walkthrough, external-user testing and acceptance remain pending.\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": null,
+    "license": null,
+    "license_expression": "BSD-3-Clause",
+    "license_files": [
+      "LICENSE"
+    ],
+    "maintainer": null,
+    "maintainer_email": "Alireza Emad <Alireza221177@gmail.com>",
+    "name": "neurocvguard",
+    "package_url": "https://pypi.org/project/neurocvguard/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/neurocvguard/",
+    "project_urls": {
+      "Source": "https://github.com/Alireza2177/NeuroCVguard"
+    },
+    "provides_extra": [
+      "dev",
+      "docs"
+    ],
+    "release_url": "https://pypi.org/project/neurocvguard/0.1.0/",
+    "requires_dist": [
+      "jinja2>=3.1.6",
+      "jsonschema>=4.23.0",
+      "numpy>=1.26.4",
+      "pandas>=2.2.3",
+      "scikit-learn>=1.5.2",
+      "scipy>=1.13.1",
+      "build; extra == \"dev\"",
+      "hypothesis; extra == \"dev\"",
+      "mypy; extra == \"dev\"",
+      "pandas-stubs; extra == \"dev\"",
+      "pytest; extra == \"dev\"",
+      "pytest-cov; extra == \"dev\"",
+      "ruff; extra == \"dev\"",
+      "twine; extra == \"dev\"",
+      "types-jsonschema; extra == \"dev\"",
+      "myst-parser; extra == \"docs\"",
+      "sphinx; extra == \"docs\"",
+      "sphinx-rtd-theme; extra == \"docs\""
+    ],
+    "requires_python": ">=3.11",
+    "summary": "Research-only cohort audits and independently checked split plans for neuroimaging ML",
+    "version": "0.1.0",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "last_serial": 41508290,
+  "ownership": {
+    "organization": null,
+    "roles": [
+      {
+        "role": "Owner",
+        "user": "Alireza217"
+      }
+    ]
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "10ab0c074ab959a85f9892367ebdfc1d562332e2caa851394b38a97183e63ddd"
+      },
+      "digests": {
+        "blake2b_256": "3604ff53564383992d8512f036a39ba108ec3c679fbb29653717a15d02005965",
+        "md5": "1aca0d4885f1e341a604e1447e5d77bb",
+        "sha256": "a40936fb615b86fcb31a0e212bae8075318f1b43bd8950cecebf3a549d5b74b9"
+      },
+      "downloads": -1,
+      "filename": "neurocvguard-0.1.0-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "1aca0d4885f1e341a604e1447e5d77bb",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.11",
+      "size": 132475,
+      "upload_time": "2026-09-27T06:36:55",
+      "upload_time_iso_8601": "2026-09-27T06:36:55.856348Z",
+      "url": "https://files.pythonhosted.org/packages/36/04/ff53564383992d8512f036a39ba108ec3c679fbb29653717a15d02005965/neurocvguard-0.1.0-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "00930efc1fe4aa2754ea7106907d20a323cebc3cea7dd5a5ea567d6eb30c283e",
+        "md5": "3ec93ba0b5bf02257fe3b17a83438743",
+        "sha256": "d12b8ba53bed76293e54bdccb43fb849873a5f6cd89adc3341f6966b0a33020b"
+      },
+      "downloads": -1,
+      "filename": "neurocvguard-0.1.0.tar.gz",
+      "has_sig": false,
+      "md5_digest": "3ec93ba0b5bf02257fe3b17a83438743",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.11",
+      "size": 103407,
+      "upload_time": "2026-09-27T06:36:57",
+      "upload_time_iso_8601": "2026-09-27T06:36:57.172537Z",
+      "url": "https://files.pythonhosted.org/packages/00/93/0efc1fe4aa2754ea7106907d20a323cebc3cea7dd5a5ea567d6eb30c283e/neurocvguard-0.1.0.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "vulnerabilities": []
+}

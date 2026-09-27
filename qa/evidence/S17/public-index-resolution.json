@@ -1,0 +1,27 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pip",
+    "download",
+    "--no-deps",
+    "--only-binary=:all:",
+    "--index-url",
+    "https://pypi.org/simple",
+    "neurocvguard==0.1.0",
+    "--dest",
+    "dist/s17-index-download"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T06:39:18.168457+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_code": 0,
+  "stdout": "Collecting neurocvguard==0.1.0\n  Obtaining dependency information for neurocvguard==0.1.0 from https://files.pythonhosted.org/packages/36/04/ff53564383992d8512f036a39ba108ec3c679fbb29653717a15d02005965/neurocvguard-0.1.0-py3-none-any.whl.metadata\n  Downloading neurocvguard-0.1.0-py3-none-any.whl.metadata (4.7 kB)\nDownloading neurocvguard-0.1.0-py3-none-any.whl (132 kB)\n   -------------------------------------- 132.5/132.5 kB 650.2 kB/s eta 0:00:00\nSaved <PROJECT_ROOT>\\dist\\s17-index-download\\neurocvguard-0.1.0-py3-none-any.whl\nSuccessfully downloaded neurocvguard\n",
+  "stderr": "\n[notice] A new release of pip is available: 23.2.1 -> 26.2.1\n[notice] To update, run: <PROJECT_ROOT>\\.venv\\Scripts\\python.exe -m pip install --upgrade pip\n"
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "tools/validate_foundation.py",
+    "--mode",
+    "artifacts"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T06:48:04.696572+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_code": 0,
+  "stdout": "Document/schema/fixture consistency only. No NeuroCVguard implementation, application tests, human acceptance or release readiness are validated here.\nMode: artifacts; checks: 124/124 passed; application tests executed: 0.\nOutside artifact scope (not passed): all-required-cases-unrun, software-not-claimed, no-invented-stage-passes\n",
+  "stderr": ""
+}

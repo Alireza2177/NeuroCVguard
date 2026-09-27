@@ -2156,8 +2156,8 @@
     "expected": "Available/owned names verified; conflicts handled transparently.",
     "method": "human",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S17-03",
@@ -2168,8 +2168,8 @@
     "expected": "Match or explicit explanation; no silent rebuild with different contents.",
     "method": "packaging",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S17-04",
@@ -2180,8 +2180,8 @@
     "expected": "Version/import/demo verified or release marked incomplete.",
     "method": "packaging",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S17-05",
@@ -2192,8 +2192,8 @@
     "expected": "Only real working identifiers appear in citation metadata.",
     "method": "human",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S17-06",

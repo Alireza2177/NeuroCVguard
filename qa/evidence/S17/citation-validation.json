@@ -1,0 +1,8 @@
+{
+  "source": "https://raw.githubusercontent.com/citation-file-format/citation-file-format/main/schema.json",
+  "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b",
+  "validation": "passed",
+  "actual_release_published_at": "2026-09-27T06:27:02Z",
+  "citation_sha256": "7f4c694f1b92213cfef34ab0ea1a81534e18d01bea8e6dea7e29d86c0eb03d5b",
+  "doi": null
+}

@@ -1,7 +1,7 @@
 {
   "foundation_version": "1.0.0",
   "target_release": "0.1.0",
-  "software_status": "IN_PROGRESS",
+  "software_status": "READY_FOR_REVIEW",
   "current_stage": "S17",
   "public_release_authorized": true,
   "stages": [
@@ -109,7 +109,7 @@
     },
     {
       "id": "S17",
-      "status": "IN_PROGRESS",
+      "status": "READY_FOR_REVIEW",
       "human_accepted": false,
       "evidence_path": "qa/evidence/S17/"
     }

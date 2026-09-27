@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "tools/release_preflight.py",
+    "--manifest",
+    "state/release/0.1.0-artifacts.json",
+    "--dist",
+    "dist/s17-candidate",
+    "--output",
+    "qa/evidence/S17/authorized-preflight-data.json"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T06:08:16.034058+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_code": 0,
+  "stdout": "{\n  \"scope\": \"Local consistency only; cannot authenticate a human or grant permission.\",\n  \"status\": \"LOCAL_CHECKS_PASS_REQUIRES_HUMAN_DECISION\",\n  \"publication_performed\": false,\n  \"version\": \"0.1.0\",\n  \"blockers\": [],\n  \"source_drift\": [],\n  \"artifacts\": [\n    {\n      \"file\": \"neurocvguard-0.1.0-py3-none-any.whl\",\n      \"sha256\": \"a40936fb615b86fcb31a0e212bae8075318f1b43bd8950cecebf3a549d5b74b9\",\n      \"matches_candidate\": true\n    },\n    {\n      \"file\": \"neurocvguard-0.1.0.tar.gz\",\n      \"sha256\": \"d12b8ba53bed76293e54bdccb43fb849873a5f6cd89adc3341f6966b0a33020b\",\n      \"matches_candidate\": true\n    }\n  ],\n  \"still_requires\": [\n    \"Owner-verified namespaces and visibility\",\n    \"Exact final commit and artifact approval\",\n    \"Human scientific/usability review\",\n    \"Authorization for each external action\",\n    \"Public artifact/download/install verification after approved publication\"\n  ],\n  \"checked_revision\": \"f694268432e9aeacf8c6315b2f806596fa20b906\"\n}\n",
+  "stderr": ""
+}

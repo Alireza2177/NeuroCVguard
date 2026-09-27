@@ -1,0 +1,28 @@
+{
+  "scope": "Local consistency only; cannot authenticate a human or grant permission.",
+  "status": "LOCAL_CHECKS_PASS_REQUIRES_HUMAN_DECISION",
+  "publication_performed": false,
+  "version": "0.1.0",
+  "blockers": [],
+  "source_drift": [],
+  "artifacts": [
+    {
+      "file": "neurocvguard-0.1.0-py3-none-any.whl",
+      "sha256": "a40936fb615b86fcb31a0e212bae8075318f1b43bd8950cecebf3a549d5b74b9",
+      "matches_candidate": true
+    },
+    {
+      "file": "neurocvguard-0.1.0.tar.gz",
+      "sha256": "d12b8ba53bed76293e54bdccb43fb849873a5f6cd89adc3341f6966b0a33020b",
+      "matches_candidate": true
+    }
+  ],
+  "still_requires": [
+    "Owner-verified namespaces and visibility",
+    "Exact final commit and artifact approval",
+    "Human scientific/usability review",
+    "Authorization for each external action",
+    "Public artifact/download/install verification after approved publication"
+  ],
+  "checked_revision": "f694268432e9aeacf8c6315b2f806596fa20b906"
+}

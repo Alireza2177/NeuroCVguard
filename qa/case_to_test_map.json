@@ -1,5 +1,5 @@
 {
-  "note": "Current test IDs and actual evidence are mapped per case. Historical S00 parameter IDs are retained separately. Human acceptance remains separate; S14 walkthrough pending; S15 first-import exception explicitly approved.",
+  "note": "Current test IDs and actual evidence are mapped per case. Historical case-level human flags describe original reviews; PROJECT_STATUS records later owner acceptance of S00–S16 technical outputs with two human exercises explicitly deferred. S17 is READY_FOR_REVIEW, not human accepted. AI review and owner publication authorization remain distinct.",
   "mappings": [
     {
       "case_id": "AT-S00-01",
@@ -3121,82 +3121,84 @@
         "tests/test_release_preflight.py::test_local_flags_never_grant_publication"
       ],
       "evidence": [
-        "qa/evidence/S17/review.md",
-        "qa/evidence/S17/preflight.json",
-        "qa/evidence/S17/namespaces.json",
-        "state/release/S17_PUBLICATION_PLAN.md",
+        "state/release/S17_OWNER_DECISIONS.md",
+        "qa/evidence/S17/authorized-preflight.json",
+        "qa/evidence/S17/release-tools-tests.json",
+        "qa/evidence/S17/external-actions.md",
         "state/handoffs/S17.md"
       ],
-      "verification_type": "automated_guard_and_implementing_ai_review",
-      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
+      "verification_type": "recorded_owner_decisions_and_agent_verification",
+      "scope_note": "Public release and fresh public-wheel installation verified. Actual owner decisions are recorded separately from agent execution. No independent human scientific validation or S17 acceptance is inferred; deferred exercises remain unfinished."
     },
     {
       "case_id": "AT-S17-02",
       "stage": "S17",
       "requirement_id": "REQ-S17",
-      "execution_status": "NOT_RUN",
+      "execution_status": "PASSED",
       "human_accepted": false,
       "test_node_ids": [],
       "evidence": [
-        "qa/evidence/S17/review.md",
-        "qa/evidence/S17/preflight.json",
-        "qa/evidence/S17/namespaces.json",
-        "state/release/S17_PUBLICATION_PLAN.md",
+        "qa/evidence/S17/public-repository.json",
+        "qa/evidence/S17/pypi-release.json",
+        "state/release/S17_OWNER_DECISIONS.md",
         "state/handoffs/S17.md"
       ],
-      "verification_type": "blocked_public_release",
-      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
+      "verification_type": "recorded_owner_decisions_and_agent_verification",
+      "scope_note": "Public release and fresh public-wheel installation verified. Actual owner decisions are recorded separately from agent execution. No independent human scientific validation or S17 acceptance is inferred; deferred exercises remain unfinished."
     },
     {
       "case_id": "AT-S17-03",
       "stage": "S17",
       "requirement_id": "REQ-S17",
-      "execution_status": "NOT_RUN",
+      "execution_status": "PASSED",
       "human_accepted": false,
       "test_node_ids": [],
       "evidence": [
-        "qa/evidence/S17/review.md",
-        "qa/evidence/S17/preflight.json",
-        "qa/evidence/S17/namespaces.json",
-        "state/release/S17_PUBLICATION_PLAN.md",
+        "state/release/0.1.0-artifacts.json",
+        "qa/evidence/S17/github-public-bytes.json",
+        "qa/evidence/S17/pypi-public-bytes.json",
+        "qa/evidence/S17/public-index-identity.json",
         "state/handoffs/S17.md"
       ],
-      "verification_type": "blocked_public_release",
-      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
+      "verification_type": "recorded_owner_decisions_and_agent_verification",
+      "scope_note": "Public release and fresh public-wheel installation verified. Actual owner decisions are recorded separately from agent execution. No independent human scientific validation or S17 acceptance is inferred; deferred exercises remain unfinished."
     },
     {
       "case_id": "AT-S17-04",
       "stage": "S17",
       "requirement_id": "REQ-S17",
-      "execution_status": "NOT_RUN",
+      "execution_status": "PASSED",
       "human_accepted": false,
       "test_node_ids": [],
       "evidence": [
-        "qa/evidence/S17/review.md",
-        "qa/evidence/S17/preflight.json",
-        "qa/evidence/S17/namespaces.json",
-        "state/release/S17_PUBLICATION_PLAN.md",
+        "qa/evidence/S17/public-wheel-install.json",
+        "qa/evidence/S17/public-installed-payloads.json",
+        "qa/evidence/S17/public-index-resolution.json",
         "state/handoffs/S17.md"
       ],
-      "verification_type": "blocked_public_release",
-      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
+      "verification_type": "recorded_owner_decisions_and_agent_verification",
+      "scope_note": "Public release and fresh public-wheel installation verified. Actual owner decisions are recorded separately from agent execution. No independent human scientific validation or S17 acceptance is inferred; deferred exercises remain unfinished."
     },
     {
       "case_id": "AT-S17-05",
       "stage": "S17",
       "requirement_id": "REQ-S17",
-      "execution_status": "NOT_RUN",
+      "execution_status": "PASSED",
       "human_accepted": false,
-      "test_node_ids": [],
+      "test_node_ids": [
+        "tests/test_documentation.py::test_at_s14_06_08_metadata_and_human_review_remain_honest",
+        "tests/test_documentation.py::test_at_s14_01_local_markdown_links_exist"
+      ],
       "evidence": [
-        "qa/evidence/S17/review.md",
-        "qa/evidence/S17/preflight.json",
-        "qa/evidence/S17/namespaces.json",
-        "state/release/S17_PUBLICATION_PLAN.md",
+        "CITATION.cff",
+        "qa/evidence/S17/citation-validation.json",
+        "qa/evidence/S17/public-links.json",
+        "qa/evidence/S17/final-documentation-tests.json",
+        "qa/evidence/S17/final-docs.json",
         "state/handoffs/S17.md"
       ],
-      "verification_type": "blocked_public_release",
-      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
+      "verification_type": "recorded_owner_decisions_and_agent_verification",
+      "scope_note": "Public release and fresh public-wheel installation verified. Actual owner decisions are recorded separately from agent execution. No independent human scientific validation or S17 acceptance is inferred; deferred exercises remain unfinished."
     },
     {
       "case_id": "AT-S17-06",
@@ -3206,14 +3208,14 @@
       "human_accepted": false,
       "test_node_ids": [],
       "evidence": [
+        "AI_ASSISTANCE.md",
         "qa/evidence/S17/review.md",
-        "qa/evidence/S17/preflight.json",
-        "qa/evidence/S17/namespaces.json",
-        "state/release/S17_PUBLICATION_PLAN.md",
+        "qa/evidence/S17/external-actions.md",
+        "state/release/S17_OWNER_DECISIONS.md",
         "state/handoffs/S17.md"
       ],
-      "verification_type": "automated_guard_and_implementing_ai_review",
-      "scope_note": "S17 remains BLOCKED. AT-S17-01 passes only the missing-approval guard; no approval is granted. Public publication/install/citation outcomes remain unverified."
+      "verification_type": "recorded_owner_decisions_and_agent_verification",
+      "scope_note": "Public release and fresh public-wheel installation verified. Actual owner decisions are recorded separately from agent execution. No independent human scientific validation or S17 acceptance is inferred; deferred exercises remain unfinished."
     }
   ]
 }

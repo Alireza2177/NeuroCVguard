@@ -1,0 +1,44 @@
+{
+  "checked_at_utc": "2026-09-27T06:47:14.333521+00:00",
+  "method": "Unauthenticated HTTP GET, no credentials; citation body compared with local validated text",
+  "links": [
+    {
+      "url": "https://github.com/Alireza2177/NeuroCVguard",
+      "status": 200,
+      "final_url": "https://github.com/Alireza2177/NeuroCVguard",
+      "body_bytes": 325635
+    },
+    {
+      "url": "https://github.com/Alireza2177/NeuroCVguard/releases/tag/v0.1.0",
+      "status": 200,
+      "final_url": "https://github.com/Alireza2177/NeuroCVguard/releases/tag/v0.1.0",
+      "body_bytes": 204741
+    },
+    {
+      "url": "https://github.com/Alireza2177/NeuroCVguard/blob/main/CITATION.cff",
+      "status": 200,
+      "final_url": "https://github.com/Alireza2177/NeuroCVguard/blob/main/CITATION.cff",
+      "body_bytes": 235931
+    },
+    {
+      "url": "https://github.com/Alireza2177/NeuroCVguard/blob/main/docs/installation.md",
+      "status": 200,
+      "final_url": "https://github.com/Alireza2177/NeuroCVguard/blob/main/docs/installation.md",
+      "body_bytes": 247667
+    },
+    {
+      "url": "https://github.com/Alireza2177/NeuroCVguard/blob/main/docs/release.md",
+      "status": 200,
+      "final_url": "https://github.com/Alireza2177/NeuroCVguard/blob/main/docs/release.md",
+      "body_bytes": 263929
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Alireza2177/NeuroCVguard/main/CITATION.cff",
+      "status": 200,
+      "sha256": "7f4c694f1b92213cfef34ab0ea1a81534e18d01bea8e6dea7e29d86c0eb03d5b",
+      "matches_local_text": true
+    }
+  ],
+  "doi": null,
+  "hosted_docs_deployed": false
+}

@@ -1,0 +1,22 @@
+{
+  "checked_at_utc": "2026-09-27T06:37:48.771693+00:00",
+  "registry_url": "https://pypi.org/pypi/neurocvguard/0.1.0/json",
+  "artifacts": [
+    {
+      "file": "neurocvguard-0.1.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/36/04/ff53564383992d8512f036a39ba108ec3c679fbb29653717a15d02005965/neurocvguard-0.1.0-py3-none-any.whl",
+      "sha256": "a40936fb615b86fcb31a0e212bae8075318f1b43bd8950cecebf3a549d5b74b9",
+      "bytes": 132475,
+      "upload_time": "2026-09-27T06:36:55.856348Z",
+      "matches_reviewed": true
+    },
+    {
+      "file": "neurocvguard-0.1.0.tar.gz",
+      "url": "https://files.pythonhosted.org/packages/00/93/0efc1fe4aa2754ea7106907d20a323cebc3cea7dd5a5ea567d6eb30c283e/neurocvguard-0.1.0.tar.gz",
+      "sha256": "d12b8ba53bed76293e54bdccb43fb849873a5f6cd89adc3341f6966b0a33020b",
+      "bytes": 103407,
+      "upload_time": "2026-09-27T06:36:57.172537Z",
+      "matches_reviewed": true
+    }
+  ]
+}
