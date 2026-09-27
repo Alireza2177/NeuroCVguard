@@ -215,6 +215,8 @@
     "neurocvguard/workflows.py": "529f94ca06af0f7a5c5e3ff776c2df0ee0fbbf433551152ba955ff7631ad9715"
   },
   "scope": "Exact archive allowlist and byte equality; no application or license approval.",
-  "pypi_upload_authorized": false,
-  "source_base_revision": "eb0559d90b94ef2dda2f847bb0fe72c69112e173"
+  "pypi_upload_authorized": true,
+  "source_base_revision": "eb0559d90b94ef2dda2f847bb0fe72c69112e173",
+  "approved_candidate_revision": "06c14b64776faf6ccce7c80aa9703db6490f4dd9",
+  "owner_decision": "S17_OWNER_DECISIONS.md"
 }

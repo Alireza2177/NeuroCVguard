@@ -20,3 +20,8 @@ locate its limitations/private artifacts, remap a fictitious observation/partici
 column pair, and complete validate/audit/split without verbal coaching. Record the
 actual tester, environment, commands, time/friction and findings with their consent.
 Do not invent a tester or convert these instructions into a passed trial.
+
+The owner accepted the S00–S16 technical outputs for the first research-only
+release on 2026-09-27 and explicitly approved deferring both exercises above.
+Neither exercise is claimed completed; technical-stage acceptance is not
+independent human scientific validation. These remain maintenance follow-ups.

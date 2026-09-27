@@ -33,3 +33,20 @@ Alireza2177/NeuroCVguard, publish.yml, environment pypi. Pending configuration d
 not reserve a project name or publish a package. GitHub confirmed environment
 "pypi" was created. Required reviewer controls are not shown while this repository
 is private; they remain to be configured/verified before any upload.
+
+## Exact release approval, 2026-09-27
+
+The user selected “Approve this scoped release” for candidate
+06c14b64776faf6ccce7c80aa9703db6490f4dd9 and the exact wheel/sdist hashes in
+0.1.0-artifacts.json. Scope: push to Alireza2177/NeuroCVguard, publish that repository
+and existing history (including internal stage documents and historical machine
+paths), run CI, and publish v0.1.0 on GitHub and PyPI only after required checks
+pass. Release-evidence, approval-record and citation updates are also authorized.
+Different package bytes require a new decision. No DOI or public issues authorized.
+
+The user selected “Accept outputs; defer the two exercises” for the completed
+S00–S16 technical outputs for this first research-only release. Those stages are
+now ACCEPTED by explicit owner decision. The maintainer walkthrough remains
+pending and the independent-user trial remains not performed. This acceptance
+is not represented as independent human scientific validation. S17 itself is
+still IN_PROGRESS pending actual publication and public-install verification.

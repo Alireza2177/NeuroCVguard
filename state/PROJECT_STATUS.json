@@ -3,108 +3,108 @@
   "target_release": "0.1.0",
   "software_status": "IN_PROGRESS",
   "current_stage": "S17",
-  "public_release_authorized": false,
+  "public_release_authorized": true,
   "stages": [
     {
       "id": "S00",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S00/"
     },
     {
       "id": "S01",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S01/"
     },
     {
       "id": "S02",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S02/"
     },
     {
       "id": "S03",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S03/"
     },
     {
       "id": "S04",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S04/"
     },
     {
       "id": "S05",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S05/"
     },
     {
       "id": "S06",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S06/"
     },
     {
       "id": "S07",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S07/"
     },
     {
       "id": "S08",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S08/"
     },
     {
       "id": "S09",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S09/"
     },
     {
       "id": "S10",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S10/"
     },
     {
       "id": "S11",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S11/"
     },
     {
       "id": "S12",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S12/"
     },
     {
       "id": "S13",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S13/"
     },
     {
       "id": "S14",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S14/"
     },
     {
       "id": "S15",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S15/"
     },
     {
       "id": "S16",
-      "status": "READY_FOR_REVIEW",
-      "human_accepted": false,
+      "status": "ACCEPTED",
+      "human_accepted": true,
       "evidence_path": "qa/evidence/S16/"
     },
     {
