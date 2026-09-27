@@ -35,7 +35,7 @@ jobs:
       - name: Verify reviewed artifact bytes and explicit publication decision
         run: python tools/verify_release_assets.py --manifest state/release/0.1.0-artifacts.json --dist dist/release --require-authorization
       - name: Publish verified files through PyPI Trusted Publishing
-        uses: pypa/gh-action-pypi-publish@ed0c53931b1dc9bd32cbe73a98c7f6766f8a527e # v1.13.0
+        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # v1.14.2
         with:
           packages-dir: dist/release/
           skip-existing: false
