@@ -2,8 +2,10 @@
 
 Use an authorized local source checkout. No public package name or repository URL
 has been verified. Python 3.11 or newer is required by package metadata; the
-3.11/3.12/3.13 cross-platform matrix and minimum dependency versions remain release
-checks. Local evidence covers Windows Python 3.11 and an ordinary 3.12 install.
+3.11/3.12/3.13 Linux suites were exercised under WSL2 during S16. Clean installed
+wheels were exercised on Windows 3.12 and Linux 3.12; the direct-dependency floor
+was exercised on Windows 3.11. macOS remains unverified. These are local results,
+not hosted CI certification; see [release evidence](release.md).
 
 Create a new environment (do not replace an unrelated one):
 
@@ -40,8 +42,12 @@ or deserialize models to use this package.
 | Infeasible site split | Inspect crossing participants/protected components; document any upstream curation separately. |
 | Fit failure / code 4 | Inspect retained incomplete records and convergence settings; do not average successful folds only. |
 
-Linux/macOS instructions use conventional Python paths but do not represent an
-executed platform test. See the stage handoffs for measured local evidence.
+The tested direct-dependency floor is NumPy 1.26.4, pandas 2.2.3, SciPy 1.13.1,
+scikit-learn 1.5.2, Jinja2 3.1.6 and jsonschema 4.23.0. These are conservative
+tested lower bounds, not claims about the earliest usable versions. Exact floor
+pins for Python 3.11 are in `requirements/minimum-py311.txt`; transitive versions
+and commands are in the S16 records. Newer Python interpreters may need newer
+dependency versions. macOS instructions remain conventional, unverified guidance.
 
 See [limitations](limitations.md) for the approved first-import Python RNG effect
 in the exercised scikit-learn/Rich versions. It does not change seeded plans.

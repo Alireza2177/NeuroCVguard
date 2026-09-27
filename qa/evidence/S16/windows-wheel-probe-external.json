@@ -1,0 +1,21 @@
+{
+  "command": [
+    "<TEMP>\\neurocvguard-s16-0azxjcue/wheel312/Scripts/python.exe",
+    "-I",
+    "<TEMP>\\neurocvguard-s16-0azxjcue/wheel312/verify_wheel.py",
+    "--forbid-root",
+    "<PROJECT_ROOT>",
+    "--out",
+    "<TEMP>\\neurocvguard-s16-0azxjcue/wheel312-demo"
+  ],
+  "cwd": "<USER_HOME>\\AppData\\Local\\Temp\\neurocvguard-s16-0azxjcue",
+  "started_at_utc": "2026-09-27T04:38:52.696957+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "ERROR: Unexpected internal failure; no success is claimed. Retry with --debug before the command for sanitized stack locations.\nTraceback (most recent call last):\n  File \"<TEMP>\\neurocvguard-s16-0azxjcue/wheel312/verify_wheel.py\", line 79, in <module>\n    main()\n  File \"<TEMP>\\neurocvguard-s16-0azxjcue/wheel312/verify_wheel.py\", line 51, in main\n    assert cli_main([\"demo\", \"--out\", str(args.out)]) == 0\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

@@ -1,0 +1,25 @@
+{
+  "command": [
+    "<TEMP>\\neurocvguard-s16-0azxjcue/minimum311/Scripts/python.exe",
+    "-I",
+    "<TEMP>\\neurocvguard-s16-0azxjcue/verify_final_wheel.py",
+    "--forbid-root",
+    "<PROJECT_ROOT>",
+    "--wheel",
+    "<TEMP>\\neurocvguard-s16-0azxjcue/neurocvguard-0.1.0-py3-none-any.whl",
+    "--out",
+    "<TEMP>\\neurocvguard-s16-0azxjcue/minimum-final-demo"
+  ],
+  "cwd": "<USER_HOME>\\AppData\\Local\\Temp\\neurocvguard-s16-0azxjcue",
+  "started_at_utc": "2026-09-27T04:53:09.195823+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_code": 0,
+  "stdout": "demo: synthetic=true; scenario=clean; execution=completed\nOpen report.html in the requested output directory; provenance: demo.private.json.\n{\n  \"version\": \"0.1.0\",\n  \"python\": \"3.11.7\",\n  \"platform\": \"Windows-10-10.0.26200-SP0\",\n  \"installed_under_environment\": true,\n  \"editable\": false,\n  \"source_tree_reads\": \"blocked by audit hook\",\n  \"network\": \"blocked by audit hook\",\n  \"schemas\": [\n    \"audit-report.schema.json\",\n    \"comparison-summary.schema.json\",\n    \"config.schema.json\",\n    \"evaluation-result.schema.json\",\n    \"preprocessing-ledger.schema.json\",\n    \"split-plan.schema.json\"\n  ],\n  \"examples\": [\n    \"01_cohort_audit.py\",\n    \"02_repeated_observations.py\",\n    \"03_site_held_out.py\",\n    \"04_preprocessing_provenance.py\",\n    \"05_explicit_feature_join.py\"\n  ],\n  \"demo\": \"completed\",\n  \"audit_report\": \"partial; upstream preprocessing remains unassessable\",\n  \"wheel_sha256\": \"2997e8d1ef5dd09d8a66aead05e165960a08b040b7949436fa02c8945db45386\",\n  \"installed_payloads_match_wheel\": 53,\n  \"versions\": {\n    \"numpy\": \"1.26.4\",\n    \"pandas\": \"2.2.3\",\n    \"scipy\": \"1.13.1\",\n    \"scikit-learn\": \"1.5.2\",\n    \"Jinja2\": \"3.1.6\",\n    \"jsonschema\": \"4.23.0\"\n  }\n}\n",
+  "stderr": "WARNING: Fully synthetic demonstration; no patient data. These are fictitious tabular mechanisms, not biologically realistic brain models or clinical results.\nWARNING: Operational plans, evaluations and demo.private.json are separately private.\n"
+}

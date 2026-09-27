@@ -1,0 +1,28 @@
+{
+  "command": [
+    "uv",
+    "pip",
+    "install",
+    "--python",
+    "<TEMP>\\neurocvguard-s16-0azxjcue/minimum311/Scripts/python.exe",
+    "dist/s16-initial/neurocvguard-0.1.0-py3-none-any.whl",
+    "numpy==1.26.4",
+    "pandas==2.2.3",
+    "scipy==1.13.1",
+    "scikit-learn==1.5.2",
+    "Jinja2==3.1.6",
+    "jsonschema==4.23.0",
+    "pytest",
+    "hypothesis"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T04:35:15.202062+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "Using Python 3.11.7 environment at: <TEMP>\\neurocvguard-s16-0azxjcue\\minimum311\nResolved 28 packages in 3.17s\nDownloading pandas (11.1MiB)\nDownloading numpy (15.1MiB)\nDownloading scipy (44.1MiB)\nDownloading scikit-learn (10.5MiB)\n Downloaded scikit-learn\n Downloaded numpy\n Downloaded pandas\n Downloaded scipy\nPrepared 9 packages in 19.33s\nInstalled 28 packages in 1.43s\n + attrs==26.1.0\n + cloudpickle==3.1.2\n + colorama==0.4.6\n + hypothesis==6.168.1\n + iniconfig==2.3.0\n + jinja2==3.1.6\n + joblib==1.6.0\n + jsonschema==4.23.0\n + jsonschema-specifications==2025.9.1\n + markupsafe==3.0.3\n + neurocvguard==0.1.0 (from file:///<PROJECT_ROOT>/dist/s16-initial/neurocvguard-0.1.0-py3-none-any.whl)\n + numpy==1.26.4\n + packaging==26.3\n + pandas==2.2.3\n + pluggy==1.6.0\n + pygments==2.21.0\n + pytest==9.1.1\n + python-dateutil==2.9.0.post0\n + pytz==2026.4\n + referencing==0.37.0\n + rpds-py==2026.6.3\n + scikit-learn==1.5.2\n + scipy==1.13.1\n + six==1.17.0\n + sortedcontainers==2.4.0\n + threadpoolctl==3.7.0\n + typing-extensions==4.16.0\n + tzdata==2026.4\n"
+}

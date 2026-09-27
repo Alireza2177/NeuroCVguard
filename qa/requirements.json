@@ -311,7 +311,7 @@
       "AT-S16-07",
       "AT-S16-08"
     ],
-    "status": "NOT_IMPLEMENTED"
+    "status": "IMPLEMENTED"
   },
   {
     "id": "REQ-S17",

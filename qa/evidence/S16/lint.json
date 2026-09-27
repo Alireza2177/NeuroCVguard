@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "ruff",
+    "check",
+    "."
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T04:54:14.371090+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_code": 1,
+  "stdout": "UP017 [*] Use `datetime.UTC` alias\n  --> qa\\evidence\\S16\\linux_matrix.py:21:37\n   |\n19 |     destination = EVIDENCE / (name + \".json\")\n20 |     assert not destination.exists(), name\n21 |     started = datetime.datetime.now(datetime.timezone.utc).isoformat()\n   |                                     ^^^^^^^^^^^^^^^^^^^^^\n22 |     result = subprocess.run(command, cwd=cwd, env=env, capture_output=True, text=True)\n23 |     record = {\n   |\nhelp: Convert to `datetime.UTC` alias\n   |\n20 |     assert not destination.exists(), name\n   -     started = datetime.datetime.now(datetime.timezone.utc).isoformat()\n21 +     started = datetime.datetime.now(datetime.UTC).isoformat()\n22 |     result = subprocess.run(command, cwd=cwd, env=env, capture_output=True, text=True)\n   |\n\nE501 Line too long (109 > 100)\n  --> qa\\evidence\\S16\\privacy_scan.py:41:101\n   |\n39 |                     hits.append({\"file\": name, \"line\": number, \"kind\": kind})\n40 |     record = {\n41 |         \"scope\": \"Tracked file review locations only; no proof of anonymity or exhaustive secret detection.\",\n   |                                                                                                     ^^^^^^^^^\n42 |         \"files_scanned\": len(files),\n43 |         \"hits\": hits,\n   |\n\nE501 Line too long (102 > 100)\n  --> qa\\evidence\\S16\\privacy_scan.py:50:101\n   |\n48 |         handle.write(\"\\n\")\n49 |     print(\n50 |         f\"Scanned {len(files)} tracked paths; {len(hits)} review locations; {len(large)} large files.\"\n   |                                                                                                     ^^\n51 |     )\n   |\n\nE501 Line too long (121 > 100)\n  --> tests\\test_distribution_audit.py:74:101\n   |\n72 |         lambda files: files.update(\n73 |             {\n74 |                 \"neurocvguard-0.1.0.dist-info/METADATA\": b\"Name: neurocvguard\\nVersion: 9.9.9\\nRequires-Python: >=3.11\\n\"\n   |                                                                                                     ^^^^^^^^^^^^^^^^^^^^^\n75 |             }\n76 |         ),\n   |\n\nFound 4 errors.\n[*] 1 fixable with the `--fix` option.\n",
+  "stderr": ""
+}

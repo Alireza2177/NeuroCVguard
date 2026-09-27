@@ -2048,8 +2048,8 @@
     "expected": "Both valid and metadata checks pass.",
     "method": "packaging",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S16-02",
@@ -2060,8 +2060,8 @@
     "expected": "Schemas/templates/CSS/demo assets included; private files excluded.",
     "method": "packaging",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S16-03",
@@ -2072,8 +2072,8 @@
     "expected": "Import, CLI and demo work without source-path fallback.",
     "method": "packaging",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S16-04",
@@ -2084,8 +2084,8 @@
     "expected": "Evidence records only actual passes; unavailable platforms remain pending.",
     "method": "quality",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S16-05",
@@ -2096,8 +2096,8 @@
     "expected": "No unsupported bound is advertised.",
     "method": "quality",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S16-06",
@@ -2108,8 +2108,8 @@
     "expected": "Dossier records matching version/files/SHA256.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S16-07",
@@ -2120,8 +2120,8 @@
     "expected": "Result-changing defects block readiness.",
     "method": "review",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S16-08",
@@ -2132,8 +2132,8 @@
     "expected": "No push/upload/tag/DOI operation without explicit authorization.",
     "method": "security",
     "priority": "MUST",
-    "implementation_status": "NOT_IMPLEMENTED",
-    "execution_status": "NOT_RUN"
+    "implementation_status": "IMPLEMENTED",
+    "execution_status": "PASSED"
   },
   {
     "id": "AT-S17-01",

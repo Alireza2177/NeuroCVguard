@@ -1,0 +1,21 @@
+{
+  "command": [
+    "<TEMP>\\neurocvguard-s16-0azxjcue/wheel312/Scripts/python.exe",
+    "-I",
+    "<TEMP>\\neurocvguard-s16-0azxjcue/wheel312/verify_wheel.py",
+    "--forbid-root",
+    "<PROJECT_ROOT>",
+    "--out",
+    "<TEMP>\\neurocvguard-s16-0azxjcue/wheel312-demo"
+  ],
+  "cwd": "<USER_HOME>\\AppData\\Local\\Temp\\neurocvguard-s16-0azxjcue",
+  "started_at_utc": "2026-09-27T04:40:44.556066+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "demo: synthetic=true; scenario=clean; execution=completed\nOpen report.html in the requested output directory; provenance: demo.private.json.\n",
+  "stderr": "WARNING: Fully synthetic demonstration; no patient data. These are fictitious tabular mechanisms, not biologically realistic brain models or clinical results.\nWARNING: Operational plans, evaluations and demo.private.json are separately private.\nTraceback (most recent call last):\n  File \"<TEMP>\\neurocvguard-s16-0azxjcue/wheel312/verify_wheel.py\", line 80, in <module>\n    main()\n  File \"<TEMP>\\neurocvguard-s16-0azxjcue/wheel312/verify_wheel.py\", line 55, in main\n    assert report[\"execution_status\"] == \"completed\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

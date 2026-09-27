@@ -1,0 +1,36 @@
+{
+  "version": "0.1.0",
+  "python": "3.12.14",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "installed_under_environment": true,
+  "editable": false,
+  "source_tree_reads": "blocked by audit hook",
+  "network": "blocked by audit hook",
+  "schemas": [
+    "audit-report.schema.json",
+    "comparison-summary.schema.json",
+    "config.schema.json",
+    "evaluation-result.schema.json",
+    "preprocessing-ledger.schema.json",
+    "split-plan.schema.json"
+  ],
+  "examples": [
+    "01_cohort_audit.py",
+    "02_repeated_observations.py",
+    "03_site_held_out.py",
+    "04_preprocessing_provenance.py",
+    "05_explicit_feature_join.py"
+  ],
+  "demo": "completed",
+  "audit_report": "partial; upstream preprocessing remains unassessable",
+  "wheel_sha256": "2997e8d1ef5dd09d8a66aead05e165960a08b040b7949436fa02c8945db45386",
+  "installed_payloads_match_wheel": 53,
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "Jinja2": "3.1.6",
+    "jsonschema": "4.26.0"
+  }
+}

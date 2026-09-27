@@ -1,0 +1,25 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "pip",
+    "download",
+    "--only-binary=:all:",
+    "--no-deps",
+    "--platform",
+    "manylinux_2_17_x86_64",
+    "--dest",
+    "dist/s16-tooling",
+    "uv"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T04:31:55.191233+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "Collecting uv\n  Obtaining dependency information for uv from https://files.pythonhosted.org/packages/76/71/b47cec536d8ee7b09017c1d9db211dfc2e7ce5c87d0482918d8b3411ec48/uv-0.12.19-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata\n  Downloading uv-0.12.19-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)\nDownloading uv-0.12.19-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (20.5 MB)\n   ---------------------------------------- 20.5/20.5 MB 6.6 MB/s eta 0:00:00\nSaved <PROJECT_ROOT>\\dist\\s16-tooling\\uv-0.12.19-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl\nSuccessfully downloaded uv\n",
+  "stderr": "\n[notice] A new release of pip is available: 23.2.1 -> 26.2.1\n[notice] To update, run: <PROJECT_ROOT>\\.venv\\Scripts\\python.exe -m pip install --upgrade pip\n"
+}

@@ -1,0 +1,30 @@
+{
+  "command": [
+    "<TEMP>\\neurocvguard-s16-0azxjcue/wheel312/Scripts/python.exe",
+    "-I",
+    "-m",
+    "pytest",
+    "-q",
+    "--strict-markers",
+    "--strict-config",
+    "tests/test_association_checks.py::test_rules_match_normative_catalog",
+    "tests/test_cohort_checks.py::test_rule_registry_exactly_matches_normative_catalog",
+    "tests/test_evaluation_runner.py::test_s10_rule_catalog_metadata",
+    "tests/test_plan_exports.py::test_plan_catalog_matches_normative_definitions",
+    "tests/test_preprocessing.py::test_event_order_invariance_and_registry",
+    "tests/test_split_audit.py::test_split_rules_match_normative_catalog",
+    "--junitxml=<PROJECT_ROOT>/qa/evidence/S16/windows-catalog-corrected.xml"
+  ],
+  "cwd": "<USER_HOME>\\AppData\\Local\\Temp\\neurocvguard-s16-0azxjcue\\wheel312-checks",
+  "started_at_utc": "2026-09-27T04:53:01.688619+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_code": 0,
+  "stdout": "......                                                                   [100%]\n6 passed in 2.56s\n",
+  "stderr": ""
+}

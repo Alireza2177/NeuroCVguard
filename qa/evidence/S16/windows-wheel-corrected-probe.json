@@ -1,0 +1,23 @@
+{
+  "command": [
+    "<TEMP>\\neurocvguard-s16-0azxjcue/wheel312/Scripts/python.exe",
+    "-I",
+    "<TEMP>\\neurocvguard-s16-0azxjcue/wheel312/verify_wheel.py",
+    "--forbid-root",
+    "<PROJECT_ROOT>",
+    "--out",
+    "<TEMP>\\neurocvguard-s16-0azxjcue/wheel312-corrected-demo"
+  ],
+  "cwd": "<USER_HOME>\\AppData\\Local\\Temp\\neurocvguard-s16-0azxjcue",
+  "started_at_utc": "2026-09-27T04:43:42.080535+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_code": 0,
+  "stdout": "demo: synthetic=true; scenario=clean; execution=completed\nOpen report.html in the requested output directory; provenance: demo.private.json.\n{\n  \"version\": \"0.1.0\",\n  \"python\": \"3.12.3\",\n  \"platform\": \"Windows-11-10.0.26200-SP0\",\n  \"installed_under_environment\": true,\n  \"editable\": false,\n  \"source_tree_reads\": \"blocked by audit hook\",\n  \"network\": \"blocked by audit hook\",\n  \"schemas\": [\n    \"audit-report.schema.json\",\n    \"comparison-summary.schema.json\",\n    \"config.schema.json\",\n    \"evaluation-result.schema.json\",\n    \"preprocessing-ledger.schema.json\",\n    \"split-plan.schema.json\"\n  ],\n  \"examples\": [\n    \"01_cohort_audit.py\",\n    \"02_repeated_observations.py\",\n    \"03_site_held_out.py\",\n    \"04_preprocessing_provenance.py\",\n    \"05_explicit_feature_join.py\"\n  ],\n  \"demo\": \"completed\",\n  \"audit_report\": \"partial; upstream preprocessing remains unassessable\",\n  \"wheel_archive_hashes\": null,\n  \"versions\": {\n    \"numpy\": \"2.5.3\",\n    \"pandas\": \"3.0.6\",\n    \"scipy\": \"1.18.1\",\n    \"scikit-learn\": \"1.9.1\",\n    \"Jinja2\": \"3.1.6\",\n    \"jsonschema\": \"4.26.0\"\n  }\n}\n",
+  "stderr": "WARNING: Fully synthetic demonstration; no patient data. These are fictitious tabular mechanisms, not biologically realistic brain models or clinical results.\nWARNING: Operational plans, evaluations and demo.private.json are separately private.\n"
+}

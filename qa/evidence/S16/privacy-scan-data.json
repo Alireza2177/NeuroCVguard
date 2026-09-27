@@ -1,0 +1,2382 @@
+{
+  "scope": "Tracked file review locations only; no proof of anonymity or exhaustive secret detection.",
+  "files_scanned": 1104,
+  "hits": [
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7206,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7207,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7208,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7209,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7210,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7211,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7212,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7213,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7214,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7215,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7216,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7217,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7218,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7219,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7220,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7221,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7222,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7223,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7224,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7225,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7226,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7227,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7228,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7229,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7230,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7231,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7232,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7233,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7234,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7235,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7236,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7237,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7238,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7239,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7240,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7241,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7249,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7250,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7251,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7252,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7253,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7254,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7255,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7256,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7257,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7258,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7259,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7260,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7261,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7262,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7263,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7264,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7265,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7266,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7267,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7268,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7269,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7270,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7271,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7272,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7273,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7274,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7275,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7276,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7277,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7278,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7279,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7280,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7281,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7282,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7283,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7284,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7292,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7293,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7294,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7295,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7296,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7297,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7298,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7299,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7300,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7301,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7302,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7303,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7304,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7305,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7306,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7307,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7308,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7309,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7310,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7311,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7312,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7313,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7314,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7315,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7316,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7317,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7318,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7319,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7320,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7321,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7322,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7323,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7324,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7325,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7326,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_MASTER_SPEC.md",
+      "line": 7327,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8531,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8532,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8533,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8534,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8535,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8536,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8537,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8538,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8539,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8540,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8541,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8542,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8543,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8544,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8545,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8546,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8547,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8548,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8549,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8550,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8551,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8552,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8553,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8554,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8555,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8556,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8557,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8558,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8559,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8560,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8561,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8562,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8563,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8564,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8565,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8566,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8570,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8571,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8572,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8573,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8574,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8575,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8576,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8577,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8578,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8579,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8580,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8581,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8582,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8583,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8584,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8585,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8586,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8587,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8588,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8589,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8590,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8591,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8592,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8593,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8594,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8595,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8596,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8597,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8598,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8599,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8600,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8601,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8602,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8603,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8604,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8605,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8609,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8610,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8611,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8612,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8613,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8614,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8615,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8616,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8617,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8618,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8619,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8620,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8621,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8622,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8623,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8624,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8625,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8626,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8627,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8628,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8629,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8630,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8631,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8632,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8633,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8634,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8635,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8636,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8637,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8638,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8639,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8640,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8641,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8642,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8643,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "NeuroCVguard_READABLE.html",
+      "line": 8644,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 2,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 3,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 4,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 5,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 6,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 7,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 8,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 9,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 10,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 11,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 12,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 13,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 14,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 15,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 16,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 17,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 18,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 19,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 20,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 21,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 22,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 23,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 24,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 25,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 26,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 27,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 28,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 29,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 30,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 31,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 32,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 33,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 34,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 35,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 36,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_changing_target.tsv",
+      "line": 37,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 2,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 3,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 4,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 5,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 6,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 7,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 8,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 9,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 10,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 11,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 12,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 13,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 14,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 15,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 16,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 17,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 18,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 19,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 20,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 21,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 22,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 23,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 24,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 25,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 26,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 27,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 28,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 29,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 30,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 31,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 32,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 33,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 34,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 35,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 36,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_clean.tsv",
+      "line": 37,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 2,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 3,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 4,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 5,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 6,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 7,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 8,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 9,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 10,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 11,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 12,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 13,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 14,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 15,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 16,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 17,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 18,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 19,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 20,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 21,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 22,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 23,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 24,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 25,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 26,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 27,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 28,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 29,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 30,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 31,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 32,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 33,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 34,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 35,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 36,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "fixtures/cohort_cross_site.tsv",
+      "line": 37,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "qa/evidence/S01/lint-initial.json",
+      "line": 14,
+      "kind": "email_like"
+    },
+    {
+      "file": "qa/evidence/S08/pytest-final.json",
+      "line": 19,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S08/pytest-final.json",
+      "line": 19,
+      "kind": "email_like"
+    },
+    {
+      "file": "qa/evidence/S08/pytest-final.xml",
+      "line": 8,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S08/pytest-final.xml",
+      "line": 8,
+      "kind": "email_like"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 1,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 27,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 29,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 55,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 57,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 83,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 85,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 111,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 113,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 139,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 141,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 167,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 169,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 195,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 197,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 223,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 225,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 251,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 253,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 279,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 281,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 307,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 309,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 335,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 337,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 363,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 365,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 391,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 393,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 419,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 421,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 447,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 449,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 475,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 477,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 503,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 505,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 531,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 533,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 559,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 561,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 587,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 589,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 615,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 617,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 643,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 645,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 671,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 673,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 699,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 701,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 727,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 729,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 755,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 757,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 783,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 785,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 811,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 813,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 839,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 841,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 867,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 869,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 895,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 897,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 923,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 925,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 951,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 953,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 979,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 981,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 1007,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 1009,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 1035,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 1037,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 1063,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 1065,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 1091,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 1093,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial-corrected.xml",
+      "line": 1119,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 1,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 2,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 5,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 8,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 9,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 12,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 15,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 18,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 21,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 24,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 27,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 30,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 39,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 42,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 45,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 48,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 51,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 54,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 57,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 59,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 62,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 64,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 67,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 69,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 71,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 80,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 83,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 86,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 89,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 92,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 95,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 98,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 100,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 103,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 105,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 108,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 110,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/adversarial.xml",
+      "line": 112,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/final-1.xml",
+      "line": 1,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/final-1.xml",
+      "line": 49,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/final-1.xml",
+      "line": 51,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/final-1.xml",
+      "line": 53,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/hardening-and-affected.xml",
+      "line": 1,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/security-inventory.json",
+      "line": 16,
+      "kind": "email_like"
+    },
+    {
+      "file": "qa/evidence/S15/security-inventory.json",
+      "line": 61,
+      "kind": "email_like"
+    },
+    {
+      "file": "qa/evidence/S15/security-inventory.json",
+      "line": 71,
+      "kind": "email_like"
+    },
+    {
+      "file": "qa/evidence/S15/security-inventory.json",
+      "line": 76,
+      "kind": "email_like"
+    },
+    {
+      "file": "qa/evidence/S15/security-inventory.json",
+      "line": 91,
+      "kind": "email_like"
+    },
+    {
+      "file": "qa/evidence/S15/validator-followup-tests.xml",
+      "line": 1,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/validator-followup-tests.xml",
+      "line": 2,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/validator-followup-tests.xml",
+      "line": 36,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "qa/evidence/S15/validator-followup-tests.xml",
+      "line": 37,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "tests/test_cli_policy.py",
+      "line": 123,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "tests/test_cohort_checks.py",
+      "line": 173,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "tests/test_cohort_inventory.py",
+      "line": 64,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "tests/test_cohort_inventory.py",
+      "line": 78,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "tests/test_cohort_inventory.py",
+      "line": 125,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "tests/test_comparison_cli.py",
+      "line": 128,
+      "kind": "email_like"
+    },
+    {
+      "file": "tests/test_contracts.py",
+      "line": 317,
+      "kind": "email_like"
+    },
+    {
+      "file": "tests/test_evaluation_cli.py",
+      "line": 54,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "tests/test_identity.py",
+      "line": 90,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "tests/test_report_projection.py",
+      "line": 38,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "tests/test_report_projection.py",
+      "line": 55,
+      "kind": "absolute_user_path"
+    },
+    {
+      "file": "tests/test_report_projection.py",
+      "line": 55,
+      "kind": "email_like"
+    },
+    {
+      "file": "tests/test_split_audit.py",
+      "line": 243,
+      "kind": "participant_label_shape"
+    },
+    {
+      "file": "tests/test_split_edges.py",
+      "line": 82,
+      "kind": "email_like"
+    }
+  ],
+  "large_files": []
+}

@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/Scripts/python.exe",
+    "-m",
+    "twine",
+    "check",
+    "--strict",
+    "dist/s16-initial/neurocvguard-0.1.0-py3-none-any.whl",
+    "dist/s16-initial/neurocvguard-0.1.0.tar.gz"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T04:31:14.498626+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "Checking dist/s16-initial/neurocvguard-0.1.0-py3-none-any.whl: PASSED\nChecking dist/s16-initial/neurocvguard-0.1.0.tar.gz: PASSED\n",
+  "stderr": ""
+}

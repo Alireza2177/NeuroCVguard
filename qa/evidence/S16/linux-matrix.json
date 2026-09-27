@@ -1,0 +1,20 @@
+{
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "--",
+    "python3",
+    "/mnt/c/Users/Alireza217/Desktop/NeuroCVguard_Foundation_v1.0.0/qa/evidence/S16/linux_matrix.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T04:40:56.088505+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 0,
+  "stdout": "linux-313-venv 0\nlinux-312-venv 0\nlinux-311-venv 0\nlinux-311-install 0\nlinux-311-environment 0\nlinux-313-install 0\nlinux-313-environment 0\nlinux-312-install 0\nlinux-312-environment 0\nlinux-313-tests 0\nlinux-312-tests 0\nlinux-311-tests 0\n",
+  "stderr": ""
+}

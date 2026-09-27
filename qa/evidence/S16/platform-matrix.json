@@ -1,0 +1,51 @@
+[
+  {
+    "environment": "linux-311",
+    "existing_passed": 712,
+    "separate_packaging_passed": 9,
+    "unique_passed": 721,
+    "installation": "isolated editable source snapshot"
+  },
+  {
+    "environment": "linux-312",
+    "existing_passed": 712,
+    "separate_packaging_passed": 9,
+    "unique_passed": 721,
+    "installation": "isolated editable source snapshot"
+  },
+  {
+    "environment": "linux-313",
+    "existing_passed": 712,
+    "separate_packaging_passed": 9,
+    "unique_passed": 721,
+    "installation": "isolated editable source snapshot"
+  },
+  {
+    "environment": "windows-wheel-core",
+    "initial_passed": 672,
+    "initial_failed": 6,
+    "corrective_passed": 6,
+    "unique_runtime_passed": 678,
+    "outside_wheel_scope": [],
+    "installation": "non-editable initial wheel; runtime bytes equal final"
+  },
+  {
+    "environment": "minimum-tests",
+    "initial_passed": 672,
+    "initial_failed": 7,
+    "corrective_passed": 6,
+    "unique_runtime_passed": 678,
+    "outside_wheel_scope": [
+      "tests/test_bootstrap.py::test_editable_install_points_to_source"
+    ],
+    "installation": "non-editable initial wheel; runtime bytes equal final"
+  },
+  {
+    "environment": "macOS",
+    "status": "NOT_RUN"
+  },
+  {
+    "environment": "hosted CI",
+    "status": "NOT_RUN"
+  }
+]

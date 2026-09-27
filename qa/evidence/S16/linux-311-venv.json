@@ -1,0 +1,20 @@
+{
+  "command": [
+    "<PROJECT_ROOT>/dist/s16-tooling/uv-linux",
+    "venv",
+    "--seed",
+    "--python",
+    "<LINUX_WORK>/pythons/cpython-3.11.16-linux-x86_64-gnu/bin/python3.11",
+    "<LINUX_WORK>/linux-311"
+  ],
+  "cwd": "<LINUX_WORK>",
+  "started_at_utc": "2026-09-27T04:40:54.100460+00:00",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "Using CPython 3.11.16 interpreter at: pythons/cpython-3.11.16-linux-x86_64-gnu/bin/python3.11\nCreating virtual environment with seed packages at: linux-311\n + packaging==26.3\n + pip==26.2.1\n + setuptools==84.0.0\n + wheel==0.48.0\nActivate with: source linux-311/bin/activate\n",
+  "environment_overrides": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  }
+}

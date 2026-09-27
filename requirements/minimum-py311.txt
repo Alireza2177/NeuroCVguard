@@ -1,0 +1,8 @@
+# Tested direct-dependency floor on Python 3.11, not pins for downstream users.
+# Transitive resolved versions and executed results are in qa/evidence/S16.
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.13.1
+scikit-learn==1.5.2
+Jinja2==3.1.6
+jsonschema==4.23.0

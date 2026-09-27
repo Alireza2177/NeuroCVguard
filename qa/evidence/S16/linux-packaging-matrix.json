@@ -1,0 +1,22 @@
+{
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "--",
+    "python3",
+    "/mnt/c/Users/Alireza217/Desktop/NeuroCVguard_Foundation_v1.0.0/qa/evidence/S16/linux_supplement.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T04:52:16.258786+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "exit_code": 0,
+  "stdout": "linux-311-packaging 0\nlinux-312-packaging 0\nlinux-313-packaging 0\n",
+  "stderr": ""
+}

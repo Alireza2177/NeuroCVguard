@@ -59,3 +59,12 @@ protected historical outputs and added focused regression tests. An unknown-ID
 fixture crash found by those tests was corrected. Contributor guidance, strict
 docs and lint/format checks were updated. No new independent or human review is
 claimed; the prior scientific package, RNG exception and stage boundary remain.
+
+S16 (2026-09-27): at the user's request, Codex inspected/build-tested distributions,
+created isolated local Windows and WSL2 environments, downloaded setup tools and
+dependencies, executed source/installed-wheel checks, and assembled hashes,
+privacy review and release-readiness records. It corrected archive inclusion and
+verification-harness setup mistakes and added nine archive-oracle tests. Runtime
+scientific source is unchanged. These are agent-run local checks, not hosted CI,
+external-user feedback or human acceptance. No public push/tag/upload/DOI action
+was performed. S17 remains unstarted.

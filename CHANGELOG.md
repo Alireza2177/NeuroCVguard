@@ -26,3 +26,10 @@ report export after analysis. Numerical metrics and private records are unchange
 Added adversarial/property tests and measured mutation/security/resource evidence.
 The first dependency import's Python RNG effect remains an explicitly approved
 limitation under ADR-S15-001; no scientific invariant was silently relaxed.
+
+S16: built and checked local wheel/sdist distributions, verified clean offline
+installs, and exercised Linux 3.11/3.12/3.13 and Windows runtime tests. Anchored
+sdist include patterns to exclude an unintended nested fixture README. Declared
+direct dependency lower bounds only after exercising that exact floor. Runtime
+scientific code is unchanged. The release dossier keeps unavailable platforms
+and human/publication gates explicit.

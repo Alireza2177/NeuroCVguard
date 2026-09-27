@@ -23,3 +23,25 @@ Publication workflows must use least privilege, audited full action SHAs and a
 manual protected gate; no secrets in PR jobs or untrusted pull_request_target runs.
 No publication workflow is enabled here. Runtime has no network dependency.
 The proposed license notice is not yet a finalized license grant.
+
+## Local S16 candidate
+
+S16 built version 0.1.0 as a wheel and source archive under `dist/s16/`. The wheel
+is built from the sdist and all 53 runtime payloads match the selected source.
+Both pass strict Twine metadata validation. Fresh Windows/Linux wheel environments
+exercise the actual console entry point, all schemas/assets and default demo;
+an audit hook blocks source-tree reads and networking during the demo.
+
+The Linux WSL2 matrix passed 712 existing tests per interpreter (3.11.16,
+3.12.14, 3.13.15), followed by 9 new archive regression tests on each. Windows
+3.12.3 and the Windows 3.11.7 dependency-floor environment exercise the installed
+wheel's runtime tests. The S16 dossier records setup failures and corrective runs
+instead of relabeling the first attempts successful. macOS and hosted CI are
+NOT RUN. A WSL2 result does not imply every Linux distribution was tested.
+
+The {download}`S16 dossier <../state/release/S16_DOSSIER.md>` and
+{download}`release checklist <../state/release/S16_CHECKLIST.md>` record hashes,
+test scope, privacy review and open owner decisions. Human acceptance, real
+metadata/license/contact confirmation, independent-user review and explicit S17
+authorization are still required before public release. No public action is
+authorized by a passing local build.

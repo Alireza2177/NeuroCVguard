@@ -1,0 +1,20 @@
+{
+  "command": [
+    "wsl",
+    "-d",
+    "Ubuntu",
+    "--",
+    "python3",
+    "/mnt/c/Users/Alireza217/Desktop/NeuroCVguard_Foundation_v1.0.0/qa/evidence/S16/prepare_matrix.py"
+  ],
+  "cwd": "<PROJECT_ROOT>",
+  "started_at_utc": "2026-09-27T04:37:44.196479+00:00",
+  "recorder_python": "3.11.7",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "environment_overrides": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/mnt/c/Users/Alireza217/Desktop/NeuroCVguard_Foundation_v1.0.0/qa/evidence/S16/prepare_matrix.py\", line 33, in <module>\n    target.mkdir()\n  File \"/usr/lib/python3.10/pathlib.py\", line 1175, in mkdir\n    self._accessor.mkdir(self, mode)\nFileNotFoundError: [Errno 2] No such file or directory: '/tmp/neurocvguard-s16-0azxjcue/source'\n"
+}

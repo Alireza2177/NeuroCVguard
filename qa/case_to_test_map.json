@@ -2939,6 +2939,171 @@
       "requirement_id": "REQ-S15",
       "execution_status": "PASSED",
       "human_accepted": false
+    },
+    {
+      "case_id": "AT-S16-01",
+      "stage": "S16",
+      "requirement_id": "REQ-S16",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "verification_type": "automated_and_implementing_ai_review",
+      "test_node_ids": [
+        "tests/test_distribution_audit.py::test_at_s16_metadata_version_drift_rejected",
+        "tests/test_distribution_audit.py::test_at_s16_missing_runtime_asset_rejected[neurocvguard/schemas/config.schema.json]",
+        "tests/test_distribution_audit.py::test_at_s16_missing_runtime_asset_rejected[neurocvguard/templates/report.css]",
+        "tests/test_distribution_audit.py::test_at_s16_payload_drift_rejected",
+        "tests/test_distribution_audit.py::test_at_s16_source_private_file_is_not_allowlisted",
+        "tests/test_distribution_audit.py::test_at_s16_unexpected_private_or_unsafe_member_rejected[../../outside]",
+        "tests/test_distribution_audit.py::test_at_s16_unexpected_private_or_unsafe_member_rejected[neurocvguard/__pycache__/x.pyc]",
+        "tests/test_distribution_audit.py::test_at_s16_unexpected_private_or_unsafe_member_rejected[private_data/cohort.csv]",
+        "tests/test_distribution_audit.py::test_at_s16_valid_payload_and_version"
+      ],
+      "evidence": [
+        "qa/evidence/S16/build-final.json",
+        "qa/evidence/S16/metadata-final.json",
+        "qa/evidence/S16/distributions.json",
+        "state/release/S16_DOSSIER.md",
+        "state/release/S16_CHECKLIST.md"
+      ],
+      "scope_note": "Local S16 criterion passed; human/public gates remain pending. AT-S16-04 records unavailable platforms as NOT RUN."
+    },
+    {
+      "case_id": "AT-S16-02",
+      "stage": "S16",
+      "requirement_id": "REQ-S16",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "verification_type": "automated_and_implementing_ai_review",
+      "test_node_ids": [
+        "tests/test_distribution_audit.py::test_at_s16_metadata_version_drift_rejected",
+        "tests/test_distribution_audit.py::test_at_s16_missing_runtime_asset_rejected[neurocvguard/schemas/config.schema.json]",
+        "tests/test_distribution_audit.py::test_at_s16_missing_runtime_asset_rejected[neurocvguard/templates/report.css]",
+        "tests/test_distribution_audit.py::test_at_s16_payload_drift_rejected",
+        "tests/test_distribution_audit.py::test_at_s16_source_private_file_is_not_allowlisted",
+        "tests/test_distribution_audit.py::test_at_s16_unexpected_private_or_unsafe_member_rejected[../../outside]",
+        "tests/test_distribution_audit.py::test_at_s16_unexpected_private_or_unsafe_member_rejected[neurocvguard/__pycache__/x.pyc]",
+        "tests/test_distribution_audit.py::test_at_s16_unexpected_private_or_unsafe_member_rejected[private_data/cohort.csv]",
+        "tests/test_distribution_audit.py::test_at_s16_valid_payload_and_version"
+      ],
+      "evidence": [
+        "qa/evidence/S16/archive-final.json",
+        "qa/evidence/S16/distributions.json",
+        "qa/evidence/S16/distribution-tests-final.xml",
+        "state/release/S16_DOSSIER.md",
+        "state/release/S16_CHECKLIST.md"
+      ],
+      "scope_note": "Local S16 criterion passed; human/public gates remain pending. AT-S16-04 records unavailable platforms as NOT RUN."
+    },
+    {
+      "case_id": "AT-S16-03",
+      "stage": "S16",
+      "requirement_id": "REQ-S16",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "verification_type": "automated_and_implementing_ai_review",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S16/windows-final-install.json",
+        "qa/evidence/S16/linux-final-install.json",
+        "qa/evidence/S16/windows-final-wheel.json",
+        "qa/evidence/S16/linux-final-wheel.json",
+        "state/release/S16_DOSSIER.md",
+        "state/release/S16_CHECKLIST.md"
+      ],
+      "scope_note": "Local S16 criterion passed; human/public gates remain pending. AT-S16-04 records unavailable platforms as NOT RUN."
+    },
+    {
+      "case_id": "AT-S16-04",
+      "stage": "S16",
+      "requirement_id": "REQ-S16",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "verification_type": "automated_and_implementing_ai_review",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S16/platform-matrix.json",
+        "qa/evidence/S16/linux-matrix.json",
+        "qa/evidence/S16/windows-catalog-corrected.xml",
+        "state/release/S16_DOSSIER.md",
+        "state/release/S16_CHECKLIST.md"
+      ],
+      "scope_note": "Local S16 criterion passed; human/public gates remain pending. AT-S16-04 records unavailable platforms as NOT RUN."
+    },
+    {
+      "case_id": "AT-S16-05",
+      "stage": "S16",
+      "requirement_id": "REQ-S16",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "verification_type": "automated_and_implementing_ai_review",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S16/minimum-tests.xml",
+        "qa/evidence/S16/minimum-catalog-corrected.xml",
+        "qa/evidence/S16/minimum-final-wheel.json",
+        "qa/evidence/S16/minimum-pip-check.json",
+        "state/release/S16_DOSSIER.md",
+        "state/release/S16_CHECKLIST.md"
+      ],
+      "scope_note": "Local S16 criterion passed; human/public gates remain pending. AT-S16-04 records unavailable platforms as NOT RUN."
+    },
+    {
+      "case_id": "AT-S16-06",
+      "stage": "S16",
+      "requirement_id": "REQ-S16",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "verification_type": "automated_and_implementing_ai_review",
+      "test_node_ids": [
+        "tests/test_distribution_audit.py::test_at_s16_metadata_version_drift_rejected",
+        "tests/test_distribution_audit.py::test_at_s16_missing_runtime_asset_rejected[neurocvguard/schemas/config.schema.json]",
+        "tests/test_distribution_audit.py::test_at_s16_missing_runtime_asset_rejected[neurocvguard/templates/report.css]",
+        "tests/test_distribution_audit.py::test_at_s16_payload_drift_rejected",
+        "tests/test_distribution_audit.py::test_at_s16_source_private_file_is_not_allowlisted",
+        "tests/test_distribution_audit.py::test_at_s16_unexpected_private_or_unsafe_member_rejected[../../outside]",
+        "tests/test_distribution_audit.py::test_at_s16_unexpected_private_or_unsafe_member_rejected[neurocvguard/__pycache__/x.pyc]",
+        "tests/test_distribution_audit.py::test_at_s16_unexpected_private_or_unsafe_member_rejected[private_data/cohort.csv]",
+        "tests/test_distribution_audit.py::test_at_s16_valid_payload_and_version"
+      ],
+      "evidence": [
+        "qa/evidence/S16/distributions.json",
+        "qa/evidence/S16/preservation.json",
+        "state/release/S16_DOSSIER.md",
+        "state/release/S16_CHECKLIST.md"
+      ],
+      "scope_note": "Local S16 criterion passed; human/public gates remain pending. AT-S16-04 records unavailable platforms as NOT RUN."
+    },
+    {
+      "case_id": "AT-S16-07",
+      "stage": "S16",
+      "requirement_id": "REQ-S16",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "verification_type": "automated_and_implementing_ai_review",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S16/review.md",
+        "qa/evidence/S16/platform-matrix.json",
+        "state/release/S16_DOSSIER.md",
+        "state/release/S16_CHECKLIST.md"
+      ],
+      "scope_note": "Local S16 criterion passed; human/public gates remain pending. AT-S16-04 records unavailable platforms as NOT RUN."
+    },
+    {
+      "case_id": "AT-S16-08",
+      "stage": "S16",
+      "requirement_id": "REQ-S16",
+      "execution_status": "PASSED",
+      "human_accepted": false,
+      "verification_type": "automated_and_implementing_ai_review",
+      "test_node_ids": [],
+      "evidence": [
+        "qa/evidence/S16/review.md",
+        "qa/evidence/S16/preservation.json",
+        "state/release/S16_DOSSIER.md",
+        "state/release/S16_CHECKLIST.md"
+      ],
+      "scope_note": "Local S16 criterion passed; human/public gates remain pending. AT-S16-04 records unavailable platforms as NOT RUN."
     }
   ]
 }
